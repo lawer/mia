@@ -1,6 +1,11 @@
-# 2. Ética de la intel·ligència artificial
+---
+title: 2.-Conceptes previs
+layout: home
+---
 
-## Conceptes previs
+# 2. Conceptes previs
+
+## Models d'intel·ligència artificial
 
 * [Presentacio](3.1-conceptes_previs.pdf)
 * [Exercicis](2.1.-exercicis.ipynb)
