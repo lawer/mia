@@ -8,4 +8,3 @@ layout: home
 ## Models d'intel·ligència artificial
 
 * [Presentacio](1-introduccio.pdf)
-* [Exercicis]()
