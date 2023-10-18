@@ -2,6 +2,11 @@ autoscale: true
 footer: Carles Gonzàlez
 slidenumbers: true
 
+---
+layout: default
+title: 1. Introducció a la intel·ligència artificial
+---
+
 ## 1. Introducció a la intel·ligència artificial
 
 ### Models d'intel·ligència artificial
