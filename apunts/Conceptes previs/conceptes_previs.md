@@ -8,4 +8,4 @@ layout: home
 ## Models d'intel·ligència artificial
 
 * [Presentacio](3.1-conceptes_previs.pdf)
-* [Exercicis](2.1.-exercicis.ipynb)
+* [Exercicis](https://classroom.github.com/a/dLGXkYCq)
