@@ -9,4 +9,5 @@ layout: home
 * Exemples solucionats:
   * [Búsqueda local](tsp.ipynb)
   * [Algorismes genètics](motxilla.ipynb)
+  * [Satisfacció de restriccions](n_reines.ipynb)
 * [Exercicis](https://classroom.github.com/a/X6b52kPS)
