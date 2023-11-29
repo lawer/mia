@@ -11,3 +11,6 @@ layout: home
   * [Algorismes genètics](motxilla.ipynb)
   * [Satisfacció de restriccions](n_reines.ipynb)
 * [Exercicis](https://classroom.github.com/a/X6b52kPS)
+  * [Exercici 1 solucionat](1.-exercicis_solucionats.ipynb)
+  * [WorldCities](worldcities.csv)
+  * [Players_22](players_22.csv)
