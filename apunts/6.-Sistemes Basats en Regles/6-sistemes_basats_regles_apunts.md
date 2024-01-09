@@ -1,9 +1,8 @@
-
+---
 layout: default
 title: Apunts Sistemes basats en regles
 parent: 6. Sistemes basats en regles
-nav_order: 2
-
+---
 
 ## 6. Sistemes basats en regles
 
