@@ -2,6 +2,7 @@
 layout: default
 title: Apunts Sistemes basats en regles
 parent: 6. Sistemes basats en regles
+math: mathjax3
 ---
 
 ## 6. Sistemes basats en regles
