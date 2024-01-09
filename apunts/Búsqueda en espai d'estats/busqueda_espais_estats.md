@@ -7,6 +7,8 @@ layout: home
 
 * [Presentacio](3.2-busqueda.pdf)
 
+| [Presentacio](3.2-busqueda.pdf) | ![PDF](https://img.shields.io/badge/PDF-3.2--busqueda.pdf-blue?logo=adobe-acrobat-reader&logoColor=white) |
+
 ## Exercicis
 
 | [Exercicis](https://classroom.github.com/a/6E3eP9D5) | [![Open In GitHub Classroom](https://img.shields.io/badge/GitHub%20Classroom-Exercicis-blue?logo=github)](https://classroom.github.com/a/6E3eP9D5) |
