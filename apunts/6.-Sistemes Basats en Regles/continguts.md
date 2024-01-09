@@ -34,14 +34,12 @@ math: mathjax3
 
 > El coneixement és un conjunt d'informació estructurada i interrelacionada que permet a un agent realitzar tasques.
 
-## Jerarquia del coneixement (I)
-
-* Moltes vegades definim el coneixement en relació a conceptes similars.
-* La jerarquia del coneixement o jerarquia de DIKW és un model que mostra la relació entre _dades_, _informació_, _coneixement_ i _saviesa_.
+## Jerarquia del coneixement
 
 ![right fit](../images%2FDIKW_Pyramid.png)
 
-## Jerarquia del coneixement (II)
+* Moltes vegades definim el coneixement en relació a conceptes similars.
+* La jerarquia del coneixement o jerarquia de DIKW és un model que mostra la relació entre _dades_, _informació_, _coneixement_ i _saviesa_.
 
 * **Dades** (**D**ata): Fets o valors registrats en un suport físic. És independent de l'agent i pot ser interpretat de diferents maneres.
     * Exemple: _"Un smartwatch registra la temperatura corporal de la persona."_
@@ -49,15 +47,13 @@ math: mathjax3
 * **Informació** (**I**nformation): És com les dades són interpretades per un agent. És subjectiva i depèn de l'agent.
     * Exemple: _"La temperatura corporal de la persona és de 37ºC"_
 
-## Jerarquia del coneixement (III)
-
 * **Coneixement** (**K**nowledge): És informació integrada en el nostre model del mon. Depèn de l'agent i dels seus coneixements previs.
     * Exemple: _"Si la temperatura és superior a 37ºC, llavors la persona té febre"_
 
 * **Saviesa** (**W**isdom): Representa el meta-coneixement: coneixement sobre com i quan aplicar el coneixement.
     * Exemple: _"Si la persona té febre, llavors ha de prendre paracetamol"_
 
-## Representació del coneixement (I)
+## Representació del coneixement
 
 * És la forma en la que representem el coneixement per a que les màquines puguin entendre'l.
 * És un dels problemes fonamentals de la intel·ligència artificial.
@@ -65,16 +61,11 @@ math: mathjax3
     * Sigui **entendible** per a les màquines.
     * Sigui **útil** per a resoldre problemes.
     * Sigui **eficient** per a ser processat per les màquines.
-
-## Representació del coneixement (II)
-
 * Podem veure les diferents representacions com un **continuum**:
     * A l'esquerra tenim les representacions més **simples** (algorismes); utilitzables per els ordinadors de forma eficient pero molt poc flexibles.
     * A la dreta tenim les representacions més **flexibles** (text natural); molt potents pero no utilitzables diréctament per les màquines.
 
 ![inline](../images%2Fknowledge-spectrum.png)
-
-## Representació del coneixement (III)
 
 * **Representacions de xarxa**:
     * En la ment humana el coneixement es representa com una xarxa de conceptes interrelacionats.
@@ -189,7 +180,6 @@ math: mathjax3
 
 ![inline](../images%2FAND-OR-Tree.png)
 
-
 **IF** (animal has hair **OR** animal gives milk) **THEN** the animal is a mammal
 **IF** the animal eats meat **OR** (animal has sharp teeth AND animal has claws **AND** animal has forward-looking eyes ) **THEN** the animal is a carnivore
 
@@ -233,6 +223,8 @@ math: mathjax3
 
 ### Estratègies d'inferència
 
+Hi ha dues estratègies d'inferència:
+
 #### Encadenament cap endavant: _forward chaining_
 
 * Revisa els antecedents de les regles per buscar coincidències en els fets i inferir noves conclusions.
@@ -241,8 +233,6 @@ math: mathjax3
     * Modus ponens: $$p \rightarrow q, p \vdash q$$
 * **Problema**: Pot no trobar la conclusió.
     * Exemple: _"Si el gos està malalt, doncs el gos està malalt"_
-
-
 * El raonament **no ve guiat per la conclusió**.
     * Es troben totes les conclusions possibles (relevants o no).
     * Es fa més treball del necessari.
@@ -278,9 +268,9 @@ math: mathjax3
 
 * Dos enfocaments:
     * Deducció de regles a partir de dades.
-      * Facilita la **interpretació** del raonament.
+        * Facilita la **interpretació** del raonament.
     * Integració de regles definides per l'usuari i Aprenentatge Automàtic.
-      * Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
+        * Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
 
 ![right fit 85%](../images%2F1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
 
@@ -357,7 +347,6 @@ math: mathjax3
     * Utilitza les **funcions de pertinença**.
         * Assignen a cada valor d'entrada un grau de pertinença a cada **variable lingüística**
         * $$27^oC \rightarrow Calor = 0.8, Molta\:calor = 0.2$$
-
 
 * _Evaluació de les regles_:
     * En aquest pas s'**apliquen les regles del sistema**.
