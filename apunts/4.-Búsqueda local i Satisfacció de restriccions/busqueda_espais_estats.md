@@ -17,5 +17,5 @@ layout: home
 | [Algorismes genètics](motxilla.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/motxilla.ipynb) |
 | [Satisfacció de restriccions](n_reines.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/n_reines.ipynb) |
 | [Exercici 1 solucionat](1.-exercicis_solucionats.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/1.-exercicis_solucionats.ipynb) |
-| [WorldCities](worldcities.csv) | [![CSV](https://img.shields.io/badge/CSV-worldcities.csv-blue?logo=google-drive)](worldcities.csv) |
-| [Players_22](players_22.csv) | [![CSV](https://img.shields.io/badge/CSV-players_22.csv-blue?logo=google-drive)](players_22.csv) |
+| [WorldCities](worldcities.csv) | [![CSV](https://img.shields.io/badge/CSV-worldcities.csv-blue?logo=pandas)](worldcities.csv) |
+| [Players_22](players_22.csv) | [![CSV](https://img.shields.io/badge/CSV-players_22.csv-blue?logo=pandas)](players_22.csv) |
