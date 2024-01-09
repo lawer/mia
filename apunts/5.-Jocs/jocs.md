@@ -9,5 +9,5 @@ layout: home
 
 ## Exemples solucionats
 
-| [Joc del _nim_](nim.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/Jocs/nim.ipynb) |
-| [Joc del _tres en ratlla_](controladors_jocs.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/Jocs/controladors_jocs.ipynb) |
+| [Joc del _nim_](nim.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/5.-Jocs/nim.ipynb) |
+| [Joc del _tres en ratlla_](controladors_jocs.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/5.-Jocs/controladors_jocs.ipynb) |

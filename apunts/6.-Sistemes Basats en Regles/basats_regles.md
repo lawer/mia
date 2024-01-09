@@ -9,6 +9,6 @@ layout: home
 
 ## Exemples solucionats
 
-| [Sistema expert: Classificar animals](1.-animals.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/Sistemes%20Basats%20en%20Regles/1.-animals.ipynb) |
-| [Sistema basat regles: Titanic](2.-titanic.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/Sistemes%20Basats%20en%20Regles/2.-titanic.ipynb) |
-| [Lógica difusa: Qui jugarà](3.-qui_jugara.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/Sistemes%20Basats%20en%20Regles/3.-qui_jugara.ipynb) |
+| [Sistema expert: Classificar animals](1.-animals.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/1.-animals.ipynb)
+| [Sistema basat regles: Titanic](2.-titanic.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/2.-titanic.ipynb) |
+| [Lógica difusa: Qui jugarà](3.-qui_jugara.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/3.-qui_jugara.ipynb) |
