@@ -1,5 +1,5 @@
 ---
-title: 5. 5.-Jocs
+title: 5. Jocs
 layout: home
 ---
 
