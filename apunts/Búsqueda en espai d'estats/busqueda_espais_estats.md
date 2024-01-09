@@ -5,8 +5,6 @@ layout: home
 
 # 3. Búsqueda en espais d'estats
 
-* [Presentacio](3.2-busqueda.pdf)
-
 | [Presentacio](3.2-busqueda.pdf) | ![PDF](https://img.shields.io/badge/PDF-3.2--busqueda.pdf-blue?logo=adobe-acrobat-reader&logoColor=white) |
 
 ## Exercicis
