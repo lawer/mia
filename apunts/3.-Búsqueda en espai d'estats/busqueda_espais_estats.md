@@ -2,6 +2,7 @@
 title: 3. Búsqueda en espais d'estats
 layout: home
 has_children: true
+has_toc: false
 ---
 
 # 3. Búsqueda en espais d'estats

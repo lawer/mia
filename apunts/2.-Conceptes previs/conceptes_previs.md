@@ -2,6 +2,7 @@
 title: 2. Conceptes previs
 layout: home
 has_children: true
+has_toc: false
 ---
 
 # 2. Conceptes previs
