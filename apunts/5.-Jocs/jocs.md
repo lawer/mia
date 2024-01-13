@@ -1,6 +1,7 @@
 ---
 title: 5. Jocs
 layout: home
+has_children: true
 ---
 
 # 5. Jocs

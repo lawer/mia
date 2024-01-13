@@ -1,6 +1,7 @@
 ---
 title: 4. Búsqueda local i satisfacció de restriccions
 layout: home
+has_children: true
 ---
 
 # 4. Búsqueda local i satisfacció de restriccions

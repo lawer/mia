@@ -1,6 +1,7 @@
 ---
 title: 6. Sistemes basats en regles
 layout: home
+has_children: true
 ---
 
 # 6. Sistemes basats en regles
