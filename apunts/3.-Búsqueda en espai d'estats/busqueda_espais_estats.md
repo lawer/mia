@@ -1,6 +1,7 @@
 ---
 title: 3. Búsqueda en espais d'estats
 layout: home
+has_children: true
 ---
 
 # 3. Búsqueda en espais d'estats

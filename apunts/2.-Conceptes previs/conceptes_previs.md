@@ -1,6 +1,7 @@
 ---
 title: 2. Conceptes previs
 layout: home
+has_children: true
 ---
 
 # 2. Conceptes previs
