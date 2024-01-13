@@ -10,3 +10,4 @@ layout: home
 
 ## Exercicis
 | [Exercicis](https://classroom.github.com/a/dLGXkYCq) | [![PDF](https://img.shields.io/badge/GitHub%20Classroom-Exercicis-blue?logo=github)](https://classroom.github.com/a/dLGXkYCq) |
+
