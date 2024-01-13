@@ -6,7 +6,7 @@ layout: home
 # 6. Sistemes basats en regles
 
 | [Presentacio](6-sistemes_basats_regles.pdf) | [![PDF](https://img.shields.io/badge/PDF-6--sistemes_basats_regles.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](6-sistemes_basats_regles.pdf) |
-| [Continguts](continguts.html) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)](continguts.html) |
+| [Continguts]({% link continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link continguts.md %}) |
 
 ## Exemples solucionats
 

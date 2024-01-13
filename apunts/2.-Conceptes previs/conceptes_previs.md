@@ -1,13 +1,13 @@
 ---
 title: 2. Conceptes previs
 layout: home
-has_children: true
+nav_order: 1
 ---
 
 # 2. Conceptes previs
 
 | [Presentacio](3.1-conceptes_previs.pdf) | [![PDF](https://img.shields.io/badge/PDF-2--conceptes_previs.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](3.1-conceptes_previs.pdf) |
-| [Continguts](continguts.html) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)](continguts.html) |
+| [Continguts]({% link continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link continguts.md %}) |
 
 ## Exercicis
 

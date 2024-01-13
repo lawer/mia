@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Apunts conceptes previs
+title: Continguts conceptes previs
 parent: 2. Conceptes previs
 math: mathjax3
 ---
