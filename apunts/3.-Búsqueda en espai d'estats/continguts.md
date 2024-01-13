@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Búsqueda en espais d'estats
+title: Apunts búsqueda en espais d'estats
 parent: 3. Búsqueda en espais d'estats
 math: mathjax3
 ---
