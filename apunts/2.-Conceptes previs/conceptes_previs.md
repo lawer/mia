@@ -1,7 +1,6 @@
 ---
 title: 2. Conceptes previs
 layout: home
-nav_order: 1
 ---
 
 # 2. Conceptes previs
