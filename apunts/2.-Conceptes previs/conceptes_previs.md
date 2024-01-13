@@ -13,4 +13,5 @@ has_toc: false
 ## Exercicis
 
 | [Exercicis](https://classroom.github.com/a/dLGXkYCq) | [![PDF](https://img.shields.io/badge/GitHub%20Classroom-Exercicis-blue?logo=github)](https://classroom.github.com/a/dLGXkYCq) |
+| [Exercicis curts](1.-exercicis.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/2.-Conceptes%20previs/exercicis/1.-exercicis.ipynb) |
 
