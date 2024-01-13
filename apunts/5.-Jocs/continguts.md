@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Apunts búsqueda en jocs
 parent: 5. Jocs
 math: mathjax3

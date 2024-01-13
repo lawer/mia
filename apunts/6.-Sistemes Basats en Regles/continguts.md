@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Apunts Sistemes basats en regles
 parent: 6. Sistemes basats en regles
 math: mathjax3
