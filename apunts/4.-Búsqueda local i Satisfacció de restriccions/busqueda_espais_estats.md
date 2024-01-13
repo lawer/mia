@@ -6,7 +6,7 @@ layout: home
 # 4. Búsqueda local i satisfacció de restriccions
 
 | [Presentacio](4-busqueda_local_i_satisfaccio_restriccions.pdf) | [![PDF](https://img.shields.io/badge/PDF-4--busqueda_local.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](4-busqueda_local_i_satisfaccio_restriccions.pdf) |
-|[Continguts]({% link continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link continguts.md %}) |
+|[Continguts]({% link ./continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link ./continguts.md %}) |
 
 
 ## Exercicis

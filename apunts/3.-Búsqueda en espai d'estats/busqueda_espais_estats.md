@@ -6,7 +6,7 @@ layout: home
 # 3. Búsqueda en espais d'estats
 
 | [Presentacio](3.2-busqueda.pdf) | [![PDF](https://img.shields.io/badge/PDF-3.--busqueda.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](3.2-busqueda.pdf) |
-| [Continguts]({% link continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link continguts.md %}) |
+| [Continguts]({% ./link continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link ./continguts.md %}) |
 
 ## Exercicis
 
