@@ -6,7 +6,7 @@ layout: home
 # 5. Jocs
 
 |[Presentacio](5-jocs.pdf) | [![PDF](https://img.shields.io/badge/PDF-5--jocs.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](5-jocs.pdf) |
-|[Continguts]({% link ./continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link ./continguts.md %}) |
+|[Continguts]({% link apunts/5.-Jocs/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/5.-Jocs/continguts.md %}) |
 
 ## Exemples solucionats
 
