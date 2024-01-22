@@ -36,9 +36,6 @@ math: mathjax3
     * Ciències cognitives.
     * Informàtica.
     * etc.
-
-## Introducció (II)
-
 * És un problema **difícil** perquè:
     * El llenguatge humà és **ambigu**.
     * El llenguatge humà és **ric**.
@@ -88,7 +85,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * Ex: `the shit` és un sinònim de `the best` en anglès que no apareix en WordNet.
 * Les solucions modernes es basen en les representacions del text.
 
-## Representacions del text (I)
+## Representacions del text
 
 * Els ordinadors necessiten representar el text com a dades numèriques.
 * Quina unitat de text triem per a representar el text i com ho fem?.
@@ -122,7 +119,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
         * Permet representar paraules rares i que no estan en el vocabulari.
         * Útil per a llengües amb moltes paraules compostes i derivades.
 
-## Tokens i tokenització (I)
+## Tokens i tokenització
 
 * Indepententment de l'enfocament triat, el text ha de ser **dividit** en **tokens**.
     * Ex: "New York in winter" $$\rightarrow$$ `["New", "York", "in", "winter"]`
@@ -131,17 +128,11 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * **Tokenització**: procés de dividir un text en tokens i que facilita el tractament i comprensió del text.
     * És un procés **no trivial**. Depèn de la llengua i del domini.
         * Exemple: "New York" és un token o dos?
-
-## Tokens i tokenització (II)
-
 * Qüestions a tindre en compte:
     * **Puntuació**: es considera un token o no?. Pot variar la interpretació del text.
     * **Majuscules/Minúscules**: es consideren tokens diferents o no?.
     * **Stopwords**: paraules que no aporten informació al text (articles, preposicions, etc.).
     * **Idioma i domini**: el procés de tokenització depèn de l'idioma i del domini del text.
-
-## Tokens i tokenització (III)
-
 * N-grams: seqüències de n tokens consecutius.
 * Algunes paraules tenen significat propi, però la seva combinació amb altres paraules també té un significat. Ex: "New York".
 * Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
@@ -168,8 +159,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 
 ![inline 70%](../images%2FCaptura%20de%20pantalla%202024-01-14%20a%20las%2021.35.56.png)
 
-## Word2Vec (II)
-
 * Per cada paraula obtenim un vector **dens** i de **longitud fixa**.
 * Cada dimensió del vector representa un **aspecte semàntic** de la paraula.
 * Representen la seva **posició** en un espai semàntic n-dimensional.
@@ -178,8 +167,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 > Facilita calcular la similitud entre paraules.
 
 ![right fit](../images%2Fembeddings.png)
-
-## Word2Vec (III)
 
 * Els vectors de parales també s'anomenen **embeddings** o **representacions de xarxa**.
 * **FastText** és una variant de **Word2Vec** que utilitza subparaules.
@@ -309,7 +296,7 @@ model.wv.most_similar("Gavi")
 * El càlcul de la similitud entre textos, però, és una tasca **difícil**.
 * Anem a veure algunes tècniques de les més utilitzades.
 
-### Técniques per a calcular la similitud entre textos (I)
+### Técniques per a calcular la similitud entre textos
 
 * **Basades en en regles**: Es basen en regles predefinides; fàcils d'implementar i útils per a casos senzills.
     * **Distància de Levenshtein**: És el nombre mínim d'operacions per a transformar una cadena en una altra.
@@ -317,16 +304,12 @@ model.wv.most_similar("Gavi")
     * **Recompte de paraules**: És el nombre comú de paraules entre dos textos.
     * **Distància de Jaccard**: És el nombre de paraules comunes entre dos textos dividit pel nombre total de paraules dels dos textos.
 
-### Técniques per a calcular la similitud entre textos (II)
-
 * **Basades en característiques sintàctiques**: Es basen en les característiques sintàctiques i gramaticals dels textos. Impliquen un procés de **parsejat** dels textos per analitzar la seva
   estructura sintàctica.
 * **Basades en característiques semàntiques**: Es basen en les característiques semàntiques dels textos. Aquí models com Word2Vec són molt útils, al permetre representar el significat contextual de
   les paraules.
     * **Word Mover's Distance**: Mesura la distància entre dos textos com la distància entre els vectors de les paraules dels dos textos.
     * **Similitud del cosinus**: Utilitza el cosinus de l'angle entre ells.
-
-### Técniques per a calcular la similitud entre textos (II)
 
 * **Basades en l'aprenentatge automàtic**: Es basen en l'aprenentatge automàtic per a calcular la similitud entre textos.
     * **BERT i GPT**: Models de llenguatge basats en xarxes neuronals que pot ser utilitzat per a calcular la similitud entre textos.
@@ -517,8 +500,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
     * Necessiten un entrenament previ amb un **gran** volum de dades (_corpus_)
     * Mostren la capacitat d'entendre el context, la semàntica i la sintàxis del text.
 
-## Història: LLM (II)
-
 * El mecanisme d'atenció és un mecanisme que permet a les xarxes neuronals aprendre a **centrar-se** en les parts importants de les seves entrades.
 * És un mecanisme que imita el comportament humà.
 * Podem entendre'l com una **capa** que s'afegeix a una xarxa neuronal.
@@ -542,22 +523,16 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
     * Segons quines parts estiguen presents o no podran ser **bidireccionals** o **unidireccionals**.
     * Aixó determinarà també les tasques que poden realitzar.
 
-## Parts d'un LLM (II)
-
 * Encoder: codifica el text d'entrada en un vector.
 * Els models `encoder-only` són **unidireccionals** i s'especialitzen en "entendre" el text d'entrada i, per tant, són útils per a tasques com la classificació de text.
 * Solament necessiten el **encoder** per a realitzar la tasca perqué no necessiten generar un text de sortida.
 * Utilitats: classificació de text, anàlisi de sentiments, etc.
 * Ex: **BERT**, RoBERTa, ALBERT, ELECTRA, etc.
 
-## Parts d'un LLM (III)
-
 * Decoder: decodifica el vector en un text de sortida.
 * Els models `Decoder-only` solament poden accedir a les paraules anteriors i, per tant, són útils per a tasques com la generació de text.
 * Utilitats: generació de text, escritura creativa, etc.
 * Ex: **GPT**, GPT-2, GPT-3, Mixtral, etc.
-
-## Parts d'un LLM (IV)
 
 * Encoder + Decoder: codifica el text d'entrada en un vector i decodifica el vector en un text de sortida.
 * Els models `Encoder-Decoder` poden accedir a les paraules anteriors i posteriors i, per tant, són útils per a tasques com la traducció automàtica.
