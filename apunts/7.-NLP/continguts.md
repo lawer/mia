@@ -28,7 +28,7 @@ math: mathjax3
 * Anàlisi de sentiments.
 * Classificació de text.
 
-## Introducció (I)
+## Introducció
 
 * Camp multidisciplinari que combina:
     * Lingüística.
