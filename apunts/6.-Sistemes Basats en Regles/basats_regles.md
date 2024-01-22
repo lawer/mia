@@ -15,6 +15,7 @@ has_toc: false
 | [Sistema expert: Classificar animals](1.-animals.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/1.-animals.ipynb)
 | [Sistema basat regles: Titanic](2.-titanic.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/2.-titanic.ipynb) |
 | [Lógica difusa: Qui jugarà](3.-qui_jugara.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/3.-qui_jugara.ipynb) |
+| [Sistema de control: Regar la gespa](SC1.-regar_gespa.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/SC1.-regar_gespa.ipynb) |
 
 ## Exercicis
 
@@ -22,3 +23,4 @@ has_toc: false
 | [Sistema basat en regles: Preveure el valor de mercat de jugadors](5.-preveure_valor_mercat.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/5.-preveure_valor_mercat.ipynb) |
 | [Lógica difusa: Detectar centrocampistes joves](6.-detectar_centrocampistes_joves.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/6.-detectar_centrocampistes_joves.ipynb) |
 | [CSV en dades de jugadors del FIFA 22](players_22.csv) | [![CSV](https://img.shields.io/badge/CSV-players_22.csv-blue?logo=pandas)](players_22.csv) |
+| [Sistema de control: Cremador de gas](SC2.-cremador.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/6.-Sistemes%20Basats%20en%20Regles/SC2.-cremador.ipynb) |
