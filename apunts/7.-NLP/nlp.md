@@ -1,5 +1,5 @@
 ---
-title: 6. Sistemes basats en regles
+title: 7. Processament del llenguatge natural
 layout: home
 has_children: true
 has_toc: false
