@@ -100,7 +100,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * El model ha de ser molt complex, ja que ha d'aprendre a combinar els caràcters per a formar paraules.
     * Exemple: "AND" es pot representar com a $$[65, 78, 68]$$
 
-![right fit](../images%2Fascii-character-map.png)
+![](../images/ascii-character-map.png)
 
 ## Representació de paraules
 
