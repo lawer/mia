@@ -16,7 +16,7 @@ has_toc: false
 
 | Exemple                                               |                                                                                                                                                                                                Enllaç |
 |-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Representació del text](1.-representacio_text.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/1.-representacio_text.ipynb) <img width=250/> |
+| [Representació del text](1.-representacio_text.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/1.-representacio_text.ipynb) |
 | [Models de llenguatge](2.-models_llenguatge.ipynb)    |                   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/2.-models_llenguatge.ipynb) |
 
 ## Exercicis
