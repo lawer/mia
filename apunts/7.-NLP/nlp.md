@@ -7,21 +7,22 @@ has_toc: false
 
 # 7. Processament del llenguatge natural
 
-| Material                                              |                                                                                                                          Enllaç |
-|:------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------:|
-| [Presentacio](7.-nlp.pdf)                             |               [![PDF](https://img.shields.io/badge/PDF-7.--nlp.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](7.-nlp.pdf) |
-| [Continguts]({% link apunts/7.-NLP/continguts.md %})  | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/7.-NLP/continguts.md %}) |
+| Material                                             |                                                                                                                          Enllaç |
+|:-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------:|
+| [Presentacio](7.-nlp.pdf)                            |               [![PDF](https://img.shields.io/badge/PDF-7.--nlp.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](7.-nlp.pdf) |
+| [Continguts]({% link apunts/7.-NLP/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/7.-NLP/continguts.md %}) |
 
 ## Exemples solucionats
 
-| Exemple                                                |                                                                                                                                                                               Enllaç |
-|:-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Representació del text](1.-representacio_text.ipynb)  | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/1.-representacio_text.ipynb) |
-| [Models de llenguatge](2.-models_llenguatge.ipynb)     |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/2.-models_llenguatge.ipynb) |
+| Exemple                                                     |                                                                                                                                                                                      Enllaç |
+|:------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Representació del text](2.-classificacio_text_keras.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/22.-classificacio_text_keras.ipynb) |
+| [Models de llenguatge](3.-models_llenguatge.ipynb)          |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/3.-models_llenguatge.ipynb) |
 
 ## Exercicis
 
-| Exercici                                                                                       |                                                                                                                                                                                    Enllaç |
-|:-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Classificador de preguntes en temàtiques](3.-classificador_preguntes.ipynb) <img width=250/>  | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/3.-classificador_preguntes.ipynb) |
-| [Anàlisi de sentiments IMDB](4.-analisi_sentiment_imdb.ipynb)                                  |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/4.-analisi_sentiment_imdb.ipynb) |
+| Exercici                                                                     |                                                                                                                                                                                    Enllaç |
+|:-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Introducció al NLP](1.-introduccio_nlp.ipynb)                               |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/1.-introduccio_nlp.ipynb) |
+| [Classificador de preguntes en temàtiques](4.-classificador_preguntes.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/3.-classificador_preguntes.ipynb) |
+| [Anàlisi de sentiments IMDB](5.-analisi_sentiment_imdb.ipynb)                |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/4.-analisi_sentiment_imdb.ipynb) |
