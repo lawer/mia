@@ -1,6 +1,6 @@
 ---
 title: 6. Sistemes basats en regles
-layout: home
+layout: default
 has_children: true
 has_toc: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: 4. Búsqueda local i satisfacció de restriccions
-layout: home
+layout: default
 has_children: true
 has_toc: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: 5. Jocs
-layout: home
+layout: default
 has_children: true
 has_toc: false
 ---

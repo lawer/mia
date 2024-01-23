@@ -1,6 +1,6 @@
 ---
 title: 2. Conceptes previs
-layout: home
+layout: default
 has_children: true
 has_toc: false
 ---
