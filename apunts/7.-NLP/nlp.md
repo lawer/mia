@@ -7,13 +7,8 @@ has_toc: false
 
 # 7. Processament del llenguatge natural
 
-|                       Material                       |                                                             Enllaç                                                              |
-|:----------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|
-|      [Presentacio](7.-nlp.pdf) <img width=250/>      |        [![PDF](https://img.shields.io/badge/PDF-7.--nlp.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](7.-nlp.pdf)        |
+| [Presentacio](7.-nlp.pdf) <img width=250/>| [![PDF](https://img.shields.io/badge/PDF-7.--nlp.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](7.-nlp.pdf) |
 | [Continguts]({% link apunts/7.-NLP/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/7.-NLP/continguts.md %}) |
-
-
-
 
 ## Exemples solucionats
 
