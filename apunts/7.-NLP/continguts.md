@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Apunts Processament del llenguatge natural
 parent: 7. Processament del llenguatge natural
 math: mathjax3

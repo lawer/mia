@@ -1,6 +1,6 @@
 ---
 title: 7. Processament del llenguatge natural
-layout: home
+layout: default
 has_children: true
 has_toc: false
 ---
