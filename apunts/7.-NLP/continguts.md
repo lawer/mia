@@ -100,7 +100,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * El model ha de ser molt complex, ja que ha d'aprendre a combinar els caràcters per a formar paraules.
     * Exemple: "AND" es pot representar com a $$[65, 78, 68]$$
 
-![](../images/ascii-character-map.png)
+![right fit](../images%2Fascii-character-map.png)
 
 ## Representació de paraules
 
@@ -133,11 +133,47 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * **Majuscules/Minúscules**: es consideren tokens diferents o no?.
     * **Stopwords**: paraules que no aporten informació al text (articles, preposicions, etc.).
     * **Idioma i domini**: el procés de tokenització depèn de l'idioma i del domini del text.
-* N-grams: seqüències de n tokens consecutius.
-* Algunes paraules tenen significat propi, però la seva combinació amb altres paraules també té un significat. Ex: "New York".
-* Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
-* Bigrams: seqüències de dos tokens consecutius, trigrams: seqüències de tres tokens consecutius, etc.
-* Problema: augmenta molt el vocabulari i la complexitat del model.
+* **N-grams**: seqüències de n tokens consecutius.
+  * Algunes paraules tenen significat propi, però la seva combinació amb altres paraules també té un significat. Ex: "New York".
+  * Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
+  * Bigrams: seqüències de dos tokens consecutius, trigrams: seqüències de tres tokens consecutius, etc.
+  * Problema: augmenta molt el vocabulari i la complexitat del model.
+
+## Representació de textos
+
+* Fins ara hem vist com representar paraules.
+* Solament així podrem veure les relacions entre les paraules que el formen.
+* Algunes de les tècniques utilitzades són:
+    * **One-hot encoding**: cada token $$\rightarrow$$ una dimensió; valor $$\rightarrow$$ 1 si el token està i 0 si no.
+    * **Bag of Words**: model basat en freqüències. El valor de cada cel·la son les aparicions del token en el document. Simple i encara molt utilitzat.
+    * **TF-IDF**: model basat en freqüències i inversa de freqüències
+    * **Word Embeddings**. Vectorització de paraules amb _Word2Vec_, _FastText_, etc
+
+### One-hot encoding
+
+* El model **one-hot encoding** és un model basat en tokens.
+* Els vectors generats són **dispersos** i **grans**, ja que cada token és una dimensió.
+* Cada token és una dimensió i el valor de cada cel·la és 1 si el token està i 0 si no.
+* Els vectors generats són **independents** de la semàntica.
+* No facilita calcular la similitud entre paraules i textos.
+
+![right fit](../images%2Fone_hot.png)
+
+### Bag of Words (BoW)
+
+* El model **BoW** és un model basat en freqüències.
+* Es pot entendre com una suma dels vectors one-hot.
+* Els vectors generats són **independents** de la semàntica.
+* El nombre del token es pot entendre com a **ordre** i en molts casos no és així. Aquesta discrepància pot afectar a la qualitat del model.
+
+![right fit](../images%2Fbag-of-words.png)
+
+### TF-IDF
+
+* El model **TF-IDF** és un model basat en freqüències i inversa de freqüències.
+* Semblant al model **BoW**, però té en compte la freqüència del token en el document i en el conjunt de documents.
+* El valor de cada cel·la és el producte de la freqüència del token en el document i la inversa de la freqüència del token en el conjunt de documents.
+* Dona més importància als tokens que apareixen en pocs documents. Raó: els tokens que apareixen en molts documents no solen aportar informació rellevant.
 
 ## Vectorització
 
@@ -188,7 +224,7 @@ sentences = [
     ["Kepa", "para"],
     ["Xavi", "entrena"],
 ]
-model = Word2Vec(sentencias, min_count=1)
+model = Word2Vec(sentences, min_count=1)
 ```
 
 ## Visualització dels _embeddings_
@@ -238,57 +274,6 @@ model.wv.most_similar("Gavi")
 
 ![](../images%2Fsimilarity.jpg)
 
-## Representació de textos
-
-* Fins ara hem vist com representar paraules.
-* Per veure la similitud entre textos hem de representar els textos en la seva totalitat.
-* Solament així podrem veure les relacions entre les paraules que el formen.
-* Algunes de les tècniques utilitzades són:
-    * **One-hot encoding**: cada token $$\rightarrow$$ una dimensió; valor $$\rightarrow$$ 1 si el token està i 0 si no.
-    * **Bag of Words**: model basat en freqüències. El valor de cada cel·la son les aparicions del token en el document. Simple i encara molt utilitzat.
-    * **TF-IDF**: model basat en freqüències i inversa de freqüències
-    * **Word Embeddings**. Vectorització de paraules amb _Word2Vec_, _FastText_, etc
-
-### One-hot encoding
-
-* El model **one-hot encoding** és un model basat en tokens.
-* Els vectors generats són **dispersos** i **grans**, ja que cada token és una dimensió.
-* Cada token és una dimensió i el valor de cada cel·la és 1 si el token està i 0 si no.
-* Els vectors generats són **independents** de la semàntica.
-* No facilita calcular la similitud entre paraules i textos.
-
-![right fit](../images%2Fone_hot.png)
-
-### Bag of Words (BoW)
-
-* El model **BoW** és un model basat en freqüències.
-* Es pot entendre com una suma dels vectors one-hot.
-* Els vectors generats són **independents** de la semàntica.
-* El nombre del token es pot entendre com a **ordre** i en molts casos no és així. Aquesta discrepància pot afectar a la qualitat del model.
-
-![right fit](../images%2Fbag-of-words.png)
-
-### TF-IDF
-
-* El model **TF-IDF** és un model basat en freqüències i inversa de freqüències.
-* Semblant al model **BoW**, però té en compte la freqüència del token en el document i en el conjunt de documents.
-* El valor de cada cel·la és el producte de la freqüència del token en el document i la inversa de la freqüència del token en el conjunt de documents.
-* Dona més importància als tokens que apareixen en pocs documents. Raó: els tokens que apareixen en molts documents no solen aportar informació rellevant.
-
-### Word Embeddings
-
-* Com ja hem vist, els _embeddings_ generats per Word2Vec són vectors de _n_ dimensions.
-* Per a representar un text pot utilitzar-se la mitjana dels _embeddings_ de les paraules que el formen.
-* Els vectors generats són **densos**, de **longitud fixa** i amb **sentit semàntic**.
-* Facilita calcular la similitud entre paraules i textos.
-
-### Transformers
-
-* Els **transformers** són models complexos basats en xarxes neuronals recurrents.
-* Poden aprendre la semàntica del text i generar els seus propis _embeddings_ utilitzant el mecansime d'**atenció**.
-* Demostren un gran rendiment en moltes tasques, com pot ser el càlcul de la similitud entre textos.
-* Són complexos i necessiten un entrenament previ amb un gran volum de dades.
-
 ## Similitud entre textos
 
 * La similitud entre textos és una mesura que indica com de semblants són dos textos.
@@ -298,19 +283,17 @@ model.wv.most_similar("Gavi")
 
 ### Técniques per a calcular la similitud entre textos
 
-* **Basades en en regles**: Es basen en regles predefinides; fàcils d'implementar i útils per a casos senzills.
+* **Basades en regles**: Es basen en regles predefinides; fàcils d'implementar i útils per a casos senzills.
     * **Distància de Levenshtein**: És el nombre mínim d'operacions per a transformar una cadena en una altra.
     * **Distància de Hamming**: És el nombre de posicions en les quals dues cadenes de la mateixa longitud difereixen.
     * **Recompte de paraules**: És el nombre comú de paraules entre dos textos.
     * **Distància de Jaccard**: És el nombre de paraules comunes entre dos textos dividit pel nombre total de paraules dels dos textos.
-
 * **Basades en característiques sintàctiques**: Es basen en les característiques sintàctiques i gramaticals dels textos. Impliquen un procés de **parsejat** dels textos per analitzar la seva
   estructura sintàctica.
 * **Basades en característiques semàntiques**: Es basen en les característiques semàntiques dels textos. Aquí models com Word2Vec són molt útils, al permetre representar el significat contextual de
   les paraules.
     * **Word Mover's Distance**: Mesura la distància entre dos textos com la distància entre els vectors de les paraules dels dos textos.
     * **Similitud del cosinus**: Utilitza el cosinus de l'angle entre ells.
-
 * **Basades en l'aprenentatge automàtic**: Es basen en l'aprenentatge automàtic per a calcular la similitud entre textos.
     * **BERT i GPT**: Models de llenguatge basats en xarxes neuronals que pot ser utilitzat per a calcular la similitud entre textos.
     * **Universal Sentence Encoder**: Model específicament entrenat per al _transfer learning_ (aprenentatge per a la transferència; utilitzar un model entrenat per a una tasca per a una altra).
@@ -322,13 +305,29 @@ model.wv.most_similar("Gavi")
 * **Agrupació de textos**: Útil per a agrupar textos similars en clusters.
 * **Búsqueda de resposte**: Per a trobar la resposta a una pregunta es busquen texts semblants a la pregunta.
 
-# Anàlisi de sentiments
+### Word Embeddings
+
+* Les técniques clàssiques d'NLP es basen en representacions no semàntiques com BoW o TF-IDF.
+* Les modernes es basen en LLMs (Language Models) i Word Embeddings.
+* Com ja hem vist, els _embeddings_ generats per Word2Vec són vectors de _n_ dimensions.
+* Per a representar un text pot utilitzar-se la mitjana dels _embeddings_ de les paraules que el formen.
+* Els vectors generats són **densos**, de **longitud fixa** i amb **sentit semàntic**.
+* Facilita calcular la similitud entre paraules i textos.
+
+### LLMS (Language Models)
+
+* Els **LLMs** són models complexos basats en xarxes neuronals recurrents i l'arquitectura **Transformer**.
+* Poden aprendre la semàntica del text i generar els seus propis _embeddings_ utilitzant el mecansime d'**atenció**.
+* Demostren un gran rendiment en moltes tasques, com pot ser el càlcul de la similitud entre textos.
+* Són complexos i necessiten un entrenament previ amb un gran volum de dades.
+
+# Classificació de textos i anàlisi de sentiments
 
 ![](../images%2Fsentiment.png)
 
 ## Anàlisi de sentiments
 
-* L'anàlisi de sentiments és una de les tasques més utilitzades en el processament del llenguatge natural.
+* L'anàlisi de sentiments és un tipus de classificació i una de les tasques més utilitzades en el processament del llenguatge natural.
 * L'objectiu és determinar l'actitud d'un autor respecte a un tema o producte.
 * Es basa en la **polaritat** del text, que pot ser **positiva**, **negativa** o **neutra**.
 * També poden buscar-se emocions concretes, com pot ser **alegria**, **tristesa**, **ira**, etc.
@@ -345,7 +344,7 @@ model.wv.most_similar("Gavi")
 
 ## Preprocessament del text
 
-* El **tractament** de textos facilita obtindre bons resultats en NLP.
+* El **tractament** de textos facilita obtenir bons resultats en NLP.
 * Permet reduïr la **dimensionalitat** dels textos, eliminar el soroll i capturar la semàntica.
 * Algunes de les tècniques més utilitzades són:
     * **Tokenització**: vist anteriorment.
@@ -358,15 +357,15 @@ model.wv.most_similar("Gavi")
 
 * Com ja hem vist, la tokenització és el procés de dividir un text en tokens.
 * Els tokens poden ser paraules, subparaules, signes de puntuació, etc.
-* Facilita un anàlisi més profund del text i l'extreure característiques rellevants.
-* Ex: "El Barça està en crisi"  $$\rightarrow$$ `["El", "Barça", "està", "en", "crisi"]`.
+* Facilita una anàlisi més profund del text i extreure característiques rellevants.
+* Ex: "El Barça està en crisi" $$\rightarrow$$ `["El", "Barça", "està", "en", "crisi"]`.
 
 ### Preprocessament: normalització
 
 * La **normalització** implica el·liminar els elements que no aporten informació.
     * Nombres, signes de puntuació, etc.
 * També implica convertir el text a un format estàndard, passant a minúscules i llevant espais innecessaris, per exemple.
-    * Ex: "El Barça està en crisi! 😡"  $$\rightarrow$$ "el barça està en crisi".
+    * Ex: "El Barça està en crisi! 😡" $$\rightarrow$$ "el Barça està en crisi".
 * La normalització facilita la comparació entre textos i la detecció de paraules clau.
 
 ### Preprocessament: eliminació d'stopwords
@@ -374,14 +373,14 @@ model.wv.most_similar("Gavi")
 * Les **stopwords** són paraules que no aporten informació al text.
 * Són paraules molt comunes en un idioma, com pot ser articles, preposicions, etc.
 * Els textos després de processar-se amb stopwords són més fàcils de tractar i més ràpids de processar.
-* Ex: "El Barça està en crisi"  $$\rightarrow$$ `["Barça", "crisi"]`.
+* Ex: "El Barça està en crisi" $$\rightarrow$$ `["Barça", "crisi"]`.
 
 ### Preprocessament: stemming i lematització
 
 * El **stemming** i la **lematització** són tècniques per a convertir les paraules a la seva forma base i facilitar l'agrupació de paraules relacionades.
 * L'**stemming** és un procés heurístic basat en regles, mentre que la **lematització** és un procés basat en coneixements lingüístics.
     * Ex d'stemming: "jugar", "jugaré", "jugarà"  $$\rightarrow$$ "jug".
-    * Ex de lematització: "jugar", "jugaré", "jugarà"  $$\rightarrow$$ "jugar".
+    * Ex de lematització: "jugar", "jugaré", "jugarà" $$\rightarrow$$ "jugar".
 * El stemming és més ràpid, però la lematització és més precisa.
 
 ### Preprocessament: negacions i modalitats
@@ -499,7 +498,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
     * Són els models més utilitzats en l'actualitat.
     * Necessiten un entrenament previ amb un **gran** volum de dades (_corpus_)
     * Mostren la capacitat d'entendre el context, la semàntica i la sintàxis del text.
-
 * El mecanisme d'atenció és un mecanisme que permet a les xarxes neuronals aprendre a **centrar-se** en les parts importants de les seves entrades.
 * És un mecanisme que imita el comportament humà.
 * Podem entendre'l com una **capa** que s'afegeix a una xarxa neuronal.
