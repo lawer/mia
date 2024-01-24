@@ -7,6 +7,8 @@ has_toc: false
 
 # 3. Búsqueda en espais d'estats
 
+## Material
+
 | Material                                                                    |                                                                                                                                                 Enllaç |
 |:----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Presentacio](3.2-busqueda.pdf)                                             |                           [![PDF](https://img.shields.io/badge/PDF-3.--busqueda.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](3.2-busqueda.pdf) |
