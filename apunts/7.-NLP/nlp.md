@@ -16,6 +16,7 @@ has_toc: false
 
 | Exemple                                                     |                                                                                                                                                                                      Enllaç |
 |:------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Introducció al NLP](1.-introduccio_nlp.ipynb)              |           [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/1.-introduccio_nlp.ipynb) |
 | [Representació del text](2.-classificacio_text_keras.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/22.-classificacio_text_keras.ipynb) |
 | [Models de llenguatge](3.-models_llenguatge.ipynb)          |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/3.-models_llenguatge.ipynb) |
 
@@ -23,6 +24,5 @@ has_toc: false
 
 | Exercici                                                                     |                                                                                                                                                                                    Enllaç |
 |:-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Introducció al NLP](1.-introduccio_nlp.ipynb)                               |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/1.-introduccio_nlp.ipynb) |
 | [Classificador de preguntes en temàtiques](4.-classificador_preguntes.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/3.-classificador_preguntes.ipynb) |
 | [Anàlisi de sentiments IMDB](5.-analisi_sentiment_imdb.ipynb)                |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/7.-NLP/4.-analisi_sentiment_imdb.ipynb) |
