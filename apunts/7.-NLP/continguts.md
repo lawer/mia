@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Apunts Processament del llenguatge natural
 parent: 7. Processament del llenguatge natural
 math: mathjax3
@@ -9,7 +9,7 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
-![NLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp](../images%2FNLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp)
+![NLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp](images%2FNLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp)
 
 # Processament del llenguatge natural
 
@@ -17,7 +17,7 @@ math: mathjax3
 * Se centra en la **comprensió** i **generació** de llenguatge humà.
 * Un dels camps més actius i complexos de la IA.
 
-![right fit](../images%2Fperiodic-table-of-nlp-tasks-high.png)
+![right fit](images%2Fperiodic-table-of-nlp-tasks-high.png)
 
 ## Aplicacions
 
@@ -28,7 +28,7 @@ math: mathjax3
 * Anàlisi de sentiments.
 * Classificació de text.
 
-## Introducció
+## Introducció (I)
 
 * Camp multidisciplinari que combina:
     * Lingüística.
@@ -36,6 +36,9 @@ math: mathjax3
     * Ciències cognitives.
     * Informàtica.
     * etc.
+
+## Introducció (II)
+
 * És un problema **difícil** perquè:
     * El llenguatge humà és **ambigu**.
     * El llenguatge humà és **ric**.
@@ -45,7 +48,7 @@ math: mathjax3
 
 # El text com a dada
 
-![](../images%2Ftext.jpg)
+![](images%2Ftext.jpg)
 
 ## Introducció
 
@@ -85,11 +88,12 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * Ex: `the shit` és un sinònim de `the best` en anglès que no apareix en WordNet.
 * Les solucions modernes es basen en les representacions del text.
 
-## Representacions del text
+## Representacions del text (I)
 
 * Els ordinadors necessiten representar el text com a dades numèriques.
+* Necessitarem un **vocabulari** que relacioni les unitats de text amb els números.
 * Quina unitat de text triem per a representar el text i com ho fem?.
-* Aquestes decisions determinaran la **complexitat** del model i la **qualitat** del resultat.
+* Aquestes decisions determinaran la **complexitat** del model, el tamany del **vocabulari** i la **precisió** del model.
 * Els models de representació del text són **molt importants** en el processament del llenguatge natural.
 * A continuació veurem algunes de les tècniques més utilitzades.
 
@@ -100,16 +104,14 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * El model ha de ser molt complex, ja que ha d'aprendre a combinar els caràcters per a formar paraules.
     * Exemple: "AND" es pot representar com a $$[65, 78, 68]$$
 
-![right fit](../images%2Fascii-character-map.png)
+![right fit](images%2Fascii-character-map.png)
 
 ## Representació de paraules
 
 * Cada paraula és representada per un número.
     * El diccionari serà molt gran, ja que cada paraula serà una entrada en el diccionari.
     * El model serà més senzill, ja que les paraules són unitats semàntiques.
-    * Exemple: "BE" es pot representar com a 2.
-
-![inline 50%](../images%2Fbow_2.png)
+    * Exemple: Si el nostre vocabulari és `["gat", "gos", "cavall", "ocell", "peix"]`, llavors "gat" es pot representar com a $$1$$ i "cavall" com a $$3$$.
 
 ## Representació de subparaules
 
@@ -119,7 +121,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
         * Permet representar paraules rares i que no estan en el vocabulari.
         * Útil per a llengües amb moltes paraules compostes i derivades.
 
-## Tokens i tokenització
+## Tokens i tokenització (I)
 
 * Indepententment de l'enfocament triat, el text ha de ser **dividit** en **tokens**.
     * Ex: "New York in winter" $$\rightarrow$$ `["New", "York", "in", "winter"]`
@@ -128,16 +130,72 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * **Tokenització**: procés de dividir un text en tokens i que facilita el tractament i comprensió del text.
     * És un procés **no trivial**. Depèn de la llengua i del domini.
         * Exemple: "New York" és un token o dos?
+
+## Tokens i tokenització (II)
+
 * Qüestions a tindre en compte:
     * **Puntuació**: es considera un token o no?. Pot variar la interpretació del text.
     * **Majuscules/Minúscules**: es consideren tokens diferents o no?.
     * **Stopwords**: paraules que no aporten informació al text (articles, preposicions, etc.).
     * **Idioma i domini**: el procés de tokenització depèn de l'idioma i del domini del text.
-* **N-grams**: seqüències de n tokens consecutius.
-  * Algunes paraules tenen significat propi, però la seva combinació amb altres paraules també té un significat. Ex: "New York".
-  * Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
-  * Bigrams: seqüències de dos tokens consecutius, trigrams: seqüències de tres tokens consecutius, etc.
-  * Problema: augmenta molt el vocabulari i la complexitat del model.
+
+## Tokens i tokenització (III)
+
+* N-grams: seqüències de n tokens consecutius.
+* Algunes paraules tenen significat propi, però la seva combinació amb altres paraules també té un significat. Ex: "New York".
+* Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
+* Bigrams: seqüències de dos tokens consecutius, trigrams: seqüències de tres tokens consecutius, etc.
+* Problema: augmenta molt el vocabulari i la complexitat del model.
+
+## Vectorització (I)
+
+* Encara que els tokens son molt útils, presenten alguns problemes:
+    * No són fàcils de manipular per a les màquines.
+    * No són fàcils de comparar.
+    * No permeten calcular la similitud entre paraules i textos.
+* La **vectorització** és el procés de convertir un text en un vector numèric.
+* Els vectors són més fàcils de manipular per a les màquines i de comparar.
+
+## Vectorització (II)
+
+* Algunes técniques de vectorització (embeddings):
+    * **NNLM**: model basat en xarxes neuronals. El nombre de dimensions és fixe.
+    * **Word2Vec**: cada paraula és un vector en un espai semàntic. El nombre de dimensions és fixe.
+    * **FastText**: creat per Facebook. Similar a Word2Vec, però permet representar paraules rares i que no estan en el vocabulari.
+    * **GloVe**: model basat en NNLM i Word2Vec.
+
+## Word2Vec
+
+* Es basa en la idea que les paraules amb significats similars apareixen en contextos similars.
+    * "You shall know a word by the company it keeps" (J.R. Firth, 1957).
+* Quan una paraula **p** apareix en un text, les paraules properes a `p` són el seu **context**.
+* Els diferents contextos de `p` defineixen el significat de `p`.
+
+![inline 70%](images%2FCaptura%20de%20pantalla%202024-01-14%20a%20las%2021.35.56.png)
+
+## Word2Vec (II)
+
+* Per cada paraula obtenim un vector **dens** i de **longitud fixa**.
+* Cada dimensió del vector representa un **aspecte semàntic** de la paraula.
+* Representen la seva **posició** en un espai semàntic n-dimensional.
+* Els vectors de paraules amb contextos semblants estaran propers en l'espai semàntic.
+
+> Facilita calcular la similitud entre paraules.
+
+![right fit](images%2Fembeddings.png)
+
+## Word2Vec (III)
+
+* Els vectors de parales també s'anomenen **embeddings** o **representacions de xarxa**.
+* **FastText** és una variant de **Word2Vec** que utilitza subparaules.
+    * Permet representar paraules rares i que no estan en el vocabulari.
+    * Útil per a llengües amb moltes paraules compostes i derivades.
+* Els _embeddings_ generats poden ser utilitzats en una gran varietat de tasques, com pot ser la classificació de textos, anàlisi de sentiments, etc.
+* Són models que necessiten un entrenament previ amb totes les paraules del vocabulari. A continuació veurem un exemple.
+
+# Representació de textos
+
+![](images%2Ftf-idf.png)
 
 ## Representació de textos
 
@@ -157,7 +215,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * Els vectors generats són **independents** de la semàntica.
 * No facilita calcular la similitud entre paraules i textos.
 
-![right fit](../images%2Fone_hot.png)
+![right fit](images%2Fone_hot.png)
 
 ### Bag of Words (BoW)
 
@@ -166,7 +224,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * Els vectors generats són **independents** de la semàntica.
 * El nombre del token es pot entendre com a **ordre** i en molts casos no és així. Aquesta discrepància pot afectar a la qualitat del model.
 
-![right fit](../images%2Fbag-of-words.png)
+![right fit](images%2Fbag-of-words.png)
 
 ### TF-IDF
 
@@ -175,43 +233,13 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * El valor de cada cel·la és el producte de la freqüència del token en el document i la inversa de la freqüència del token en el conjunt de documents.
 * Dona més importància als tokens que apareixen en pocs documents. Raó: els tokens que apareixen en molts documents no solen aportar informació rellevant.
 
-## Vectorització
+### Word Embeddings
 
-* La **vectorització** és el procés de convertir un text en un vector numèric.
-* Els vectors són més fàcils de manipular per a les màquines i de comparar.
-* Algunes técniques de vectorització (e
-* mbeddings):
-    * **NNLM**: model basat en xarxes neuronals. El nombre de dimensions és fixe.
-    * **Word2Vec**: cada paraula és un vector en un espai semàntic. El nombre de dimensions és fixe.
-    * **FastText**: creat per Facebook. Similar a Word2Vec, però permet representar paraules rares i que no estan en el vocabulari.
-    * **GloVe**: model basat en NNLM i Word2Vec.
+* Els _embeddings_ generats per Word2Vec són vectors de _n_ dimensions.
+* Els vectors generats són **densos**, de **longitud fixa** i amb **sentit semàntic**.
+* Per a representar un **text** pot utilitzar-se la mitjana dels _embeddings_ de les paraules que el formen, el màxim, la suma, etc.
 
-## Word2Vec
-
-* Es basa en la idea que les paraules amb significats similars apareixen en contextos similars.
-    * "You shall know a word by the company it keeps" (J.R. Firth, 1957).
-* Quan una paraula **p** apareix en un text, les paraules properes a `p` són el seu **context**.
-* Els diferents contextos de `p` defineixen el significat de `p`.
-
-![inline 70%](../images%2FCaptura%20de%20pantalla%202024-01-14%20a%20las%2021.35.56.png)
-
-* Per cada paraula obtenim un vector **dens** i de **longitud fixa**.
-* Cada dimensió del vector representa un **aspecte semàntic** de la paraula.
-* Representen la seva **posició** en un espai semàntic n-dimensional.
-* Els vectors de paraules amb contextos semblants estaran propers en l'espai semàntic.
-
-> Facilita calcular la similitud entre paraules.
-
-![right fit](../images%2Fembeddings.png)
-
-* Els vectors de parales també s'anomenen **embeddings** o **representacions de xarxa**.
-* **FastText** és una variant de **Word2Vec** que utilitza subparaules.
-    * Permet representar paraules rares i que no estan en el vocabulari.
-    * Útil per a llengües amb moltes paraules compostes i derivades.
-* Els _embeddings_ generats poden ser utilitzats en una gran varietat de tasques, com pot ser la classificació de textos, anàlisi de sentiments, etc.
-* Són models que necessiten un entrenament previ amb totes les paraules del vocabulari. A continuació veurem un exemple.
-
-## Generació de _embeddings_ amb Word2Vec i la llibreria Gensim
+#### Generació de _embeddings_ amb Word2Vec i la llibreria Gensim
 
 ```python
 from gensim.models import Word2Vec
@@ -227,7 +255,7 @@ sentences = [
 model = Word2Vec(sentences, min_count=1)
 ```
 
-## Visualització dels _embeddings_
+#### Visualització dels _embeddings_
 
 ```python
 gavi = model.wv["Gavi"]
@@ -242,7 +270,7 @@ print(gavi)
 ]
 ```
 
-## Busquem paraules similars
+#### Busquem paraules similars
 
 ```python
 model.wv.most_similar("Gavi")
@@ -260,7 +288,7 @@ model.wv.most_similar("Gavi")
  ('company', -0.7287455797195435)]
 ```
 
-## Similitud del cosinus
+#### Similitud del cosinus
 
 * Els _embeddings_ generats per Word2Vec són vectors de _n_ dimensions.
 * Per a calcular la similitud entre dos vectors s'utilitza la **similitud del cosinus**.
@@ -270,9 +298,84 @@ model.wv.most_similar("Gavi")
     * 1: vectors iguals.
 * Aquesta mesura és molt utilitzada en el processament del llenguatge natural.
 
+# Conversió de text a veu i veu a text
+
+![DALL·E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg](images%2FDALL%C2%B7E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg)
+
+## Reconeixement de veu i transcripció automàtica
+
+* La **síntesi de veu** i la **transcripció automàtica** són tasques de **processament del llenguatge natural**.
+    * La síntesi de veu és el procés de **convertir un arxiu de text en un arxiu d'àudio**.
+    * La transcripció automàtica és el procés de **convertir un arxiu d'àudio en un arxiu de text**.
+* Ambdues són unes tècniques molt importants en el processament del llenguatge natural; encara que no solen estar en primer pla.
+* En aquest apartat veurem com funcionen aquestes tècniques.
+
+## Síntesi de veu
+
+* La **síntesi de veu** és el procés de **convertir un arxiu de text en un arxiu d'àudio**.
+* Aquesta tecnologia ha millorat molt en els últims anys, gràcies als models de llenguatge i a les xarxes neuronals.
+* Hi ha diversos enfocaments, a continuació veurem els més importants.
+
+![right](images%2FVoice-Synthesis.png)
+
+### Síntesi de veu: concatenació de sons
+
+* Es basa en la grabació de **sons** i la seva **concatenació** per a formar paraules i frases.
+* Es busquen els sons més adaptats al context i es combinen de manera que soni el més natural possible.
+* Requereix una gran quantitat de dades i dificulata adapatar-se a contextos nous.
+
+### Síntesi de veu: síntesi basada en formants
+
+* Els **formants** són les **frequencies** de les cordes vocàliques.
+* S'ajusten els formants per representar els diferents sons i es combinen per a formar paraules i frases.
+* La síntesi de formants permet obtindre veus clares i precises.
+* Requereixen menys dades que la síntesi per concatenació de sons, tenen, però menys naturalitat i expressivitat.
+
+### Síntesi de veu: síntesi basada en unitats
+
+* Es basa en la **síntesi d'unitats** més petites que les paraules, com ara **fonemes** o **diftongs**.
+    * Aquestes unitats s'enmagatzemen en una base de dades i es combinen de forma dinàmica segons el text.
+    * La síntesi de unitats permet obtenir veus més naturals i expressives.
+    * Requereixen menys dades que la síntesi per concatenació de sons.
+
+### Síntesi de veu: síntesi basada en xarxes neuronals (I)
+
+* Les xarxes neuronals són capaces de sintetitzar veus a partir de text.
+* Aquestes xarxes s'entrenen amb grans quantitats de dades de veu i text i són capaces de sintetitzar veus molt naturals.
+* S'utiltzen Xarxes Neural Recurrents (RNN) específiques, com ara les xarxes LSTM o GRU o models més moderns com ara les xarxes Transformer.
+* Aquestes xarxes són capaces de sintetitzar veus molt naturals i expressives, sempre que tinguin suficientes dades d'entrenament i suficient capacitat de procés.
+
+### Síntesi de veu: síntesi basada en xarxes neuronals (II)
+
+* Aquests models es basen en els espectrogrames de les veus (representació de la veu en funció del temps i la freqüència).
+* Funcionen en quatre etapes:
+    * **Etapa de seqüència a seqüència**: el text es converteix en una seqüència de vectors.
+    * **Etapa de seqüència a espectrograma**: els vectors es converteixen en espectrogrames.
+    * **Etapa de síntesi**: els espectrogrames es converteixen en veu.
+    * **Etapa de postprocessament**: es millora la qualitat de la veu.
+
+![right fit](images%2Fpsesgmsndedform00a.jpg)
+
+## Transcripció automàtica
+
+* En l'actualitat el **reconeixement de veu** és una tasca **molt madura**.
+* Els assistents virtuals com **Siri**, **Alexa** o **Google Assistant** són capaços de reconèixer veu amb una gran precisió.
+* Si volem implementar un sistema de reconeixement de veu, podem utilitzar eines com **Google Cloud Speech-to-Text** o **IBM Watson Speech to Text**.
+* Aquestes eines es basen en les matèixes tècniques que hem vist per a la síntesi de veu.
+
+## Models de reconeixement de veu i transcripció automàtica
+
+* Els models de reconeixement de veu i transcripció automàtica són models de **seqüència a seqüència**.
+* Aquests models són capaços de convertir una seqüència d'entrada en una seqüència de sortida.
+* Alguns dels models més importants són:
+    * **Whisper**: model de reconeixement de veu de **OpenAI**.
+    * **DeepSpeech**: model de reconeixement de veu de **Mozilla**.
+    * **Hugging Face Speech2Text**: model de reconeixement de veu de **Hugging Face**.
+    * **Bark**: Model de generació de veu de **Suno Labs**.
+
 # Similitud entre textos
 
-![](../images%2Fsimilarity.jpg)
+![](images%2Fsimilarity.jpg)
 
 ## Similitud entre textos
 
@@ -281,19 +384,25 @@ model.wv.most_similar("Gavi")
 * El càlcul de la similitud entre textos, però, és una tasca **difícil**.
 * Anem a veure algunes tècniques de les més utilitzades.
 
-### Técniques per a calcular la similitud entre textos
+### Técniques per a calcular la similitud entre textos (I)
 
 * **Basades en regles**: Es basen en regles predefinides; fàcils d'implementar i útils per a casos senzills.
     * **Distància de Levenshtein**: És el nombre mínim d'operacions per a transformar una cadena en una altra.
     * **Distància de Hamming**: És el nombre de posicions en les quals dues cadenes de la mateixa longitud difereixen.
     * **Recompte de paraules**: És el nombre comú de paraules entre dos textos.
     * **Distància de Jaccard**: És el nombre de paraules comunes entre dos textos dividit pel nombre total de paraules dels dos textos.
+
+### Técniques per a calcular la similitud entre textos (II)
+
 * **Basades en característiques sintàctiques**: Es basen en les característiques sintàctiques i gramaticals dels textos. Impliquen un procés de **parsejat** dels textos per analitzar la seva
   estructura sintàctica.
 * **Basades en característiques semàntiques**: Es basen en les característiques semàntiques dels textos. Aquí models com Word2Vec són molt útils, al permetre representar el significat contextual de
   les paraules.
     * **Word Mover's Distance**: Mesura la distància entre dos textos com la distància entre els vectors de les paraules dels dos textos.
     * **Similitud del cosinus**: Utilitza el cosinus de l'angle entre ells.
+
+### Técniques per a calcular la similitud entre textos (II)
+
 * **Basades en l'aprenentatge automàtic**: Es basen en l'aprenentatge automàtic per a calcular la similitud entre textos.
     * **BERT i GPT**: Models de llenguatge basats en xarxes neuronals que pot ser utilitzat per a calcular la similitud entre textos.
     * **Universal Sentence Encoder**: Model específicament entrenat per al _transfer learning_ (aprenentatge per a la transferència; utilitzar un model entrenat per a una tasca per a una altra).
@@ -323,7 +432,7 @@ model.wv.most_similar("Gavi")
 
 # Classificació de textos i anàlisi de sentiments
 
-![](../images%2Fsentiment.png)
+![](images%2Fsentiment.png)
 
 ## Anàlisi de sentiments
 
@@ -432,9 +541,14 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 * **Transformers**: com ja hem vist, els transformers són models específics per a NLP molt potents. Un dels models més utilitzats és **BERT**, de qüal utilitzarem una implementació en la segona
   pràctica.
 
+## Xarxes neuronals per a l'anàlisi de sentiments
+
+* Les xarxes neuronals són un dels models més utilitzats per a l'anàlisi de sentiments.
+* Les xarxes neuronals són capaces d'aprendre els patrons en el text i de generar els seus propis _embeddings_.
+
 # Models de llenguatge
 
-![](../images%2Flanguage-model.png)
+![](images%2Flanguage-model.png)
 
 ## Models de llenguatge
 
@@ -442,6 +556,25 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 * Hem comentat que els models de llenguatge són eines molt potentes que poden ser utilitzades en moltes tasques.
 * En aquesta secció veurem què són els models de llenguatge i com funcionen.
 * També veurem alguns dels més utilitzats i les seves aplicacions.
+
+## Definició
+
+* Un **model de llenguatge** assigna una probabilitat a una seqüència de paraules.
+    * Per tant, permet predir la següent paraula d'una seqüència.
+    * Ex: "El barça està en ___" $$\rightarrow$$ `[{crisi: 0.8}, {forma: 0.1}, {casa: 0.1}]`
+* Es basen en la idea que les paraules d'una seqüència no són independents, sinó que depenen de les paraules anteriors.
+* Permeten calcular la "**validesa**" d'una seqüència de paraules.
+    * No és el mateix que la **correcció** d'una seqüència de paraules.
+    * Intentem modelar el llenguatge humà, amb els seus **matissos i ambigüitats**.
+
+## Entrenament de models de llenguatge
+
+* Els models de llenguatge necessiten un entrenament previ amb un **gran** volum de dades.
+* Aquestes dades s'anomenen **corpus**.
+* Els corpus són **molt grans** i difícils de generar.
+* Poden ser **generats manualment** o **automàticament**.
+* Varien en contingut: notícies, llibres, xats, etc.
+* Poden incloure **etiquetes** per a entrenar models supervisats.
 
 ## Aplicacions dels models de llenguatge
 
@@ -455,16 +588,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
     * **Classificació de text**: classificar un text en una categoria.
     * **Generació de textos**: generar textos a partir d'un tema o un estil.
 
-### Definició
-
-* Un **model de llenguatge** assigna una probabilitat a una seqüència de paraules.
-    * Per tant, permet predir la següent paraula d'una seqüència.
-    * Ex: "El barça està en ___" $$\rightarrow$$ `[{crisi: 0.8}, {forma: 0.1}, {casa: 0.1}]`
-* Es basen en la idea que les paraules d'una seqüència no són independents, sinó que depenen de les paraules anteriors.
-* Permeten calcular la "**validesa**" d'una seqüència de paraules.
-    * No és el mateix que la **correcció** d'una seqüència de paraules.
-    * Intentem modelar el llenguatge humà, amb els seus **matissos i ambigüitats**.
-
 ## Història: Models basats en regles
 
 * Els models de llenguatge són un dels camps més antics del processament del llenguatge natural.
@@ -475,7 +598,8 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 
 ## Història: Models estocàstics
 
-* Els models basats en regles van ser substituïts per models basats en **estadístiques**, més flexibles i que poden modelar millor el llenguatge humà.
+* Els models basats en regles van ser substituïts per models basats en **estadístiques**, més flexibles i que poden modelar millor el llenguatge humà. Els models de Markov van ser els primers en
+  obtenir resultats acceptables.
 * Es basen en la idea que les paraules d'una seqüència no són independents, sinó que depenen de les paraules anteriors. Exemples:
     * **N-gram**: modela cada paraula en funció de les n paraules anteriors. (uni, bi, tri, etc).
     * **Skip-gram**: modela cada paraula en funció de les n paraules anteriors i posteriors.
@@ -498,46 +622,236 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
     * Són els models més utilitzats en l'actualitat.
     * Necessiten un entrenament previ amb un **gran** volum de dades (_corpus_)
     * Mostren la capacitat d'entendre el context, la semàntica i la sintàxis del text.
-* El mecanisme d'atenció és un mecanisme que permet a les xarxes neuronals aprendre a **centrar-se** en les parts importants de les seves entrades.
-* És un mecanisme que imita el comportament humà.
-* Podem entendre'l com una **capa** que s'afegeix a una xarxa neuronal.
-* Els transformers són models basats en xarxes neuronals que utilitzen una variant del mecanisme d'atenció anomenada **self-attention**.
 
-## Entrenament de models de llenguatge
+# Arquitectures per a NLP
 
-* Els models de llenguatge necessiten un entrenament previ amb un **gran** volum de dades.
-* Aquestes dades s'anomenen **corpus**.
-* Els corpus són **molt grans** i difícils de generar.
-* Poden ser **generats manualment** o **automàticament**.
-* Varien en contingut: notícies, llibres, xats, etc.
-* Poden incloure **etiquetes** per a entrenar models supervisats.
+![](images/recursive_nn_nlp.png)
 
-## Parts d'un LLM
+## Models ocults de Markov
 
-* Els models de llenguatge basats en transformers són models molt complexos.
-* Tenen dues parts principals:
-    * **Encoder**: codifica el text d'entrada en un vector.
-    * **Decoder**: decodifica el vector en un text de sortida.
-    * Segons quines parts estiguen presents o no podran ser **bidireccionals** o **unidireccionals**.
-    * Aixó determinarà també les tasques que poden realitzar.
+* Els **models ocults de Markov** (HMM) són models estocàstics que permeten modelar seqüències de paraules.
+* Es basen en la idea que les paraules d'una seqüència no són independents, sinó que depenen de les paraules anteriors.
+* Els HMM són capaços de modelar la probabilitat de transició entre paraules.
+* El seu principal desavantatge és que no poden modelar dependències a llarg termini.
 
-* Encoder: codifica el text d'entrada en un vector.
-* Els models `encoder-only` són **unidireccionals** i s'especialitzen en "entendre" el text d'entrada i, per tant, són útils per a tasques com la classificació de text.
-* Solament necessiten el **encoder** per a realitzar la tasca perqué no necessiten generar un text de sortida.
-* Utilitats: classificació de text, anàlisi de sentiments, etc.
-* Ex: **BERT**, RoBERTa, ALBERT, ELECTRA, etc.
+![right fit](images%2Fmarkov.png)
 
-* Decoder: decodifica el vector en un text de sortida.
-* Els models `Decoder-only` solament poden accedir a les paraules anteriors i, per tant, són útils per a tasques com la generació de text.
-* Utilitats: generació de text, escritura creativa, etc.
-* Ex: **GPT**, GPT-2, GPT-3, Mixtral, etc.
+## Xarxes neuronals recurrents
 
-* Encoder + Decoder: codifica el text d'entrada en un vector i decodifica el vector en un text de sortida.
-* Els models `Encoder-Decoder` poden accedir a les paraules anteriors i posteriors i, per tant, són útils per a tasques com la traducció automàtica.
-* Utilitats: traducció automàtica, resum de text, esquematització de text, etc.
-* Ex: **T5**, BART, etc.
+* Com ja hem parlat, les **xarxes neuronals recurrents** (RNN) són xarxes neuronals que poden processar seqüències de longitud vaariablede forma eficient.
+* En aquesta secció veuren en més detall com funcionen les RNN i com són utilitzades en NLP.
 
-## Utilització dels LLM
+![right fit](images%2Frnn.png)
+
+### Memòria
+
+* La principal característica de les RNN és que tenen **memòria**.
+* Com s'aconsegueix aquesta memòria?
+    * La sortida d'una neurona pot anar determinada per la sortida d'ella mateixa.
+    * Aixó permet que la informació puga processar-se un una mateixa capa, sense necessitat de capa addicional.
+    * Apareix un nou problema: el **desvaiment del gradient**. Quina informació es manté i quina no?
+    * Per aixó han anat diferents aquitectures al llarg del temps.
+
+### Xarxes Recurrents Tradicionals
+
+* La sortida d'una neurona pot anar determinada per la sortida d'ella mateixa.
+* Cada neurona té dues entrades: el **valor actual** i el **valor anterior**.
+* Aquesta memòria és inherenment de curta durada.
+* Per facilitar la comprensió es solen mostrar de forma **desplegada**, com veurem després.
+* Són una millora respecte als models ocults de Markov, però molt vulnerables als problemes de desvaiment del gradient.
+
+### Xarxes Recurrents Tradicionals
+
+![inline fit 100%](images%2Frnn_unfolded.png)
+
+Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
+
+### LSTM (Long Short-Term Memory)
+
+* Les **LSTM** són una millora de les RNN tradicionals implementant una **memòria a llarg termini**.
+* Tenen una **memòria interna** que pot ser **mantinguda**, **modificada** o **eliminada** segons les necessitats.
+* L'estat de la *cel·la* es gestiona utilitzant les **portes**.
+* **Millora el desvaiment** del gradient **a costa de ser més complexa i costosa** de processar.
+
+### LSTM (Long Short-Term Memory)
+
+![fit inline](images%2Flstm.png)
+
+### GRU (Gated Recurrent Unit)
+
+* Les **GRU** són una altra millora de les RNN tradicionals implementant una **memòria a llarg termini**.
+* No tenen una **memòria interna** com les LSTM, però són més senzilles i més ràpides de processar.
+* Hi ha dues portes: **porta d'actualització** i **porta de reinici**. En conjunt determinen la quantitat d'informació que es manté i la que es descarta.
+* **Millora el desvaiment** del gradient sense ser tan complexa com les LSTM.
+
+### GRU (Gated Recurrent Unit)
+
+![fit inline](images%2Fgru.png)
+
+## Transformers
+
+![](images%2Ftransformers.png)
+
+### Introducció
+
+* Com ja hem comentat anteriorment, els **transformers** són models basats en xarxes neuronals que utilitzen el mecanisme d'**atenció**.
+* Són els models més utilitzats en l'actualitat en el processament del llenguatge natural.
+* La seva arquitectura innovadora permet obtenir resultats molt millors que els models anteriors i aprofitar el **parallelisme** i les **GPU**.
+* Per la seva complexitat anem a veurel's en més detall.
+
+### Orige
+
+* Els transformers van ser introduïts per **Vaswani et al.** en el 2017.
+    * El paper original es titula "_Attention is All You Need_".
+* Els transformers van ser dissenyats per a millorar el rendiment dels models de llenguatge.
+* El seu primer ús va ser en la tasca de traducció automàtica.
+* Va posar en primer pla el mecanisme d'atenció com a eina fonamental en el processament del llenguatge natural.
+
+### Arquitectura dels transformers (I)
+
+* Els transformers són models moderns i molt complexos.
+* Per contra, si veiem les seves parts per separat, és més fàcil entendre'l's.
+* Anem a veure punt per punt les seves parts principals i com funcionen.
+
+![right fit](images%2Ftransformers_arquitectura.png)
+
+### Arquitectura dels transformers (II)
+
+* En un nivell superficial, els transformers funcionen com una caixa negra.
+* Reben com a entrada un text i generen com a sortida un text.
+* La seva complexitat rau en la seva arquitectura interna.
+* Els transformers tenen *dos* parts principals: **encoders** i **decoders**.
+
+![right fit](images%2Ftransformer_ml01-768x644.png)
+
+### Arquitectura dels transformers (III)
+
+* L'entrada passa per una sèrie de capes d'encoders.
+* A continuació, la sortida dels encoders passa per una sèrie de capes de decoders.
+* En el paper original: **6 capes d'encoders i 6 capes de decoders**.
+* També podem passar un "**target**" com a entrada, **per entrenar**
+
+![right fit](images%2Ftransformer_ml02-768x644.png)
+
+### Encoders i decoders
+
+* Els **encoders** i **decoders** són les parts principals dels transformers.
+* A nivell intern son semblants i comparteixen moltes característiques.
+    * Ambdós tenen en l'entrada una (o més) capa d'**atenció** i com a sortida una capa **feed-forward** (xarxa neuronal normal).
+* La diferència principal és que els **encoders** solament tenen una capa d'atenció, mentre que els **decoders** tenen dues.
+
+![right fit](images%2Ftransformer_ml03-768x644-1.png)
+
+### Embeddings i posicions
+
+* Els transformers utilitzen **embeddings** per a representar les paraules (de 512 dimensions en el paper original).
+* A més, utilitzen el **positional encoding** per a representar la posició de les paraules en la seqüència.
+    * Básicament una funció sinusoidal que varia segons la posició de la paraula, per lo que el mateix vector en diferents posicions serà un poc diferent.
+    * $$PE_{(pos, 2i)} = \sin(pos / 10000^{2i/d_{model}})$$
+* Aquest encoding manté la informació de la posició de les paraules en la seqüència; al mateix temps que permet **enviar tots els tokens a la xarxa al mateix temps**.
+
+![right fit](images%2Ftransformers_arquitectura_inputs.png)
+
+### Encoder
+
+* Els **encoders** estan compostos per tres capes:
+    * **Self-attention**: per a calcular la importància de cada paraula en la seqüència. A continuació veurem com funciona.
+    * **Feed-forward**: per a processar la informació obtinguda de l'atenció.
+    * **Normalization i conexions residuals**: per a evitar el desvaiment del gradient i facilitar el seu entrenament.
+
+![right fit](images%2Ftransformer_ml04-768x644.png)
+
+### Self-attention (I)
+
+* El **self-attention** és el mecanisme clau dels transformers.
+* Permet a la xarxa "centrar-se" en les parts importants de la seqüència.
+    * Ex: en la frase _"El gat gris va a la casa"_ sabem que $$gris$$ i $$gat$$ estan relacionats. Com ho pot saber la xarxa?
+* Els transformers creen un "**Soft dictionary**" d'atencions en les paraules de la seqüència. Així, l'atenció de $$gris$$ en $$gat$$ serà $$1$$ i en $$casa$$ serà $$-1$$.
+* El que el diccionari siga "soft" vol dir que pot anar modificant-se.
+    * En la frase "El gat va a la casa gris" l'atenció de $$gris$$ en $$casa$$ serà $$1$$.
+
+### Self-attention (II)
+
+* Per calcular el self-attention es generen tres matrius a partir de la seqüència d'entrada: **Q** (query), **K** (key) i **V** (value)
+* **Q** i **K** són matrius que representen la seqüència d'entrada i **V** és la matriu que representa el valor de cada paraula.
+* Per obtindre l'atenció multiplicarem **Q** per la transposada de **K**
+    * Obtindrem la similitud entre les paraules.
+* El resultat el multiplicarem pel valor de **V**.
+    * Obtindrem la matriu d'atencions.
+
+![right fit](images%2Fejemplo-self-attention-768x336.png)
+
+### Self-attention (III)
+
+* Els transformers utilitzen el **multi-head attention**.
+* Aquesta tècnica consisteix en calcular el self-attention amb diferents grups de dimensions.
+* Els transformers utilitzen **8** caps de self-attention en el paper original.
+* Dels resultats es fa un promig i el resultat, segons els estudis es molt més significatiu.
+* És important ressaltar que tot el procñes d'atenció es paral·lel i accelerat per la GPU (multiplicació de matrius), per lo que es molt ràpid.
+
+### Altres tipus d'atenció
+
+* A més del **self-attention**, els transformers utilitzen altres tipus d'atenció:
+    * **Cross-attention**: les entrades del decoder són les sortides de l'encoder. Això permet al encoder condicionar el decoder, donant-li informació sobre el context.
+    * **Masked attention**: en el decoder, les paraules futures no poden ser utilitzades per a calcular l'atenció. Això evita que el model "mire al futur".
+
+![right fit](images%2Ftransformers_arquitectura_attention-1.png)
+
+### Normalització i conexions residuals
+
+* Les conexions residuals són una tècnica que permeten evitar el desvaiment del gradient.
+    * Aquest problema es produeix quan les xarxes són molt profundes.
+    * Les conexions residuals permeten que els valors d'entrada es mantinguen en les capes posteriors.
+* La normalització permet que els valors d'entrada es mantinguen en un rang determinat.
+    * Això facilita el seu entrenament i millora el seu rendiment.
+
+![right fit](images%2Ftransformers_arquitectura_addnorm.png)
+
+### Feed-forward
+
+* La capa **feed-forward** és una capa de xarxa neuronal normal.
+* La seva funció és processar la informació obtinguda de l'atenció.
+* Hi haurà dues capes de _dropout_ per a evitar l'overfitting i una funció d'activació no lineal (ReLU en el paper original).
+
+![right fit](images%2Ftransformers_arquitectura_mlp.png)
+
+### Decoder
+
+* Els **decoders** són molt semblants als **encoders**.
+* En els models normals en l'entranament utilitzem la sortida esperada per validar el resultat.
+* Per contra, en els models de llenguatge, el **target** es passa com a entrada per a entrenar el model.
+* Això permet que el model aprenga a generar el text de sortida.
+
+![right fit](images%2Ftransformer_ml05-768x644.png)
+
+### Sortida final del model
+
+* Recordem que utilitzem múltiples capes d'encoders i decoders.
+* La sortida final del model és la sortida de l'última capa de decoders i passa per una capa de **softmax**.
+* Aquesta sortida és un vector de longitud igual al nombre de paraules del vocabulari.
+* Aquest vector representa la probabilitat de cada paraula en el vocabulari (de 0 a 1).
+* La paraula amb més probabilitat serà la paraula de sortida.
+
+### Aplicacions dels transformers
+
+* Els transformers són models molt potents i poden ser utilitzats en moltes tasques de NLP.
+* Més enllà del NLP també s'utilitzen en altres tasques com les següents:
+    * **Visió per computador**: s'està utilitzant per la classificació d'imatges i altres. _Vision Transformer (ViT)_.
+    * **Series temporals**: és un us molt obvi en realitat, ja que les seqüències de paraules són molt semblants a les seqüències de fets en el temps.
+    * **Generatius**: s'utilitzen per a generar textos, imatges, etc.
+    * **Aprenentatge per reforç**: s'utilitzen per a entrenar agents en entorns complexos.
+* Tots aquests usos porten a pensar que els transformers són una de les eines més potents de l'actualitat i que poden arribar a substituir molts dels models actuals.
+
+### Classificació dels LLM
+
+* `Encoder-only`: No necessiten generar un text de sortida, processen el text d'entrada.
+    * Utilitats: classificació de text, anàlisi de sentiments, etc. Ex: **BERT**, RoBERTa, ALBERT, ELECTRA, etc.
+* `Decoder-only`: No processen el text d'entrada, solament generen un text de sortida.
+    * Utilitats: generació de text, escritura creativa, etc. Ex: **GPT-X**, Mixtral, Aguila...
+* `Encoder + Decoder`: Processen el text d'entrada i generen un text de sortida.
+    * Utilitats: traducció automàtica, resum, esquematització, etc. Ex: **T5**, BART, etc.
+
+### Utilització dels LLM
 
 * Els transformers són models molt complexos i necessiten un entrenament previ amb un gran volum de dades.
 * Normalment s'utilitzen models ja entrenats i que poden ser utilitzats per a diferents tasques.
