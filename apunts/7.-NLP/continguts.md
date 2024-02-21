@@ -9,7 +9,7 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
-![NLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp](images%2FNLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp)
+![NLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp](../images%2FNLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.webp)
 
 # Processament del llenguatge natural
 
@@ -17,7 +17,7 @@ math: mathjax3
 * Se centra en la **comprensió** i **generació** de llenguatge humà.
 * Un dels camps més actius i complexos de la IA.
 
-![right fit](images%2Fperiodic-table-of-nlp-tasks-high.png)
+![right fit](../images%2Fperiodic-table-of-nlp-tasks-high.png)
 
 ## Aplicacions
 
@@ -28,7 +28,7 @@ math: mathjax3
 * Anàlisi de sentiments.
 * Classificació de text.
 
-## Introducció (I)
+## Introducció
 
 * Camp multidisciplinari que combina:
     * Lingüística.
@@ -36,9 +36,6 @@ math: mathjax3
     * Ciències cognitives.
     * Informàtica.
     * etc.
-
-## Introducció (II)
-
 * És un problema **difícil** perquè:
     * El llenguatge humà és **ambigu**.
     * El llenguatge humà és **ric**.
@@ -48,7 +45,7 @@ math: mathjax3
 
 # El text com a dada
 
-![](images%2Ftext.jpg)
+![](../images%2Ftext.jpg)
 
 ## Introducció
 
@@ -88,7 +85,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * Ex: `the shit` és un sinònim de `the best` en anglès que no apareix en WordNet.
 * Les solucions modernes es basen en les representacions del text.
 
-## Representacions del text (I)
+## Representacions del text
 
 * Els ordinadors necessiten representar el text com a dades numèriques.
 * Necessitarem un **vocabulari** que relacioni les unitats de text amb els números.
@@ -104,7 +101,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * El model ha de ser molt complex, ja que ha d'aprendre a combinar els caràcters per a formar paraules.
     * Exemple: "AND" es pot representar com a $$[65, 78, 68]$$
 
-![right fit](images%2Fascii-character-map.png)
+![right fit](../images%2Fascii-character-map.png)
 
 ## Representació de paraules
 
@@ -121,7 +118,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
         * Permet representar paraules rares i que no estan en el vocabulari.
         * Útil per a llengües amb moltes paraules compostes i derivades.
 
-## Tokens i tokenització (I)
+## Tokens i tokenització
 
 * Indepententment de l'enfocament triat, el text ha de ser **dividit** en **tokens**.
     * Ex: "New York in winter" $$\rightarrow$$ `["New", "York", "in", "winter"]`
@@ -130,24 +127,18 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * **Tokenització**: procés de dividir un text en tokens i que facilita el tractament i comprensió del text.
     * És un procés **no trivial**. Depèn de la llengua i del domini.
         * Exemple: "New York" és un token o dos?
-
-## Tokens i tokenització (II)
-
 * Qüestions a tindre en compte:
     * **Puntuació**: es considera un token o no?. Pot variar la interpretació del text.
     * **Majuscules/Minúscules**: es consideren tokens diferents o no?.
     * **Stopwords**: paraules que no aporten informació al text (articles, preposicions, etc.).
     * **Idioma i domini**: el procés de tokenització depèn de l'idioma i del domini del text.
-
-## Tokens i tokenització (III)
-
 * N-grams: seqüències de n tokens consecutius.
 * Algunes paraules tenen significat propi, però la seva combinació amb altres paraules també té un significat. Ex: "New York".
 * Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
 * Bigrams: seqüències de dos tokens consecutius, trigrams: seqüències de tres tokens consecutius, etc.
 * Problema: augmenta molt el vocabulari i la complexitat del model.
 
-## Vectorització (I)
+## Vectorització
 
 * Encara que els tokens son molt útils, presenten alguns problemes:
     * No són fàcils de manipular per a les màquines.
@@ -155,8 +146,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     * No permeten calcular la similitud entre paraules i textos.
 * La **vectorització** és el procés de convertir un text en un vector numèric.
 * Els vectors són més fàcils de manipular per a les màquines i de comparar.
-
-## Vectorització (II)
 
 * Algunes técniques de vectorització (embeddings):
     * **NNLM**: model basat en xarxes neuronals. El nombre de dimensions és fixe.
@@ -171,9 +160,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * Quan una paraula **p** apareix en un text, les paraules properes a `p` són el seu **context**.
 * Els diferents contextos de `p` defineixen el significat de `p`.
 
-![inline 70%](images%2FCaptura%20de%20pantalla%202024-01-14%20a%20las%2021.35.56.png)
-
-## Word2Vec (II)
+![inline 70%](../images%2FCaptura%20de%20pantalla%202024-01-14%20a%20las%2021.35.56.png)
 
 * Per cada paraula obtenim un vector **dens** i de **longitud fixa**.
 * Cada dimensió del vector representa un **aspecte semàntic** de la paraula.
@@ -182,9 +169,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 
 > Facilita calcular la similitud entre paraules.
 
-![right fit](images%2Fembeddings.png)
-
-## Word2Vec (III)
+![right fit](../images%2Fembeddings.png)
 
 * Els vectors de parales també s'anomenen **embeddings** o **representacions de xarxa**.
 * **FastText** és una variant de **Word2Vec** que utilitza subparaules.
@@ -195,9 +180,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 
 # Representació de textos
 
-![](images%2Ftf-idf.png)
-
-## Representació de textos
+![](../images%2Ftf-idf.png)
 
 * Fins ara hem vist com representar paraules.
 * Solament així podrem veure les relacions entre les paraules que el formen.
@@ -215,7 +198,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * Els vectors generats són **independents** de la semàntica.
 * No facilita calcular la similitud entre paraules i textos.
 
-![right fit](images%2Fone_hot.png)
+![right fit](../images%2Fone_hot.png)
 
 ### Bag of Words (BoW)
 
@@ -224,7 +207,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 * Els vectors generats són **independents** de la semàntica.
 * El nombre del token es pot entendre com a **ordre** i en molts casos no és així. Aquesta discrepància pot afectar a la qualitat del model.
 
-![right fit](images%2Fbag-of-words.png)
+![right fit](../images%2Fbag-of-words.png)
 
 ### TF-IDF
 
@@ -300,7 +283,7 @@ model.wv.most_similar("Gavi")
 
 # Conversió de text a veu i veu a text
 
-![DALL·E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg](images%2FDALL%C2%B7E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg)
+![DALL·E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg](../images%2FDALL%C2%B7E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg)
 
 ## Reconeixement de veu i transcripció automàtica
 
@@ -316,7 +299,7 @@ model.wv.most_similar("Gavi")
 * Aquesta tecnologia ha millorat molt en els últims anys, gràcies als models de llenguatge i a les xarxes neuronals.
 * Hi ha diversos enfocaments, a continuació veurem els més importants.
 
-![right](images%2FVoice-Synthesis.png)
+![right](../images%2FVoice-Synthesis.png)
 
 ### Síntesi de veu: concatenació de sons
 
@@ -338,14 +321,12 @@ model.wv.most_similar("Gavi")
     * La síntesi de unitats permet obtenir veus més naturals i expressives.
     * Requereixen menys dades que la síntesi per concatenació de sons.
 
-### Síntesi de veu: síntesi basada en xarxes neuronals (I)
+### Síntesi de veu: síntesi basada en xarxes neuronals
 
 * Les xarxes neuronals són capaces de sintetitzar veus a partir de text.
 * Aquestes xarxes s'entrenen amb grans quantitats de dades de veu i text i són capaces de sintetitzar veus molt naturals.
 * S'utiltzen Xarxes Neural Recurrents (RNN) específiques, com ara les xarxes LSTM o GRU o models més moderns com ara les xarxes Transformer.
 * Aquestes xarxes són capaces de sintetitzar veus molt naturals i expressives, sempre que tinguin suficientes dades d'entrenament i suficient capacitat de procés.
-
-### Síntesi de veu: síntesi basada en xarxes neuronals (II)
 
 * Aquests models es basen en els espectrogrames de les veus (representació de la veu en funció del temps i la freqüència).
 * Funcionen en quatre etapes:
@@ -354,7 +335,7 @@ model.wv.most_similar("Gavi")
     * **Etapa de síntesi**: els espectrogrames es converteixen en veu.
     * **Etapa de postprocessament**: es millora la qualitat de la veu.
 
-![right fit](images%2Fpsesgmsndedform00a.jpg)
+![right fit](../images%2Fpsesgmsndedform00a.jpg)
 
 ## Transcripció automàtica
 
@@ -375,7 +356,7 @@ model.wv.most_similar("Gavi")
 
 # Similitud entre textos
 
-![](images%2Fsimilarity.jpg)
+![](../images%2Fsimilarity.jpg)
 
 ## Similitud entre textos
 
@@ -384,7 +365,7 @@ model.wv.most_similar("Gavi")
 * El càlcul de la similitud entre textos, però, és una tasca **difícil**.
 * Anem a veure algunes tècniques de les més utilitzades.
 
-### Técniques per a calcular la similitud entre textos (I)
+### Técniques per a calcular la similitud entre textos
 
 * **Basades en regles**: Es basen en regles predefinides; fàcils d'implementar i útils per a casos senzills.
     * **Distància de Levenshtein**: És el nombre mínim d'operacions per a transformar una cadena en una altra.
@@ -392,16 +373,12 @@ model.wv.most_similar("Gavi")
     * **Recompte de paraules**: És el nombre comú de paraules entre dos textos.
     * **Distància de Jaccard**: És el nombre de paraules comunes entre dos textos dividit pel nombre total de paraules dels dos textos.
 
-### Técniques per a calcular la similitud entre textos (II)
-
 * **Basades en característiques sintàctiques**: Es basen en les característiques sintàctiques i gramaticals dels textos. Impliquen un procés de **parsejat** dels textos per analitzar la seva
   estructura sintàctica.
 * **Basades en característiques semàntiques**: Es basen en les característiques semàntiques dels textos. Aquí models com Word2Vec són molt útils, al permetre representar el significat contextual de
   les paraules.
     * **Word Mover's Distance**: Mesura la distància entre dos textos com la distància entre els vectors de les paraules dels dos textos.
     * **Similitud del cosinus**: Utilitza el cosinus de l'angle entre ells.
-
-### Técniques per a calcular la similitud entre textos (II)
 
 * **Basades en l'aprenentatge automàtic**: Es basen en l'aprenentatge automàtic per a calcular la similitud entre textos.
     * **BERT i GPT**: Models de llenguatge basats en xarxes neuronals que pot ser utilitzat per a calcular la similitud entre textos.
@@ -432,7 +409,7 @@ model.wv.most_similar("Gavi")
 
 # Classificació de textos i anàlisi de sentiments
 
-![](images%2Fsentiment.png)
+![](../images%2Fsentiment.png)
 
 ## Anàlisi de sentiments
 
@@ -548,7 +525,7 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 
 # Models de llenguatge
 
-![](images%2Flanguage-model.png)
+![](../images%2Flanguage-model.png)
 
 ## Models de llenguatge
 
@@ -634,14 +611,14 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 * Els HMM són capaços de modelar la probabilitat de transició entre paraules.
 * El seu principal desavantatge és que no poden modelar dependències a llarg termini.
 
-![right fit](images%2Fmarkov.png)
+![right fit](../images%2Fmarkov.png)
 
 ## Xarxes neuronals recurrents
 
 * Com ja hem parlat, les **xarxes neuronals recurrents** (RNN) són xarxes neuronals que poden processar seqüències de longitud vaariablede forma eficient.
 * En aquesta secció veuren en més detall com funcionen les RNN i com són utilitzades en NLP.
 
-![right fit](images%2Frnn.png)
+![right fit](../images%2Frnn.png)
 
 ### Memòria
 
@@ -662,7 +639,7 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 
 ### Xarxes Recurrents Tradicionals
 
-![inline fit 100%](images%2Frnn_unfolded.png)
+![inline fit 100%](../images%2Frnn_unfolded.png)
 
 Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 
@@ -673,9 +650,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * L'estat de la *cel·la* es gestiona utilitzant les **portes**.
 * **Millora el desvaiment** del gradient **a costa de ser més complexa i costosa** de processar.
 
-### LSTM (Long Short-Term Memory)
-
-![fit inline](images%2Flstm.png)
+![fit inline](../images%2Flstm.png)
 
 ### GRU (Gated Recurrent Unit)
 
@@ -684,13 +659,11 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * Hi ha dues portes: **porta d'actualització** i **porta de reinici**. En conjunt determinen la quantitat d'informació que es manté i la que es descarta.
 * **Millora el desvaiment** del gradient sense ser tan complexa com les LSTM.
 
-### GRU (Gated Recurrent Unit)
-
-![fit inline](images%2Fgru.png)
+![fit inline](../images%2Fgru.png)
 
 ## Transformers
 
-![](images%2Ftransformers.png)
+![](../images%2Ftransformers.png)
 
 ### Introducció
 
@@ -707,31 +680,27 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * El seu primer ús va ser en la tasca de traducció automàtica.
 * Va posar en primer pla el mecanisme d'atenció com a eina fonamental en el processament del llenguatge natural.
 
-### Arquitectura dels transformers (I)
+### Arquitectura dels transformers
 
 * Els transformers són models moderns i molt complexos.
 * Per contra, si veiem les seves parts per separat, és més fàcil entendre'l's.
 * Anem a veure punt per punt les seves parts principals i com funcionen.
 
-![right fit](images%2Ftransformers_arquitectura.png)
-
-### Arquitectura dels transformers (II)
+![right fit](../images%2Ftransformers_arquitectura.png)
 
 * En un nivell superficial, els transformers funcionen com una caixa negra.
 * Reben com a entrada un text i generen com a sortida un text.
 * La seva complexitat rau en la seva arquitectura interna.
 * Els transformers tenen *dos* parts principals: **encoders** i **decoders**.
 
-![right fit](images%2Ftransformer_ml01-768x644.png)
-
-### Arquitectura dels transformers (III)
+![right fit](../images%2Ftransformer_ml01-768x644.png)
 
 * L'entrada passa per una sèrie de capes d'encoders.
 * A continuació, la sortida dels encoders passa per una sèrie de capes de decoders.
 * En el paper original: **6 capes d'encoders i 6 capes de decoders**.
 * També podem passar un "**target**" com a entrada, **per entrenar**
 
-![right fit](images%2Ftransformer_ml02-768x644.png)
+![right fit](../images%2Ftransformer_ml02-768x644.png)
 
 ### Encoders i decoders
 
@@ -740,7 +709,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
     * Ambdós tenen en l'entrada una (o més) capa d'**atenció** i com a sortida una capa **feed-forward** (xarxa neuronal normal).
 * La diferència principal és que els **encoders** solament tenen una capa d'atenció, mentre que els **decoders** tenen dues.
 
-![right fit](images%2Ftransformer_ml03-768x644-1.png)
+![right fit](../images%2Ftransformer_ml03-768x644-1.png)
 
 ### Embeddings i posicions
 
@@ -750,7 +719,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
     * $$PE_{(pos, 2i)} = \sin(pos / 10000^{2i/d_{model}})$$
 * Aquest encoding manté la informació de la posició de les paraules en la seqüència; al mateix temps que permet **enviar tots els tokens a la xarxa al mateix temps**.
 
-![right fit](images%2Ftransformers_arquitectura_inputs.png)
+![right fit](../images%2Ftransformers_arquitectura_inputs.png)
 
 ### Encoder
 
@@ -759,9 +728,9 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
     * **Feed-forward**: per a processar la informació obtinguda de l'atenció.
     * **Normalization i conexions residuals**: per a evitar el desvaiment del gradient i facilitar el seu entrenament.
 
-![right fit](images%2Ftransformer_ml04-768x644.png)
+![right fit](../images%2Ftransformer_ml04-768x644.png)
 
-### Self-attention (I)
+### Self-attention
 
 * El **self-attention** és el mecanisme clau dels transformers.
 * Permet a la xarxa "centrar-se" en les parts importants de la seqüència.
@@ -770,8 +739,6 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * El que el diccionari siga "soft" vol dir que pot anar modificant-se.
     * En la frase "El gat va a la casa gris" l'atenció de $$gris$$ en $$casa$$ serà $$1$$.
 
-### Self-attention (II)
-
 * Per calcular el self-attention es generen tres matrius a partir de la seqüència d'entrada: **Q** (query), **K** (key) i **V** (value)
 * **Q** i **K** són matrius que representen la seqüència d'entrada i **V** és la matriu que representa el valor de cada paraula.
 * Per obtindre l'atenció multiplicarem **Q** per la transposada de **K**
@@ -779,9 +746,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * El resultat el multiplicarem pel valor de **V**.
     * Obtindrem la matriu d'atencions.
 
-![right fit](images%2Fejemplo-self-attention-768x336.png)
-
-### Self-attention (III)
+![right fit](../images%2Fejemplo-self-attention-768x336.png)
 
 * Els transformers utilitzen el **multi-head attention**.
 * Aquesta tècnica consisteix en calcular el self-attention amb diferents grups de dimensions.
@@ -795,7 +760,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
     * **Cross-attention**: les entrades del decoder són les sortides de l'encoder. Això permet al encoder condicionar el decoder, donant-li informació sobre el context.
     * **Masked attention**: en el decoder, les paraules futures no poden ser utilitzades per a calcular l'atenció. Això evita que el model "mire al futur".
 
-![right fit](images%2Ftransformers_arquitectura_attention-1.png)
+![right fit](../images%2Ftransformers_arquitectura_attention-1.png)
 
 ### Normalització i conexions residuals
 
@@ -805,7 +770,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * La normalització permet que els valors d'entrada es mantinguen en un rang determinat.
     * Això facilita el seu entrenament i millora el seu rendiment.
 
-![right fit](images%2Ftransformers_arquitectura_addnorm.png)
+![right fit](../images%2Ftransformers_arquitectura_addnorm.png)
 
 ### Feed-forward
 
@@ -813,7 +778,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * La seva funció és processar la informació obtinguda de l'atenció.
 * Hi haurà dues capes de _dropout_ per a evitar l'overfitting i una funció d'activació no lineal (ReLU en el paper original).
 
-![right fit](images%2Ftransformers_arquitectura_mlp.png)
+![right fit](../images%2Ftransformers_arquitectura_mlp.png)
 
 ### Decoder
 
@@ -822,7 +787,7 @@ Desenvolupament d'una xarxa neuronal recurrent per tres passos de temps.
 * Per contra, en els models de llenguatge, el **target** es passa com a entrada per a entrenar el model.
 * Això permet que el model aprenga a generar el text de sortida.
 
-![right fit](images%2Ftransformer_ml05-768x644.png)
+![right fit](../images%2Ftransformer_ml05-768x644.png)
 
 ### Sortida final del model
 
