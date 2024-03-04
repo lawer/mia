@@ -1,0 +1,8 @@
+{
+    "markdown.marp.themes": [
+        "https://raw.githubusercontent.com/dracula/marp/master/dracula/dracula.css",
+        "https://raw.githubusercontent.com/eyssette/teaching-theme-for-marp/master/themes/teaching.css",
+        "https://raw.githubusercontent.com/ttyskg/marp-themes/master/themes/uranus.css",
+        "https://raw.githubusercontent.com/lawer/marp_themes/main/lawer.css"
+    ]
+}
