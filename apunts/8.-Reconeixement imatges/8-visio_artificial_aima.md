@@ -197,20 +197,6 @@ h1, p {
 
 ---
 
-### Tipus de segmentació
-
-* Tipus de segmentació:
-  * **Segmentació binària**: es segmenta la imatge en dues regions: objecte i fons.
-  * **Segmentació semàntica**: es segmenta en categories predefinides.
-  * **Segmentació d'instàncies**: es segmenta en instàncies d'objectes.
-  * **Segmentació panòptica**: es segmenta en categories predefinides, però també es segmenten les instàncies d'objectes.
-
----
-
-![bg fit](../images/segment.png)
-
----
-
 <!-- 
 _class: invert lead
 -->
@@ -236,8 +222,9 @@ h1, p {
 
 * Les tasques de visió artificial són aquelles que es poden realitzar a partir d'imatges.
 * Veurem algunes de les més importants:
-  * **Preprocessament d'imatges**
-  * **Classificació d'imatges i Reconeixement d'objectes**
+  * **Processament d'imatges**
+  * **Classificació d'imatges**
+  * **Reconeixement d'objectes**
   * **Segmentació**
   * **Reconstrucció**
 
@@ -548,4 +535,42 @@ h1, p {
 
 ---
 
+### Models preentrenats
 
+* Entrenar una XNC és una tasca molt costosa.
+  * Sovint es fa servir **models preentrenats**
+  * XNCs entrenades amb moltes dades i que ha obtingut molt bons resultats.
+* Exemples:
+  * **Yolo**: xarxa neuronal convolucional per a la detecció d'objectes en temps real. Solament necessita una passada per la imatge i és molt ràpida.
+  * **DETR**: Es basa en l'arquitetura Transformer i és capaç de detectar tots els objectes en una sola passada.
+
+---
+
+## Segmentació
+
+* La **segmentació** és una tasca de visió artificial que consisteix en **separar la imatge en diferents regions significatives**.
+* L'objectiu principal de la segmentació és **agrupar** els píxels de la imatge en **regions** que tinguin alguna propietat comuna.
+* Facilita la **comprensió** de la imatge i permet facilita tasques com la **classificació**, el **reconeixement d'objectes**, el **seguiment**, l'anàlisi d'escenes o la **reconstrucció 3D**.
+  
+---
+
+### Tipus de segmentació (I)
+
+* Tipus de segmentació:
+  * **Segmentació binària** o d'umbral: es segmenta la imatge en dues regions: objecte i fons. (Ex: _thresholding_)
+  * **Segmentació per vores**: es segmenta la imatge en regions separades per vores. (Ex: _Canny_)
+  * **Segmentació semàntica**: assignem a cada píxel una categoria predefinida. (Ex: _mask-RCNN_)
+  
+---
+
+### Tipus de segmentació (II)
+  
+  * **Segmentació en superpíxels**: es segmenta la imatge en superpíxels (regions de píxels compactes i coherents)  (Ex: _SLIC_)
+  * **Segmentació d'instàncies**: es segmenta en instàncies d'objectes. (Ex: _mask-RCNN_)
+  * **Segmentació panòptica**: es segmenta en categories predefinides, però també es segmenten les instàncies d'objectes. (Ex: _mask-RCNN_)
+
+--- 
+
+![bg fit](../images/segment.png)
+
+---
