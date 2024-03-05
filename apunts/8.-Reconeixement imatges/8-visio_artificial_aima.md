@@ -14,7 +14,7 @@ h1, p {
   color: #FFFFFF;
   font-weight: bold;
   text-shadow:
-    2px 2px 3px #000000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -80,6 +80,17 @@ Models d'intel·ligència artificial
 <!-- 
 _class: invert lead
 -->
+
+
+<style scoped>
+h1, p {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
+
 
 # Característiques de les imatges
 
@@ -181,8 +192,8 @@ _class: invert lead
 
 * Anomenen **segments** a les **regions** de la imatge que tenen alguna propietat comuna (color, textura, forma, etc.).
 * Per definit els segments hi ha dós enfocaments principals:
-  * **Basat en límits**: es busquen els límits de les regions. Es pot entendre com un problema de *classificació* on cada pizel pertany o no a un segment i es soluciona amb tècniques de machine learning i models preentrenats.
-  * **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de b i es soluciona amb tècniques com k-means, etc.
+  * **Basat en límits**: es busquen els límits de les regions. Es pot entendre com un problema de *classificació* on cada pixel pertany o no a un segment i es soluciona amb tècniques de machine learning i models preentrenats.
+  * **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de *clustering* i s'utilitzen tècniques com _k-means_.
 
 ---
 
@@ -204,6 +215,17 @@ _class: invert lead
 _class: invert lead
 -->
 
+
+<style scoped>
+h1, p {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
+
+
 # Tasques de visió artificial
 
 ![bg opacity](../images/opencv_tasks.jpg)
@@ -216,8 +238,6 @@ _class: invert lead
 * Veurem algunes de les més importants:
   * **Preprocessament d'imatges**
   * **Classificació d'imatges i Reconeixement d'objectes**
-  * **Reconstrucció 3D**
-  * **Localització**
   * **Segmentació**
   * **Reconstrucció**
 
@@ -371,10 +391,8 @@ _class: invert lead
 
 #### Convolució
 
-* La **convolució** permet reduir la quantitat d'informació de la imatge i ens permetrá enviar a la xarxa solament les **característiques més rellevants.**
-* Aquest procés millora la precissió de la xarxa i la fa més ràpida.
-* La convolució es fa amb **filtres** que es van aplicant a la imatge.
-* Els filtres solen ser matrius de mida petita (3x3, 5x5, etc.).
+* La **convolució** permet reduir la quantitat d'informació de la imatge i ens permetrá enviar a la xarxa solament les **característiques més rellevants.** .Aquest procés millora la precissió de la xarxa i la fa més ràpida.
+* La convolució es fa amb **filtres** que es van aplicant a la imatge (matrius de mida petita - 3x3, 5x5, etc.).
 * El resultat de la convolució es una **imatge més petita** que l'original, anomenada **mapa de característiques**.
 * Si no volem reduir la mida de la imatge, podem fer servir **padding**.
 
@@ -401,12 +419,12 @@ _class: invert lead
 * El **pooling** és una tècnica que es fa servir per tal de reduïr la mida de la imatge encara més.
 * Hi ha diferents tipus de pooling, però el més comú és el **max pooling**.
 * Es sol utilitzar una finestra de mida petita (2x2, 3x3, etc.) i es pren el valor màxim de la finestra.
-* El resultat és un **mapa de característiques poolat**. Aquest mapa de característiques es passarà a la següent capa de la xarxa.
+* El resultat és un **mapa de característiques poolat**. Aquest mapa de característiques es passarà a la següent capa.
 * El pooling obliga a la xarxa a ser **invariant a petites transformacions**.
 
 ---
 
-#### Regularització i capes totalment connectades
+#### Regularització
 
 * Després de les capes de convolució i pooling, es solen afegir capes de **regularització**.
 * Les capes de regularització són capes que ajuden a la xarxa a **generalitzar**.
@@ -416,16 +434,118 @@ _class: invert lead
 
 ---
 
-### Aplanament i capes totalment connectades
+#### Aplanament i capes totalment connectades
 
 * Entre les capes de regularització i les capes totalment connectades, es sol fer un **aplanament**.
 * L'aplanament és el procés de convertir el **mapa de característiques** en un **vector**.
 * Aquest vector es passarà a les capes totalment connectades.
 * Les capes totalment connectades són les capes que es fan servir per tal de **classificar** la imatge.
+* Aquestes capes són les que es fan servir per tal de **reduir la dimensió** del vector de característiques.
 
 ---
 
-### Perqué les XNN són bones per a la classificació d'imatges?
+#### Estructura d'una xarxa neuronal convolucional
 
-* Les xarxes neuronals convolucionals són molt bones per a la classificació d'imatges perquè són capaces d'**aprendre les característiques més rellevants** de la imatge.
-* 
+![bg right:64% fit](../images/estructura_cnn.png)
+
+---
+
+#### Funcionament d'una CNN (I)
+
+* En les imatges els pixels individuals no tenen gaire sentit
+  * Sabem que un 8 tindrà pixels negres en la part central pero no sabem exactament on.
+* Els patrons locals si que poden ser importants
+  * Sabem que el 0 i el 8 tenen cercles, el 1 i el 7 tenen línies verticals, etc.
+* Les relacions entre patrons també son interessants
+  * El 1 té dues linies, el 6 una linia i un cercle, etc.
+* Estratégia general: **extreure patrons locals i després combinar-los per extreure patrons més globals**
+
+---
+
+#### Funcionament d'una CNN (II)
+
+* Les xarxes neuronals convolucionals (CNN) són una forma de fer això
+  * Una capa está formada per una convolució + ReLU
+  * La convolució mesura la similitud entre un filtre i la finestra. Cada filtre detecta un patró diferent.
+  * La ReLU posa a zero els valors negatius i poténcia els positius, identificant patrons.
+  * Si posem una capa darrere, que reba les dades d'altres capes i les combini, l'efecte serà el de tindre una finestra més gran.
+
+---
+
+#### Funcionament d'una CNN (III)
+
+* Si continuem afegint capes, les finestres es faran més grans i més complexes
+* Això permetrà identificar patrons més globals
+* Finalment, les capes totalment connectades combinaran tots els patrons per tal de classificar la imatge
+* Aquesta és la idea bàsica d'una CNN
+  * Extreure patrons locals
+  * Combinar-los per extreure patrons globals
+  * Classificar la imatge
+
+---
+
+#### Arquitectures de xarxes neuronals convolucionals
+
+* Hi ha moltes arquitectures de xarxes neuronals convolucionals aprofitables, però les més conegudes són:
+  * **VGG-16**: xarxa de 16 capes. Va aconseguir un 92.7% d'exactitud en el dataset ImageNet en 2014.
+  * **ResNet**: xarxa de 152 capes, basada en la idea de **residual learning**. Va aconseguir un 96.4% d'exactitud en el dataset ImageNet en 2015.
+  * **Inception**: xarxa de 22 capes, basada en la idea de **factorització de convolucions**. Va aconseguir un 97.3% d'exactitud en el dataset ImageNet en 2015.
+
+---
+
+## Reconeixement d'objectes
+
+* El **reconeixement d'objectes** és una tasca més complexa que la classificació d'imatges.
+* Mentres que la classificació d'imatges consisteix en **identificar** l'objecte que hi ha a la imatge, el reconeixement d'objectes consisteix en **identificar** els objectes que hi ha a la imatge i **localitzar-los** (dibuixar un rectangle al voltant de l'objecte - _bounding box_).
+* Les classes d'objectes a identificar estaran **predefinides**. D'aquesta manera, el sistema podrà identificar si hi ha un gos, un cotxe, una persona, etc.
+
+---
+
+### Procediment bàsic	
+
+* El procediment básic per fer el reconeixement d'objectes és el següent:
+  1. Definim una _finestra_ que es mourà per tota la imatge.
+  2. Passem la finestra per tota la imatge i en cada posició passem la imatge per una XNC.
+  3. Ens quedem en les puntuacions més altes i ignorem la resta.
+  4. Resolem conflictes i reduïm la quantitat de _bounding boxes_.
+
+---
+
+### Problemes en el procediment bàsic
+
+* **Forma de la finestra**: si la finestra és massa gran, no podrem identificar objectes petits. Si és massa petita, no podrem identificar objectes grans.
+* **Selecció de finestres**: si passem la finestra per tota la imatge, el procés serà molt lent. Si passem la finestra per poques posicions, podrem perdre objectes.
+* **Resolució de conflictes**: si hi ha dues finestres que identifiquen el mateix objecte, quina és la correcta?
+* **Determinació del _bounding box_**: com decidim quina és la mida i la posició del _bounding box_?
+
+---
+
+#### Selecció de finestres
+
+* En una imatge de tamany N x N, hi ha N^4 finestres possibles.
+* Les finestres amb objectes solen ser coherents en textura i color.
+* Les que tallen objectes solen tindre regions o vores que travessen la finestra.
+* Necessitem un mecanisme que mesure de forma eficient les probabilitats de que una finestra contingui un objecte.
+* Una de les opcions és utilitzar a una **RPN** (Region Proposal Network). 
+
+---
+
+#### Resolució de conflictes
+
+* Si hi ha dues finestres que identifiquen el mateix objecte, com decidim quina és la correcta?
+* Una opció és utilitzar un **algorisme de _non-maximum suppression_**.
+* Aquest algorisme elimina les finestres que tenen una puntuació baixa, ordena les finestres segons la puntuació i elimina les finestres que tenen una superposició alta amb una finestra amb puntuació més alta.
+* Aquest algorisme és molt eficient i permet reduir la quantitat de finestres.
+
+---
+
+#### Determinació del _bounding box_
+
+* Com decidim quina és la mida i la posició del _bounding box_?
+* La finestra que identifica l'objecte sol tenir una mida i una posició que no coincideixen exactament amb la mida i la posició de l'objecte.
+* Per tal de determinar la mida i la posició del _bounding box_, es fa servir un **algorisme de regressió**.
+* Aquest algorisme calcula la mida i la posició del _bounding box_ a partir de la mida i la posició de la finestra, utilitzant les característiques obteses per la XNC.
+
+---
+
+
