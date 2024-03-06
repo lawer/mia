@@ -604,3 +604,19 @@ h1, p {
 
 ---
 
+### Percepció
+
+* Anomenem **percepció** a la tasca d'**entendre el nostre entorn**.
+* Entendre el que fan les persones ens permetrá crear interfícies humà-màquina més naturals, observant el que fem i actuant en conseqüència.
+* 
+
+---
+
+#### * Algunes de les aplicacions:
+  * **Seguretat**: construir sistemes de seguretat més efectius i menys intrusius.
+  * **Urbanisme**: entendre com es mouen les persones per tal de dissenyar millor les ciutats.
+  * **Esports**: analitzar videos de partits per tal de millorar l'entrenament i extreure estadístiques.
+  * 
+  
+
+---
