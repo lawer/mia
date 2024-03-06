@@ -221,12 +221,12 @@ h1, p {
 ## Tasques
 
 * Les tasques de visió artificial són aquelles que es poden realitzar a partir d'imatges.
+* Hi ha moltes tasques de visió artificial, però totes tenen en comú que es basen en l'**anàlisi** de les imatges.
 * Veurem algunes de les més importants:
   * **Processament d'imatges**
   * **Classificació d'imatges**
   * **Reconeixement d'objectes**
   * **Segmentació**
-  * **Reconstrucció**
 
 ---
 
@@ -574,3 +574,33 @@ h1, p {
 ![bg fit](../images/segment.png)
 
 ---
+
+<!-- 
+_class: invert lead
+-->
+
+
+<style scoped>
+h1, p {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
+
+# Aplicacions
+
+![bg opacity](../images/computer_vision_applications.png)
+
+---
+
+## Aplicacions
+
+* Fins ara hem vist quins són els conceptes bàsics de la visió artificial i com s'apliquen en la pràctica.
+* Les aplicacions s'han multiplicat en els últims anys, gràcies a l'aparició d'un munt de llibreries i models preentrenats.
+* Aquesta facilitat ha fet que la visió artificial sigui una de les àrees més actives de la inte, adaptant-se a molts camps i necessitats (mèdiques, industrials, de seguretat, etc.).
+* A continuació veurem algunes de les aplicacions més importants.
+
+---
+
