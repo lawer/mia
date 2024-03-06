@@ -643,5 +643,59 @@ h1, p {
 
 ### Creació d'imatges
 
-- La **reconstrucció 3D** és una tasca de visió artificial que consisteix en **reconstruir** un objecte o una escena en **tres dimensions** a partir d'una o més imatges.
-- 
+- Les xarxes neuronals són capaces de **crear imatges** a partir de text o d'altres imatges.
+- Un dels usos està relacionat amb el _self-supervised learning_.
+  - Quan no tenim moltes dades etiquetades, podem utilitzar xarxes per tal de crear més dades.
+  - Aquestes dades poden ser utilitzades per tal de millorar el rendiment de les xarxes.
+  - Utilitzarem un _autoencoder_ per tal de crear imatges.
+
+---
+
+#### Autoencoder
+
+- Un **autoencoder** és una arquitectura de xarxa neuronal que es fa servir per tal de **reconstruir** la imatge d'entrada; moltes vegades, però, amb modificacions.
+- L'autoencoder té tres parts:
+  - **Encoder**: pren la imatge d'entrada i la converteix en un **vector de característiques**.
+  - **Bottleneck**: el vector de característiques. És la part més important de l'autoencoder.
+  - **Decoder**: pren el vector de característiques i el converteix en la imatge d'entrada.
+
+---
+
+![bg fit](../images/autoencoder.png)
+
+---
+
+#### Utilitats de l'autoencoder
+
+- **Reducció de la dimensió**: l'autoencoder pot ser utilitzat per tal de reduir la dimensió de la imatge. 
+- **Denioising**: al generar el vector de característiques, guardem la informació més important de la imatge, eliminant el soroll.
+- **Super-resolució**: partim d'una imatge de baixa resolució i la convertim en una imatge de alta resolució.
+- **Creació d'imatges**: la part del decoder pot ser utilitzada per tal de crear imatges, partint de vectors de característiques aleatoris.
+
+---
+
+### Autoencoders Variacionals
+
+- Els **autoencoders variacionals** són una variant dels autoencoders que permeten generar imatges.
+- El punt de partida és el mateix, però, en lloc de generar un vector de característiques, generen una **distribució de probabilitat**.
+- Aquesta distribució de probabilitat es fa servir per tal de generar imatges.
+- Generarem imatges amb un aspecte similar a les imatges d'entrada, però no iguals.
+
+---
+
+### GANs (Generative Adversarial Networks)
+
+- Les **GANs** són un tipus de xarxes neuronals que es fan servir per tal de generar imatges.
+- Les GANs estan formades per dues xarxes:
+  - **Generador**: genera imatges a partir de vectors de característiques aleatoris.
+  - **Discriminador**: intenta distingir entre imatges reals i imatges generades.
+  - Les dues xarxes es **entrenen enfrontades**. El generador intenta enganyar el discriminador i el discriminador intenta no ser enganyat.
+
+---
+
+### GANs (Generative Adversarial Networks)
+
+
+![bg fit](../images/GANS.png)
+
+---
