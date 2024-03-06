@@ -604,19 +604,47 @@ h1, p {
 
 ---
 
-### Percepció
+### Percepció de persones
 
-* Anomenem **percepció** a la tasca d'**entendre el nostre entorn**.
-* Entendre el que fan les persones ens permetrá crear interfícies humà-màquina més naturals, observant el que fem i actuant en conseqüència.
-* 
+* Les persones són el **motiu més important** de les imatges.
+* Entendre el que fan les persones ens permetrá crear **interfícies humà-màquina** més naturals, observant el que fem i actuant en conseqüència.
+* Aquesta és una tasca molt complexa, que requereix la combinació de moltes tasques de visió artificial.
+* S'ha avançat molt en els últims anys, però encara hi ha molts reptes per resoldre.
+* A continuació veurem en que ens pot ajudar.
 
 ---
 
-#### * Algunes de les aplicacions:
+#### Usos 
   * **Seguretat**: construir sistemes de seguretat més efectius i menys intrusius.
   * **Urbanisme**: entendre com es mouen les persones per tal de dissenyar millor les ciutats.
   * **Esports**: analitzar videos de partits per tal de millorar l'entrenament i extreure estadístiques.
-  * 
-  
+  * **Estalvi energètic**: engegar i parar sistemes de climatització i llum en funció de la presència de persones.
+ 
+ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ---
+
+#### Detecció de la postura
+
+* Alguns aspectes com la **detecció de la postura** (determinar la posició de les articulacions) estan molt avançats.
+* Es relativament fàcil, ja que les articulacions tenen una forma i una posició concreta, les relacions entre les articulacions són conegudes i els efectes sobre las perspectiva són previsibles.
+* Per contra, preveure el que està fent una persona és molt més difícil.
+
+![bg right:30% fit](../images/pose.png)
+
+---
+
+#### Descripció de l'acció
+
+* La **descripció de l'acció** és una tasca molt més complexa.
+* Consisteix en **entendre** què està fent una persona en una imatge.
+* Moltes vegades és necessari **entendre el context** per tal de saber què està fent una persona.
+* Aquesta dependència del context fa difícil assegurar el correcte funcionament dels sistemes.
+  * Ex: en una piscina es fàcil dir que algú està nedant. Ho ha sabut descriure o simplement ha detectat una piscina?
+
+---
+
+### Reconstrucció 3D
+
+* La **reconstrucció 3D** és una tasca de visió artificial que consisteix en **reconstruir** un objecte o una escena en **tres dimensions** a partir d'una o més imatges.
+* 
