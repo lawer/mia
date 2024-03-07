@@ -197,6 +197,10 @@ h1, p {
 
 ---
 
+![bg fit](../images/tipus_segments.png)
+
+---
+
 <!-- 
 _class: invert lead
 -->
