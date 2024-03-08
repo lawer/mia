@@ -615,6 +615,10 @@ h1, p {
 
 ---
 
+![bg  fit](../images/deteccio_persones.jpg)
+
+---
+
 #### Usos 
   - **Seguretat**: construir sistemes de seguretat més efectius i menys intrusius.
   - **Urbanisme**: entendre com es mouen les persones per tal de dissenyar millor les ciutats.
@@ -681,9 +685,10 @@ h1, p {
 ### Autoencoders Variacionals
 
 - Els **autoencoders variacionals** són una variant dels autoencoders que permeten generar imatges.
-- El punt de partida és el mateix, però, en lloc de generar un vector de característiques, generen una **distribució de probabilitat**.
-- Aquesta distribució de probabilitat es fa servir per tal de generar imatges.
+- El punt de partida és el mateix, però no generar un vector de característiques, sino una **distribució de probabilitat** que es fa servir per tal de generar imatges.
 - Generarem imatges amb un aspecte similar a les imatges d'entrada, però no iguals.
+
+![bg right:28% fit](../images/vae.jpg)
 
 ---
 
@@ -703,3 +708,48 @@ h1, p {
 ![bg fit](../images/GANS.png)
 
 ---
+
+## Control del moviment
+
+- Un dels usos més importants de la visió és el de manipular objectes (agafar-los, moure'ls, etc.) i navegar evitant obstacles. Els vehicles autònoms són un dels exemples més clars, i impliquen una sèrie de tasques:
+  - **Control lateral**: mantenir-se dins del carril.
+  - **Control longitudinal**: mantenir la distància de seguretat.
+  - **Evitar obstacles**: detectar i evitar possibles vehicles, vianants, etc.
+  - **Respectar senyals**: Incloent-hi les llums dels semàfors, guàrdies urbans, etc.
+
+---
+
+### Procediment
+
+- El Procediment bàsic consistirà en la generació d'una seqüència de comandes (acceleració, frenada, gir, etc.) que permetin al vehicle complir les tasques anteriorment esmentades.
+- Caldrà un model del mon i dels objectes que hi ha al voltant. Teòricament, aquest model es pot crear solament a partir de dades visió, però no és senzill. Ex: Captar la velocitat d'un vehicle a partir de la imatge és difícil.
+- En la pràctica, es fa servir una combinació de dades de visió i de sensors (radar, lidar, etc.).
+
+---
+
+### Model del mon
+
+- El **model del mon** és una representació del mon que permet al vehicle preveure el que passarà en el futur.
+- Ex: en verd es mostra els llocs on el vehicle pot anar i els objectes es mostren envoltats per  una caixa vermella.
+
+![bg right fit](../images/mobileye.png)
+
+---
+
+### Navegació autònoma
+
+- La tasca de **navegació autònoma** consisteix en **moure's** per un entorn sense la **intervenció humana**.
+- Es sol dividir en dues tasques:
+  - **Mapeig**: crear un **mapa** de l'entorn. Algunes de les tècniques més comunes són el **SLAM** i el **Simultaneous Localization and Mapping**.
+  - **Planiﬁcació de trajectòries**: Una vegada el robot té un mapa 3D de l'entorn i sap on és, l'objectiu és **planificar** una **trajectòria** que el porti al seu destí sense col·lisions.
+
+---
+
+### Mapeig i Planiﬁcació de trajectòries
+
+![bg fit](../images/navegacio_autonoma.png)
+
+---
+
+## Seguiment d'objectes
+
