@@ -753,3 +753,35 @@ h1, p {
 
 ## Seguiment d'objectes
 
+* El **seguiment d'objectes** és una tasca de visió artificial que consisteix en **seguir** una **sèrie d'objectes** en una **seqüència d'imatges**.
+* La **complexitat** del seguiment s'origina de la quantitat d'imatges que poden haber en un video.
+  * 24 fps x 60 s x 60 min = **86400 imatges en una hora**.
+  * Si contem 8 - 10 objectes =  **més de 800000 objectes**.
+* Aquesta tasca és molt important en aplicacions com la **vigilància**, **robots autònoms**,etc.
+
+---
+
+### Tipus de seguiment
+
+- Tractarem els següents tipus de seguiment:
+  - **Seguiment d'un sol objecte** (single object tracking - SOT)
+  - **Seguiment de múltiples objectes** (multiple object tracking - MOT)
+  - **Seguiment de múltiples objectes sense classe semi-supervisat**
+  - Segmentació d'objectes en video (VOS)
+- Els dos primers són els més comuns, però els altres són també importants i subjectes a investigació.
+
+---
+
+#### Seguiment d'un sol objecte
+
+- El **seguiment d'un sol objecte** consisteix en seguir un sol objecte en una seqüència d'imatges, basant-nos en una anotació manual inicial.
+- Al primer frame anotat l'anomenen _template_ i a cadascún dels següents _search area_
+- Les xarxes neuronals per aquestes tasques están entrenades per seguir qualsevol objecte del primer frame
+  - S'anomenen Xarxes Neuronals Agnòstiques a la Classe (Class Agnostic Neural Networks - CAN).
+
+---
+
+#### Seguiment de múltiples objectes
+
+- El **seguiment de múltiples objectes** **NO** és simplement **SOT pero repetit** per a cada objecte.
+- 
