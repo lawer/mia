@@ -237,7 +237,7 @@ h1, p {
 ## Processament d'imatges
 
 - El **processament** d'imatges és el conjunt de tècniques que s'apliquen a les imatges per tal de millorar-ne la qualitat o per tal d'extreure'n informació.
-- Històricament, el processament d'imatges era la única forma de obtidre resultats en visió artifical, amb l'aparició de les xarxes neuronals, però, aquesta tasca ha perdut importància.
+- Històricament, el processament d'imatges era la única forma de obtindre resultats en visió artificial, amb l'aparició de les xarxes neuronals, però, aquesta tasca ha perdut importància.
 - Tot i això, segueix sent una tasca important en visió artificial, especialment en tasques de visió artificial més tradicionals o **quan no hi ha GPUs disponibles**.
 - Veurem algunes de les tècniques més comunes.
 
@@ -289,7 +289,7 @@ h1, p {
 
 #### Filtres de realçament
 
-- Els filtres de realçament són útils per tal de millorar el contrast de la imatge. Molt utilitzats enla detecció de vores.
+- Els filtres de realçament són útils per tal de millorar el contrast de la imatge. Molt utilitzats en la detecció de vores.
 - Els filtres més comuns són:
   - **Filtre de Sobel**: 
     - Calcula el gradient de la imatge, és a dir, la intensitat de canvi de la imatge.
@@ -766,22 +766,74 @@ h1, p {
 - Tractarem els següents tipus de seguiment:
   - **Seguiment d'un sol objecte** (single object tracking - SOT)
   - **Seguiment de múltiples objectes** (multiple object tracking - MOT)
-  - **Seguiment de múltiples objectes sense classe semi-supervisat**
-  - Segmentació d'objectes en video (VOS)
-- Els dos primers són els més comuns, però els altres són també importants i subjectes a investigació.
+  - **Seguiment de múltiples objectes sense classe semi-supervisat**. Versió estesa de SOT.
+  - **Segmentació d'objectes en video** (VOS).
+- Els dos primers són els més comuns i son els que tractarem en més detall.
 
 ---
 
 #### Seguiment d'un sol objecte
 
-- El **seguiment d'un sol objecte** consisteix en seguir un sol objecte en una seqüència d'imatges, basant-nos en una anotació manual inicial.
+- El **seguiment d'un sol objecte** consisteix en seguir un sol objecte en una seqüència d'**imatges**, basant-nos en una anotació manual inicial.
 - Al primer frame anotat l'anomenen _template_ i a cadascún dels següents _search area_
 - Les xarxes neuronals per aquestes tasques están entrenades per seguir qualsevol objecte del primer frame
-  - S'anomenen Xarxes Neuronals Agnòstiques a la Classe (Class Agnostic Neural Networks - CAN).
+  - S'anomenen **X**arxes **N**euronals **A**gnòstiques a la **C**lasse (Class Agnostic Neural Networks - CAN).
 
 ---
 
-#### Seguiment de múltiples objectes
+#### Seguiment de múltiples objectes - Definició
 
-- El **seguiment de múltiples objectes** **NO** és simplement **SOT pero repetit** per a cada objecte.
-- 
+- El **seguiment de múltiples objectes** **NO** consisteix simplement en **repetir SOT** pero per a cada objecte.
+- En realitat consisteix en identificar i seguir tots els objectes d'una sèries de classes predefinides.
+  - L'usuari no pot corregir al model ni aportar feedback.
+- L'us més habitual és el d'**aplicar el model a un video i després extreure estadístiques**
+  - Ex: quantes persones passen per un carrer en una hora.
+- No es tant utilitzat per etiquetatge
+
+---
+
+![bg fit](../images/mot.gif)
+
+---
+
+#### Seguiment de múltiples objectes - Funcionament
+
+- Dues fases, **Detecció** (identificar tots els objectes en una imatge) i **Associació** (associar els objectes detectats en una imatge amb els objectes detectats en la imatge anterior - _tracklets_).
+- Hi ha xarxes neuronals que poden fer les dues tasques alhora de forma eficient. Per entrenar-les, però, es fa servir un dataset de video etiquetat i son molt costosos de crear.
+- Es més freqüent fer servir una xarxa per la detecció, i una altra per la identificació i re-identificació: **Tracking by detection**. El rendiment, però, és més baix.
+
+---
+
+##### Tracking by detection
+
+![bg fit](../images/tracking-by-detection.png)
+
+---
+
+##### Identificació i re-identificació
+
+- La **identificació** és la tasca d'assignar un **identificador únic** a cada objecte detectat.
+- La **re-identificació** és la tasca d'associar el **mateix identificador** a un objecte detectat en diferents imatges.
+  - Aquesta es la tasca més difícil, ja que els objectes poden canviar molt en aparença. Ex: una persona que es tapa la cara.
+- Alguns dels algorismes més comuns són:
+  - **ByteTrack**: algorisme simple i ràpid.
+  - **FairMOT**: algorisme més complexe pero més precís.
+
+---
+
+## Reconeixement facial
+
+- El **reconeixement facial** és una tasca de visió artificial que consisteix en **identificar** una **persona** a partir d'una **imatge** o un **video**.
+- Aquesta tasca és molt important en aplicacions com la **seguretat**, **control d'accés**, **vigilància**, etc.
+- A pesar de que altres métodes com les **empruntes digitals** o l'**iris** són més segurs, el **reconeixement facial** és més **còmode** i **menys intrusiu**.
+- Aixó ha fet que s'hagi mantingut la investigació en aquesta àrea, i que s'hagi aconseguit un **alt rendiment**.
+
+---
+
+### Funcionament
+
+https://towardsdatascience.com/face-recognition-for-beginners-a7a9bd5eb5c2
+
+https://viso.ai/deep-learning/deep-face-recognition/
+
+https://www.techtarget.com/searchenterpriseai/definition/face-detection
