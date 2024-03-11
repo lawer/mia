@@ -832,8 +832,28 @@ h1, p {
 
 ### Funcionament
 
+- El funcionament del **reconeixement facial** és molt similar al de la **classificació d'imatges**.
+- La **diferència** principal és que en lloc de classificar l'objecte que hi ha a la imatge, es classifica la **persona**.
+- Això fa que el **reconeixement facial** sigui una tasca més **complexa** que la **classificació d'imatges**, ja que les persones poden tenir moltes aparences diferents en funció de la **llum**, la **posició**, l'**expressió**, etc.
+- Les persones també poden **canviar** molt en el temps, per lo que haurem de buscar **característiques invariants**.
+
+---
+
+#### Enfocaments per al reconeixement facial
+
+- **Basats en la geometria**: analitzen estadísticament la geometría de les **característiques** facials.
+- **Enfocament holístic**: analitzen la **imatge** sencera i utilitzen les relacions entre les **característiques**.
+- **Basats en models**: utilitzen models estadístics per tal de **reconèixer** les persones.  
+
+---
+
+#### Referencia
+
 https://towardsdatascience.com/face-recognition-for-beginners-a7a9bd5eb5c2
 
 https://viso.ai/deep-learning/deep-face-recognition/
 
 https://www.techtarget.com/searchenterpriseai/definition/face-detection
+
+
+
