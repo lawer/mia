@@ -7,6 +7,7 @@ _class: invert lead
 paginate: true
 _paginate: false
 auto-scaling: true
+footer: Carles Gonzàlez
 ---
 
 <style scoped>
@@ -119,6 +120,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ### Detecció de vores
 
 - Tasca de visió artificial que consisteix en detectar les vores d'una imatge.
@@ -176,6 +179,7 @@ h1, p {
 
 
 ---
+<style scoped>section { font-size:34px; }</style>
 
 ## Fluix òptic
 
@@ -188,6 +192,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ## Segments
 
 - Anomenen **segments** a les **regions** de la imatge que tenen alguna propietat comuna (color, textura, forma, etc.).
@@ -196,6 +202,7 @@ h1, p {
   - **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de *clustering* i s'utilitzen tècniques com _k-means_.
 
 ---
+
 
 ![bg fit](../images/tipus_segments.png)
 
@@ -222,6 +229,9 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
+
 ## Tasques
 
 - Les tasques de visió artificial són aquelles que es poden realitzar a partir d'imatges.
@@ -233,6 +243,7 @@ h1, p {
   - **Segmentació**
 
 ---
+<style scoped>section { font-size:33px; }</style>
 
 ## Processament d'imatges
 
@@ -256,6 +267,7 @@ h1, p {
 ![bg 90%](../images/histo.png)
 
 ---
+<style scoped>section { font-size:34px; }</style>
 
 ### Equalització de l'histograma
 
@@ -267,6 +279,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ### Filtratge
 
 - El **filtratge** és una tècnica que es fa servir per tal de millorar la qualitat de la imatge.
@@ -276,6 +290,9 @@ h1, p {
 - Els filtres es poden aplicar a tota la imatge o a una regió concreta.
 
 ---
+
+<style scoped>section { font-size:34px; }</style>
+
 
 #### Filtres de suavitzat
 
@@ -298,6 +315,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ### Thresholding
 
 - El **thresholding** és una tècnica que es fa servir per tal de binaritzar una imatge.
@@ -309,6 +328,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 ### Transformacions
 
 - Les **transformacions** són tècniques que es fan servir per tal de canviar la forma de la imatge.
@@ -318,6 +339,7 @@ h1, p {
 ![bg right:38% fit](../images/transformacions.png)
 
 ---
+<style scoped>section { font-size:34px; }</style>
 
 ### Extracció del fluix óptic (_optical flow_)
 
@@ -335,6 +357,8 @@ h1, p {
 ![bg fit](../images/dense_sparse_optical_flow_hor.png)
 
 ---
+
+<style scoped>section { font-size:34px; }</style>
 
 ### Llibreries
 
@@ -357,6 +381,8 @@ h1, p {
 - Ambdues tasques són molt importants en visió artificial i són la base de moltes aplicacions.
 
 ---
+
+<style scoped>section { font-size:33px; }</style>
 
 ### Classificació d'imatges
 
@@ -402,6 +428,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 #### Pooling
 
 - El **pooling** és una tècnica que es fa servir per tal de reduïr la mida de la imatge encara més.
@@ -438,6 +466,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 #### Funcionament d'una CNN (I)
 
 - En les imatges els pixels individuals no tenen gaire sentit
@@ -449,6 +479,8 @@ h1, p {
 - Estratégia general: **extreure patrons locals i després combinar-los per extreure patrons més globals**
 
 ---
+
+<style scoped>section { font-size:34.2px; }</style>
 
 #### Funcionament d'una CNN (II)
 
@@ -481,6 +513,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 ## Reconeixement d'objectes
 
 - El **reconeixement d'objectes** és una tasca més complexa que la classificació d'imatges.
@@ -499,6 +533,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 ### Problemes en el procediment bàsic
 
 - **Forma de la finestra**: si la finestra és massa gran, no podrem identificar objectes petits. Si és massa petita, no podrem identificar objectes grans.
@@ -507,6 +543,8 @@ h1, p {
 - **Determinació del _bounding box_**: com decidim quina és la mida i la posició del _bounding box_?
 
 ---
+
+<style scoped>section { font-size:34.7px; }</style>
 
 #### Selecció de finestres
 
@@ -535,6 +573,8 @@ h1, p {
 - Aquest algorisme calcula la mida i la posició del _bounding box_ a partir de la mida i la posició de la finestra, utilitzant les característiques obteses per la XNC.
 
 ---
+
+<style scoped>section { font-size:33px; }</style>
 
 ### Models preentrenats
 
@@ -659,6 +699,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 #### Autoencoder
 
 - Un **autoencoder** és una arquitectura de xarxa neuronal que es fa servir per tal de **reconstruir** la imatge d'entrada; moltes vegades, però, amb modificacions.
@@ -682,6 +724,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 ### Autoencoders Variacionals
 
 - Els **autoencoders variacionals** són una variant dels autoencoders que permeten generar imatges.
@@ -691,6 +735,8 @@ h1, p {
 ![bg right:28% fit](../images/vae.jpg)
 
 ---
+
+<style scoped>section { font-size:33px; }</style>
 
 ### GANs (Generative Adversarial Networks)
 
@@ -708,6 +754,8 @@ h1, p {
 ![bg fit](../images/GANS.png)
 
 ---
+
+<style scoped>section { font-size:33px; }</style>
 
 ## Control del moviment
 
@@ -810,6 +858,8 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ##### Identificació i re-identificació
 
 - La **identificació** és la tasca d'assignar un **identificador únic** a cada objecte detectat.
@@ -821,14 +871,18 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ## Reconeixement facial
 
 - El **reconeixement facial** és una tasca de visió artificial que consisteix en **identificar** una **persona** a partir d'una **imatge** o un **video**.
 - Aquesta tasca és molt important en aplicacions com la **seguretat**, **control d'accés**, **vigilància**, etc.
-- A pesar de que altres métodes com les **empruntes digitals** o l'**iris** són més segurs, el **reconeixement facial** és més **còmode** i **menys intrusiu**.
+- A pesar de que altres metodes com les **empremtes digitals** o l'**iris** són més segurs, el **reconeixement facial** és més **còmode** i **menys intrusiu**.
 - Això ha fet que s'hagi mantingut la investigació en aquesta àrea, i que s'hagi aconseguit un **alt rendiment**.
 
 ---
+
+<style scoped>section { font-size:34px; }</style>
 
 ### Funcionament
 
@@ -839,21 +893,13 @@ h1, p {
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 #### Enfocaments per al reconeixement facial
 
-- **Basats en la geometria**: analitzen estadísticament la geometría de les **característiques** facials.
+- **Basats en la geometria**: analitzen estadísticament la geometria de les **característiques** facials.
 - **Enfocament holístic**: analitzen la **imatge** sencera i utilitzen les relacions entre les **característiques**.
-- **Basats en models**: utilitzen models estadístics per tal de **reconèixer** les persones.  
+- **Basats en models**: creen un vector de característiques a partir de la imatge i el comparen amb vectors de característiques predefinits.
+- **Basats en xarxes neuronals**: utilitzen xarxes neuronals convolucionals per classificar la imatge; fins fa poc, però, no era factible per la gran quantitat de dades necessàries. 
 
 ---
-
-#### Referencia
-
-https://towardsdatascience.com/face-recognition-for-beginners-a7a9bd5eb5c2
-
-https://viso.ai/deep-learning/deep-face-recognition/
-
-https://www.techtarget.com/searchenterpriseai/definition/face-detection
-
-
-
