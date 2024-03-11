@@ -826,7 +826,7 @@ h1, p {
 - El **reconeixement facial** és una tasca de visió artificial que consisteix en **identificar** una **persona** a partir d'una **imatge** o un **video**.
 - Aquesta tasca és molt important en aplicacions com la **seguretat**, **control d'accés**, **vigilància**, etc.
 - A pesar de que altres métodes com les **empruntes digitals** o l'**iris** són més segurs, el **reconeixement facial** és més **còmode** i **menys intrusiu**.
-- Aixó ha fet que s'hagi mantingut la investigació en aquesta àrea, i que s'hagi aconseguit un **alt rendiment**.
+- Això ha fet que s'hagi mantingut la investigació en aquesta àrea, i que s'hagi aconseguit un **alt rendiment**.
 
 ---
 
