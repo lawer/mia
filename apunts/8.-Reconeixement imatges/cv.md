@@ -12,3 +12,15 @@ has_toc: false
 | Material                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Presentació](8-visio_artificial.pdf)                                                   | [![PDF](https://img.shields.io/badge/PDF-8--visio_per_computador.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](8-visio_artificial.pdf) <br/> [![HTML](https://img.shields.io/badge/HTML-8--visio_per_computador-blue?logo=html5&logoColor=white)](8-visio_artificial.html) |
+
+## Exemples solucionats
+
+| Exemple                                                                                     |                                                                                                                                       Enllaç |
+|:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Introducció a OpenCV](1_Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/apunts/8.-Reconeixement%20imatges/1_Introduccio_OpenCV.ipynb) |
+
+## Exercicis
+
+| Exercici                                                                                     |                                                                                                                                       Enllaç |
+|:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Introducció a OpenCV](1_Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/apunts/8.-Reconeixement%20imatges/1_Introduccio_OpenCV.ipynb) |
