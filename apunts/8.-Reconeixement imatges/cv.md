@@ -17,10 +17,10 @@ has_toc: false
 
 | Exemple                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Introducció a OpenCV](1_Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/apunts/8.-Reconeixement%20imatges/1_Introduccio_OpenCV.ipynb) |
+| [Introducció a OpenCV](1_Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/8.-Reconeixement%20imatges/1_Introduccio_OpenCV.ipynb) |
 
 ## Exercicis
 
 | Exercici                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Introducció a OpenCV](1_Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/apunts/8.-Reconeixement%20imatges/1_Introduccio_OpenCV.ipynb) |
+| [Introducció a OpenCV](1_Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/8.-Reconeixement%20imatges/1_Introduccio_OpenCV.ipynb) |
