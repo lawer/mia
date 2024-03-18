@@ -14,3 +14,6 @@ _site/
 .bundle/
 vendor/
 apunts/images/DACI_noProfessionals.pdf
+
+
+.venv
