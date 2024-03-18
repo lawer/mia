@@ -504,7 +504,22 @@ h1, p {
 
 ---
 
+#### Data augmentation
+
+<style scoped>section { font-size:33.74px; }</style>
+
+- El **data augmentation** és una tècnica que es fa servir per tal de millorar la precissió de la xarxa.
+- Consisteix en **augmentar** la quantitat de dades d'entrenament.
+- Es poden fer servir diferents tècniques per augmentar les dades:
+  - **Rotació**, **Translació**, **Escala**, **Mirall**, **Zoom**, **Desplaçament**, **Distorsió**, **Filtres**, **Ruído**, etc.
+  - Aquestes tècniques permeten millorar la precissió de la xarxa i evitar el **sobreajust**.
+- A canvi de més dades, l'entrenament serà més lent.
+
+---
+
 #### Arquitectures de xarxes neuronals convolucionals
+
+<style scoped>section { font-size:33.8px; }</style>
 
 - Hi ha moltes arquitectures de xarxes neuronals convolucionals aprofitables, però les més conegudes són:
   - **VGG-16**: xarxa de 16 capes. Va aconseguir un 92.7% d'exactitud en el dataset ImageNet en 2014.
