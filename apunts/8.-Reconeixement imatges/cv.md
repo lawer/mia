@@ -19,6 +19,7 @@ has_toc: false
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Introducció a OpenCV](1.-Introduccio_OpenCV.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/8.-Reconeixement%20imatges/1.-Introduccio_OpenCV.ipynb) <br /> [![PNG](https://img.shields.io/badge/PNG-line.png-blue?logo=img&logoColor=white)](line.png)<br /> [![PNG](https://img.shields.io/badge/PNG-line__left.png-blue?logo=img&logoColor=white)](line_left.png) <br/> [![PNG](https://img.shields.io/badge/PNG-line__right.png-blue?logo=img&logoColor=white)](line_right.png) |
 | [Classificació d'imatges](2_Classificacio_imatges_gossos_gats.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/8.-Reconeixement%20imatges/2_Classificacio_imatges_gossos_gats.ipynb) |
+| [Detecció d'objectes](3_Deteccio_objectes.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/8.-Reconeixement%20imatges/3_Deteccio_objectes.ipynb) |
 
 ## Exercicis
 
