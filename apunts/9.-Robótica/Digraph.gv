@@ -1,0 +1,14 @@
+digraph {
+	node [fontsize=9 height=0.2 shape=circle width=0.2]
+	d1 [fillcolor=lightgray shape=box style=filled]
+	d2 [fillcolor=lightgray shape=box style=filled]
+	d3 [fillcolor=lightgray shape=box style=filled]
+	translate [fillcolor=lightblue style=filled]
+	rotate [fillcolor=lightblue style=filled]
+	d1 -> translate [color=green penwidth=0.3928802260076263 style=solid]
+	d1 -> rotate [color=red penwidth=0.11259130094350414 style=solid]
+	d2 -> translate [color=red penwidth=0.16149233053478199 style=solid]
+	d2 -> rotate [color=red penwidth=0.33729096441055734 style=solid]
+	d3 -> translate [color=red penwidth=0.26789366870292297 style=solid]
+	d3 -> rotate [color=green penwidth=0.1725028928024585 style=solid]
+}
