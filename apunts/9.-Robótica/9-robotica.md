@@ -388,4 +388,4 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - La robòtica és una disciplina multidisciplinària que combina coneixements d'enginyeria, informàtica, matemàtiques, física, biologia, etc.
 - Els robots permeten als nostres models d'intel·ligència artificial interactuar amb el món real.
 - La robòtica és una eina molt potent per resoldre problemes complexos en entorns no deterministes.
-- Hem vist com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.a
+- Hem vist com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.
