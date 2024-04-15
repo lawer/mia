@@ -8,9 +8,15 @@ has_toc: false
 
 # 9. Robótica
 
-## Exercicis
+## Exemples solucionats
 
 | Exemple                                                                                     |                                                                                                                                       Enllaç |
+|:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
+| [0. Exemples de robots](0.-exemples_robots.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-exemples_robots.ipynb) |
+
+## Exercicis
+
+| Exercici                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
 | [1. Introducció a AITK](1.-intro_aitk.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/1.-intro_aitk.ipynb) |
 | [2. Generant Dades Entrenament](2.-generant_dades_entrenament.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/2.-generant_dades_entrenament.ipynb) |
