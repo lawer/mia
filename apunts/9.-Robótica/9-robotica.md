@@ -35,6 +35,8 @@ Models d'intel·ligència artificial
 
 ---
 
+<style scoped>section { font-size:34px; }</style>
+
 ## Robots
 
 - Un robot és un dispositiu programable que realitza tasques manipulant el seu entorn.
@@ -44,6 +46,8 @@ Models d'intel·ligència artificial
 ![bg right:40%](../images/robot.png)
 
 ---
+
+<style scoped>section { font-size:34px; }</style>
 
 ### Sensors
 
@@ -107,15 +111,141 @@ Models d'intel·ligència artificial
 
 ![bg right%](../images/mobile.jpg)
 
+
 ---
+<style scoped>section { font-size:33px; }</style>
 
 ### Tipus de sensors
 
 - **Actius**: emeten una senyal i mesuren la resposta. Es solen utilitzar per mesurar distàncies. 
-  - Radars, ultrasons. Econòmics i fàcils d'utilitzar.
-- **Passius**: mesuren la radiació que rebreixen. 
-  - Càmeres, micròfons. Més precisos però més cars i complexos.
+  - Necessiten una font d'energia. Més precisos però més cars i complexos.
+  - _Radars, ultrasons_.
+- **Passius**: mesuren la radiació que reben. Es solen utilitzar per mesurar la llum o el so.
+  - No necessiten una font d'energia. Econòmics i fàcils d'utilitzar. 
+  - _Càmeres, micròfons_. 
+
+---
+
+#### Sensors de distància
+
+Permeten als robots mesurar la distància a objectes.
+
+- **Ultrasons**: emeten ones sonores i mesuren el temps que triguen a rebre l'eco. Polivalents i econòmics.
+- **Radars**: emeten ones electromagnètiques i mesuren el temps que triguen a rebre el reflexe.  Molt utilitzats en robots aèris.
+- **LIDAR**: utilitzen làser per mesurar la distància a objectes amb una gran precisió. Molt utilitzats en vehicles autònoms terrestres.
+
+---
+
+##### LIDAR
+
+![bg fit](../images/lidar.webp)
+
+---
 
 
+#### Sensors de localització
+
+Permeten als robots saber on es troben en el seu entorn. 
+
+- **GPS**: permet als robots saber la seva posició en un mapa. L'equivalent Rus és el GLONASS i el xinès el Beidou. Solament funciona a l'aire lliure.
+- **Beacons**: emeten una senyal que permet als robots saber la seva posició en un espai conegut. Molt utilitzats en robòtica indoor.
+- **Wi-Fi**: La força de la senyal Wi-Fi permet substituir els beacons en entorns amb Wi-Fi.
+
+---
+<style scoped>section { font-size:34px; }</style>
+
+#### Propiocepció
+
+Es refereix a la capacitat dels robots de saber la seva posició i orientació en l'espai.
+
+- **Sensors inercials**: acceleròmetres i giroscopis que permeten als robots saber la seva orientació.
+- **Encoders**: permeten als robots saber la seva posició en un eix. 
+- **Odometria**: permet als robots saber la seva posició en un pla. Utilitza encoders i giroscopis.
+- **SLAM**: permet als robots saber la seva posició en un entorn desconegut. Utilitza càmeres i LIDAR.
+
+---
+
+#### Altres
+
+- **Sensors de temperatura, humitat, pressió, etc.**: permeten als robots mesurar variables ambientals.
+- **Sensors de força**: permeten als robots mesurar la força que fan servir.
+- **Sensors de color**: permeten als robots mesurar el color dels objectes.
+- **Sensors de llum**: permeten als robots mesurar la llum ambiental.
+- **Sensors de so**: permeten als robots mesurar el so ambiental.
+
+---
+
+![bg fit](../images/sensors.jpg)
+
+---
+<style scoped>section { font-size:33px; }</style>
+
+### Actuadors
+
+- Els actuadors són els components del robot que permeten moure's pel seu entorn. Els més comuns són:
+  - **Servomotors**: permeten moure's en un eix. Molt utilitzats en robots manipuladors.
+  - **Motors DC**: permeten moure's en un eix. Molt utilitzats en robots mòbils.
+  - **Motors pas a pas**: permeten moure's en un eix amb una gran precisió. 
+  - **Hidràulics**: permeten moure's amb una gran força. Molt utilitzats en robots industrials.
+
+---
+
+![bg fit](../images/actuators.png)
+
+---
+
+## Programació de robots
+
+- La programació de robots és molt més complexa que la programació de software tradicional.
+- No coneixem l'estat de l'entorn, per tant, hem de plantejar les tasques del robot com un **problema d'optimització**, on hem de trobar la millor seqüència d'accions per aconseguir un objectiu.
+- Dividim la programació de robots en quatre nivells: **percepció**, **planificació**, **control** i **aprenentatge**.
 
 
+---
+<style scoped>section { font-size:33.8px; }</style>
+
+### Percepció
+
+- La percepció és la capacitat del robot de **percebre el seu entorn**.
+  - Convertir les dades dels sensors en una representació interna.
+- És un problema complex, ja que els sensors poden ser molt **ruidosos** i **inexactes**.
+  - Necessitem **filtrar** i **processar** les dades dels sensors per obtenir una representació fiable de l'entorn.
+  - Haurem de construïr un model **complet**, **fàcil d'actualitzar** i **eficient** de l'entorn.
+
+---
+
+<style scoped>section { font-size:34.5px; }</style>
+
+#### Localització
+
+ - **Localització**: determinar la posició dels objectes (incloent el robot) en l'entorn.
+-  Inclús en entorns coneguts, la localització és un problema complex, ja que els sensors poden ser molt inexactes.
+-  Partint d'una posició inicial i sabent les acccions que ha fet el robot la posició final serà una **distribució de probabilitat**.
+   -  **Monte Carlo Localization (MCL)** vs **Extended Kalman Filter (KF)**: MCL és més precís però més lent. EKF és més ràpid però menys precís. 
+   -  Ambdós es basen en la **teoria de la probabilitat**.
+
+---
+
+#### Mapatge
+
+- **Mapatge**: construir un mapa de l'entorn a partir de les dades dels sensors.
+- Problema complex: difícil localitzar-se sense un mapa, però difícil construir un mapa sense saber on estàs.
+- **Simultaneous Localization and Mapping (SLAM)**: resoldre simultàniament el problema de la localització i el mapatge.
+  - **SLAM visual**: utilitza càmeres per localitzar-se i construir un mapa.
+  - **SLAM LIDAR**: utilitza LIDAR per localitzar-se i construir un mapa.
+
+---
+
+![bg fit](../images/SLAM.png)
+
+---
+
+<style scoped>section { font-size:34px; }</style>
+
+#### Altres tipus de percepció
+
+ - Hi ha altres tipus de percepció que són importants en robòtica com poden ser els de **temperatura, llum, olor, etc.**
+  - La percepció de variables ambientals és important en moltes tasques robòtiques.
+  - Per exemple, un robot que ha de netejar una habitació necessita percebre la brutícia.
+  - Aquest tipus de percepció es pot fer amb sensors especialitzats. 
+  - Podem aplicar un enfocament similar al de la percepció visual o un reactiu.

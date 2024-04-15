@@ -8,6 +8,13 @@ has_toc: false
 
 # 9. Robótica
 
+## Material
+
+| Material                                                                                     |                                                                                                                                       Enllaç |
+|:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Presentació](9-robotica.pdf)                                                   | [![PDF](https://img.shields.io/badge/PDF-9--robotica.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](9-robotica.pdf) <br/> [![HTML](https://img.shields.io/badge/HTML-9--robotica-blue?logo=html5&logoColor=white)](9-robotica.html) |
+
+
 ## Exemples solucionats
 
 | Exemple                                                                                     |                                                                                                                                       Enllaç |
