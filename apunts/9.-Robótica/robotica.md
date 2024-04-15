@@ -19,7 +19,7 @@ has_toc: false
 
 | Exemple                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
-| [0. Exemples de robots](0.-exemples_robots.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-exemples_robots.ipynb) |
+| [Exemples de robots](0.-exemples_robots.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-exemples_robots.ipynb) |
 
 ## Exercicis
 
