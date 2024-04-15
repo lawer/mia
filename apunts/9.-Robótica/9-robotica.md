@@ -198,7 +198,7 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 
 - La programació de robots és molt més complexa que la programació de software tradicional.
 - No coneixem l'estat de l'entorn, per tant, hem de plantejar les tasques del robot com un **problema d'optimització**, on hem de trobar la millor seqüència d'accions per aconseguir un objectiu.
-- Dividim la programació de robots en quatre nivells: **percepció**, **planificació**, **control** i **aprenentatge**.
+- Veurem com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.
 
 
 ---
@@ -248,4 +248,144 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - La percepció de variables ambientals és important en moltes tasques robòtiques.
   - Per exemple, un robot que ha de netejar una habitació necessita percebre la brutícia.
   - Aquest tipus de percepció es pot fer amb sensors especialitzats. 
-  - Podem aplicar un enfocament similar al de la percepció visual o un reactiu.
+  - Podem aplicar un enfocament similar al de la percepció visual o un enfocament reactiu.
+
+---
+
+### Comportament reactiu
+
+- Els robots reactius són robots que prenen decisions basades en les dades dels sensors en temps real.
+- Aquesta és una estratègia senzilla però efectiva per a moltes tasques robòtiques.
+- Els robots reactius són molt ràpids i eficients, però no sempre poden resoldre tasques complexes.
+- Podem combinar els robots reactius amb altres estratègies per resoldre tasques més complexes.
+- L'exemple més senzill és el dels vehicles de Braitenberg.
+
+---
+
+#### Vehicles de Braitenberg
+
+- Valentino Braitenberg va proposar un model senzill de vehicles autònoms que mostren comportaments sorprenents.
+- Els vehicles de Braitenberg són vehicles amb sensors i actuadors que segueixen unes regles senzilles. Normalment interconecten els sensors amb els actuadors directament.
+- Els vehicles mostren comportaments complexos com seguir la llum, evitar obstacles, etc.
+- Son representatius de la **robòtica BEAM** (Biology, Electronics, Aesthetics, Mechanics). 
+
+---
+
+![bg fit](../images/braitenberg.png)
+
+---
+
+#### Seguiment de línies
+
+- El seguiment de línies és una tasca comuna en robòtica mòbil.
+- Consisteix en seguir una línia en el terra utilitzant sensors d'infrarojos o càmeres.
+- Els robots que segueixen línies utilitzen un algoritme senzill per determinar la direcció en la que han de moure's.
+- En la forma més senzilla, el robot gira cap a la línia quan la veu i rectifica la seva trajectòria quan la perd.
+
+---
+
+![bg fit](../images/LINE-FOLLOWER-ALGORITHM.jpg)
+
+---
+
+<style scoped>section { font-size:32.8px; }</style>
+
+#### Màquines d'estats finits
+
+- Les **màquines d'estats finits** són una eina molt útil per programar robots.   
+  - Un pàs més enllà dels robots reactius en complexitat i flexibilitat.
+
+- Model matemàtic** que descriu el comportament d'un **sistema com una sèrie d'estats i transicions**, on cada estat representa una situació en la que es pot trobar
+- Robots reactius: les decisions es prenen segons l'estat actual
+- FSM: **En funció de les entrades actuals i de l'estat en el que es troba el robot**.
+
+---
+
+#### Exemple de màquina d'estats finits (I)
+
+- Un exemple senzill del que podem fer amb una màquina d'estats finits és el de buscar un objectiu.
+
+- En aquest cas, tenim quatre estats:
+  - **Esquerra**: el robot gira a l'esquerra buscant l'objectiu.
+  - **Dreta**: el robot gira a la dreta buscant l'objectiu.
+  - **Endavant**: el robot va endavant.
+  - **Objectiu**: el robot ha trobat l'objectiu i s'atura.
+
+---
+
+#### Exemple de màquina d'estats finits (II)
+
+- Les transicions entre estats es fan en funció de les dades dels sensors:
+  - Si el robot passa de +45º passa a l'estat **Dreta**.
+  - Si el robot passa de -45º passa a l'estat **Esquerra**.
+  - Si el robot passa detecta l'objectiu passa a l'estat **Endavant** i comença a moure's cap a l'objectiu.
+  - Quan el robot arriba a l'objectiu passa a l'estat **Objectiu** i s'atura.
+
+
+---
+
+![bg fit](../images/buscar_objectiu.png)
+
+---
+
+#### Estat de l'algorisme
+
+- Quasi tots els algorismes de robòtica són **estatals**.
+  - Necessiten guardar alguna informació de l'estat actual del robot.
+- Aquesta informació pot ser molt senzilla (com en el cas de la màquina d'estats finits) o molt complexa.
+- Els FSM són una eina molt útil d'introdïr l'estat en els algorismes de robòtica.
+  - Per algorismes més complexos necessitarem eines més avançades.
+
+---
+
+### Xarxes neuronals
+
+- Les xarxes neuronals són una eina molt potent per resoldre problemes de robòtica.
+- Com les xarxes neuronals poden aproximar qualsevol funció, podem utilitzar-les per controlar un robot.
+- Les XN Feedforward són les més comunes en robòtica, ja que són senzilles i eficients.
+  - Serien equivalents a un sistema reactiu
+- Les XN Recurrents són més complexes però més potents.
+  - Serien equivalents a un sistema basat en FSM.
+
+---
+
+![bg fit](../images/nn_robotics.jpeg)
+
+---
+
+<style scoped>section { font-size:34px; }</style>
+
+
+#### Aprenentatge (I)
+
+- Per entrenar les xarxes neuronals podem utilitzar tècniques d'aprenentatge supervisat o no supervisat.
+  - **Supervisat**: donem un conjunt de dades d'entrada i sortida i la xarxa apren a partir d'aquestes dades.
+    - Replegarem dades de sensors i actuadors per entrenar la xarxa.
+    - Si volem que el robot segueixi una línia, recollirem dades de sensors de línia i actuadors de moviment.
+    - Una vegada entrenada la xarxa, el robot serà capaç de seguir la línia sense necessitat de programar-lo.
+
+---
+
+<style scoped>section { font-size:33px; }</style>
+
+
+#### Aprenentatge (II)
+
+
+- **Aprenentatge per reforç**: les xarxes aprenen a partir de la interacció amb l'entorn.
+  - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
+- **Neuroevolució**: utilitzar algoritmes evolutius per evolucionar les xarxes neuronals.
+  - Crearem una població de xarxes neuronals i les farem competir entre elles. Les xarxes més eficients es reproduiran i evolucionaran.
+
+---
+
+![bg fit](../images/rl_robot.png)
+
+---
+
+## Conclusions
+
+- La robòtica és una disciplina multidisciplinària que combina coneixements d'enginyeria, informàtica, matemàtiques, física, biologia, etc.
+- Els robots permeten als nostres models d'intel·ligència artificial interactuar amb el món real.
+- La robòtica és una eina molt potent per resoldre problemes complexos en entorns no deterministes.
+- Hem vist com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.a
