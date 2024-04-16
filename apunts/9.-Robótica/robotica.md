@@ -13,6 +13,7 @@ has_toc: false
 | Material                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Presentació](9-robotica.pdf)                                                   | [![PDF](https://img.shields.io/badge/PDF-9--robotica.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](9-robotica.pdf) <br/> [![HTML](https://img.shields.io/badge/HTML-9--robotica-blue?logo=html5&logoColor=white)](9-robotica.html) |
+| [Continguts]({% link apunts/9.-Robótica/continguts.md %})                                                   | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)](continguts.md) |
 
 
 ## Exemples solucionats
