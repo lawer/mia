@@ -5,15 +5,6 @@ parent: 9. Robòtica
 math: mathjax3
 ---
 
-<style scoped>
-h1, p {
-  color: #FFFFFF;
-  font-weight: bold;
-  text-shadow:
-    0px 0px 3px #000000;
-}
-</style>
-
 # 9. Robòtica
 
 Models d'intel·ligència artificial
@@ -26,8 +17,6 @@ Models d'intel·ligència artificial
 - Els robots permeten als nostres models d'intel·ligència artificial interactuar amb el món real.
 - La robòtica és una disciplina multidisciplinària que combina coneixements d'enginyeria, informàtica, matemàtiques, física, biologia, etc.
 
-<style scoped>section { font-size:34px; }</style>
-
 ## Robots
 
 - Un robot és un dispositiu programable que realitza tasques manipulant el seu entorn.
@@ -35,8 +24,6 @@ Models d'intel·ligència artificial
 - Els canvis podem ser físics (moure objectes) o digitals (enviar informació).
 
 ![bg right:40%](../images/robot.png)
-
-<style scoped>section { font-size:34px; }</style>
 
 ### Sensors
 
@@ -86,8 +73,6 @@ Models d'intel·ligència artificial
 
 ![bg right%](../images/mobile.jpg)
 
-<style scoped>section { font-size:33px; }</style>
-
 ### Tipus de sensors
 
 - **Actius**: emeten una senyal i mesuren la resposta. Es solen utilitzar per mesurar distàncies.
@@ -117,8 +102,6 @@ Permeten als robots saber on es troben en el seu entorn.
 - **Beacons**: emeten una senyal que permet als robots saber la seva posició en un espai conegut. Molt utilitzats en robòtica indoor.
 - **Wi-Fi**: La força de la senyal Wi-Fi permet substituir els beacons en entorns amb Wi-Fi.
 
-<style scoped>section { font-size:34px; }</style>
-
 #### Propiocepció
 
 Es refereix a la capacitat dels robots de saber la seva posició i orientació en l'espai.
@@ -138,8 +121,6 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 
 ![bg fit](../images/sensors.jpg)
 
-<style scoped>section { font-size:33px; }</style>
-
 ### Actuadors
 
 - Els actuadors són els components del robot que permeten moure's pel seu entorn. Els més comuns són:
@@ -156,8 +137,6 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - No coneixem l'estat de l'entorn, per tant, hem de plantejar les tasques del robot com un **problema d'optimització**, on hem de trobar la millor seqüència d'accions per aconseguir un objectiu.
 - Veurem com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.
 
-<style scoped>section { font-size:33.8px; }</style>
-
 ### Percepció
 
 - La percepció és la capacitat del robot de **percebre el seu entorn**.
@@ -165,8 +144,6 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - És un problema complex, ja que els sensors poden ser molt **ruidosos** i **inexactes**.
   - Necessitem **filtrar** i **processar** les dades dels sensors per obtenir una representació fiable de l'entorn.
   - Haurem de construïr un model **complet**, **fàcil d'actualitzar** i **eficient** de l'entorn.
-
-<style scoped>section { font-size:34.5px; }</style>
 
 #### Localització
 
@@ -185,8 +162,6 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - **SLAM LIDAR**: utilitza LIDAR per localitzar-se i construir un mapa.
 
 ![bg fit](../images/SLAM.png)
-
-<style scoped>section { font-size:34px; }</style>
 
 #### Altres tipus de percepció
 
@@ -222,8 +197,6 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 
 ![bg fit](../images/LINE-FOLLOWER-ALGORITHM.jpg)
 
-<style scoped>section { font-size:32.8px; }</style>
-
 #### Màquines d'estats finits
 
 - Les **màquines d'estats finits** són una eina molt útil per programar robots.
@@ -234,17 +207,16 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Robots reactius: les decisions es prenen segons l'estat actual
 - FSM: **En funció de les entrades actuals i de l'estat en el que es troba el robot**.
 
-#### Exemple de màquina d'estats finits (I)
+#### Exemple de màquina d'estats finits
 
 - Un exemple senzill del que podem fer amb una màquina d'estats finits és el de buscar un objectiu.
 
 - En aquest cas, tenim quatre estats:
+
   - **Esquerra**: el robot gira a l'esquerra buscant l'objectiu.
   - **Dreta**: el robot gira a la dreta buscant l'objectiu.
   - **Endavant**: el robot va endavant.
   - **Objectiu**: el robot ha trobat l'objectiu i s'atura.
-
-#### Exemple de màquina d'estats finits (II)
 
 - Les transicions entre estats es fan en funció de les dades dels sensors:
   - Si el robot passa de +45º passa a l'estat **Dreta**.
@@ -273,24 +245,17 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 
 ![bg fit](../images/nn_robotics.jpeg)
 
-<style scoped>section { font-size:34px; }</style>
-
-#### Aprenentatge (I)
+#### Aprenentatge
 
 - Per entrenar les xarxes neuronals podem utilitzar tècniques d'aprenentatge supervisat o no supervisat.
   - **Supervisat**: donem un conjunt de dades d'entrada i sortida i la xarxa apren a partir d'aquestes dades.
     - Replegarem dades de sensors i actuadors per entrenar la xarxa.
     - Si volem que el robot segueixi una línia, recollirem dades de sensors de línia i actuadors de moviment.
     - Una vegada entrenada la xarxa, el robot serà capaç de seguir la línia sense necessitat de programar-lo.
-
-<style scoped>section { font-size:33px; }</style>
-
-#### Aprenentatge (II)
-
-- **Aprenentatge per reforç**: les xarxes aprenen a partir de la interacció amb l'entorn.
-  - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
-- **Neuroevolució**: utilitzar algoritmes evolutius per evolucionar les xarxes neuronals.
-  - Crearem una població de xarxes neuronals i les farem competir entre elles. Les xarxes més eficients es reproduiran i evolucionaran.
+  - **Aprenentatge per reforç**: les xarxes aprenen a partir de la interacció amb l'entorn.
+    - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
+  - **Neuroevolució**: utilitzar algoritmes evolutius per evolucionar les xarxes neuronals.
+    - Crearem una població de xarxes neuronals i les farem competir entre elles. Les xarxes més eficients es reproduiran i evolucionaran.
 
 ![bg fit](../images/rl_robot.png)
 
