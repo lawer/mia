@@ -12,7 +12,7 @@ has_toc: false
 | Material                                                                                     |                                                                                                                                       Enllaç |
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Presentació](8-visio_artificial.pdf)                                                   | [![PDF](https://img.shields.io/badge/PDF-8--visio_per_computador.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](8-visio_artificial.pdf) <br/> [![HTML](https://img.shields.io/badge/HTML-8--visio_per_computador-blue?logo=html5&logoColor=white)](8-visio_artificial.html) |
-| [Continguts]({% link apunts/8.-Reconeixement%20imatges/continguts.md %})                                                   | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/8.-Reconeixement%20imatges/continguts.md %}) |
+| [Continguts]({% link apunts/8.-Reconeixement imatges/continguts.md %})                                                   | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/8.-Reconeixement imatges/continguts.md %}) |
 
 ## Exemples solucionats
 
