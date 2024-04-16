@@ -816,11 +816,11 @@ h1, p {
 
 ## Seguiment d'objectes
 
-* El **seguiment d'objectes** és una tasca de visió artificial que consisteix en **seguir** una **sèrie d'objectes** en una **seqüència d'imatges**.
-* La **complexitat** del seguiment s'origina de la quantitat d'imatges que poden haber en un video.
-  * 24 fps x 60 s x 60 min = **86400 imatges en una hora**.
-  * Si contem 8 - 10 objectes =  **més de 800000 objectes**.
-* Aquesta tasca és molt important en aplicacions com la **vigilància**, **robots autònoms**,etc.
+- El **seguiment d'objectes** és una tasca de visió artificial que consisteix en **seguir** una **sèrie d'objectes** en una **seqüència d'imatges**.
+- La **complexitat** del seguiment s'origina de la quantitat d'imatges que poden haber en un video.
+  - 24 fps x 60 s x 60 min = **86400 imatges en una hora**.
+  - Si contem 8 - 10 objectes =  **més de 800000 objectes**.
+- Aquesta tasca és molt important en aplicacions com la **vigilància**, **robots autònoms**,etc.
 
 ---
 
