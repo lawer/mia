@@ -113,6 +113,25 @@ Models d'intel·ligència artificial
 
 
 ---
+
+<!-- 
+_class: invert lead
+-->
+
+<style scoped>
+h1, p {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
+
+## Sensors i actuadors
+
+![bg opacity](../images/sensors2.png)
+
+---
 <style scoped>section { font-size:33px; }</style>
 
 ### Tipus de sensors
@@ -190,11 +209,33 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 
 ---
 
+
 ![bg fit](../images/actuators.png)
 
 ---
 
+<!-- 
+_class: invert lead
+-->
+
+<style scoped>
+h1, p {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
+
+
 ## Programació de robots
+
+![bg opacity](../images/robot_programming.png)
+
+---
+
+## Programació de robots
+
 
 - La programació de robots és molt més complexa que la programació de software tradicional.
 - No coneixem l'estat de l'entorn, per tant, hem de plantejar les tasques del robot com un **problema d'optimització**, on hem de trobar la millor seqüència d'accions per aconseguir un objectiu.
