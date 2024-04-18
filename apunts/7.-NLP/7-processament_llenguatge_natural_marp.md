@@ -1131,6 +1131,7 @@ h1, p {
 ![bg  fit](../images/transformers_arquitectura_inputs.png)
 
 ---
+<style scoped>section { font-size:30px; }</style>
 
 ### Encoder
 
