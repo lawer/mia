@@ -13,7 +13,6 @@ footer: Carles Gonzàlez
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;0
   text-shadow:
     0px 0px 3px #00000;
 }
@@ -79,7 +78,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -152,7 +150,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 
 ---
 
-<style scoped>section { font-size:31.6px; }</style>
+<style scoped>section { font-size:31.5px; }</style>
 
 ## Representació de caràcters
 
@@ -291,7 +289,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -304,7 +301,7 @@ h1, p {
 
 ---
 
-<style scoped>section { font-size:30.8px; }</style>
+<style scoped>section { font-size:30.7px; }</style>
 
 ## Representació de textos
 
@@ -331,7 +328,7 @@ h1, p {
 
 ---
 
-<style scoped>section { font-size:31.8px; }</style>
+<style scoped>section { font-size:31.7px; }</style>
 
 ### Bag of Words (BoW)
 
@@ -440,7 +437,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -505,7 +501,7 @@ h1, p {
 
 <style scoped>section { font-size:32px; }</style>
 
-### Síntesi de veu: síntesi basada en xarxes neuronals (I)
+### Síntesi de veu: basada en xarxes neuronals (I)
 
 * Les xarxes neuronals són capaces de sintetitzar veus a partir de text.
 * Aquestes xarxes s'entrenen amb grans quantitats de dades de veu i text i són capaces de sintetitzar veus molt naturals.
@@ -516,7 +512,7 @@ h1, p {
 
 <style scoped>section { font-size:31.5px; }</style>
 
-### Síntesi de veu: síntesi basada en xarxes neuronals (II)
+### Síntesi de veu: basada en xarxes neuronals (II)
 
 * Aquests models es basen en els espectrogrames de les veus (representació de la veu en funció del temps i la freqüència).
 
@@ -562,7 +558,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -584,7 +579,7 @@ h1, p {
 
 ---
 
-<style scoped>section { font-size:32px; }</style>
+<style scoped>section { font-size:31px; }</style>
 
 ### Técniques per a calcular la similitud entre textos (I)
 
@@ -656,7 +651,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -712,7 +706,7 @@ h1, p {
 * Com ja hem vist, la tokenització és el procés de dividir un text en tokens.
 * Els tokens poden ser paraules, subparaules, signes de puntuació, etc.
 * Facilita una anàlisi més profund del text i extreure característiques rellevants.
-* Ex: "El Barça està en crisi" $$\rightarrow$$ `["El", "Barça", "està", "en", "crisi"]`.
+* Ex: "El Barça està en crisi" $\rightarrow$ `["El", "Barça", "està", "en", "crisi"]`.
 
 ---
 
@@ -723,7 +717,7 @@ h1, p {
 * La **normalització** implica el·liminar els elements que no aporten informació.
     * Nombres, signes de puntuació, etc.
 * També implica convertir el text a un format estàndard, passant a minúscules i llevant espais innecessaris, per exemple.
-    * Ex: "El Barça està en crisi! 😡" $$\rightarrow$$ "el Barça està en crisi".
+    * Ex: "El Barça està en crisi! 😡" $\rightarrow$ "el Barça està en crisi".
 * La normalització facilita la comparació entre textos i la detecció de paraules clau.
 
 ---
@@ -828,7 +822,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -872,7 +865,7 @@ h1, p {
 
 * Un **model de llenguatge** assigna una probabilitat a una seqüència de paraules.
     * Per tant, permet predir la següent paraula d'una seqüència.
-    * Ex: "El barça està en ___" $$\rightarrow$$ `[{crisi: 0.8}, {forma: 0.1}, {casa: 0.1}]`
+    * Ex: "El barça està en ___" $\rightarrow$ `[{crisi: 0.8}, {forma: 0.1}, {casa: 0.1}]`
 * Es basen en la idea que les paraules d'una seqüència no són independents, sinó que depenen de les paraules anteriors.
 * Permeten calcular la "**validesa**" d'una seqüència de paraules.
     * No és el mateix que la **correcció** d'una seqüència de paraules.
@@ -1007,7 +1000,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -1044,7 +1036,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }

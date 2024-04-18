@@ -329,7 +329,7 @@ h1, p {
 
 ---
 
-<style scoped>section { font-size:32.8px; }</style>
+<style scoped>section { font-size:32.5px; }</style>
 
 #### Màquines d'estats finits
 
@@ -430,3 +430,5 @@ h1, p {
 - Els robots permeten als nostres models d'intel·ligència artificial interactuar amb el món real.
 - La robòtica és una eina molt potent per resoldre problemes complexos en entorns no deterministes.
 - Hem vist com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.
+
+---

@@ -13,7 +13,7 @@ footer: Carles Gonzàlez
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 800;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -55,6 +55,8 @@ Models d'intel·ligència artificial
 
 ---
 
+<style scoped>section { font-size:33px; }</style>
+
 ## El color (I)
 
 - Propietat de la llum que depèn de la seva longitud d'ona.
@@ -70,7 +72,7 @@ Models d'intel·ligència artificial
 ## El color (II)
 
 - **Principi de tricromia**: qualsevol color es pot representar com una combinació de tres colors primaris.
-- **Colors primaris** 
+- **Colors primaris**
   - Aquells que no es poden descompondre en altres colors.
   - **blau**, **verd** i **vermell**.
 - Espais de color: RGB, HSV, YUV, ...
@@ -78,20 +80,17 @@ Models d'intel·ligència artificial
 
 ---
 
-<!-- 
+<!--
 _class: invert lead
 -->
-
 
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
 </style>
-
 
 # Característiques de les imatges
 
@@ -153,13 +152,12 @@ h1, p {
 
 ![bg right:45% fit](../images/textures_vert.jpg)
 
-
 ---
 
 ### Característiques de la textura
 
 - La textura pot ser més o menys regular, per lo que es freqüent utilitzar un model de **tesel·les** per descriure-la. Vejam algunes característiques:
-  
+
   - **Tesel·la**: patró que es repeteix en una imatge.
   - **Tesel·lació**: procés de cobrir una superfície amb tesel·les.
   - **Tipus**:
@@ -171,14 +169,14 @@ h1, p {
 
 ### Utilitats de la textura
 
-  - **Identificació**: permet identificar objectes. Ex: un cavall té una textura diferent a la d'una zebra.
-  - **Correspondència**: permet trobar zones corresponents en diferents imatges. Important en la reconstrucció 3D.
-  - **Segmentació**: permet separar la imatge en diferents regions.
-  - **Reconstrucció**: permet reconstruir la imatge a partir de les tesel·les.
-  - **Classificació**: permet classificar objectes.
-
+- **Identificació**: permet identificar objectes. Ex: un cavall té una textura diferent a la d'una zebra.
+- **Correspondència**: permet trobar zones corresponents en diferents imatges. Important en la reconstrucció 3D.
+- **Segmentació**: permet separar la imatge en diferents regions.
+- **Reconstrucció**: permet reconstruir la imatge a partir de les tesel·les.
+- **Classificació**: permet classificar objectes.
 
 ---
+
 <style scoped>section { font-size:34px; }</style>
 
 ## Fluix òptic
@@ -189,7 +187,6 @@ h1, p {
 
 ![bg right:38% fit](../images/optical_flow_vert.jpg)
 
-
 ---
 
 <style scoped>section { font-size:33px; }</style>
@@ -198,30 +195,26 @@ h1, p {
 
 - Anomenen **segments** a les **regions** de la imatge que tenen alguna propietat comuna (color, textura, forma, etc.).
 - Per definit els segments hi ha dós enfocaments principals:
-  - **Basat en límits**: es busquen els límits de les regions. Es pot entendre com un problema de *classificació* on cada pixel pertany o no a un segment i es soluciona amb tècniques de machine learning i models preentrenats.
-  - **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de *clustering* i s'utilitzen tècniques com _k-means_.
+  - **Basat en límits**: es busquen els límits de les regions. Es pot entendre com un problema de _classificació_ on cada pixel pertany o no a un segment i es soluciona amb tècniques de machine learning i models preentrenats.
+  - **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de _clustering_ i s'utilitzen tècniques com _k-means_.
 
 ---
-
 
 ![bg fit](../images/tipus_segments.png)
 
 ---
 
-<!-- 
+<!--
 _class: invert lead
 -->
-
 
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
 </style>
-
 
 # Tasques de visió artificial
 
@@ -230,7 +223,6 @@ h1, p {
 ---
 
 <style scoped>section { font-size:34px; }</style>
-
 
 ## Tasques
 
@@ -243,6 +235,7 @@ h1, p {
   - **Segmentació**
 
 ---
+
 <style scoped>section { font-size:33px; }</style>
 
 ## Processament d'imatges
@@ -267,6 +260,7 @@ h1, p {
 ![bg 90%](../images/histo.png)
 
 ---
+
 <style scoped>section { font-size:34px; }</style>
 
 ### Equalització de l'histograma
@@ -275,7 +269,7 @@ h1, p {
 - L'objectiu és que la distribució dels píxels sigui més uniforme.
 - Es divideix l'histograma en _bins_ i es redistribueixen els píxels de manera que la distribució sigui més uniforme.
 - El resultat poden no ser realistes, però si útils per a tasques de visió artificial.
-![bg right:27% fit](../images/hist_eq.png)
+  ![bg right:27% fit](../images/hist_eq.png)
 
 ---
 
@@ -293,7 +287,6 @@ h1, p {
 
 <style scoped>section { font-size:34px; }</style>
 
-
 #### Filtres de suavitzat
 
 - El soroll és un problema comú en les imatges.
@@ -302,13 +295,13 @@ h1, p {
 - Filtre de Gauss: substitueix cada píxel per la mitjana ponderada dels píxels del seu entorn.
   - Els píxels tenen un pes més gran com més propers estan al píxel central.
 
-----
+---
 
 #### Filtres de realçament
 
 - Els filtres de realçament són útils per tal de millorar el contrast de la imatge. Molt utilitzats en la detecció de vores.
 - Els filtres més comuns són:
-  - **Filtre de Sobel**: 
+  - **Filtre de Sobel**:
     - Calcula el gradient de la imatge, és a dir, la intensitat de canvi de la imatge.
   - **Filtre de Laplace**:
     - calcula el laplacià de la imatge, és a dir, la segona derivada de la imatge.
@@ -321,7 +314,7 @@ h1, p {
 
 - El **thresholding** és una tècnica que es fa servir per tal de binaritzar una imatge.
 - Apliquem un **llindar** a la imatge; els píxels que tenen una intensitat superior al llindar es converteixen en blancs i els que tenen una intensitat inferior es converteixen en negres.
-- És una forma simple de **segmentació**: es vol separar la imatge en *objecte* i *fons*.
+- És una forma simple de **segmentació**: es vol separar la imatge en _objecte_ i _fons_.
 - Per binaritzar, sol ser millor opció que ajustar la lluminositat i el contrast.
 
 ![bg right:20% fit](../images/thresholding.png)
@@ -339,6 +332,7 @@ h1, p {
 ![bg right:38% fit](../images/transformacions.png)
 
 ---
+
 <style scoped>section { font-size:34px; }</style>
 
 ### Extracció del fluix óptic (_optical flow_)
@@ -348,7 +342,6 @@ h1, p {
     - L'algorisme més comú és el de **Horn-Schunck**.
   - **Densos**: es calcula el fluix òptic per cada píxel de la imatge. Més costós computacionalment, al comptar en més punts.
     - Els algorismes més comú son el de **Lucas-Kanade** i el de **Farnebäck**.
-
 
 ---
 
@@ -538,7 +531,7 @@ h1, p {
 
 ---
 
-### Procediment bàsic	
+### Procediment bàsic
 
 - El procediment básic per fer el reconeixement d'objectes és el següent:
   1. Definim una _finestra_ que es mourà per tota la imatge.
@@ -567,7 +560,7 @@ h1, p {
 - Les finestres amb objectes solen ser coherents en textura i color.
 - Les que tallen objectes solen tindre regions o vores que travessen la finestra.
 - Necessitem un mecanisme que mesure de forma eficient les probabilitats de que una finestra contingui un objecte.
-- Una de les opcions és utilitzar a una **RPN** (Region Proposal Network). 
+- Una de les opcions és utilitzar a una **RPN** (Region Proposal Network).
 
 ---
 
@@ -607,7 +600,7 @@ h1, p {
 - La **segmentació** és una tasca de visió artificial que consisteix en **separar la imatge en diferents regions significatives**.
 - L'objectiu principal de la segmentació és **agrupar** els píxels de la imatge en **regions** que tinguin alguna propietat comuna.
 - Facilita la **comprensió** de la imatge i permet facilita tasques com la **classificació**, el **reconeixement d'objectes**, el **seguiment**, l'anàlisi d'escenes o la **reconstrucció 3D**.
-  
+
 ---
 
 ### Tipus de segmentació (I)
@@ -616,30 +609,28 @@ h1, p {
   - **Segmentació binària** o d'umbral: es segmenta la imatge en dues regions: objecte i fons. (Ex: _thresholding_)
   - **Segmentació per vores**: es segmenta la imatge en regions separades per vores. (Ex: _Canny_)
   - **Segmentació semàntica**: assignem a cada píxel una categoria predefinida. (Ex: _mask-RCNN_)
-  
+
 ---
 
 ### Tipus de segmentació (II)
-  
-  - **Segmentació en superpíxels**: es segmenta la imatge en superpíxels (regions de píxels compactes i coherents)  (Ex: _SLIC_)
-  - **Segmentació d'instàncies**: es segmenta en instàncies d'objectes. (Ex: _mask-RCNN_)
-  - **Segmentació panòptica**: es segmenta en categories predefinides, però també es segmenten les instàncies d'objectes. (Ex: _mask-RCNN_)
 
---- 
+- **Segmentació en superpíxels**: es segmenta la imatge en superpíxels (regions de píxels compactes i coherents) (Ex: _SLIC_)
+- **Segmentació d'instàncies**: es segmenta en instàncies d'objectes. (Ex: _mask-RCNN_)
+- **Segmentació panòptica**: es segmenta en categories predefinides, però també es segmenten les instàncies d'objectes. (Ex: _mask-RCNN_)
+
+---
 
 ![bg fit](../images/segment.png)
 
 ---
 
-<!-- 
+<!--
 _class: invert lead
 -->
-
 
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -674,13 +665,14 @@ h1, p {
 
 ---
 
-#### Usos 
-  - **Seguretat**: construir sistemes de seguretat més efectius i menys intrusius.
-  - **Urbanisme**: entendre com es mouen les persones per tal de dissenyar millor les ciutats.
-  - **Esports**: analitzar videos de partits per tal de millorar l'entrenament i extreure estadístiques.
-  - **Estalvi energètic**: engegar i parar sistemes de climatització i llum en funció de la presència de persones.
- 
- Molts més, en videojocs, en la indústria, en la medicina, etc.
+#### Usos
+
+- **Seguretat**: construir sistemes de seguretat més efectius i menys intrusius.
+- **Urbanisme**: entendre com es mouen les persones per tal de dissenyar millor les ciutats.
+- **Esports**: analitzar videos de partits per tal de millorar l'entrenament i extreure estadístiques.
+- **Estalvi energètic**: engegar i parar sistemes de climatització i llum en funció de la presència de persones.
+
+Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ---
 
@@ -732,7 +724,7 @@ h1, p {
 
 #### Utilitats de l'autoencoder
 
-- **Reducció de la dimensió**: l'autoencoder pot ser utilitzat per tal de reduir la dimensió de la imatge. 
+- **Reducció de la dimensió**: l'autoencoder pot ser utilitzat per tal de reduir la dimensió de la imatge.
 - **Denioising**: al generar el vector de característiques, guardem la informació més important de la imatge, eliminant el soroll.
 - **Super-resolució**: partim d'una imatge de baixa resolució i la convertim en una imatge de alta resolució.
 - **Creació d'imatges**: la part del decoder pot ser utilitzada per tal de crear imatges, partint de vectors de característiques aleatoris.
@@ -765,7 +757,6 @@ h1, p {
 
 ### GANs (Generative Adversarial Networks)
 
-
 ![bg fit](../images/GANS.png)
 
 ---
@@ -793,7 +784,7 @@ h1, p {
 ### Model del mon
 
 - El **model del mon** és una representació del mon que permet al vehicle preveure el que passarà en el futur.
-- Ex: en verd es mostra els llocs on el vehicle pot anar i els objectes es mostren envoltats per  una caixa vermella.
+- Ex: en verd es mostra els llocs on el vehicle pot anar i els objectes es mostren envoltats per una caixa vermella.
 
 ![bg right fit](../images/mobileye.png)
 
@@ -819,7 +810,7 @@ h1, p {
 - El **seguiment d'objectes** és una tasca de visió artificial que consisteix en **seguir** una **sèrie d'objectes** en una **seqüència d'imatges**.
 - La **complexitat** del seguiment s'origina de la quantitat d'imatges que poden haber en un video.
   - 24 fps x 60 s x 60 min = **86400 imatges en una hora**.
-  - Si contem 8 - 10 objectes =  **més de 800000 objectes**.
+  - Si contem 8 - 10 objectes = **més de 800000 objectes**.
 - Aquesta tasca és molt important en aplicacions com la **vigilància**, **robots autònoms**,etc.
 
 ---
@@ -915,6 +906,6 @@ h1, p {
 - **Basats en la geometria**: analitzen estadísticament la geometria de les **característiques** facials.
 - **Enfocament holístic**: analitzen la **imatge** sencera i utilitzen les relacions entre les **característiques**.
 - **Basats en models**: creen un vector de característiques a partir de la imatge i el comparen amb vectors de característiques predefinits.
-- **Basats en xarxes neuronals**: utilitzen xarxes neuronals convolucionals per classificar la imatge; fins fa poc, però, no era factible per la gran quantitat de dades necessàries. 
+- **Basats en xarxes neuronals**: utilitzen xarxes neuronals convolucionals per classificar la imatge; fins fa poc, però, no era factible per la gran quantitat de dades necessàries.
 
 ---
