@@ -11,7 +11,7 @@ has_toc: false
 
 | Material                                              |                                                                                                                           Enllaç |
 |:------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------:|
-| [Presentacio](5-jocs.pdf)                             |                [![PDF](https://img.shields.io/badge/PDF-5--jocs.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](5-jocs.pdf) |
+| [Presentacio](5-jocs.pdf)                             |                [![PDF](https://img.shields.io/badge/PDF-5--jocs.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](5-jocs_marp.pdf) <br> [![HTML](https://img.shields.io/badge/HTML-5--jocs-blue?logo=html5&logoColor=white)](5-jocs_marp.html) |
 | [Continguts]({% link apunts/5.-Jocs/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/5.-Jocs/continguts.md %}) |
 
 ## Exemples solucionats
