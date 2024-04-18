@@ -13,7 +13,7 @@ footer: Carles Gonzàlez
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;0
+  font-weight: 800;
   text-shadow:
     0px 0px 3px #00000;
 }
@@ -386,3 +386,4 @@ def avalua_tres_en_ratlla(joc, estat):
                 utilitat -= 1
     return utilitat
 ```
+---
