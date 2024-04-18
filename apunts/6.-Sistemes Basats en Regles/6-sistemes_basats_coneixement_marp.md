@@ -13,7 +13,7 @@ footer: Carles Gonzàlez
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;0
+  font-weight: 800;
   text-shadow:
     0px 0px 3px #00000;
 }
@@ -34,7 +34,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;0
   text-shadow:
     0px 0px 3px #00000;
 }
@@ -646,3 +645,5 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - Propina: **20.24%**
 
 ![bg right fit](../images/plot_tipping_problem_newapi_5.png)
+
+---
