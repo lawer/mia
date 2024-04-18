@@ -11,7 +11,7 @@ has_toc: false
 
 | Material                                                                   |                                                                                                                                                Enllaç |
 |:---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Presentacio](6-sistemes_basats_regles_marp.pdf)                                | [![PDF](https://img.shields.io/badge/PDF-6--sistemes_basats_regles.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](6-sistemes_basats_regles_marp.pdf) <br /> [![HTML](https://img.shields.io/badge/HTML-6--sistemes_basats_regles-blue?logo=html5&logoColor=white)](6-sistemes_basats_regles_marp.html) |
+| [Presentacio](6-sistemes_basats_regles_marp.pdf)                                | [![PDF](https://img.shields.io/badge/PDF-6--sistemes_basats_regles.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](6-sistemes_basats_coneixement_marp.pdf) <br /> [![HTML](https://img.shields.io/badge/HTML-6--sistemes_basats_regles-blue?logo=html5&logoColor=white)](6-sistemes_basats_coneixement_marp.html) |
 | [Continguts]({% link apunts/6.-Sistemes Basats en Regles/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/6.-Sistemes Basats en Regles/continguts.md %}) |
 
 ## Exemples solucionats
