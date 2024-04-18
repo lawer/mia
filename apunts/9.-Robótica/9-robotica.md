@@ -13,7 +13,7 @@ footer: Carles Gonzàlez
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 800;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -82,7 +82,7 @@ Models d'intel·ligència artificial
 
 ### Intel·ligència artificial
 
-- Tot el discutit fins ara ens poryta a que els robots **impliquen molts conceptes** dels vists durant el curs.
+- Tot el discutit fins ara ens porta a que els robots **impliquen molts conceptes** dels vists durant el curs.
 - Per alguns dels conceptes vistos trobarem en la robòtica una **aplicació pràctica** i real Per exemple, els robots autònoms utilitzen xarxes neuronals per processar la informació dels sensors i prendre decisions.
 - Altres conceptes es veuran **ampliats**: per exemple, els algoritmes d'optimització han de ser adaptats per funcionar en entorns no deterministes.
 
@@ -221,7 +221,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;
   text-shadow:
     0px 0px 3px #000000;
 }
@@ -266,6 +265,7 @@ h1, p {
    -  Ambdós es basen en la **teoria de la probabilitat**.
 
 ---
+<style scoped>section { font-size:34.5px; }</style>
 
 #### Mapatge
 
