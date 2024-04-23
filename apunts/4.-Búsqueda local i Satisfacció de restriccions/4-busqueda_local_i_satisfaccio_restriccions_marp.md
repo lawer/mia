@@ -11,15 +11,15 @@ footer: Carles Gonzàlez
 ---
 
 <style scoped>
-h1, p {
+h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   font-weight: 800;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
-# Búsqueda local i satisfacció de restriccions
+# 4. Búsqueda local i satisfacció de restriccions
 
 Models d'intel·ligència artificial
 
@@ -35,7 +35,7 @@ _class: invert lead
 h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -91,7 +91,7 @@ _class: invert lead
 h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -679,7 +679,7 @@ _class: invert lead
 h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -866,7 +866,7 @@ _class: invert lead
 h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -952,7 +952,7 @@ _class: invert lead
 h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -1085,7 +1085,7 @@ _class: invert lead
 h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
