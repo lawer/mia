@@ -114,10 +114,11 @@ _class: invert lead
 -->
 
 <style scoped>
-h1, p {
+h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
+  font-weight: 800;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -221,10 +222,11 @@ _class: invert lead
 -->
 
 <style scoped>
-h1, p {
+h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
+  font-weight: 800;
   text-shadow:
-    0px 0px 3px #00000;
+    0px 0px 3px #000000;
 }
 </style>
 
@@ -285,6 +287,10 @@ h1, p {
 ![bg right:39% fit](../images/img_11.png)
 
 ---
+
+<!--
+_footer: ""
+-->
 
 ### Implementació (I)
 
