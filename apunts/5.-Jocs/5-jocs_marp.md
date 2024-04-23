@@ -116,7 +116,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;0
   text-shadow:
     0px 0px 3px #00000;
 }
@@ -224,7 +223,6 @@ _class: invert lead
 <style scoped>
 h1, p {
   color: #FFFFFF;
-  font-weight: bold;0
   text-shadow:
     0px 0px 3px #00000;
 }

@@ -11,7 +11,7 @@ has_toc: false
 
 | Material                                                                                      |                                                                                                                                                                   Enllaç |
 |:----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Presentacio](4-busqueda_local_i_satisfaccio_restriccions.pdf)                                |         [![PDF](https://img.shields.io/badge/PDF-4--busqueda_local.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](4-busqueda_local_i_satisfaccio_restriccions.pdf) |
+| [Presentacio](4-busqueda_local_i_satisfaccio_restriccions.pdf)                                |         [![PDF](https://img.shields.io/badge/PDF-4--busqueda_local.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](4-busqueda_local_i_satisfaccio_restriccions_marp.pdf) <br /> [![HTML](https://img.shields.io/badge/HTML-4--busqueda_local-blue?logo=html5&logoColor=white)](4-busqueda_local_i_satisfaccio_restriccions_marp.html) |
 | [Continguts]({% link apunts/4.-Búsqueda local i Satisfacció de restriccions/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/4.-Búsqueda local i Satisfacció de restriccions/continguts.md %}) |
 
 
