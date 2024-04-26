@@ -22,9 +22,7 @@ has_toc: false
 |:---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Vehicles de Braitenberg](0.-vehicles_braitenberg.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-vehicles_braitenberg.ipynb) |
 | [Exemples de robots](0.-exemples_robots.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-exemples_robots.ipynb) |
-| [Navegant en la càmera](0.-navegant_camera.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-navegant_camera.ipynb) <br /> [![PNG](https://img.shields.io/badge/PNG-pista__4.png-blue?logo=img&logoColor=white)](pista_4.png)
-
-|
+| [Navegant en la càmera](0.-navegant_camera.ipynb)                                                   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/9.-Rob%C3%B3tica/0.-navegant_camera.ipynb) <br /> [![PNG](https://img.shields.io/badge/PNG-pista__4.png-blue?logo=img&logoColor=white)](pista_4.png)|
 
 ## Exercicis
 
