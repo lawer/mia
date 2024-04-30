@@ -7,7 +7,7 @@ _class: invert lead
 paginate: true
 _paginate: false
 auto-scaling: true
-footer: Carles Gonzàlez
+footer: © Carles Gonzàlez - CC-BY-NC-SA
 ---
 
 <style scoped>
