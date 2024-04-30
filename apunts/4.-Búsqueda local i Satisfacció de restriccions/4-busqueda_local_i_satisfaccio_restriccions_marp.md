@@ -550,7 +550,7 @@ Millor fitness: 12798.50074780205
 - La probabilitat d'acceptar un estat empitjorant depèn de la **temperatura**.
   - A mesura que l'algorisme avança, la temperatura **disminueix** i fa que sigui **menys probable** acceptar un estat empitjorant.
   - La probabilitat d'acceptar un estat empitjorant es calcula amb la següent fórmula:
-    - $P = e^{-\frac{\Delta E}{T}}$, on $\Delta E$$ és la diferència entre el valor de l'estat actual i el valor de l'estat successor.
+    - $P = e^{-\frac{\Delta E}{T}}$, on $\Delta E$ és la diferència entre el valor de l'estat actual i el valor de l'estat successor.
 
 ---
 
