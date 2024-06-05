@@ -187,6 +187,10 @@ scrapy crawl quotes
 ```
 
 ---
+<!--
+_footer: ""
+-->
+
 
 ## Execució del Spider (II)
 
@@ -221,6 +225,65 @@ scrapy crawl quotes -o quotes.xml
 
 ---
 
+## Definicio d'Items (I)
+
+- Els items són objectes que contenen les dades extretes
+- Per defecte són diccionaris de Python
+- Si necessitem més control sobre les dades, podem definir-los com a classes a `items.py`
+
+```python
+import scrapy
+
+class QuoteItem(scrapy.Item):
+    text = scrapy.Field()
+    author = scrapy.Field()
+    tags = scrapy.Field()
+```
+
+---
+
+<!--
+_footer: ""
+-->
+
+
+## Definicio d'Items (II)
+
+- Modifiquem el Spider per utilitzar l'Item definit. En lloc de retornar un diccionari, retornem un objecte `QuoteItem` encara que seguim accedint als camps com si fos un diccionari
+
+```python
+from project_name.items import QuoteItem
+
+def parse(self, response):
+    for quote in response.css('div.quote'):
+        item = QuoteItem()
+        item['text'] = quote.css('span.text::text').get()
+        item['author'] = quote.css('small.author::text').get()
+        item['tags'] = quote.css('div.tags a.tag::text').getall()
+
+        yield item
+```
+
+---
+
+## Definicio d'Items (III)
+
+- Podem accedir als camps de l'Item com un objecte
+
+```python
+def parse(self, response):
+    for quote in response.css('div.quote'):
+        item = QuoteItem(
+            text=quote.css('span.text::text').get(),
+            author=quote.css('small.author::text').get(),
+            tags=quote.css('div.tags a.tag::text').getall()
+        )
+
+        yield item
+```
+
+---
+
 <style scoped>section { font-size: 33px; }</style>
 
 ## Múltiples pàgines (I)
@@ -231,6 +294,11 @@ scrapy crawl quotes -o quotes.xml
     - Si no sabem el nombre de pàgines, podem utilitzar el mètode `parse` per extreure la URL de la següent pàgina i la seguim amb `response.follow`. Veurem com fer-ho a continuació.
 
 ---
+
+<!--
+_footer: ""
+-->
+
 
 ## Múltiples pàgines (II)
 
@@ -254,7 +322,7 @@ def parse(self, response):
 
 ---
 
-<style scoped>section { font-size: 33px; }</style>
+<style scoped>section { font-size: 32px; }</style>
 
 
 ## Múltiples pàgines (III)
@@ -266,6 +334,10 @@ def parse(self, response):
 - Per evitar extreure la mateixa pàgina dues vegades, podem utilitzar `response.urljoin(next_page)`. Les urls visitades es guarden a `response.meta['visited']` i podem comprovar si ja hem visitat la pàgina. De totes maneres, Scrapy ja ho fa per nosaltres.
 
 ---
+
+<!--
+_footer: ""
+-->
 
 ## Postprocessament amb pipelines (I)
 
@@ -322,6 +394,8 @@ class QuotesPipeline:
 
 ---
 
+<style scoped>section { font-size: 32px; }</style>
+
 ## Postprocessament amb pipelines (IV)
 
 - Podem afegir més funcionalitats a la pipeline, com ara comprovar si les dades ja existeixen a la base de dades abans de guardar-les
@@ -357,11 +431,15 @@ LOG_LEVEL = 'INFO'
 
 - Nivells de logs: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`
 
-- Amb `logging` podem afegir logs personalitzats
+- Per defecte, Scrapy mostra els logs per pantalla. Podem guardar-los en un fitxer amb `-s LOG_FILE=quotes.log`
+
 
 ---
 
 ## Errors i logs (II)
+
+- Amb `logging` podem afegir logs personalitzats
+
 
 ```python
 import logging
@@ -377,6 +455,11 @@ def parse(self, response):
 ---
 
 <style scoped>section { font-size: 30px; }</style>
+
+<!--
+_footer: ""
+-->
+
 
 ## Errors i logs (III)
 
@@ -414,3 +497,5 @@ def parse(self, response):
 - Utilitza pipelines per processar les dades abans de guardar-les
 - Utilitza logs per mostrar informació de depuració i errors
 - Extra: guarda les dades en una base de dades SQLite
+
+---
