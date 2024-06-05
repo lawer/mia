@@ -3,7 +3,7 @@ marp: true
 size: 16:9
 theme: lawer
 class: default
-_class:  lead
+_class:  invert lead
 paginate: true
 _paginate: false
 auto-scaling: true
@@ -19,8 +19,9 @@ h1, p {
 }
 </style>
 
+# Web Scraping amb Scrapy
 
-![bg fit](apunts/images/scrapy.png)
+![bg opacity](apunts/images/web_scraping.png)
 
 
 ---
