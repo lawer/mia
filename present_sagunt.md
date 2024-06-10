@@ -184,6 +184,18 @@ Aplicant la IA
 
 ---
 
+#### ESO i CFGM (II)
+
+- **Continguts**:
+    - Conceptes: Algorismes avançats, dades complexes, processament de llenguatge natural.
+    - Aplicacions: utilizació d'assistents de programació, anàlisi documental.
+    - Reflexió ètica: Privacitat, Seguretat.
+- **Competències**:
+    - Digital, Matemàtica, Lingüística, Social i Cívica.
+    - Autonomia i iniciativa personal. Treball en equip.
+
+---
+
 ##### Activitats en batxillerat
 
 - Normativa APA
@@ -253,9 +265,12 @@ Desenvolupant la IA
 
 #### Curs d'especialització (II)
 
+<style scoped>section { font-size:33px; }</style>
+
+
 - **Continguts**:
     - Conceptes avançats de IA: Xarxes neuronals, Algorismes genètics, Lògica difusa, Processament de llenguatge natural, Visió artificial.
-    - Aplicacions reals: Xatbots, anàlisi de dades, prediccions en medicina, robòtica.
+    - Aplicacions reals: Xatbots, anàlisi de dades, prediccions en medicina, robòtica industrial.
     - Ètica en la IA: Privacitat, Seguretat, Discriminació.
 - **Competències personals**:
     - Pensament crític, Comunicació, Autonomia i iniciativa personal, Treball en equip.
