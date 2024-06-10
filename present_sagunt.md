@@ -15,7 +15,7 @@ h1, p {
   color: #FFFFFF;
   font-weight: 800;
   text-shadow:
-    0px 0px 3px #000000;
+    0px 0px 6px #000000;
 }
 </style>
 
@@ -23,7 +23,7 @@ h1, p {
 
 Preparant el futur més immediat.
 
-![bg opacity](apunts/images/8-ways-to-help-ensure-your-companys-ai-is-ethical.jpg)
+![bg](apunts/images/portada_present.jpg)
 
 ---
 
@@ -41,7 +41,7 @@ Preparant el futur més immediat.
 
 ---
 
-<style scoped>section { font-size:30px; }</style>
+<style scoped>section { font-size:29px; }</style>
 
 ## IES Benigasló
 
@@ -49,7 +49,7 @@ Preparant el futur més immediat.
 - Més de **1000 alumnes** i més de **100 professors**.
 - ESO, Batxillerat, FP (bàsica, grau mitjà i grau superior) i màster.
     - Els FPs de grau superior es treballa el desenvolupament d'aplicacions web i mòbils.
-    - El curs d'especialització en IA és la última incorporació al centre.
+    - El curs d'especialització en IA i Big Dataés la última incorporació al centre.
 
 ![bg right:43% 135%](apunts/images/benigaslo.png)
 
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 </style>
 
-### ESO i FPGM
+### ESO i CFGM
 
 Coneixent la IA
 
@@ -104,7 +104,7 @@ Coneixent la IA
 ---
 <style scoped>section { font-size:33px; }</style>
 
-#### ESO i FPGM (I)
+#### ESO i CFGM (I)
 
 - **Objectius**:
     - Conèixer els conceptes bàsics de la IA.
@@ -119,7 +119,7 @@ Coneixent la IA
 
 ---
 
-#### ESO i FPGM (II)
+#### ESO i CFGM (II)
 
 - **Continguts**:
     - Conceptes bàsics: Algorismes, Dades, Aprenentatge.
@@ -131,7 +131,7 @@ Coneixent la IA
 
 ---
 
-#### Activitats ESO i FPGM - Guiades
+#### Activitats ESO i CFGM - Guiades
 
 - _Generar imatges per treballs_
     - Treballem la competència linguística per obtindre el resultat buscat.
@@ -170,7 +170,7 @@ Aplicant la IA
 ---
 
 
-#### Batxillerat i FPGS
+#### Batxillerat i CFGS (I)
 
 - **Objectius**:
     - Aplicar la IA en la resolució de problemes.
@@ -197,7 +197,7 @@ Aplicant la IA
 
 ---
 
-#### Activitats en FPGS
+#### Activitats en CFGS
 
 - Utilització d'assistents de programació
     - **Generar codi** a partir de preguntes i comentaris.
@@ -206,7 +206,7 @@ Aplicant la IA
 - Explicacions de codi:
     - Explica **pas a pas** codi complex o desconegut
 - Integració en motors de IA:
-    - **Utilitzar l'API del ChatGPT** en el nostre <style scoped>section { font-size:32px; }</style>
+    - **Utilitzar l'API del ChatGPT** en el nostre programa
 
 .
 
@@ -248,6 +248,17 @@ Desenvolupant la IA
     - Projectes.
     - Col·laboració amb empreses.
     - Conferències.
+
+---
+
+#### Curs d'especialització (II)
+
+- **Continguts**:
+    - Conceptes avançats de IA: Xarxes neuronals, Algorismes genètics, Lògica difusa, Processament de llenguatge natural, Visió artificial.
+    - Aplicacions reals: Xatbots, anàlisi de dades, prediccions en medicina, robòtica.
+    - Ètica en la IA: Privacitat, Seguretat, Discriminació.
+- **Competències personals**:
+    - Pensament crític, Comunicació, Autonomia i iniciativa personal, Treball en equip.
 
 ---
 
