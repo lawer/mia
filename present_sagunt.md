@@ -27,9 +27,12 @@ Preparant el futur més immediat.
 
 ---
 
+<style scoped>section { font-size:31px; }</style>
+
 ## Introducció a la xarrada
 
 - **Intel·ligència Artificial**.
+    - Sistemes que realitzen tasques que requereixen intel·ligència humana.
 - En molt poc de temps ha canviat la nostra vida.
 - A l'educació també hi ha arribat. Com podem aprofitar-la?
 - Veurem que ens aporta la IA a l'educació, els **reptes** que planteja i que estem fent a l'IES Benigasló per **integrar-la**.
@@ -203,7 +206,9 @@ Aplicant la IA
 - Explicacions de codi:
     - Explica **pas a pas** codi complex o desconegut
 - Integració en motors de IA:
-    - **Utilitzar l'API del ChatGPT** en el nostre codi.
+    - **Utilitzar l'API del ChatGPT** en el nostre <style scoped>section { font-size:32px; }</style>
+
+.
 
 ---
 ![bg](apunts/images/copilot_genera.png)
@@ -245,6 +250,8 @@ Desenvolupant la IA
     - Conferències.
 
 ---
+
+<style scoped>section { font-size:33px; }</style>
 
 #### Activitats curs d'especialització
 
