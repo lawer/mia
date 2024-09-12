@@ -21,7 +21,6 @@ has_toc: false
 | [Exercicis](https://classroom.github.com/a/6E3eP9D5) |                                                              [![Open In GitHub Classroom](https://img.shields.io/badge/GitHub%20Classroom-Exercicis-blue?logo=github)](https://classroom.github.com/a/6E3eP9D5) |
 | [Exercicis curts](1.-exercicis.ipynb)                | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/1.-exercicis.ipynb) |
 | [Sokoban](2.-sokoban.ipynb)                          |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/2.-sokoban.ipynb) |
-) |
 | [Word ladder](3.-word_ladder.ipynb)                  |                                                                                           [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/3.-word_ladder.ipynb) |
 | [Viatjar per Romania](4.-romania.ipynb)              |                                                                                           [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/4.-romania.ipynb) |
 
