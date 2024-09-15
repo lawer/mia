@@ -11,7 +11,7 @@ has_toc: false
 
 | Material                                                                    |                                                                                                                                                 Enllaç |
 |:----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Presentacio](3.2-busqueda.pdf)                                             |                           [![PDF](https://img.shields.io/badge/PDF-3.--busqueda.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](3.2-busqueda.pdf) |
+| [Presentacio](3.2-busqueda-marp.pdf)                                             |                           [![PDF](https://img.shields.io/badge/PDF-3.--busqueda--marp.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](3.2-busqueda-marp.pdf) <br /> [![HTML](https://img.shields.io/badge/HTML-3.--busqueda-blue?logo=html5&logoColor=white)](3.2-busqueda-marp.html) |
 | [Continguts]({% link apunts/3.-Búsqueda en espai d'estats/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/3.-Búsqueda en espai d'estats/continguts.md %}) |
 
 ## Exercicis
