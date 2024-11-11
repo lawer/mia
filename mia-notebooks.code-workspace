@@ -10,6 +10,7 @@
 	"settings": {
 		"markdown.marp.themes": [
 			"https://raw.githubusercontent.com/lawer/marp_themes/main/lawer.css"
-		]
+		],
+		"languageToolLinter.serviceType": "public"
 	}
 }

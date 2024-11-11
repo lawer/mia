@@ -22,6 +22,7 @@ has_toc: false
 | [Graf d'exemple](graf.png) | [![PNG](https://img.shields.io/badge/Graf-graf.png-blue?logo=graphviz&logoColor=white)](graf.png) |
 | [Sokoban](2.-sokoban.ipynb)                          |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/2.-sokoban.ipynb) |
 | [Word ladder](3.-word_ladder.ipynb)                  |                                                                                           [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/3.-word_ladder.ipynb) |
+[Llista de paraules](words34.txt.gz) | [![GZ](https://img.shields.io/badge/GZ-words34.txt.gz-blue?logo=gnu-zip&logoColor=white)](words34.txt.gz) |
 | [Viatjar per Romania](4.-romania.ipynb)              |                                                                                           [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/4.-romania.ipynb) |
 
 ## Exemples solucionats
