@@ -26,6 +26,7 @@ has_toc: false
 | [WorldCities](worldcities.csv)                                    |                                                                                                                                                                   [![CSV](https://img.shields.io/badge/CSV-worldcities.csv-blue?logo=pandas)](worldcities.csv) |
 | [Players_22](players_22.csv)                                      |                                                                                                                                                                     [![CSV](https://img.shields.io/badge/CSV-players_22.csv-blue?logo=pandas)](players_22.csv) |
 | [Exercici 1 solucionat](exercicis/1.-exercicis_solucionats.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/exercicis/1.-exercicis_solucionats.ipynb) |
+| [Polideportiu](polideportiu.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/polideportiu.ipynb)
 
 
 ## Exemples solucionats
@@ -35,4 +36,3 @@ has_toc: false
 | [Búsqueda local](tsp.ipynb)                   |      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/tsp.ipynb) |
 | [Algorismes genètics](motxilla.ipynb)         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/motxilla.ipynb) |
 | [Satisfacció de restriccions](n_reines.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/n_reines.ipynb) |
-| [Polideportiu](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/4.-B%C3%BAsqueda%20local%20i%20Satisfacci%C3%B3%20de%20restriccions/polideportiu.ipynb)
