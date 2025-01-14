@@ -1,5 +1,5 @@
 ---
-title: 1. Introducció a la intel·ligència artificial
+title: 1. Introducció
 parent: 1. Primera Avaluació
 layout: default
 has_children: true
