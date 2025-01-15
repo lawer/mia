@@ -1,6 +1,6 @@
 ---
 title: 6. Sistemes basats en regles
-parent: 1. Primera Avaluació
+parent: 2. Segona Avaluació
 layout: default
 has_children: true
 has_toc: false
