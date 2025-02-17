@@ -930,69 +930,6 @@ h1, p {
 
 ---
 
-## Entrenament de models de llenguatge
-
-- Els models de llenguatge necessiten un entrenament previ amb un **gran** volum de dades.
-- Aquestes dades s'anomenen **corpus**.
-- Els corpus són **molt grans** i difícils de generar.
-- Poden ser **generats manualment** o **automàticament**.
-- Varien en contingut: notícies, llibres, xats, etc.
-- Poden incloure **etiquetes** per a entrenar models supervisats.
-
----
-
-## Parts d'un LLM
-
-- Els models de llenguatge basats en transformers són models molt complexos.
-- Tenen dues parts principals:
-  - **Encoder**: codifica el text d'entrada en un vector.
-  - **Decoder**: decodifica el vector en un text de sortida.
-  - Segons quines parts estiguen presents o no podran ser **bidireccionals** o **unidireccionals**.
-  - Aixó determinarà també les tasques que poden realitzar.
-
----
-
-## Parts d'un LLM (II)
-
-- Encoder: codifica el text d'entrada en un vector.
-- Els models `encoder-only` són **unidireccionals** i s'especialitzen en "entendre" el text d'entrada i, per tant, són útils per a tasques com la classificació de text.
-- Solament necessiten el **encoder** per a realitzar la tasca perqué no necessiten generar un text de sortida.
-- Utilitats: classificació de text, anàlisi de sentiments, etc.
-- Ex: **BERT**, RoBERTa, ALBERT, ELECTRA, etc.
-
----
-
-## Parts d'un LLM (III)
-
-- Decoder: decodifica el vector en un text de sortida.
-- Els models `Decoder-only` solament poden accedir a les paraules anteriors i, per tant, són útils per a tasques com la generació de text.
-- Utilitats: generació de text, escritura creativa, etc.
-- Ex: **GPT**, GPT-2, GPT-3, Mixtral, etc.
-
----
-
-## Parts d'un LLM (IV)
-
-- Encoder + Decoder: codifica el text d'entrada en un vector i decodifica el vector en un text de sortida.
-- Els models `Encoder-Decoder` poden accedir a les paraules anteriors i posteriors i, per tant, són útils per a tasques com la traducció automàtica.
-- Utilitats: traducció automàtica, resum de text, esquematització de text, etc.
-- Ex: **T5**, BART, etc.
-
----
-
-<style scoped>section { font-size:30px; }</style>
-
-## Utilització dels LLM
-
-- Els transformers són models molt complexos i necessiten un entrenament previ amb un gran volum de dades.
-- Normalment s'utilitzen models ja entrenats i que poden ser utilitzats per a diferents tasques.
-- Per a millorar el rendiment dels models entrenats es pot utilitzar el **fine-tuning**.
-  - El fine-tuning consisteix en entrenar el model amb un conjunt de dades específic per a la tasca que volem realitzar.
-  - S'utilitza un conjunt de dades més petit que el corpus original.
-  - En les pràctiques utilitzarem un model ja entrenat i li farem fine-tuning per a millorar el rendiment en les tasques que realitzem.
-
----
-
 <!--
 _class: invert lead
 -->
@@ -1015,7 +952,7 @@ h1, p {
 
 ## Cadenes de Markov
 
-- Els models ocults de Markov (HMM) són models estocàstics que permeten modelar seqüències de paraules.
+- Els **models ocults de Markov** (HMM) són models estocàstics que permeten modelar seqüències de paraules.
 
 - Es basen en la idea que les paraules d’una seqüència no són independents, sinó que depenen de les paraules anteriors.
 
@@ -1024,6 +961,111 @@ h1, p {
 - El seu principal desavantatge és que no poden modelar dependències a llarg termini.
 
 ![bg right:35% fit](../../images/mdp.png)
+
+---
+
+## Xarxes neuronals recurrents (RNN)
+
+- Com ja hem parlat, les xarxes neuronals recurrents (RNN) són xarxes neuronals que poden processar seqüències de longitud variable de forma eficient.
+
+- En aquesta secció veuren en més detall com funcionen les RNN i com són utilitzades en NLP.
+
+![bg right:40% fit](../../images/rnn.png)
+
+---
+
+### Memòria
+
+- La principal característica de les RNN és que tenen **memòria**.
+- Com s'aconsegueix aquesta memòria?
+  - La sortida d'una neurona pot anar determinada per la **sortida d'ella mateixa**.
+  - Aixó permet que la informació puga processar-se un una mateixa capa, sense necessitat de capa addicional.
+  - Apareix un nou problema: el **desvaiment del gradient**. Quina informació es manté i quina no?
+  - Per aixó han anat diferents aquitectures al llarg del temps.
+
+---
+
+### Xarxes Recurrents Tradicionals (I)
+
+- La sortida d'una neurona pot anar determinada per la sortida d'ella mateixa.
+- Cada neurona té dues entrades: el **valor actual** i el **valor anterior**.
+- Aquesta memòria és inherenment de curta durada.
+- Per facilitar la comprensió es solen mostrar de forma **desplegada**, com veurem a continuació.
+- Són una millora respecte als models ocults de Markov, però molt vulnerables als problemes de desvaiment del gradient.
+
+---
+
+### Xarxes Recurrents Tradicionals (II)
+
+- En el cas de les RNN, la memòria es manté en la capa oculta.
+- En el següent esquema podem veure com es representa una RNN sense desplegar.
+
+![bg right:50% fit](../../images/rnn_comprimida.png)
+
+---
+
+<style scoped>section { font-size:26px; }</style>
+
+<!-- _footer: "" -->
+
+### Xarxes Recurrents Tradicionals (III)
+
+- En l'esquema es representen tres passos de temps.
+- Solament tenim un node d'entrada, pero al necessitar tres passos de temps, necessitem passar tres valors d'entrada.
+- Els valors a entrenar en les neurones recurrents són tres: pes de la entrada, pes de la entrada recurrent i el biaix.
+
+## ![40%](../../images/rnn_desplegada.png)
+
+---
+
+### LSTM (Long Short-Term Memory) (I)
+
+- Les **LSTM** són una millora de les RNN tradicionals implementant una **memòria a llarg termini**.
+- Tenen una **memòria interna** que pot ser mantinguda, **modificada** o **eliminada** segons les necessitats.
+- **Millora el desvaiment** del gradient **a costa de ser més complexa i costosa** de processar.
+- Cada cel·la LSTM equival a quatre capes en una RNN tradicional.
+
+---
+
+### LSTM (Long Short-Term Memory) (II)
+
+- L'estat intern de la cel·la es gestiona utilitzant les **portes**.
+- Les LSTM tenen tres portes:
+  - **Porta d'oblit**: Si s'activa la cel·la oblidarà la informació anterior.
+  - **Porta d'entrada**: Si s'activa la cel·la afegirà nova informació.
+  - **Porta de sortida**: Si s'activa la cel·la generarà la sortida.
+- Aquestes portes permeten a la LSTM mantenir la informació important i descartar la que no ho és.
+
+---
+
+### LSTM (Long Short-Term Memory) (III)
+
+![bg fit 90%](../../images/lstm_hor.png)
+
+---
+
+### GRU (Gated Recurrent Unit)
+
+- Les GRU són una altra millora de les RNN tradicionals implementant una memòria a llarg termini.
+- No tenen una memòria interna com les LSTM, però són més senzilles i més ràpides de processar.
+- Hi ha dues portes: porta d'actualització i porta de reinici. En conjunt determinen la quantitat d'informació que es manté i la que es descarta.
+- Millora el desvaiment del gradient sense ser tan complexa com les LSTM.
+
+---
+
+### GRU (Gated Recurrent Unit) (II)
+
+- Les GRU tenen dues portes: **porta d'actualització** i **porta de reinici**.
+- Si s'activa la porta de reinici la cel·la oblidarà la informació anterior.
+- Si s'activa la porta d'actualització la sortida incorporarà nova informació.
+  - Aquesta informació pot ser la mateixa que la anterior o una combinació de la nova i la anterior. El poder retenir la informació anterior és el que fa que les GRU no tinguin una memòria interna com les LSTM.
+- L'efecte és semblant al de les LSTM, però amb menys complexitat.
+
+---
+
+### GRU (Gated Recurrent Unit) (III)
+
+![bg fit 90%](../../images/gru_hor.png)
 
 ---
 
@@ -1260,3 +1302,31 @@ h1, h2, h3, h4, h5, h6, p {
   - **Aprenentatge per reforç**: s'utilitzen per a entrenar agents en entorns complexos.
 
 - Tots aquests usos els fan una eina molt potent i que poden arribar a substituir molts dels models actuals.
+
+---
+
+<style scoped>section { font-size:29px; }</style>
+
+### Classificació dels LLM
+
+- **Encoder-only**: No necessiten generar un text de sortida, processen el text d'entrada.
+  - Utilitats: classificació de text, anàlisi de sentiments, etc. Ex: BERT, RoBERTa, ALBERT, ELECTRA, etc.
+- **Decoder-only**: No transformen el text d'entrada, solament generen un text de sortida.
+  - Utilitats: generació de text, escritura creativa, etc. Ex: GPT-X, Mixtral, Aguila...
+- **Encoder + Decoder**: Processen el text d'entrada i generen un text de sortida
+  - Utilitats: traducció automàtica, resum, esquematització, etc. Ex: T5, BART, etc.
+
+---
+
+<style scoped>section { font-size:30px; }</style>
+
+## Utilització dels LLM
+
+- Els transformers són models molt complexos i necessiten un entrenament previ amb un gran volum de dades.
+- Normalment s'utilitzen models ja entrenats i que poden ser utilitzats per a diferents tasques.
+- Per a millorar el rendiment dels models entrenats es pot utilitzar el **fine-tuning**.
+  - El fine-tuning consisteix en entrenar el model amb un conjunt de dades específic per a la tasca que volem realitzar.
+  - S'utilitza un conjunt de dades més petit que el corpus original.
+  - En les pràctiques utilitzarem un model ja entrenat i li farem fine-tuning per a millorar el rendiment en les tasques que realitzem.
+
+---
