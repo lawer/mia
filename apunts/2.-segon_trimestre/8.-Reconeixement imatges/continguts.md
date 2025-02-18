@@ -9,7 +9,7 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
-![bg opacity](../images/visio_artificial.png)
+![bg opacity](../../images/visio_artificial.png)
 
 # Introducció
 
@@ -51,7 +51,7 @@ Models d'intel·ligència artificial
 
 # Característiques de les imatges
 
-![bg opacity](../images/Feature_Detection_Result_b.jpg)
+![bg opacity](../../images/Feature_Detection_Result_b.jpg)
 
 ## Definició
 
@@ -68,7 +68,7 @@ Models d'intel·ligència artificial
 - Simplifiquen la imatge i permeten **reduir la quantitat d'informació**.
 - Passem d'una imatge molt gran a una **matriu de vores**
 
-![bg right:40% fit](../images/vores_vert.png)
+![bg right:40% fit](../../images/vores_vert.png)
 
 ### Detecció de vores
 
@@ -87,7 +87,7 @@ Models d'intel·ligència artificial
   3. Es detecten les vores: **mètode de supressió de no-màxims**.
   4. Es decideixen quines vores són vàlides: **mètode de la histèresi**.
 
-![bg right:33% fit](../images/edge_vert.png)
+![bg right:33% fit](../../images/edge_vert.png)
 
 ## Textura
 
@@ -95,7 +95,7 @@ Models d'intel·ligència artificial
   - Ex: Finestres en un edifici, taques en una vaca, etc.
 - Ajuden, al igual que les vores, a **identificar objectes**.
 
-![bg right:45% fit](../images/textures_vert.jpg)
+![bg right:45% fit](../../images/textures_vert.jpg)
 
 ### Característiques de la textura
 
@@ -122,7 +122,7 @@ Models d'intel·ligència artificial
 - Els algoritmes de visió artificial són capaços de calcular el fluix òptic a partir de diferents imatges.
 - Important per moltes tasques: **reconstrucció 3D**, la **compensació de moviment**, **compressió**...
 
-![bg right:38% fit](../images/optical_flow_vert.jpg)
+![bg right:38% fit](../../images/optical_flow_vert.jpg)
 
 ## Segments
 
@@ -131,11 +131,11 @@ Models d'intel·ligència artificial
   - **Basat en límits**: es busquen els límits de les regions. Es pot entendre com un problema de _classificació_ on cada pixel pertany o no a un segment i es soluciona amb tècniques de machine learning i models preentrenats.
   - **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de _clustering_ i s'utilitzen tècniques com _k-means_.
 
-![bg fit](../images/tipus_segments.png)
+![bg fit](../../images/tipus_segments.png)
 
 # Tasques de visió artificial
 
-![bg opacity](../images/opencv_tasks.jpg)
+![bg opacity](../../images/opencv_tasks.jpg)
 
 ## Tasques
 
@@ -162,7 +162,7 @@ Models d'intel·ligència artificial
 - Els histogrames es poden calcular per cada canal de color (R, G, B) o per la imatge en escala de grisos.
 - S'utilitzen molt en la **normalització** d'imatges.
 
-![bg 90%](../images/histo.png)
+![bg 90%](../../images/histo.png)
 
 ### Equalització de l'histograma
 
@@ -170,7 +170,7 @@ Models d'intel·ligència artificial
 - L'objectiu és que la distribució dels píxels sigui més uniforme.
 - Es divideix l'histograma en _bins_ i es redistribueixen els píxels de manera que la distribució sigui més uniforme.
 - El resultat poden no ser realistes, però si útils per a tasques de visió artificial.
-  ![bg right:27% fit](../images/hist_eq.png)
+  ![bg right:27% fit](../../images/hist_eq.png)
 
 ### Filtratge
 
@@ -207,7 +207,7 @@ Models d'intel·ligència artificial
 - És una forma simple de **segmentació**: es vol separar la imatge en _objecte_ i _fons_.
 - Per binaritzar, sol ser millor opció que ajustar la lluminositat i el contrast.
 
-![bg right:20% fit](../images/thresholding.png)
+![bg right:20% fit](../../images/thresholding.png)
 
 ### Transformacions
 
@@ -215,7 +215,7 @@ Models d'intel·ligència artificial
 - Les transformacions més comunes són:, **rotació**, **escala**, **desplaçament** i **canvis de perspectiva**.
 - Es divideixen en **lineals** i **no lineals**: segons si canvien la forma de la imatge.
 
-![bg right:38% fit](../images/transformacions.png)
+![bg right:38% fit](../../images/transformacions.png)
 
 ### Extracció del fluix óptic (_optical flow_)
 
@@ -227,7 +227,7 @@ Models d'intel·ligència artificial
 
 ### Extracció del fluix óptic (_optical flow_)
 
-![bg fit](../images/dense_sparse_optical_flow_hor.png)
+![bg fit](../../images/dense_sparse_optical_flow_hor.png)
 
 ### Llibreries
 
@@ -271,7 +271,7 @@ Models d'intel·ligència artificial
 
 #### Convolució
 
-![bg fit](../images/feature_map.jpg)
+![bg fit](../../images/feature_map.jpg)
 
 #### Funcions d'activació
 
@@ -307,7 +307,7 @@ Models d'intel·ligència artificial
 
 #### Estructura d'una xarxa neuronal convolucional
 
-![bg right:64% fit](../images/estructura_cnn.png)
+![bg right:64% fit](../../images/estructura_cnn.png)
 
 #### Funcionament d'una CNN
 
@@ -415,11 +415,11 @@ Models d'intel·ligència artificial
   - **Segmentació d'instàncies**: es segmenta en instàncies d'objectes. (Ex: _mask-RCNN_)
   - **Segmentació panòptica**: es segmenta en categories predefinides, però també es segmenten les instàncies d'objectes. (Ex: _mask-RCNN_)
 
-![bg fit](../images/segment.png)
+![bg fit](../../images/segment.png)
 
 # Aplicacions
 
-![bg opacity](../images/computer_vision_applications.png)
+![bg opacity](../../images/computer_vision_applications.png)
 
 ## Aplicacions
 
@@ -436,7 +436,7 @@ Models d'intel·ligència artificial
 - S'ha avançat molt en els últims anys, però encara hi ha molts reptes per resoldre.
 - A continuació veurem en que ens pot ajudar.
 
-![bg  fit](../images/deteccio_persones.jpg)
+![bg  fit](../../images/deteccio_persones.jpg)
 
 #### Usos
 
@@ -453,7 +453,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - Es relativament fàcil, ja que les articulacions tenen una forma i una posició concreta, les relacions entre les articulacions són conegudes i els efectes sobre las perspectiva són previsibles.
 - Per contra, preveure el que està fent una persona és molt més difícil.
 
-![bg right:30% fit](../images/pose.png)
+![bg right:30% fit](../../images/pose.png)
 
 #### Descripció de l'acció
 
@@ -479,7 +479,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
   - **Bottleneck**: el vector de característiques. És la part més important de l'autoencoder.
   - **Decoder**: pren el vector de característiques i el converteix en la imatge d'entrada.
 
-![bg fit](../images/autoencoder.png)
+![bg fit](../../images/autoencoder.png)
 
 #### Utilitats de l'autoencoder
 
@@ -494,7 +494,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - El punt de partida és el mateix, però no generar un vector de característiques, sino una **distribució de probabilitat** que es fa servir per tal de generar imatges.
 - Generarem imatges amb un aspecte similar a les imatges d'entrada, però no iguals.
 
-![bg right:28% fit](../images/vae.jpg)
+![bg right:28% fit](../../images/vae.jpg)
 
 ### GANs (Generative Adversarial Networks)
 
@@ -506,7 +506,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ### GANs (Generative Adversarial Networks)
 
-![bg fit](../images/GANS.png)
+![bg fit](../../images/GANS.png)
 
 ## Control del moviment
 
@@ -527,7 +527,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - El **model del mon** és una representació del mon que permet al vehicle preveure el que passarà en el futur.
 - Ex: en verd es mostra els llocs on el vehicle pot anar i els objectes es mostren envoltats per una caixa vermella.
 
-![bg right fit](../images/mobileye.png)
+![bg right fit](../../images/mobileye.png)
 
 ### Navegació autònoma
 
@@ -538,7 +538,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ### Mapeig i Planiﬁcació de trajectòries
 
-![bg fit](../images/navegacio_autonoma.png)
+![bg fit](../../images/navegacio_autonoma.png)
 
 ## Seguiment d'objectes
 
@@ -573,7 +573,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
   - Ex: quantes persones passen per un carrer en una hora.
 - No es tant utilitzat per etiquetatge
 
-![bg fit](../images/mot.gif)
+![bg fit](../../images/mot.gif)
 
 #### Seguiment de múltiples objectes - Funcionament
 
@@ -583,7 +583,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ##### Tracking by detection
 
-![bg fit](../images/tracking-by-detection.png)
+![bg fit](../../images/tracking-by-detection.png)
 
 ##### Identificació i re-identificació
 

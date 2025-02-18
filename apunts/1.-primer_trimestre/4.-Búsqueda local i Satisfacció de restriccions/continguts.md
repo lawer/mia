@@ -9,11 +9,11 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
-![TS.jpg](../images%2FTS.jpg)
+![TS.jpg](../../images/TS.jpg)
 
 # Optimització
 
-![201a54c9-a413-4d2a-88a8-fade8a2db739.jpg](../images%2F201a54c9-a413-4d2a-88a8-fade8a2db739.jpg)
+![201a54c9-a413-4d2a-88a8-fade8a2db739.jpg](../../images/201a54c9-a413-4d2a-88a8-fade8a2db739.jpg)
 
 ## Definició
 
@@ -45,7 +45,7 @@ math: mathjax3
 
 # Búsqueda local
 
-![3D-TSP-solved_with_simulated_annealing.gif](../images%2F3D-TSP-solved_with_simulated_annealing.gif)
+![3D-TSP-solved_with_simulated_annealing.gif](../../images/3D-TSP-solved_with_simulated_annealing.gif)
 
 ## Búsqueda local
 
@@ -86,7 +86,7 @@ class ProblemaBusquedaLocal(object):
 - Les **restriccions** són que **no hi pugui haver dues ciutats en la mateixa posició**.
 - Les **solucions** són les **permutacions de les ciutats** que satisfan les restriccions.
 
-![right fit](../images%2F800px-GLPK_solution_of_a_travelling_salesman_problem.svg.png)
+![right fit](../../images/800px-GLPK_solution_of_a_travelling_salesman_problem.svg.png)
 
 - El **nombre d'estats** que cal **explorar** és **molt gran**.
   - Per a 10 ciutats, el nombre d'estats és de $$10! = 3.628.800$$.
@@ -203,7 +203,7 @@ loop
   - l'algorisme consisteix a **moure'ns** cap a **punts més alts**.
   - Si deixem de pujar entendrem que hem arribat al **màxim global** i hem trobat la solució.
 
-![right fit](../images%2FCaptura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
+![right fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
 
 ### Implementació
 
@@ -405,7 +405,7 @@ Millor fitness: 12798.50074780205
   - Permet acceptar estats que empitjoren l'actual, en certes condicions.
   - Incopora l'aleatorietat a l'algorisme d'escalada.
 
-![right fit 200%](../images%2F3-s2.0-B9780128150108000028-f02-14-9780128150108.jpg)
+![right fit 200%](../../images/3-s2.0-B9780128150108000028-f02-14-9780128150108.jpg)
 
 ### Probabilitat d'acceptació
 
@@ -427,7 +427,7 @@ Millor fitness: 12798.50074780205
   - Optimització de circuits electrònics
   - Optimització de problemes de planificació
 
-![right fit](../images%2FCaptura%20de%20pantalla%202023-08-25%20a%20las%207.11.20.png)
+![right fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.11.20.png)
 
 ### Implementació
 
@@ -505,7 +505,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 
 ## Algorismes genètics
 
-![shutterstock_124450252.jpg](..%2F..%2F..%2FDownloads%2Fshutterstock_124450252.jpg)
+![shutterstock_124450252.jpg](../../../Downloads/shutterstock_124450252.jpg)
 
 - Els **algorismes genètics** són una tècnica d'optimització inspirada en la **evolució biològica**.
   - Es pot veure com una **tècnica de cerca local en paral·lel**.
@@ -514,7 +514,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - Els **valors** dels gens representen els **valors** de les **variables**.
   - Els **individus** evolucionen **generant nous individus**.
 
-![right fit](../images%2FCaptura%20de%20pantalla%202023-08-25%20a%20las%207.36.24.png)
+![right fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.36.24.png)
 
 ### Procediment
 
@@ -535,7 +535,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - _Viatjant de comerç_: Seqüència de nombres que representen les ciutats en ordre
   - _Motxilla_: Série de 0/1 que indica si un objecte està o no a la motxilla.
 
-![right fit](../images%2F156770627-e6cc63e9-72b7-4afa-a968-60e994963a26.png)
+![right fit](../../images/156770627-e6cc63e9-72b7-4afa-a968-60e994963a26.png)
 
 ### Funció d'avaluació
 
@@ -551,7 +551,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - El nombre d'individus de la població inicial **ha de ser suficientment gran i divers**, sense fer-lo massa gran.
 - Opcionalment, ordenarem els individus segons la seva funció d'avaluació.
 
-![right fit](../images%2F156890925-13e0f1bf-ec4a-40fe-8d48-60d867cdacae.png)
+![right fit](../../images/156890925-13e0f1bf-ec4a-40fe-8d48-60d867cdacae.png)
 
 ### Selecció
 
@@ -561,7 +561,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Selecció per ruleta**: S'**assigna una probabilitat** a cada individu, proporcional a la seva funció d'avaluació.
   - **Selecció per rang**: S'**assigna una probabilitat** a cada individu, proporcional a la seva posició en la llista ordenada.
 
-![right fit](../images%2F156891433-13a356c7-d219-4a33-b7b3-423cdf10b910.png)
+![right fit](../../images/156891433-13a356c7-d219-4a33-b7b3-423cdf10b910.png)
 
 ### Creuament
 
@@ -573,7 +573,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Creuament uniforme**: Es tria **aleatòriament** per a cada gen si es **hereta del pare o de la mare**.
   - **Altres tècniques**: recombinació ordenada, màscara, etc.
 
-![right fit](../images%2F156891548-bfafdc41-0158-4146-b6c6-b9d14d2c536a.png)
+![right fit](../../images/156891548-bfafdc41-0158-4146-b6c6-b9d14d2c536a.png)
 
 ### Mutació
 
@@ -584,7 +584,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Mutació aleatòria**: Es tria un **gen aleatori** i es **modifica**.
   - **Mutació dirigida**: Es tria un **gen aleatori** i es **modifica** en una **direcció concreta**.
 
-![right fit](../images%2F156822218-716ea60d-4d6b-434e-9112-26cba6c93b2c.png)
+![right fit](../../images/156822218-716ea60d-4d6b-434e-9112-26cba6c93b2c.png)
 
 ### Implementació
 
@@ -629,7 +629,7 @@ def mutacio(individu):
 
 # Satisfacció de restriccions
 
-![1 YDEWV2f7UsDm6S8YC0LYbQ.webp](../images%2F1%20YDEWV2f7UsDm6S8YC0LYbQ.webp)
+![1 YDEWV2f7UsDm6S8YC0LYbQ.webp](../../images/1%20YDEWV2f7UsDm6S8YC0LYbQ.webp)
 
 ## Satisfacció de restriccions
 
@@ -683,7 +683,7 @@ def mutacio(individu):
 
 ## Búsqueda en tornada (backtracking)
 
-![introduction-to-backtracking-1-1664198487.png](../images%2Fintroduction-to-backtracking-1-1664198487.png)
+![introduction-to-backtracking-1-1664198487.png](../../images/introduction-to-backtracking-1-1664198487.png)
 
 ### Descripció
 
@@ -773,7 +773,7 @@ def _backtrack(estat, variables):
 
 ## Algorisme de mínims conflictes
 
-![Fig_06_08.PNG](../images%2FFig_06_08.PNG)
+![Fig_06_08.PNG](../../images/Fig_06_08.PNG)
 
 ### Descripció
 
