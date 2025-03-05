@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 Models d'intel·ligència artificial
 
-![bg opacity](../images/visio_artificial.png)
+![bg opacity](../../images/visio_artificial.png)
 
 ---
 
@@ -94,7 +94,7 @@ h1, p {
 
 # Característiques de les imatges
 
-![bg opacity](../images/Feature_Detection_Result_b.jpg)
+![bg opacity](../../images/Feature_Detection_Result_b.jpg)
 
 ---
 
@@ -115,7 +115,7 @@ h1, p {
 - Simplifiquen la imatge i permeten **reduir la quantitat d'informació**.
 - Passem d'una imatge molt gran a una **matriu de vores**
 
-![bg right:40% fit](../images/vores_vert.png)
+![bg right:40% fit](../../images/vores_vert.png)
 
 ---
 
@@ -140,7 +140,7 @@ h1, p {
   3. Es detecten les vores: **mètode de supressió de no-màxims**.
   4. Es decideixen quines vores són vàlides: **mètode de la histèresi**.
 
-![bg right:33% fit](../images/edge_vert.png)
+![bg right:33% fit](../../images/edge_vert.png)
 
 ---
 
@@ -150,7 +150,7 @@ h1, p {
   - Ex: Finestres en un edifici, taques en una vaca, etc.
 - Ajuden, al igual que les vores, a **identificar objectes**.
 
-![bg right:45% fit](../images/textures_vert.jpg)
+![bg right:45% fit](../../images/textures_vert.jpg)
 
 ---
 
@@ -185,7 +185,7 @@ h1, p {
 - Els algoritmes de visió artificial són capaços de calcular el fluix òptic a partir de diferents imatges.
 - Important per moltes tasques: **reconstrucció 3D**, la **compensació de moviment**, **compressió**...
 
-![bg right:38% fit](../images/optical_flow_vert.jpg)
+![bg right:38% fit](../../images/optical_flow_vert.jpg)
 
 ---
 
@@ -200,7 +200,11 @@ h1, p {
 
 ---
 
-![bg fit](../images/tipus_segments.png)
+<!--
+_footer: ""
+-->
+
+![bg fit](../../images/tipus_segments.png)
 
 ---
 
@@ -219,7 +223,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # Tasques de visió artificial
 
-![bg opacity](../images/opencv_tasks.jpg)
+![bg opacity](../../images/opencv_tasks.jpg)
 
 ---
 
@@ -258,7 +262,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg 90%](../images/histo.png)
+![bg 90%](../../images/histo.png)
 
 ---
 
@@ -270,7 +274,7 @@ h1, h2, h3, h4, h5, h6, p {
 - L'objectiu és que la distribució dels píxels sigui més uniforme.
 - Es divideix l'histograma en _bins_ i es redistribueixen els píxels de manera que la distribució sigui més uniforme.
 - El resultat poden no ser realistes, però si útils per a tasques de visió artificial.
-  ![bg right:27% fit](../images/hist_eq.png)
+  ![bg right:27% fit](../../images/hist_eq.png)
 
 ---
 
@@ -318,11 +322,15 @@ h1, h2, h3, h4, h5, h6, p {
 - És una forma simple de **segmentació**: es vol separar la imatge en _objecte_ i _fons_.
 - Per binaritzar, sol ser millor opció que ajustar la lluminositat i el contrast.
 
-![bg right:20% fit](../images/thresholding.png)
+![bg right:20% fit](../../images/thresholding.png)
 
 ---
 
 <style scoped>section { font-size:34px; }</style>
+
+<!--
+_footer: ""
+-->
 
 ### Transformacions
 
@@ -330,7 +338,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Les transformacions més comunes són:, **rotació**, **escala**, **desplaçament** i **canvis de perspectiva**.
 - Es divideixen en **lineals** i **no lineals**: segons si canvien la forma de la imatge.
 
-![bg right:38% fit](../images/transformacions.png)
+![](../../images/transformacions.png)
 
 ---
 
@@ -338,17 +346,18 @@ h1, h2, h3, h4, h5, h6, p {
 
 ### Extracció del fluix óptic (_optical flow_)
 
-- L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es poden dividir en dos grans grups:
-  - **Discrets**: es calcula el fluix òptic per punts concrets de la imatge. Rápids, però poc precisos.
-    - L'algorisme més comú és el de **Horn-Schunck**.
-  - **Densos**: es calcula el fluix òptic per cada píxel de la imatge. Més costós computacionalment, al comptar en més punts.
-    - Els algorismes més comú son el de **Lucas-Kanade** i el de **Farnebäck**.
+L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es poden dividir en dos grans grups:
+
+- **Discrets**: es calcula el fluix òptic per punts concrets de la imatge. Rápids, però poc precisos.
+  - L'algorisme més comú és el de **Horn-Schunck**.
+- **Densos**: es calcula el fluix òptic per cada píxel de la imatge. Més costós computacionalment, al comptar en més punts.
+  - Els algorismes més comú son el de **Lucas-Kanade** i el de **Farnebäck**.
 
 ---
 
 ### Extracció del fluix óptic (_optical flow_)
 
-![bg fit](../images/dense_sparse_optical_flow_hor.png)
+![bg fit](../../images/dense_sparse_optical_flow_hor.png)
 
 ---
 
@@ -408,7 +417,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 #### Convolució
 
-![bg fit](../images/feature_map.jpg)
+![bg fit](../../images/feature_map.jpg)
 
 ---
 
@@ -456,7 +465,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 #### Estructura d'una xarxa neuronal convolucional
 
-![bg right:64% fit](../images/estructura_cnn.png)
+![bg right:64% fit](../../images/estructura_cnn.png)
 
 ---
 
@@ -621,7 +630,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/segment.png)
+<!--
+_footer: ""
+-->
+
+![bg fit](../../images/segment.png)
 
 ---
 
@@ -639,7 +652,7 @@ h1, p {
 
 # Aplicacions
 
-![bg opacity](../images/computer_vision_applications.png)
+![bg opacity](../../images/computer_vision_applications.png)
 
 ---
 
@@ -662,7 +675,7 @@ h1, p {
 
 ---
 
-![bg  fit](../images/deteccio_persones.jpg)
+![bg  fit](../../images/deteccio_persones.jpg)
 
 ---
 
@@ -683,7 +696,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - Es relativament fàcil, ja que les articulacions tenen una forma i una posició concreta, les relacions entre les articulacions són conegudes i els efectes sobre las perspectiva són previsibles.
 - Per contra, preveure el que està fent una persona és molt més difícil.
 
-![bg right:30% fit](../images/pose.png)
+![bg right:30% fit](../../images/pose.png)
 
 ---
 
@@ -719,7 +732,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ---
 
-![bg fit](../images/autoencoder.png)
+![bg fit](../../images/autoencoder.png)
 
 ---
 
@@ -740,7 +753,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - El punt de partida és el mateix, però no generar un vector de característiques, sino una **distribució de probabilitat** que es fa servir per tal de generar imatges.
 - Generarem imatges amb un aspecte similar a les imatges d'entrada, però no iguals.
 
-![bg right:28% fit](../images/vae.jpg)
+![bg right:28% fit](../../images/vae.jpg)
 
 ---
 
@@ -758,7 +771,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ### GANs (Generative Adversarial Networks)
 
-![bg fit](../images/GANS.png)
+![bg fit](../../images/GANS.png)
 
 ---
 
@@ -787,7 +800,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - El **model del mon** és una representació del mon que permet al vehicle preveure el que passarà en el futur.
 - Ex: en verd es mostra els llocs on el vehicle pot anar i els objectes es mostren envoltats per una caixa vermella.
 
-![bg right fit](../images/mobileye.png)
+![bg right fit](../../images/mobileye.png)
 
 ---
 
@@ -802,7 +815,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ### Mapeig i Planiﬁcació de trajectòries
 
-![bg fit](../images/navegacio_autonoma.png)
+![bg fit](../../images/navegacio_autonoma.png)
 
 ---
 
@@ -847,7 +860,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ---
 
-![bg fit](../images/mot.gif)
+![bg fit](../../images/mot.gif)
 
 ---
 
@@ -861,7 +874,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 ##### Tracking by detection
 
-![bg fit](../images/tracking-by-detection.png)
+![bg fit](../../images/tracking-by-detection.png)
 
 ---
 
