@@ -716,7 +716,7 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - Un dels usos està relacionat amb el _self-supervised learning_.
   - Quan no tenim moltes dades etiquetades, podem utilitzar xarxes per tal de crear més dades.
   - Aquestes dades poden ser utilitzades per tal de millorar el rendiment de les xarxes.
-  - Utilitzarem un _autoencoder_ per tal de crear imatges.
+  - Veurem com es fa a continuació.
 
 ---
 
@@ -923,3 +923,141 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - **Basats en xarxes neuronals**: utilitzen xarxes neuronals convolucionals per classificar la imatge; fins fa poc, però, no era factible per la gran quantitat de dades necessàries.
 
 ---
+
+# Models avançats en visió artificial
+
+Transformers i Models de Difusió
+
+![bg opacity](../../images/advanced_models.png)
+
+---
+
+<style scoped>section { font-size:29px; }</style>
+
+## Transformers en visió artificial
+
+- Els **Transformers**, originàriament dissenyats per a processament del llenguatge natural (NLP), s'han adaptat amb èxit a la visió artificial.
+- **ViT (Vision Transformers)**: Un dels models més populars que aplica l'arquitectura Transformer a imatges.
+  - Divideix la imatge en **patxos** (patches) i els tracta com a seqüències.
+  - Utilitza **atenció multi-cap** (multi-head attention) per capturar relacions globals entre els patxos.
+- **Aplicacions**:
+  - Classificació d'imatges.
+  - Detecció d'objectes.
+  - Segmentació semàntica.
+
+---
+
+<style scoped>section { font-size:31px; }</style>
+
+### Visió per Transformers (ViT)
+
+- **Com funciona**:
+  1. Divideix la imatge en petits patxos (ex: 16x16 píxels).
+  2. Aplana cada patx i el projecta a un espai latent mitjançant una capa lineal.
+  3. Afegeix embeddings de posició per mantenir la informació espacial.
+  4. Passa la seqüència de patxos per un Transformer encoder.
+- **Avantatges**:
+  - Captura dependències a llarg termini entre regions de la imatge.
+  - Escala millor amb dades a gran escala.
+
+---
+
+### Visió per Transformers (ViT)
+
+![bg fit 70%](../../images/vit.png)
+
+---
+
+<style scoped>section { font-size:30px; }</style>
+
+## Models de Difusió
+
+- Els **Models de Difusió** són una família de models generatius que han demostrat un gran potencial en la generació d'imatges d'alta qualitat.
+- **Funcionament**:
+  - Es basen en un procés de **difusió** que afegeix soroll a les dades (imatges) durant múltiples passos.
+  - Després, el model aprèn a revertir aquest procés per generar imatges a partir de soroll.
+- **Exemples populars**:
+  - **DALL-E**: Genera imatges a partir de descripcions textuals.
+  - **Stable Diffusion**: Un model eficient que genera imatges d'alta qualitat amb menys recursos computacionals.
+
+---
+
+<style scoped>section { font-size:32px; }</style>
+
+### Procés de Difusió
+
+1. **Forward process**:
+   - Afegeix soroll gaussià a la imatge en passos incrementals.
+   - La imatge es converteix en soroll pur després de múltiples passos.
+2. **Reverse process**:
+   - El model aprèn a eliminar el soroll pas a pas per reconstruir la imatge original.
+3. **Generació**:
+   - Es comença amb soroll pur i s'aplica el procés invers per generar noves imatges.
+
+---
+
+### Procés de Difusió
+
+![bg fit 60%](../../images/diffu.png)
+
+---
+
+<style scoped>section { font-size:31px; }</style>
+
+### Aplicacions dels Models de Difusió
+
+- **Generació d'imatges**:
+  - Crear imatges realistes a partir de descripcions textuals.
+  - Ex: "Un gos assegut en un camp amb un cel blau".
+- **Edició d'imatges**:
+  - Modificar imatges existents afegint o eliminant objectes.
+- **Super-resolució**:
+  - Millorar la resolució d'imatges de baixa qualitat.
+- **Art generatiu**:
+  - Crear obres d'art úniques mitjançant la combinació d'estils i conceptes.
+
+---
+
+<style scoped>section { font-size:30px; }</style>
+
+## Comparativa entre Transformers i Models de Difusió
+
+| **Característica**         | **Transformers**                 | **Models de Difusió**         |
+| -------------------------- | -------------------------------- | ----------------------------- |
+| **Enfocament**             | Atenció global i seqüencial.     | Procés iteratiu de soroll.    |
+| **Aplicacions principals** | Classificació, detecció.         | Generació i edició d'imatges. |
+| **Complexitat**            | Alta (requereix molts recursos). | Moderada (més eficient).      |
+| **Escalabilitat**          | Excel·lent amb dades grans.      | Bona, però menys que ViT.     |
+
+---
+
+<style scoped>section { font-size:30px; }</style>
+
+## Futur de la visió artificial
+
+- **Integració de models**:
+  - Combinar Transformers i Models de Difusió per a tasques més complexes.
+- **Eficiència computacional**:
+  - Desenvolupar models més lleugers per a dispositius mòbils i IoT.
+- **Aplicacions emergents**:
+  - Realitat augmentada, medicina personalitzada, i vehicles autònoms.
+- **Ètica i privadesa**:
+  - Garantir que els models de visió artificial es desenvolupin de manera responsable.
+
+---
+
+<!--
+_class: invert lead
+-->
+
+<style scoped>
+h1, p {
+  color: #FFFFFF;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
+
+# Gràcies!
+
+![bg opacity](../../images/thank_you.png)

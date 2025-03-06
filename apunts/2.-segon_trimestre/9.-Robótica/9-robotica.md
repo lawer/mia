@@ -23,7 +23,7 @@ h1, p {
 
 Models d'intel·ligència artificial
 
-![bg opacity](../images/community-jetracer_2020.jpg)
+![bg opacity](../../images/community-jetracer_2020.jpg)
 
 ---
 
@@ -43,7 +43,7 @@ Models d'intel·ligència artificial
 - Per fer-ho, els robots utilitzen actuadors per interactuar amb el món real.
 - Els canvis podem ser físics (moure objectes) o digitals (enviar informació).
 
-![bg right:40%](../images/robot.png)
+![bg right:40%](../../images/robot.png)
 
 ---
 
@@ -56,8 +56,7 @@ Models d'intel·ligència artificial
   - **Mesurar l'estat de l'entorn**: càmeres, radars, ultrasons, etc.
   - **Mesurar l'estat del robot**: acceleròmetres, giroscopis, encoders, etc.
 
-
-![bg right:33%](../images/sensors.png)
+![bg right:33%](../../images/sensors.png)
 
 ---
 
@@ -76,7 +75,6 @@ Models d'intel·ligència artificial
 - En el **món real**, l'entorn és **no observable, no determinista i no estàtic**.
 - Aixó fa que els problemes de robòtica siguin molt més complicats que els problemes d'optimització tradicionals.
 - També es **dificulta l'aprenentatge**: el temps no es pot retrocedir per provar diferents accions ni es pot accelerar
-  
 
 ---
 
@@ -105,16 +103,15 @@ Models d'intel·ligència artificial
 
 ---
 
-![bg left%](../images/antro.webp)
+![bg left%](../../images/antro.webp)
 
-![bg center%](../images/arm.png)
+![bg center%](../../images/arm.png)
 
-![bg right%](../images/mobile.jpg)
-
+![bg right%](../../images/mobile.jpg)
 
 ---
 
-<!-- 
+<!--
 _class: invert lead
 -->
 
@@ -129,19 +126,20 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Sensors i actuadors
 
-![bg opacity](../images/sensors2.png)
+![bg opacity](../../images/sensors2.png)
 
 ---
+
 <style scoped>section { font-size:33px; }</style>
 
 ### Tipus de sensors
 
-- **Actius**: emeten una senyal i mesuren la resposta. Es solen utilitzar per mesurar distàncies. 
+- **Actius**: emeten una senyal i mesuren la resposta. Es solen utilitzar per mesurar distàncies.
   - Necessiten una font d'energia. Més precisos però més cars i complexos.
   - _Radars, ultrasons_.
 - **Passius**: mesuren la radiació que reben. Es solen utilitzar per mesurar la llum o el so.
-  - No necessiten una font d'energia. Econòmics i fàcils d'utilitzar. 
-  - _Càmeres, micròfons_. 
+  - No necessiten una font d'energia. Econòmics i fàcils d'utilitzar.
+  - _Càmeres, micròfons_.
 
 ---
 
@@ -150,27 +148,27 @@ h1, h2, h3, h4, h5, h6, p {
 Permeten als robots mesurar la distància a objectes.
 
 - **Ultrasons**: emeten ones sonores i mesuren el temps que triguen a rebre l'eco. Polivalents i econòmics.
-- **Radars**: emeten ones electromagnètiques i mesuren el temps que triguen a rebre el reflexe.  Molt utilitzats en robots aèris.
+- **Radars**: emeten ones electromagnètiques i mesuren el temps que triguen a rebre el reflexe. Molt utilitzats en robots aèris.
 - **LIDAR**: utilitzen làser per mesurar la distància a objectes amb una gran precisió. Molt utilitzats en vehicles autònoms terrestres.
 
 ---
 
 ##### LIDAR
 
-![bg fit](../images/lidar.webp)
+![bg fit](../../images/lidar.webp)
 
 ---
 
-
 #### Sensors de localització
 
-Permeten als robots saber on es troben en el seu entorn. 
+Permeten als robots saber on es troben en el seu entorn.
 
 - **GPS**: permet als robots saber la seva posició en un mapa. L'equivalent Rus és el GLONASS i el xinès el Beidou. Solament funciona a l'aire lliure.
 - **Beacons**: emeten una senyal que permet als robots saber la seva posició en un espai conegut. Molt utilitzats en robòtica indoor.
 - **Wi-Fi**: La força de la senyal Wi-Fi permet substituir els beacons en entorns amb Wi-Fi.
 
 ---
+
 <style scoped>section { font-size:34px; }</style>
 
 #### Propiocepció
@@ -178,7 +176,7 @@ Permeten als robots saber on es troben en el seu entorn.
 Es refereix a la capacitat dels robots de saber la seva posició i orientació en l'espai.
 
 - **Sensors inercials**: acceleròmetres i giroscopis que permeten als robots saber la seva orientació.
-- **Encoders**: permeten als robots saber la seva posició en un eix. 
+- **Encoders**: permeten als robots saber la seva posició en un eix.
 - **Odometria**: permet als robots saber la seva posició en un pla. Utilitza encoders i giroscopis.
 - **SLAM**: permet als robots saber la seva posició en un entorn desconegut. Utilitza càmeres i LIDAR.
 
@@ -194,9 +192,10 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 
 ---
 
-![bg fit](../images/sensors.jpg)
+![bg fit](../../images/sensors.jpg)
 
 ---
+
 <style scoped>section { font-size:33px; }</style>
 
 ### Actuadors
@@ -204,17 +203,16 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Els actuadors són els components del robot que permeten moure's pel seu entorn. Els més comuns són:
   - **Servomotors**: permeten moure's en un eix. Molt utilitzats en robots manipuladors.
   - **Motors DC**: permeten moure's en un eix. Molt utilitzats en robots mòbils.
-  - **Motors pas a pas**: permeten moure's en un eix amb una gran precisió. 
+  - **Motors pas a pas**: permeten moure's en un eix amb una gran precisió.
   - **Hidràulics**: permeten moure's amb una gran força. Molt utilitzats en robots industrials.
 
 ---
 
-
-![bg fit](../images/actuators.png)
+![bg fit](../../images/actuators.png)
 
 ---
 
-<!-- 
+<!--
 _class: invert lead
 -->
 
@@ -227,22 +225,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 </style>
 
-
 ## Programació de robots
 
-![bg opacity](../images/robot_programming.png)
+![bg opacity](../../images/robot_programming.png)
 
 ---
 
 ## Programació de robots
-
 
 - La programació de robots és molt més complexa que la programació de software tradicional.
 - No coneixem l'estat de l'entorn, per tant, hem de plantejar les tasques del robot com un **problema d'optimització**, on hem de trobar la millor seqüència d'accions per aconseguir un objectiu.
 - Veurem com aplicar els conceptes de programació i d'intel·ligència artificial vistos fins ara a la robòtica.
 
-
 ---
+
 <style scoped>section { font-size:33.8px; }</style>
 
 ### Percepció
@@ -259,13 +255,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 #### Localització
 
- - **Localització**: determinar la posició dels objectes (incloent el robot) en l'entorn.
--  Inclús en entorns coneguts, la localització és un problema complex, ja que els sensors poden ser molt inexactes.
--  Partint d'una posició inicial i sabent les acccions que ha fet el robot la posició final serà una **distribució de probabilitat**.
-   -  **Monte Carlo Localization (MCL)** vs **Extended Kalman Filter (KF)**: MCL és més precís però més lent. EKF és més ràpid però menys precís. 
-   -  Ambdós es basen en la **teoria de la probabilitat**.
+- **Localització**: determinar la posició dels objectes (incloent el robot) en l'entorn.
+- Inclús en entorns coneguts, la localització és un problema complex, ja que els sensors poden ser molt inexactes.
+- Partint d'una posició inicial i sabent les acccions que ha fet el robot la posició final serà una **distribució de probabilitat**.
+  - **Monte Carlo Localization (MCL)** vs **Extended Kalman Filter (KF)**: MCL és més precís però més lent. EKF és més ràpid però menys precís.
+  - Ambdós es basen en la **teoria de la probabilitat**.
 
 ---
+
 <style scoped>section { font-size:34.5px; }</style>
 
 #### Mapatge
@@ -278,7 +275,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/SLAM.png)
+![bg fit](../../images/SLAM.png)
 
 ---
 
@@ -286,11 +283,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 #### Altres tipus de percepció
 
- - Hi ha altres tipus de percepció que són importants en robòtica com poden ser els de **temperatura, llum, olor, etc.**
-  - La percepció de variables ambientals és important en moltes tasques robòtiques.
-  - Per exemple, un robot que ha de netejar una habitació necessita percebre la brutícia.
-  - Aquest tipus de percepció es pot fer amb sensors especialitzats. 
-  - Podem aplicar un enfocament similar al de la percepció visual o un enfocament reactiu.
+- Hi ha altres tipus de percepció que són importants en robòtica com poden ser els de **temperatura, llum, olor, etc.**
+- La percepció de variables ambientals és important en moltes tasques robòtiques.
+- Per exemple, un robot que ha de netejar una habitació necessita percebre la brutícia.
+- Aquest tipus de percepció es pot fer amb sensors especialitzats.
+- Podem aplicar un enfocament similar al de la percepció visual o un enfocament reactiu.
 
 ---
 
@@ -309,11 +306,11 @@ h1, h2, h3, h4, h5, h6, p {
 - Valentino Braitenberg va proposar un model senzill de vehicles autònoms que mostren comportaments sorprenents.
 - Els vehicles de Braitenberg són vehicles amb sensors i actuadors que segueixen unes regles senzilles. Normalment interconecten els sensors amb els actuadors directament.
 - Els vehicles mostren comportaments complexos com seguir la llum, evitar obstacles, etc.
-- Son representatius de la **robòtica BEAM** (Biology, Electronics, Aesthetics, Mechanics). 
+- Son representatius de la **robòtica BEAM** (Biology, Electronics, Aesthetics, Mechanics).
 
 ---
 
-![bg fit](../images/braitenberg.png)
+![bg fit](../../images/braitenberg.png)
 
 ---
 
@@ -326,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/LINE-FOLLOWER-ALGORITHM.jpg)
+![bg fit](../../images/LINE-FOLLOWER-ALGORITHM.jpg)
 
 ---
 
@@ -334,10 +331,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 #### Màquines d'estats finits
 
-- Les **màquines d'estats finits** són una eina molt útil per programar robots.   
+- Les **màquines d'estats finits** són una eina molt útil per programar robots.
+
   - Un pàs més enllà dels robots reactius en complexitat i flexibilitat.
 
-- Model matemàtic** que descriu el comportament d'un **sistema com una sèrie d'estats i transicions**, on cada estat representa una situació en la que es pot trobar
+- Model matemàtic** que descriu el comportament d'un **sistema com una sèrie d'estats i transicions\*\*, on cada estat representa una situació en la que es pot trobar
 - Robots reactius: les decisions es prenen segons l'estat actual
 - FSM: **En funció de les entrades actuals i de l'estat en el que es troba el robot**.
 
@@ -363,10 +361,9 @@ h1, h2, h3, h4, h5, h6, p {
   - Si el robot passa detecta l'objectiu passa a l'estat **Endavant** i comença a moure's cap a l'objectiu.
   - Quan el robot arriba a l'objectiu passa a l'estat **Objectiu** i s'atura.
 
-
 ---
 
-![bg fit](../images/buscar_objectiu.png)
+![bg fit](../../images/buscar_objectiu.png)
 
 ---
 
@@ -391,12 +388,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/nn_robotics.jpeg)
+![bg fit](../../images/nn_robotics.jpeg)
 
 ---
 
 <style scoped>section { font-size:34px; }</style>
-
 
 #### Aprenentatge (I)
 
@@ -410,9 +406,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 <style scoped>section { font-size:33px; }</style>
 
-
 #### Aprenentatge (II)
-
 
 - **Aprenentatge per reforç**: les xarxes aprenen a partir de la interacció amb l'entorn.
   - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
@@ -421,7 +415,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/rl_robot.png)
+![bg fit](../../images/rl_robot.png)
 
 ---
 
