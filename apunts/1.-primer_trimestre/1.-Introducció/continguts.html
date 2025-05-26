@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>continguts.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="1-introducci%C3%B3-a-la-intellig%C3%A8ncia-artificial">1. Introducció a la intel·ligència artificial</h2>
+<h3 id="models-dintellig%C3%A8ncia-artificial">Models d'intel·ligència artificial</h3>
+<p><img src="../../images/portada.png" alt=""></p>
+<h1 id="qu%C3%A8-%C3%A9s-la-intellig%C3%A8ncia-artificial">Què és la intel·ligència artificial?</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intel·ligència</strong></td>
+<td>La intel·ligència és la capacitat d'aprendre, comprendre i resoldre problemes.</td>
+</tr>
+<tr>
+<td><strong>Intel·ligència artificial</strong></td>
+<td>La intel·ligència artificial és la inteligència exhibida per màquines.</td>
+</tr>
+<tr>
+<td><strong>Màquina intel·ligent</strong></td>
+<td>Una màquina intel·ligent és un sistema que pot percebre el seu entorn i prendre accions que maximitzen les seves possibilitats d'èxit en un objectiu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="agents-intelligents">Agents intel·ligents</h2>
+<ul>
+<li>Un <strong>agent</strong> percep el seu entorn mitjançant <strong>sensors</strong> i actua sobre ell mitjançant <strong>actuadors</strong>.</li>
+<li>Un <strong>agent intel·ligent</strong> és un agent que actua de forma intel·ligent.
+<ul>
+<li><strong>Actuar de forma intel·ligent</strong>: Actuar de forma que maximitza les seves possibilitats d'èxit en un objectiu.</li>
+<li><strong>Objectiu</strong>: Una funció que mesura el rendiment de l'agent en un entorn.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../images/what-is-the-composition-for-agents-in-artificial-intelligence.png" alt="right fit 100%"></p>
+<ul>
+<li>L'assignatura tracta sobre la <strong>construcció d'agents intel·ligents</strong>.</li>
+<li>Veurem:
+<ul>
+<li>Diferents <strong>tècniques</strong> per a construir agents intel·ligents.</li>
+<li>Els seus <strong>avantatges i inconvenients</strong>.</li>
+<li>Els seus <strong>camps d'aplicació</strong>.</li>
+<li>Els seus <strong>riscos i reptes ètics</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../images/0 Yf3CJXTzM1sKyKOa.jpg" alt="right "></p>
+<h1 id="una-mica-dhist%C3%B2ria">Una mica d'història</h1>
+<p><img src="../../images/History.jpg" alt=""></p>
+<h2 id="1950-alan-turing">1950: Alan Turing</h2>
+<p><img src="../../images/alan-mathison-turing_d8b50689.jpg" alt="right"></p>
+<ul>
+<li>
+<p>La prova de Turing és una proposta de test per a la intel·ligència d'una màquina</p>
+</li>
+<li>
+<p>La va proposar Alan Turing el 1950 en el seu article <em>&quot;Computing Machinery and Intelligence&quot;</em>.</p>
+</li>
+<li>
+<p>L'objectiu de la prova és determinar <em>si una màquina pot pensar</em>.</p>
+</li>
+</ul>
+<h3 id="el-test">El test</h3>
+<ul>
+<li>
+<p>Un humà, aïllat en una habitació, ha de mantenir una conversa escrita amb <strong>dues persones, una
+humana i una màquina</strong>.</p>
+</li>
+<li>
+<p>Si l'humà <em>no pot distingir</em> entre les dues, la màquina es <strong>considera que pensa</strong>.</p>
+</li>
+</ul>
+<p><img src="../../images/turing_test.png" alt="right"></p>
+<h3 id="la-pregunta-de-turing">La pregunta de Turing</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Poden pensar les màquines?</strong>:</td>
+<td style="text-align:center">_La pregunta de si les màquines poden pensar és massa vaga, i hauria de ser reemplaçada per una altra pregunta que</td>
+</tr>
+<tr>
+<td style="text-align:center">pugui ser contestada per mitjà d'un sí o un no, que tingui una significació precisa._</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Poden les màquines fer el que els humans poden fer?</strong>:</td>
+<td style="text-align:center">Aquesta nova pregunta té l'avantatge que és possible contestar-la definitivament i que molts arguments que s'han fet per contestar la</td>
+</tr>
+<tr>
+<td style="text-align:center">pregunta original poden ser reutilitzats. __</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1956---1974-els-inicis">1956 - 1974: Els inicis</h2>
+<ul>
+<li><strong>1956</strong>: <em>John McCarthy</em> - La conferència de Dartmouth. El naixement de la IA.</li>
+<li><strong>1957</strong>: <em>Herbert Simon</em> - &quot;En 10 anys el campió mundial d'escacs serà una màquina&quot;</li>
+<li><strong>1958</strong>: <em>Frank Rosenblatt</em> - El perceptró</li>
+<li><strong>1967</strong>: <em>Marvin Minsky</em> - &quot;En una generació, el problema de la IA estarà resolt&quot;</li>
+</ul>
+<p><img src="../../images/1 tVuiuwvFXtByodoO1B46CQ.png" alt="right"></p>
+<h2 id="1974---1993-hi-ha-esperan%C3%A7a">1974 - 1993: Hi ha esperança?</h2>
+<ul>
+<li><strong>1974-1980</strong>: Pocs avenços, desencantament i crisi de finançament (AI Winter)</li>
+<li><strong>Principis dels 80</strong>: Apareixen els sistemes experts</li>
+<li><strong>1982 - 1992</strong>: Projecte Japonès de la 5a generació</li>
+<li><strong>1987-1993</strong>: Els sistemes experts fracassen. (II AI Winter)</li>
+</ul>
+<p><img src="../../images/IMG_0430.JPG.2a37776a69d98ce7cf1794fdb15c4083.png" alt="right"></p>
+<h2 id="1997-deep-blue">1997: Deep Blue</h2>
+<ul>
+<li>Deep Blue guanya a Kasparov, el campió mundial d'escacs.</li>
+<li>Els sistemes experts són capaços de superar a humans en tasques específiques.</li>
+<li>Després de la victòria, IBM desmantella el projecte.</li>
+<li><strong>Els sistemes experts no són capaços de superar a humans en tasques generals.</strong></li>
+</ul>
+<p><img src="../../images/DeepBlue.png" alt="right"></p>
+<h2 id="2002-roomba">2002: Roomba</h2>
+<ul>
+<li>Roomba va ser el primer robot domèstic comercialitzat.</li>
+<li>És capaç de netejar una habitació sense cap mena d'ajuda humana.</li>
+<li>Detecta obstacles i els evita, i torna a la seva base quan s'acaba la bateria.</li>
+<li><strong>El 2017, Roomba va vendre més de 20 milions d'unitats.</strong></li>
+</ul>
+<p><img src="../../images/irobot-roomba-692-2332085.png" alt="right"></p>
+<h2 id="2005-darpa-grand-challenge">2005: DARPA Grand Challenge</h2>
+<ul>
+<li>Després de 4 anys de preparació, el 2004 es va celebrar la primera edició del DARPA Grand Challenge.</li>
+<li>Els participants havien de construir un vehicle autònom capaç de recórrer 240 km per un terreny desèrtic.</li>
+<li>Els vehicles havien de ser capaços de prendre decisions sense cap mena d'ajuda humana.</li>
+<li>Els 15 equips participants no van ser capaços de completar el recorregut.</li>
+<li><strong>El 2005, 5 equips van completar el recorregut</strong>.</li>
+</ul>
+<p><img src="../../images/darpa.png" alt="right"></p>
+<h2 id="2011-watson">2011: Watson</h2>
+<ul>
+<li>Watson guanya a Jeopardy, un concurs de preguntes i respostes</li>
+<li>Va guanyar 1 milió de dòlars, que va donar a caritat.</li>
+<li>Watson és capaç de processar llenguatge natural i respondre preguntes.</li>
+<li>Va superar a dos dels millors jugadors de Jeopardy, que havien guanyat més de 3 milions de dòlars.</li>
+</ul>
+<p><img src="../../images/watson31.png" alt="right"></p>
+<h2 id="2016-alphago">2016: AlphaGo</h2>
+<ul>
+<li>AlphaGo guanya a Lee Sedol, un dels millors jugadors de Go.</li>
+<li>El Go és un joc de tauler molt més complex que els escacs; fins aleshores, es considerava impossible de resoldre.</li>
+<li>El moviment 37 de la partida 2 va sorprendre a tots els experts. AlphaGo va fer un moviment mai vist i que va acabar
+guanyant la partida.</li>
+</ul>
+<p><img src="../../images/2908.png" alt="right"></p>
+<h2 id="2017-alphago-zero">2017: AlphaGo Zero</h2>
+<ul>
+<li>AlphaGo Zero és capaç de jugar a Go sense cap mena d'informació sobre les regles.</li>
+<li>Apren a jugar a Go jugant contra si mateix.</li>
+<li>AlphaGo Zero va ser capaç de superar a AlphaGo amb només 3 dies d'entrenament.</li>
+</ul>
+<p><img src="../../images/1 m_phP_gghFLtbXnV2tQaog.png" alt="right"></p>
+<h2 id="2020-gpt-3">2020: GPT-3</h2>
+<ul>
+<li>Forma part de la família de GPT-2, un model de llenguatge basat en xarxes neuronals.</li>
+<li>Algunes de les aplicacions de GPT-3:
+<ul>
+<li>Generar textos a partir d'un text d'entrada.</li>
+<li>Traduir textos a un altre idioma.</li>
+<li>Contestar preguntes.</li>
+<li>Programar a partir de descripcions textuals.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../images/New-Version-of-GPT-3-A-Game-Changing-Language-Model-by-Open-A.jpg" alt="right"></p>
+<h2 id="2021-dalle">2021: DALL·E</h2>
+<ul>
+<li>DALL·E és capaç de generar imatges a partir d'una descripció textual.</li>
+<li>Funciona de forma similar a GPT-3, però en comptes de generar text, genera imatges.</li>
+<li>Disposa d'una base de dades de 12GB d'imatges i textos.</li>
+</ul>
+<p><img src="../../images/trump-863x570.png" alt="right"></p>
+<h2 id="2022-gpt-4">2022: GPT-4</h2>
+<ul>
+<li>Al igual que GPT-3, GPT-4 és un model de llenguatge basat en l'arquitectura transformer.</li>
+<li>GPT-4 utilitza 10 bilions de paràmetres, 100 vegades més que GPT-3.</li>
+<li>És capaç de generar textos, imatges, codi, música, etc.</li>
+</ul>
+<p><img src="../../images/GPT-4-768x427.jpg" alt="right"></p>
+<h2 id="situaci%C3%B3-actual">Situació actual</h2>
+<p><img src="../../images/State of AI.png" alt="right"></p>
+<ul>
+<li>Els avenços en IA són constants.</li>
+<li>La IA està present en molts aspectes de la nostra vida.</li>
+<li>És una tecnologia amb moltes aplicacions...</li>
+<li>... amb molts riscos.</li>
+<li>... i amb reptes ètics i morals per resoldre.</li>
+</ul>
+<h2 id="mon-laboral">Mon laboral</h2>
+<ul>
+<li>Els avenços en IA estan transformant el mercat laboral.</li>
+<li>La IA està substituint a humans en moltes tasques.</li>
+<li>Al mateix temps, la IA està creant nous llocs de treball.</li>
+<li>Aquest és un procés que no s'aturarà i, per tant, cal adaptar-se.</li>
+<li>Intentarem que aquest curs us ajudi a millorar la vostra ocupabilitat en aquest nou mercat laboral.</li>
+</ul>
+<h1 id="tenim-ja-una-m%C3%A0quina-intelligent">Tenim ja una màquina intel·ligent?</h1>
+<p><img src="../../images/8860931.jpg" alt=""></p>
+<h2 id="intellig%C3%A8ncia-humana">Intel·ligència humana</h2>
+<ul>
+<li>És una capacitat molt complexa, com a resultat de milions d'anys d'evolució.</li>
+<li>Alguns dels aspectes de la intel·ligència humana:
+<ul>
+<li>Aprendre</li>
+<li>Resoldre problemes</li>
+<li>Adaptar-se a nous entorns</li>
+<li>Prendre decisions</li>
+<li>Comunicar-se i col·laborar amb altres humans</li>
+<li>Sentir emocions</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../images/p04fm4sp.png" alt=""></p>
+<ul>
+<li>La intel·ligència humana és molt més que la suma de les seves parts.</li>
+<li>Encara sabem molt poc sobre com funciona.</li>
+<li>Turing va proposar que és el resultat de la interacció entre molts processos simples.</li>
+<li>Aquesta és la idea que ha inspirat el disseny de molts algoritmes d'IA.</li>
+<li>Però, <strong>és suficient per a crear una màquina intel·ligent</strong>?</li>
+</ul>
+<h2 id="intellig%C3%A8ncia-computacional">Intel·ligència computacional</h2>
+<p><img src="../../images/inteligencia-computacional-1.jpg" alt="right"></p>
+<ul>
+<li><em>La intel·ligència artificial intenta entendre i modelar la intel·ligència humana com a un procés computacional.</em></li>
+<li>Així, intentem construir sistemes <strong>la computació dels quals</strong> aconsegueixi o s'aproximi a una noció desitjada d'
+intel·ligència.</li>
+<li>Per tant, la IA és part de la <strong>Ciència de la Computació</strong>.</li>
+</ul>
+<h2 id="i-computacional-vs-i-humana">I. computacional vs. I. humana</h2>
+<p>| Intel·ligència humana | Intel·ligència computacional |
+|--||
+| Biològica | Computacional |
+| General | Específica |
+| Conscient | Inconscient |
+| Emocional | Racional |
+| Adaptativa | Estàtica |
+| Evolutiva | Dissenyada |</p>
+<h2 id="tipus-dintellig%C3%A8ncia-artificial">Tipus d'intel·ligència artificial</h2>
+<ul>
+<li><strong>IA feble</strong>: La IA és capaç de superar a humans en tasques específiques.
+<ul>
+<li>No significa que no siga potent.</li>
+<li>Alguns experts prefireixen el nom <strong>IA estreta</strong></li>
+</ul>
+</li>
+<li><strong>IA forta</strong>: La IA és capaç de superar a humans en tasques generals.
+<ul>
+<li>També es coneix com <strong>IA general</strong> o <strong>AGI</strong> (artificial general intelligence).</li>
+<li>Es comportaria com un humà en qualsevol situació, generalitzant el seu coneixement.</li>
+<li>No existeix encara (tal vegada per sort - singularitat tecnològica).</li>
+</ul>
+</li>
+</ul>
+<h2 id="fit-racionalitat">[fit] Racionalitat</h2>
+<p><img src="../../images/98a0e0963f9ad65083de_808xFull.png" alt=""></p>
+<ul>
+<li>Els humans <em>no sempre prenen les millors decisions</em>; l'IA pot ajudar-nos en aquestes tasques.</li>
+<li><strong>Però, què és una decisió racional?</strong>
+<ul>
+<li>Una decisió racional és aquella que <strong>maximitza la probabilitat</strong> d'aconseguir un objectiu.</li>
+<li>Per tant, entendrem que una màquina <strong>intel·ligent</strong> és aquella que <strong>pren decisions racionals</strong>.</li>
+</ul>
+</li>
+</ul>
+<h1 id="paradigmes-de-la-ia">Paradigmes de la IA</h1>
+<p><img src="../../images/ThinkstockPhotos-801680832.jpg" alt=""></p>
+<h2 id="definicions">Definicions</h2>
+<ul>
+<li><strong>Paradigma</strong>: Enfoca la resolució de problemes des d'un punt de vista concret.</li>
+<li><strong>Paradigma de la IA</strong>: Model o patró que serveix de referència per a imitar-lo o copiar-lo en el disseny de sistemes
+intel·ligents.</li>
+</ul>
+<p><img src="../../images/noun-algorithm-4894723.png" alt="right"></p>
+<h2 id="paradigma-simb%C3%B2lic">Paradigma simbòlic</h2>
+<ul>
+<li><strong>Símbol</strong>: Representació de la realitat.</li>
+<li>El paradigma simbòlic està basat en l'ús de símbols per a representar coneixement.</li>
+<li>Els símbols poden ser manipulats per a inferir noves conclusions.</li>
+<li>La intel·ligència és el resultat de la manipulació de símbols.</li>
+<li>Utilitats: <strong>Sistemes experts</strong>, <strong>sistemes basats en regles</strong>, <strong>sistemes basats en casos</strong>, etc.</li>
+</ul>
+<p><img src="../../../Downloads/divisio-blog_illustrationen_Entscheidungsbaum-Beispiel-1-1024x1024.webp" alt="right"></p>
+<h2 id="paradigma-connexionista">Paradigma connexionista</h2>
+<ul>
+<li>El paradigma connexionista està basat en la <strong>simulació de xarxes neuronals</strong>.</li>
+<li>Les xarxes neuronals són un model computacional que intenta imitar el funcionament del cervell humà.</li>
+<li>La intel·ligència és el resultat de la interacció entre molts processos simples.</li>
+<li>Utilitats: <strong>Xarxes neuronals</strong>, <strong>sistemes basats en aprenentatge</strong>, etc.</li>
+</ul>
+<p><img src="../../images/xarxa_neuronal.png" alt="right"></p>
+<h2 id="paradigma-estad%C3%ADstic">Paradigma estadístic</h2>
+<ul>
+<li>El paradigma estadístic està basat en l'<strong>anàlisi estadística</strong>.</li>
+<li>La intel·ligència és el resultat de l'anàlisi de grans quantitats de dades.</li>
+<li>Els sistemes basats en aquest paradigma són capaços d'<strong>aprendre</strong> a partir de dades.</li>
+<li>Utilitats: <strong>sistemes de recomanació</strong>, <strong>processament de llenguatge natural</strong>, etc.</li>
+</ul>
+<p><img src="../../../Downloads/0 oPJfynmi4gRfBws1.png" alt="right"></p>
+<h1 id="t%C3%A8cniques-de-la-ia">Tècniques de la IA</h1>
+<p><img src="../../images/Rule-based-vs-Machine-Learning-upd-1-1536x799.png" alt=""></p>
+<h2 id="definicions">Definicions</h2>
+<ul>
+<li><strong>Técnica</strong>: Conjunt de procediments o recursos que s'han d'aplicar per a aconseguir un objectiu.</li>
+<li><strong>Tècniques de la IA</strong>: Conjunt de tècniques, algorismes i mètodes que s'apliquen per a resoldre problemes d'IA.</li>
+<li>Combinant diferents paradigmes, podem obtenir <strong>diferents tècniques</strong>.</li>
+</ul>
+<h2 id="t%C3%A8cniques-de-la-ia">Tècniques de la IA</h2>
+<ul>
+<li>Algunes de les tècniques més utilitzades són:
+<ul>
+<li><strong>Sistemes experts</strong></li>
+<li><strong>Xarxes neuronals</strong></li>
+<li><strong>Algorismes genètics</strong></li>
+<li><strong>Sistemes multiagent</strong></li>
+<li><strong>Algorismes de cerca</strong></li>
+<li><strong>Algorismes de planificació</strong></li>
+<li><strong>Algorismes d'aprenentatge</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="sistemes-experts">Sistemes experts</h2>
+<ul>
+<li>Un sistema expert és un sistema que utilitza coneixement expert per a resoldre problemes.</li>
+<li>El coneixement expert és el coneixement que té un expert en un domini concret.</li>
+<li>Permiten automatitzar tasques que requeririen l'ajuda d'un expert.</li>
+</ul>
+<p><img src="../../images/sistema expert.png" alt="right"></p>
+<h3 id="sistemes-basats-en-casos">Sistemes basats en casos</h3>
+<ul>
+<li>S'intenta resoldre un problema a partir de casos similars resolts anteriorment.</li>
+<li>Es recuperen casos similars i s'adapten a la nova situació.</li>
+<li>Una vegada solucionat el problema, el cas es guarda per a utilitzar-lo en el futur.</li>
+<li>D'aquesta forma, el sistema va aprenent a resoldre problemes més complexos.</li>
+<li>Camps d'aplicació: <strong>Medicina</strong>, <strong>enginyeria</strong>, <strong>disseny</strong>, etc.</li>
+</ul>
+<h3 id="sistemes-basats-en-regles">Sistemes basats en regles</h3>
+<ul>
+<li>Es defineixen regles que representen coneixement.</li>
+<li>Les regles seran definides per humans experts en el domini.</li>
+<li>El sistema inferirà noves regles a partir de les regles existents.</li>
+<li>Útils en dominis on falten experts.</li>
+<li>Camps d'aplicació: <strong>Diagnòstic mèdic</strong>, <strong>control de processos</strong>, <strong>sistemes de recomanació</strong>, etc.</li>
+</ul>
+<h3 id="sistemes-basats-en-l%C3%B2gica-difusa">Sistemes basats en lògica difusa</h3>
+<ul>
+<li>Útils per a representar coneixement amb incertesa.</li>
+<li>Cada regla té un grau de certesa i es pot aplicar parcialment.</li>
+<li>Permeten definir regles amb vocabulari semblant al dels humans: &quot;molt&quot;, &quot;poc&quot;, &quot;bastant&quot;, etc.</li>
+<li>Camps d'aplicació: <strong>Robòtica</strong>, <strong>control de processos</strong>, <strong>sistemes de recomanació</strong>, etc.</li>
+</ul>
+<h2 id="xarxes-neuronals">Xarxes neuronals</h2>
+<ul>
+<li>Les xarxes neuronals són un model computacional que intenta imitar el funcionament del cervell humà.</li>
+<li>Diferents capes de neurones (nodes) interconnectades mijançant sinapsis (arcs) amb pesos.</li>
+<li>Les neurones s'activen en funció de les neurones de la capa anterior.</li>
+<li>Una capa d'entrada, una capa de sortida i podem tenir capes ocultes.</li>
+<li>Poden ser utilitzades per a resoldre problemes de classificació, regressió, etc.</li>
+</ul>
+<p><img src="../../images/types-of-artificial-neural-networks.jpg" alt="right"></p>
+<h3 id="tipus-de-xarxes-neuronals">Tipus de xarxes neuronals</h3>
+<ul>
+<li><strong>Perceptrons</strong>: Les xarxes neuronals més simples.</li>
+<li><strong>Xarxes neuronals profundes</strong>: Xarxes neuronals amb múltiples capes ocultes.</li>
+<li><strong>Xarxes neuronals recurrents</strong>: Xarxes neuronals amb connexions cícliques.</li>
+<li><strong>Xarxes neuronals convolucionals</strong>: Xarxes neuronals amb capes convolucionals (filtres).</li>
+</ul>
+<h2 id="algorismes-gen%C3%A8tics">Algorismes genètics</h2>
+<ul>
+<li>Els algorismes genètics són una tècnica d'<strong>optimització</strong> basada en la teoria de l'evolució de Darwin.</li>
+<li>Es tracta de generar una població d'individus i aplicar-los operadors genètics.</li>
+<li>Els individus més aptes (<strong>els més ben adaptats al seu entorn</strong>) tenen més probabilitats de reproduir-se.</li>
+<li>Útils per a resoldre problemes d'<strong>optimització i de cerca</strong>.</li>
+</ul>
+<p><img src="../../images/genetic.png" alt="right"></p>
+<h2 id="sistemes-multiagent">Sistemes multiagent</h2>
+<ul>
+<li>Un sistema multiagent és un sistema compost per diversos agents que interactuen entre ells.</li>
+<li>Un agent és un sistema computacional que actua en un entorn.</li>
+<li>Els agents poden ser <strong>reactius</strong>, <strong>deliberatius</strong> o <strong>socials</strong>.</li>
+<li>Útils per a resoldre problemes de <strong>planificació</strong>, <strong>disseny</strong>, <strong>control</strong>, etc.</li>
+</ul>
+<p><img src="../../images/file159604.jpg" alt="right"></p>
+<h2 id="algorismes-de-cerca">Algorismes de cerca</h2>
+<ul>
+<li>Un algorisme de cerca és un algorisme que permet trobar una solució a un problema.</li>
+<li>Els algorismes de cerca més utilitzats són:
+<ul>
+<li><strong>Cerca no informada</strong>: Cerca en amplada, cerca en profunditat, cerca en profunditat limitada, cerca en
+profunditat iterativa, cerca bidireccional, etc.</li>
+<li><strong>Cerca informada</strong>: Cerca per avarícia, cerca de cost uniforme, cerca en profunditat limitada, cerca en
+profunditat iterativa, cerca bidireccional, etc.</li>
+</ul>
+</li>
+<li>Útils per a resoldre problemes de <strong>planificació</strong>, <strong>disseny</strong>, <strong>control</strong>, etc.</li>
+</ul>
+<p><img src="../../images/A-Star-Search-Algorithm.png" alt="right"></p>
+<h2 id="algorismes-daprenentatge">Algorismes d'aprenentatge</h2>
+<ul>
+<li>Un algorisme d'aprenentatge és un algorisme que permet aprendre a partir de dades.</li>
+<li>Els algorismes d'aprenentatge més utilitzats són:
+<ul>
+<li><strong>Aprenentatge supervisat</strong>: Classificació, regressió, etc.</li>
+<li><strong>Aprenentatge no supervisat</strong>: Clustering, etc.</li>
+<li><strong>Aprenentatge per reforç</strong>: Q-learning, etc.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../images/E3ybEzqXEAAlaKM.jpg" alt="right"></p>
+<h1 id="aplicacions-de-la-ia">Aplicacions de la IA</h1>
+<p><img src="../../images/How_Artificial_Intelligence_is_Being_Deployed_Today.png" alt="How_Artificial_Intelligence_is_Being_Deployed_Today.png"></p>
+<h2 id="rob%C3%B2tica">Robòtica</h2>
+<ul>
+<li>La robòtica és una de les aplicacions més conegudes de la IA.</li>
+<li>La robòtica és la ciència i la tecnologia de robots.</li>
+<li>Un robot és un sistema capaç d'interactuar amb el seu entorn.</li>
+<li>Els robots poden ser <strong>autònoms</strong> o <strong>teleoperats</strong>.</li>
+<li>Camps d'aplicació: <strong>Indústria</strong>, <strong>sanitat</strong>, <strong>exploració espacial</strong>, <strong>militar</strong>, <strong>domèstic</strong>, etc.</li>
+</ul>
+<p><img src="../../images/Facebook-Robots-00.webp" alt="right"></p>
+<h2 id="processament-de-llenguatge-natural">Processament de llenguatge natural</h2>
+<ul>
+<li>Acumula molt del desenvolupament de la IA.</li>
+<li>El processament de llenguatge natural és la capacitat d'un ordinador per a entendre el llenguatge humà.</li>
+<li>Els humans utilitzem el llenguatge per a comunicar-nos i per a transmetre coneixement.</li>
+<li>Camps d'aplicació: <strong>Traducció automàtica</strong>, <strong>reconeixement de veu</strong>, <strong>resum de textos</strong>, <strong>chatbots</strong>, etc.</li>
+</ul>
+<p><img src="../../images/cbfff140-d7b5-4c25-9541-fe249e75a217_media-libre-aspect-ratio_default_0.jpg" alt="right"></p>
+<h2 id="visi%C3%B3-per-computador">Visió per computador</h2>
+<ul>
+<li>La visió per computador és la capacitat d'un ordinador per a entendre imatges.</li>
+<li>Els humans utilitzem la visió per a entendre el món que ens envolta.</li>
+<li>Ens permet identificar objectes, persones, colors, etc.</li>
+<li>Camps d'aplicació: <strong>Reconeixement facial</strong>, <strong>reconeixement d'objectes</strong>, <strong>reconstrucció 3D</strong>, <strong>reconstrucció de
+models</strong>, <strong>reconstrucció de paisatges</strong>, <strong>reconstrucció de monuments</strong>, etc.</li>
+</ul>
+<p><img src="../../images/Computervision_banner.webp" alt="right"></p>
+<h2 id="sistemes-de-recomanaci%C3%B3">Sistemes de recomanació</h2>
+<ul>
+<li>Un sistema de recomanació és un sistema que recomana un conjunt d'elements a un usuari.</li>
+<li>Els humans utilitzem la recomanació per a prendre decisions.</li>
+<li>L'accés a grans quantitats de dades ha fet que els sistemes de recomanació siguin cada vegada més importants.</li>
+<li>Camps d'aplicació: <strong>Recomanació de productes</strong>, <strong>recomanació de música</strong>, <strong>recomanació de pel·lícules</strong>,
+<strong>recomanació de llibres</strong>, <strong>recomanació de notícies</strong>, etc.</li>
+</ul>
+<p><img src="../../images/img-3.png" alt="right fit"></p>
+<h2 id="jocs">Jocs</h2>
+<ul>
+<li>Els jocs ens serveixen per a entendre la intel·ligència.</li>
+<li>Els humans utilitzem els jocs per a aprendre, per a divertir-nos i per a competir.</li>
+<li>El tindre molts sistemes prenent decisions en un entorn controlat els fa ser un bon banc de proves per a la IA.</li>
+<li>Camps d'aplicació: <strong>Jocs de tauler</strong>, <strong>jocs de cartes</strong>, <strong>jocs de rol</strong>, <strong>jocs d'estratègia</strong>, <strong>etc</strong>.</li>
+</ul>
+<p><img src="../../images/2825132-637490944552534550-16x9-1.jpg" alt="right fit"></p>
+<h2 id="altres-aplicacions">Altres aplicacions</h2>
+<ul>
+<li><strong>Medicina</strong>: Diagnòstic mèdic, cirugia, medicina personalitzada.</li>
+<li><strong>Enginyeria</strong>: Disseny, control de processos.</li>
+<li><strong>Finances</strong>: Predicció de mercats, recomanació d'inversions.</li>
+<li><strong>Militar</strong>: Drones, armes autònomes.</li>
+<li><strong>Domèstic</strong>: Robots, assistents virtuals, domòtica.</li>
+<li><strong>Transport</strong>: Vehicles autònoms, planificació de rutes.</li>
+</ul>
+<h1 id="refer%C3%A8ncies">Referències</h1>
+<ul>
+<li><a href="http://aima.cs.berkeley.edu/">Artificial Intelligence: A Modern Approach</a></li>
+<li><a href="http://artint.info/2e/html/ArtInt2e.html">Artificial Intelligence: Foundations of Computational Agents</a></li>
+<li><a href="https://www.deeplearningbook.org/">Deep Learning</a></li>
+<li><a href="https://www.cs.ubc.ca/~murphyk/MLbook/">Machine Learning</a></li>
+<li><a href="https://www.fast.ai/">Fast.ai</a></li>
+</ul>
+
+</body>
+</html>
