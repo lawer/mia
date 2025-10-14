@@ -1,13 +1,15 @@
 ---
+
 marp: true
 size: 16:9
 theme: lawer
 class: default
-_class: invert lead
+\_class: invert lead
 paginate: true
-_paginate: false
+\_paginate: false
 auto-scaling: true
 footer: 🄯 Carles Gonzàlez - CC-BY-NC-SA
+
 ---
 
 <style scoped>
