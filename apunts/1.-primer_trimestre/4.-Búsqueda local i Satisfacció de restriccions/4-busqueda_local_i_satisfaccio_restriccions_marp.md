@@ -1,5 +1,6 @@
 ---
 marp: true
+published: false
 size: 16:9
 theme: lawer
 class: default
@@ -23,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 Models d'intel·ligència artificial
 
-![bg opacity](../images/TS.jpg)
+![bg opacity](../../images/TS.jpg)
 
 ---
 
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # Optimització
 
-![bg opacity](../images/201a54c9-a413-4d2a-88a8-fade8a2db739.jpg)
+![bg opacity](../../images/201a54c9-a413-4d2a-88a8-fade8a2db739.jpg)
 
 ---
 
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # Búsqueda local
 
-![bg opacity](../images/3D-TSP-solved_with_simulated_annealing.gif)
+![bg opacity](../../images/3D-TSP-solved_with_simulated_annealing.gif)
 
 ---
 
@@ -154,7 +155,7 @@ class ProblemaBusquedaLocal(object):
 
 ---
 
-![bg fit](../images/800px-GLPK_solution_of_a_travelling_salesman_problem.svg.png)
+![bg fit](../../images/800px-GLPK_solution_of_a_travelling_salesman_problem.svg.png)
 
 ---
 
@@ -305,7 +306,7 @@ Millor fitness: 2718.3988057871697
 
 ---
 
-![bg fit](../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
+![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
 
 ---
 
@@ -367,7 +368,7 @@ Inline:
 (mean ± std. dev. of 7 runs, 1 loop each)
 ```
 
-![bg right:47% 100%](../images/exec_escalada.png)
+![bg right:47% 100%](../../images/exec_escalada.png)
 
 ---
 
@@ -525,7 +526,7 @@ Millor fitness: 12887.286272582816
 Millor fitness: 12798.50074780205
 ```
 
-![bg right:47% 100%](../images/exec_escalada_reinici_aleatori.png)
+![bg right:47% 100%](../../images/exec_escalada_reinici_aleatori.png)
 
 ---
 
@@ -541,7 +542,7 @@ Millor fitness: 12798.50074780205
 
 ---
 
-![bg 70%](../images/3-s2.0-B9780128150108000028-f02-14-9780128150108.jpg)
+![bg 70%](../../images/3-s2.0-B9780128150108000028-f02-14-9780128150108.jpg)
 
 ---
 
@@ -567,7 +568,7 @@ Millor fitness: 12798.50074780205
 
 ---
 
-![bg fit](../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.11.20.png)
+![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.11.20.png)
 
 ---
 
@@ -618,7 +619,7 @@ Cost:        11350.41254307539
 Cost final:  11350.41254307539
 ```
 
-![bg right:47% fit](../images/exec_annealing.png)
+![bg right:47% fit](../../images/exec_annealing.png)
 
 ---
 
@@ -685,7 +686,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # Algorismes genètics
 
-![bg opacity](../images/gen_algos.jpg)
+![bg opacity](../../images/gen_algos.jpg)
 
 ---
 
@@ -700,7 +701,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.36.24.png)
+![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.36.24.png)
 
 ---
 
@@ -727,7 +728,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![right fit](../images/156770627-e6cc63e9-72b7-4afa-a968-60e994963a26.png)
+![right fit](../../images/156770627-e6cc63e9-72b7-4afa-a968-60e994963a26.png)
 
 ---
 
@@ -749,7 +750,7 @@ h1, h2, h3, h4, h5, h6, p {
 - El nombre d'individus de la població inicial **ha de ser suficientment gran i divers**, sense fer-lo massa gran.
 - Opcionalment, ordenarem els individus segons la seva funció d'avaluació.
 
-![bg right:40% fit](../images/156890925-13e0f1bf-ec4a-40fe-8d48-60d867cdacae.png)
+![bg right:40% fit](../../images/156890925-13e0f1bf-ec4a-40fe-8d48-60d867cdacae.png)
 
 ---
 <style scoped>section { font-size:33px; }</style>
@@ -764,7 +765,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/seleccio.png)
+![bg fit](../../images/seleccio.png)
 
 ---
 
@@ -782,7 +783,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/156891548-bfafdc41-0158-4146-b6c6-b9d14d2c536a.png)
+![bg fit](../../images/156891548-bfafdc41-0158-4146-b6c6-b9d14d2c536a.png)
 
 ---
 <style scoped>section { font-size:32.8px; }</style>
@@ -798,7 +799,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/156822218-716ea60d-4d6b-434e-9112-26cba6c93b2c.png)
+![bg fit](../../images/156822218-716ea60d-4d6b-434e-9112-26cba6c93b2c.png)
 
 ---
 
@@ -873,7 +874,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # Satisfacció de restriccions
 
-![bg opacity](../images/1%20YDEWV2f7UsDm6S8YC0LYbQ.webp)
+![bg opacity](../../images/1%20YDEWV2f7UsDm6S8YC0LYbQ.webp)
 
 ---
 
@@ -926,7 +927,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Les **arestes** del graf són les **restriccions**.
 - Les **solucions** són els **nodes del graf** que **no tenen cap aresta que els connecte**.
 
-![bg right:33% fit](../images/mapes.png)
+![bg right:33% fit](../../images/mapes.png)
 
 ---
 
@@ -959,7 +960,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Búsqueda en tornada (backtracking)
 
-![bg opacity](../images/introduction-to-backtracking-1-1664198487.png)
+![bg opacity](../../images/introduction-to-backtracking-1-1664198487.png)
 
 ---
 
@@ -1091,7 +1092,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Algorisme de mínims conflictes
 
-![bg opacity](../images/Fig_06_08.PNG)
+![bg opacity](../../images/Fig_06_08.PNG)
 
 ---
 
@@ -1117,7 +1118,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Els **dominis** són les **columnes**.
 - Les **restriccions** són que **no hi pugui haver dues reines en posició d'atac**.
 
-![bg right:35% fit](../images/n_reines.png)
+![bg right:35% fit](../../images/n_reines.png)
 
 ---
 <style scoped>section { font-size:33px; }</style>

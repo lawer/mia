@@ -1,5 +1,6 @@
 ---
 marp: true
+published: false
 size: 16:9
 theme: lawer
 class: default
@@ -928,7 +929,6 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 
 Transformers i Models de Difusió
 
-![bg opacity](../../images/advanced_models.png)
 
 ---
 
@@ -964,7 +964,6 @@ Transformers i Models de Difusió
 
 ### Visió per Transformers (ViT)
 
-![bg fit 70%](../../images/vit.png)
 
 ---
 
@@ -1059,5 +1058,3 @@ h1, p {
 </style>
 
 # Gràcies!
-
-![bg opacity](../../images/thank_you.png)

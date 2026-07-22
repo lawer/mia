@@ -5,15 +5,23 @@ parent: 6. Sistemes basats en regles
 math: mathjax3
 ---
 
-## 6. Sistemes basats en regles
+> Aquesta pàgina es genera automàticament a partir de la presentació MARP `6-sistemes_basats_coneixement_marp.md`. No l'edites directament.
 
-### Models d'intel·ligència artificial
+# 6. Sistemes basats en regles
 
-![expert-system-icon-2048x2048-z3jy50rh.png](../../images/expert-system-icon-2048x2048-z3jy50rh.png)
+Models d'intel·ligència artificial
+
+![bg opacity ](../../images/expert-system-icon-2048x2048-z3jy50rh.png)
+
+---
+
+
 
 # IA simbólica
 
-![](../../images/symbolic_ai.jpeg)
+![bg opacity](../../images/symbolic_ai.jpeg)
+
+---
 
 ## Intel·ligència artificial simbòlica
 
@@ -25,6 +33,8 @@ math: mathjax3
     - Aprendre noves coses.
     - Millorar el coneixement existent.
 
+---
+
 ## Representació del coneixement
 
 - Coneixement vs dades vs informació:
@@ -34,20 +44,29 @@ math: mathjax3
 
 > El coneixement és un conjunt d'informació estructurada i interrelacionada que permet a un agent realitzar tasques.
 
-## Jerarquia del coneixement
+---
 
-![right fit](../../images/DIKW_Pyramid.png)
+## Jerarquia del coneixement (I)
 
 - Moltes vegades definim el coneixement en relació a conceptes similars.
 - La jerarquia del coneixement o jerarquia de DIKW és un model que mostra la relació entre _dades_, _informació_, _coneixement_ i _saviesa_.
+
+![bg right](../../images/DIKW_Pyramid.png)
+
+---
+
+## Jerarquia del coneixement (II)
 
 - **Dades** (**D**ata): Fets o valors registrats en un suport físic. És independent de l'agent i pot ser interpretat de diferents maneres.
 
   - Exemple: _"Un smartwatch registra la temperatura corporal de la persona."_
 
 - **Informació** (**I**nformation): És com les dades són interpretades per un agent. És subjectiva i depèn de l'agent.
-
   - Exemple: _"La temperatura corporal de la persona és de 37ºC"_
+
+---
+
+## Jerarquia del coneixement (III)
 
 - **Coneixement** (**K**nowledge): És informació integrada en el nostre model del mon. Depèn de l'agent i dels seus coneixements previs.
 
@@ -56,7 +75,9 @@ math: mathjax3
 - **Saviesa** (**W**isdom): Representa el meta-coneixement: coneixement sobre com i quan aplicar el coneixement.
   - Exemple: _"Si la persona té febre, llavors ha de prendre paracetamol"_
 
-## Representació del coneixement
+---
+
+## Representació del coneixement (I)
 
 - És la forma en la que representem el coneixement per a que les màquines puguin entendre'l.
 - És un dels problemes fonamentals de la intel·ligència artificial.
@@ -64,17 +85,32 @@ math: mathjax3
   - Sigui **entendible** per a les màquines.
   - Sigui **útil** per a resoldre problemes.
   - Sigui **eficient** per a ser processat per les màquines.
+
+---
+
+## Representació del coneixement (II)
+
 - Podem veure les diferents representacions com un **continuum**:
   - A l'esquerra tenim les representacions més **simples** (algorismes); utilitzables per els ordinadors de forma eficient pero molt poc flexibles.
   - A la dreta tenim les representacions més **flexibles** (text natural); molt potents pero no utilitzables diréctament per les màquines.
 
-![inline](../../images/knowledge-spectrum.png)
+---
+
+## Continuum del coneixement
+
+![bg fit](../../images/knowledge-spectrum.png)
+
+---
+
+## Representació del coneixement (III)
 
 - **Representacions de xarxa**:
   - En la ment humana el coneixement es representa com una xarxa de conceptes interrelacionats.
   - Les representacions de xarxa intentem fer el mateix en un graf dins dels ordinadors.
     - Les anomenem **xarxes semàntiques**.
   - Hi ha diferents tipus: Parells d'atributs i valors, representacions jeràrquiques, representacions procedurals, lógica, etc.
+
+---
 
 ## Parells d'atributs i valors o triplets objecte-atribut-valor
 
@@ -84,14 +120,18 @@ math: mathjax3
   - _"El colom és un animal, el colom és un ocell, el colom té dues potes, etc."_
   - _"El cotxe és un vehicle, el cotxe té quatre rodes, el cotxe té un motor, etc."_
 
+---
+
 ## Representacions jeràrquiques
 
 - El coneixement es representa com un arbre.
 - Els nodes de l'arbre representen conceptes.
 - Les arestes representen relacions entre conceptes.
-  - Animals $$\rightarrow$$ Vertebrats $$\rightarrow$$ Mamífers $$\rightarrow$$ Gossos $$\rightarrow$$ Caniche
-  - Animals $$\rightarrow$$ Vertebrats $$\rightarrow$$ Ocells $$\rightarrow$$ Coloms $$\rightarrow$$ Colom comú
-  - Objectes $$\rightarrow$$ Vehicles $$\rightarrow$$ Cotxes $$\rightarrow$$ Cotxe de gasolina
+  - Animals $\rightarrow$ Vertebrats $\rightarrow$ Mamífers $\rightarrow$ Gossos $\rightarrow$ Caniche
+  - Animals $\rightarrow$ Vertebrats $\rightarrow$ Ocells $\rightarrow$ Coloms $\rightarrow$ Colom comú
+  - Objectes $\rightarrow$ Vehicles $\rightarrow$ Cotxes $\rightarrow$ Cotxe de gasolina
+
+---
 
 ## Representacions procedurals
 
@@ -101,20 +141,25 @@ math: mathjax3
   - **IF** (la temperatura és superior a 37ºC) **THEN** (la persona té febre)
   - **IF** (la persona té febre) **THEN** (la persona ha de prendre paracetamol)
 
+---
+
 ## Lògica
 
-- La lògica és un sistema formal que ens permet representar el coneixement i raonar sobre ell.
-- La va proposar Aristòtil fa més de 2000 anys com a eina per a la **deducció**.
-- La lògica proposicional és un sistema formal que ens permet representar el coneixement i raonar sobre ell.
-- A nivell teòric és molt potent pero no es directament utilitzable per les màquines.
-  - Un subconjunt de la lògica es utilitzable en sistemes com prolog.
-- Ex: $$p$$: "La persona té febre", $$q$$: "La persona ha de prendre paracetamol"
-  - $$p \rightarrow q$$: "Si la persona té febre, llavors la persona ha de prendre paracetamol"
-  - $$p \land q$$: "La persona té febre i la persona ha de prendre paracetamol"
+- La lògica és un sistema formal que ens permet representar el coneixement i raonar sobre ell proposada per Aristòtil fa més de 2000 anys com a eina per a la **deducció**.
+- La lògica proposicional és un sistema formal que ens permet representar el coneixement i raonar sobre ell. Molt potenta a nivell teòric pero no directament utilitzable per les màquines; un subconjunt es utilitzable en sistemes com prolog.
+- Ex: $p$: "La persona té febre", $q$: "La persona ha de prendre paracetamol"
+  - $p \rightarrow q$: "Si la persona té febre, llavors la persona ha de prendre paracetamol"
+  - $p \land q$: "La persona té febre i la persona ha de prendre paracetamol"
+
+---
+
+
 
 # Sistemes experts
 
-![](../../images/experts.jpg)
+![bg opacity](../../images/experts.jpg)
+
+---
 
 ## Aprofitament del coneixement humà
 
@@ -128,7 +173,7 @@ math: mathjax3
   - Actualment es prefereixen els sistemes basats en dades.
   - Així i tot, compleixen un paper important en la IA.
 
-## Aprofitament del coneixement humà
+---
 
 ### Característiques
 
@@ -136,17 +181,21 @@ math: mathjax3
   - El coneixement humà s'expressa en forma de regles.
   - El coneixement és **declaratiu**.
 - **Rendiment**:
-  - Els SBC són **especialistes** en un domini concret.
-  - Els SBC són **eficients** en el seu domini.
+  - Els SBC són **especialistes** en un domini concret i **eficients** en ell.
 - **Explicació**:
-  - Els SBC poden explicar el seu raonament.
-  - Els SBC poden explicar les seves conclusions.
+  - Els SBC poden explicar el seu raonament i les seves conclusions.
 
-![right fit](../../images/expert-systems-concept-icon-information-systems-kind-abstract-idea-thin-line-illustration-artificial-intelligence-method-isolated-outline-drawing-editable-stroke-vector.jpg)
+![bg right:33%](../../images/expert-systems-concept-icon-information-systems-kind-abstract-idea-thin-line-illustration-artificial-intelligence-method-isolated-outline-drawing-editable-stroke-vector.jpg)
+
+---
+
+
 
 ## Sistemes basats en regles
 
-![fit 100%](../../images/246110377.0.x.jpg)
+![bg opacity fit](../../images/246110377.0.x.jpg)
+
+---
 
 ### Definició
 
@@ -159,7 +208,9 @@ math: mathjax3
 - Es pot representar en forma d'arbre de decisió.
   - Facilita la comprensió del raonament.
 
-### Parts d'un sistema basat en regles
+---
+
+### Parts d'un sistema basat en regles (I)
 
 - **Memória activa** (base de fets):
   - Base de dades de fets que descriuen la situació actual. _Volàtil_.
@@ -168,7 +219,13 @@ math: mathjax3
 - **Motor d'inferència**:
   - Busca les regles que s'apliquen a la situació actual (**conjunt conflictiu**) i les executa per ordre.
 
-![right fit 150%](img_6.png)
+---
+
+![bg fit](../../images/partes_se.png)
+
+---
+
+### Parts d'un sistema basat en regles (II)
 
 - **Mitjans d'explicació**:
   - Permeten explicar el raonament del sistema a l'usuari.
@@ -177,11 +234,15 @@ math: mathjax3
 - **Interfície d'usuari**:
   - Permet a l'usuari interactuar amb el sistema.
 
-### Exemple: Classificar un animal
+---
 
-- A continuació podem veure un diagrama del tipus **AND-OR-TREE** per classificar un animal.
+### Exemple: Classificar un animal (I)
 
-![inline](../../images/AND-OR-Tree.png)
+![bg 60%](../../images/AND-OR-Tree.png)
+
+---
+
+### Exemple: Classificar un animal (II)
 
 **IF** (animal has hair **OR** animal gives milk) **THEN** the animal is a mammal
 **IF** the animal eats meat **OR** (animal has sharp teeth AND animal has claws **AND** animal has forward-looking eyes ) **THEN** the animal is a carnivore
@@ -190,13 +251,19 @@ math: mathjax3
 - La **memòria activa** conté els fets que descriuen la situació actual.
 - El **sistema de regles** mira que antecedents es compleixen i aplica les seves conclusions, agregant-les a la **memòria activa**.
 
+---
+
+### Exemple: Classificar un animal (III)
+
 - _Observacions_:
   - Son necessàries moltes regles per cobrir tots els casos.
   - Les regles són difícils de mantenir.
   - Es fàcil que les regles entrin en contradicció.
     - Com representariem l'ornitorrinc?. És un mamífer o un ocell?
 
-### Exemple: Dolor de queixal
+---
+
+### Exemple: Dolor de queixal (I)
 
 - **IF** (tinc dolor de queixal) **THEN** (tinc càries)
 - **IF** (tinc dolor de queixal) **THEN** (tinc una infecció)
@@ -206,12 +273,18 @@ math: mathjax3
 - **IF** (tinc dolor de queixal) **THEN** (tinc una sinusitis)
 - **IF** (la geniva està _més roja_) **THEN** (tinc una infecció)
 
+---
+
+### Exemple: Dolor de queixal (II)
+
 - _Observacions_:
   - El dolor de queixal pot ser causat per moltes raons.
   - No es pot determinar la causa amb una única regla.
     - Ens falten eines per gestionar la **incertesa**.
   - No podem representar la regla _"si la geniva està més roja"_.
     - Ens falten eines per representar el **coneixement imprecís**.
+
+---
 
 ### Problemes
 
@@ -224,18 +297,23 @@ math: mathjax3
   - Dificultat per **adaptar-se** a nous problemes.
   - Dificultat per **aprendre** nous coneixements.
 
+---
+
 ### Estratègies d'inferència
 
-Hi ha dues estratègies d'inferència:
-
-#### Encadenament cap endavant: _forward chaining_
+#### Encadenament cap endavant: _forward chaining_ (I)
 
 - Revisa els antecedents de les regles per buscar coincidències en els fets i inferir noves conclusions.
   - Raonament **deductiu**.
 - Basat en la **lògica proposicional**.
-  - Modus ponens: $$p \rightarrow q, p \vdash q$$
+  - Modus ponens: $p \rightarrow q, p \vdash q$
 - **Problema**: Pot no trobar la conclusió.
   - Exemple: _"Si el gos està malalt, doncs el gos està malalt"_
+
+---
+
+#### _Forward chaining_ (II)
+
 - El raonament **no ve guiat per la conclusió**.
   - Es troben totes les conclusions possibles (relevants o no).
   - Es fa més treball del necessari.
@@ -244,9 +322,13 @@ Hi ha dues estratègies d'inferència:
 - **Problema**: Detecció de les regles que s'han de disparar.
   - Algorime RETE (Forgy, 1979)
 
-![right fit](../../images/RedRete.png)
+![bg right:33% fit](../../images/RedRete.png)
 
-#### Encadenament cap enrere: _backward chaining_
+---
+
+### Estratègies d'inferència
+
+#### Encadenament cap enrere: _backward chaining_ (I)
 
 - Comença amb la conclusió i busca els antecedents que la justifiquen.
   - Raonament **inductiu**.
@@ -255,7 +337,9 @@ Hi ha dues estratègies d'inferència:
 - Els objectius determinen les regles a aplicar.
   - El raonament ve **guiat per la conclusió**.
 
-![right fit](../../images/Backward_Chaining_Frog_Color_Example.png)
+![bg right:33%](../../images/Backward_Chaining_Frog_Color_Example.png)
+
+---
 
 ### Plataformes per a sistemes basats en regles
 
@@ -267,30 +351,38 @@ Hi ha dues estratègies d'inferència:
   - Llibreria _PyCLIPS_.
   - Llibreria _PyDrools_.
 
-## Sistemes híbrids Regles/Dades
+---
+
+## Sistemes híbrids Regles/Dades (I)
 
 - Dos enfocaments:
-  - Deducció de regles a partir de dades.
-    - Facilita la **interpretació** del raonament.
-  - Integració de regles definides per l'usuari i Aprenentatge Automàtic.
-    - Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
+  - Deducció de regles a partir de dades. - Facilita la **interpretació** del raonament.
+  - Integració de regles definides per l'usuari i Aprenentatge Automàtic. - Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
 
-![right fit 85%](../../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
+![bg right:40% fit](../../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
+
+---
+
+## Sistemes híbrids Regles/Dades (II)
 
 ### Llibreries
 
-- [Human-Learn](https://koaning.github.io/human-learn/index.html):
-  - Permet definir i dibuixar regles que es poden millorar amb l'aprenentatge automàtic.
-- [skope-rules](https://github.com/scikit-learn-contrib/skope-rules):
-  - Analitza les dades i dedueix regles per a classificar.
+- [Human-Learn](https://koaning.github.io/human-learn/index.html): Permet definir i dibuixar regles que es poden millorar amb l'aprenentatge automàtic.
+- [skope-rules](https://github.com/scikit-learn-contrib/skope-rules): Analitza les dades i dedueix regles per a classificar.
   - Permet analitzar les regles per millorar-les i interpretar-les.
 - [SpaCy](https://spacy.io/usage/rule-based-matching):
   - Permet definir regles per a l'extracció d'informació per a textos.
   - Útil en casos on no es disposa de prou dades etiquetades o per casos específics.
 
+---
+
+
+
 ## Sistemes de raonament imprecís
 
-![1280px-Fuzzy_logic_temperature_en.svg.png](../../images/1280px-Fuzzy_logic_temperature_en.svg.png)
+![bg opacity](../../images/1280px-Fuzzy_logic_temperature_en.svg.png)
+
+---
 
 ### Definició
 
@@ -304,18 +396,26 @@ Hi ha dues estratègies d'inferència:
   - Molt apropiats per a **sistemes de control**
   - Ens permeten tindre una **bona** solució, si no la **millor**.
 
-### Lògica difusa
+---
+
+### Lògica difusa (I)
 
 - La lògica proposicional és **binària**.
   - Un enunciat és **cert** o **fals**.
 - La lògica difusa permet treballar amb valors **continus**.
   - Un enunciat pot ser **cert** _i_ **fals** en un grau **parcial**.
-- Els valors de veritat són **nombres reals** en l'interval $$[0, 1]$$.
-  - $$0: Fals$$, $$1: Cert$$, $$0.5:$$ $$Cert$$ en un $$50\%$$
+- Els valors de veritat són **nombres reals** en l'interval $[0, 1]$.
+  - $0: Fals$, $1: Cert$, $0.5:$ $Cert$ en un $50\%$
 - La pertinença d'un element a un conjunt vindrà donada per una **funció de pertinença**.
-  - $$\mu_A(x)$$: Grau de pertinença de $$x$$ al conjunt $$A$$.
+  - $\mu_A(x)$: Grau de pertinença d'$x$ al conjunt $A$.
 
-![right fit](../../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
+---
+
+![bg fit](../../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
+
+---
+
+### Lògica difusa (II)
 
 - La lógica difusa facilita la **representació del coneixement humà**.
   - Els humans no raonem en termes binaris.
@@ -325,33 +425,43 @@ Hi ha dues estratègies d'inferència:
   - El poder treballar amb aquests conceptes facilta la creació de dispositius com **assecadors** o **termòstats**.
     - _"Si la temperatura és freda, llavors encén la calefacció"_
 
-### Conceptes bàsics
+---
+
+### Conceptes bàsics (I)
 
 - **Variable lingüística**: Variable que pot prendre valors lingüístics.
-  - Exemple: $$Temperatura$$
+  - Exemple: $Temperatura$
 - **Valors lingüístics**: Valors que pot prendre una variable lingüística.
-  - Exemple: $$Fred, Calor$$
+  - Exemple: $Fred, Calor$
 - **Funció de pertinença**: Funció que assigna a cada valor d'una variable lingüística un grau de pertinença a un valor lingüístic.
+  - Exemple: $Temperatura = 27^oC \rightarrow Calor = 0.8,\; Molta\,Calor = 0.2$
 
-  - Exemple: $$Temperatura = 27^oC \rightarrow Calor = 0.8,\; Molta\,Calor = 0.2$$
+---
+
+### Conceptes bàsics (II)
 
 - **Regla difusa**: Regla que utilitza valors difusos.
   - Exemple: _"Si la temperatura és **freda**, llavors **calefacció alta**"_
 - **Funció d'agregació**: Funció que combina els valors difusos de les regles per a deduir la conclusió final.
-  - Exemple: $$Calor = 0.8, Humit = 0.7 \rightarrow Sensacio\:desagradable = 0.8$$
+  - Exemple: $Calor = 0.8, Humit = 0.7 \rightarrow Sensacio\:desagradable = 0.8$
 - **Sistema de raonament imprecís**:
   - Sistema basat en regles que utilitza la lògica difusa.
   - Exemple: Sistema de control de la temperatura d'un habitatge.
 
-### Funcionament dels sistemes de raonament imprecís
+---
+
+### Funcionament dels sistemes de raonament imprecís (I)
 
 - _Fuzzyfication_:
-
   - Conversió de les dades d'entrada precises a valors difusos.
   - Passem de valors precisos a valors difusos.
   - Utilitza les **funcions de pertinença**.
     - Assignen a cada valor d'entrada un grau de pertinença a cada **variable lingüística**
     - $$27^oC \rightarrow Calor = 0.8, Molta\:calor = 0.2$$
+
+---
+
+### Funcionament dels sistemes de raonament imprecís (II)
 
 - _Evaluació de les regles_:
   - En aquest pas s'**apliquen les regles del sistema**.
@@ -360,7 +470,11 @@ Hi ha dues estratègies d'inferència:
   - Es combinen les **funcions de pertinença** de les variables d'**entrada**
     - per a deduir la **pertinença** de la variable de **sortida**.
 
-![right fit 110%](img_7.png)
+---
+
+### Funcionament dels sistemes de raonament imprecís (III)
+
+![bg right:35% fit](../../images/defuzzy.png)
 
 - _Defuzzyfication_:
   - Conversió de les dades de sortida difuses a valors precisos.
@@ -369,40 +483,51 @@ Hi ha dues estratègies d'inferència:
     - Combina les conclusions de les regles per a deduir la conclusió final.
     - Es sol utilitzar la funció de **centre de gravetat** o **màxim**.
 
-### Funcions de pertinença
+---
 
-![inline fit 140%](img_11.png)
+### Funcions de pertinença (I)
+
+![w:800](../../images/membership_fuctions.png)
 
 - Les més utilitzades són les **funcions trapezoïdals** i les **funcions triangulars**.
 - Les sinusoïdals són útils per a representar **periodes**.
 - Les sigmoidals són útils per a representar **probabilitats**.
 
-### Exemple: Propines
+---
+
+### Exemple: Propines (I)
 
 #### Variables d'entrada
 
 Utilitzarem funcions triangulars per a representar les variables d'entrada i sortida
 
 - **Servei**:
-  - **Baixa**: $$[0, 5]$$
-  - **Mitjana**: $$[0, 10]$$
-  - **Alta**: $$[5, 10]$$
-
-![right fit](../../images/plot_tipping_problem_newapi_2.png)
-
+  - **Baixa**: $[0, 5]$
+  - **Mitjana**: $[0, 10]$
+  - **Alta**: $[5, 10]$
 - **Qualitat del menjar**:
-  - **Baix**: $$[0, 5]$$
-  - **Mitjà**: $$[0, 10]$$
-  - **Alt**: $$[5, 10]$$
+  - **Baix**: $[0, 5]$
+  - **Mitjà**: $[0, 10]$
+  - **Alt**: $[5, 10]$
+
+![bg right:33% fit](../../images/plot_tipping_problem_newapi_2.png)
+
+---
+
+### Exemple: Propines (II)
 
 #### Variables de sortida
 
 - **Propina**:
-  - **Baixa**: $$[0, 13]$$
-  - **Mitjana**: $$[0, 25]$$
-  - **Alta**: $$[13, 25]$$
+  - **Baixa**: $[0, 13]$
+  - **Mitjana**: $[0, 25]$
+  - **Alta**: $[13, 25]$
 
-![right fit](../../images/plot_tipping_problem_newapi_3.png)
+![bg right:33% fit](../../images/plot_tipping_problem_newapi_3.png)
+
+---
+
+### Exemple: Propines (III)
 
 #### Regles
 
@@ -410,7 +535,11 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - **IF** (Qualitat del servei és **mitjana**) **THEN** (Propina és **mitjana**)
 - **IF** (Qualitat del servei és **alta** o Menjar és **alt**) **THEN** (Propina és **alta**)
 
-![right fit](../../images/plot_tipping_problem_newapi_4.png)
+![bg right:40% fit](../../images/plot_tipping_problem_newapi_4.png)
+
+---
+
+### Exemple: Propines (IV)
 
 #### Inferència
 
@@ -418,4 +547,6 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - Qualitat del menjar: **6.5**
 - Propina: **20.24%**
 
-![right fit](../../images/plot_tipping_problem_newapi_5.png)
+![bg right fit](../../images/plot_tipping_problem_newapi_5.png)
+
+---

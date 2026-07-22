@@ -1,11 +1,24 @@
 ---
-layout: default
-title: Continguts introducció
-parent: 1. Introducció
-math: mathjax3
+marp: true
+published: false
+size: 16:9
+theme: lawer
+class: default
+_class: invert lead
+paginate: true
+_paginate: false
+auto-scaling: true
+footer: 🄯 Carles Gonzàlez - CC-BY-NC-SA
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `1-introduccio-marp.md`. No l'edites directament.
+<style scoped>
+h1, h2, h3, h4, h5, h6, p {
+  color: #FFFFFF;
+  font-weight: 800;
+  text-shadow:
+    0px 0px 3px #000000;
+}
+</style>
 
 # Introducció a la intel·ligència artificial
 
@@ -14,6 +27,8 @@ math: mathjax3
 ![bg opacity](../../images/portada.png)
 
 ---
+
+<style scoped>section { font-size:32px; }</style>
 
 ## Què és la IA?
 
@@ -46,13 +61,17 @@ math: mathjax3
 
 ---
 
-
+<!--
+_class: invert lead
+-->
 
 ## Una mica d'història
 
 ![bg opacity](../../images/History.jpg)
 
 ---
+
+<style scoped>section { font-size:31px; }</style>
 
 ## Fites rellevants
 
@@ -87,13 +106,17 @@ math: mathjax3
 
 ---
 
-
+<!--
+_class: invert lead
+-->
 
 ## Tenim una màquina intel·ligent?
 
 ![bg opacity](../../images/8860931.jpg)
 
 ---
+
+<style scoped>section { font-size:31px; }</style>
 
 ## Intel·ligència humana i computacional
 
@@ -130,7 +153,9 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
 
 ---
 
-
+<!--
+_class: invert lead
+-->
 
 ## Paradigmes de la IA
 
@@ -195,13 +220,17 @@ Abans d'usar IA, hem de preguntar-nos:
 
 ---
 
-
+<!--
+_class: invert lead
+-->
 
 ## Aplicacions de la IA
 
 ![bg opacity](../../images/How_Artificial_Intelligence_is_Being_Deployed_Today.png)
 
 ---
+
+<style scoped>section { font-size:31px; }</style>
 
 ## Alguns dominis
 
@@ -223,7 +252,9 @@ Abans d'usar IA, hem de preguntar-nos:
 
 ---
 
-
+<!--
+_class: invert lead
+-->
 
 # Idees clau
 

@@ -13,7 +13,7 @@ nav_order: 1
 
 | Material                                                                         |                                                                                                                                                      Enllaç |
 | :------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [Presentacio](1-introduccio.pdf)                                                 |                            [![PDF](https://img.shields.io/badge/PDF-1.--introduccio.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](1-introduccio.pdf) |
+| [Presentacio](1-introduccio-marp.pdf)                                            | [![PDF](https://img.shields.io/badge/PDF-1.--introduccio.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](1-introduccio-marp.pdf) <br /> [![HTML](https://img.shields.io/badge/HTML-1.--introduccio-blue?logo=html5&logoColor=white)](1-introduccio-marp.html) |
 | [Continguts]({% link apunts/1.-primer_trimestre/1.-Introducció/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/1.-primer_trimestre/1.-Introducció/continguts.md %}) |
 
 ## Exercici

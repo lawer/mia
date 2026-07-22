@@ -10,3 +10,4 @@ gem "csv"
 
 gem "base64"
 
+gem "logger"
