@@ -1,3 +1,6 @@
 {
-"isGitignoreExtActive": true,
+  "isGitignoreExtActive": true,
+  "marp.themes": [
+    "./themes/lawer.css"
+  ]
 }

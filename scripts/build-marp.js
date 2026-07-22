@@ -6,6 +6,7 @@ const { basename, dirname, join, relative } = require("node:path");
 
 const root = process.cwd();
 const notesDirectory = join(root, "apunts");
+const themePath = join(root, "themes", "lawer.css");
 
 function markdownFiles(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -66,9 +67,17 @@ function render(sourcePath, extension) {
   const outputPath = sourcePath.replace(/\.md$/, `.${extension}`);
   execFileSync(
     join(root, "node_modules", ".bin", "marp"),
-    [sourcePath, `--${extension}`, "--allow-local-files", "--output", outputPath],
+    [sourcePath, `--${extension}`, "--theme-set", themePath, "--allow-local-files", "--output", outputPath],
     { cwd: root, stdio: "inherit" },
   );
+
+  return outputPath;
+}
+
+function validateTheme(htmlPath) {
+  if (!readFileSync(htmlPath, "utf8").includes("Marp / Marpit Lawer theme.")) {
+    throw new Error(`The Lawer theme was not applied to ${relative(root, htmlPath)}`);
+  }
 }
 
 const sources = markdownFiles(notesDirectory).filter((path) => isMarp(readFileSync(path, "utf8")));
@@ -79,7 +88,7 @@ for (const sourcePath of sources) {
 
   validateAssets(sourcePath, markdown);
   writeFileSync(contentPath, contentFromMarp(sourcePath, markdown));
-  render(sourcePath, "html");
+  validateTheme(render(sourcePath, "html"));
   render(sourcePath, "pdf");
   console.log(`Generated ${relative(root, contentPath)}`);
 }

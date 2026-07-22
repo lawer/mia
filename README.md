@@ -2,6 +2,17 @@
 
 En aquesta web trobareu els materials de suport a les classes de Models d’Intel·ligència Artificial del Curs d’especialització en Intel·ligència Artificial i Big Data de l’Institut Benigasló.
 
+## Presentacions MARP
+
+Les fonts MARP utilitzen el tema local [`themes/lawer.css`](themes/lawer.css). Per previsualitzar-les a VS Code, cal instal·lar l'extensió **Marp for VS Code**; la configuració del projecte a `.vscode/settings.json` ja carrega el tema automàticament. No cal configurar cap URL de GitHub a VS Code.
+
+Per generar les presentacions i les pàgines de continguts:
+
+```bash
+npm ci
+npm run build:marp
+```
+
 ## Llicència
 
  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://lawer.github.io/mia/">Models d'IA</a> de <span property="cc:attributionName">Carles Gonzàlez</span> està sotmés a la llicència: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p> 
