@@ -13,10 +13,6 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
-![bg opacity trees-graphs.jpeg](../../images/trees-graphs.jpeg)
-
----
-
 # Conceptes previs
 
 * Per a poder afrontar els temes relacionats en **búsquedes** necessitarem alguns **conceptes previs**.
@@ -28,16 +24,7 @@ math: mathjax3
     * Algorismes sobre grafs i arbres
     * Complexitat temporal i espacial
 
----
-
-
-
-
 ## Grafs
-
-![bg opacity](../../images/508px-Graph_example_%28Graph_theory%29.png)
-
----
 
 ### Teoria de grafs
 
@@ -51,9 +38,6 @@ math: mathjax3
     * **Dependències** (dependències entre tasques, processos, etc.).
 * **Exemple**: Graf no dirigit amb 6 nodes i 7 arestes.
 
-![bg right:22% fit](../../images/6n-graf.svg)
-
----
 ### Història
 
 #### Els ponts de Königsberg (1/2)
@@ -61,10 +45,6 @@ math: mathjax3
 * Els grafs van ser introduïts per **Leonhard Euler** al segle XVIII per resoldre el **problema dels ponts de Königsberg**.
 * El problema consistia en trobar un camí que passés per **tots els ponts** de la ciutat sense passar per **cap pont més d'una vegada**.
 * El problema es pot representar com a graf sense perdua de generalitat.
-
-![bg right:30% fit](../../images/7_bridges.png)
-
----
 
 ### Història
 
@@ -75,10 +55,6 @@ math: mathjax3
 * Un graf és eulerià si té **tots els nodes de grau parell**.
 * El graf dels ponts de Königsberg no és eulerià perquè té 4 nodes de grau imparell.
 * Aquesta demostració va ser el **punt de partida** de la teoria de grafs.
-
-![bg right:30% fit](../../images/euler%20bridges.png)
-
----
 
 ### Definicions (1/2)
 
@@ -93,7 +69,6 @@ math: mathjax3
 | **Graf cíclic** | Graf que té cicles. |
 | **Graf dirigit** | Graf on les arestes tenen una direcció. |
 
----
 ### Definicions (2/2)
 
 | Terme | Definició |
@@ -106,11 +81,7 @@ math: mathjax3
 |**Relació entre els nodes** | En un graf no importa la distància entre els nodes ni la posició dels nodes en l'espai. |
 | **Isomorfisme** | Dos grafs són isomorfs si es poden transformar l'un en l'altre sense canviar la relació entre els nodes. |
 
----
-
-![right fit](../../images/img_12.png)
-
----
+![](../../images/img_12.png)
 
 ### Estructures de dades en la representació de grafs
 
@@ -119,7 +90,6 @@ math: mathjax3
     * **Llista d'adjacència**
 * Vejam les diferències entre ambdues i els avantatges i inconvenients de cadascuna.
 
----
 #### Matriu d'adjacència (1/2)
 
 * Una matriu d'adjacència és una **matriu quadrada** on les files i les columnes representen els nodes del graf.
@@ -127,10 +97,6 @@ math: mathjax3
 * Si el graf és **dirigit** la matriu no serà simètrica.
 * Si el graf te **pesos** les posicions de la matriu contindran els pesos de les arestes.
 * En python podem utilitzar una llista de llistes per a representar la matriu.
-
-![bg right:37% fit](../../images/matriu_adjacencia.png)
-
----
 
 #### Matriu d'adjacència (2/2)
 
@@ -142,7 +108,6 @@ math: mathjax3
         * Per representar matrius esparses es poden utilitzar estructures de dades especials, com ara diccionaris de tuples. El cost espacial en aquest cas serà molt menor però algunes de les ventatges de la matriu d'adjacència es perden.
 * Apropiat per a grafs densos o per a grafs que no es van a modificar.
 
----
 #### Llista d'adjacència (1/2)
 
 * Una llista d'adjacència és una **llista de llistes** o un **diccionari** on cada llista o clau representa un node i conté els nodes adjacents.
@@ -150,9 +115,6 @@ math: mathjax3
 * Si el graf té pesos, la llista contindrà tuples amb el node adjacent i el pes de l'aresta.
 * Generalment, sol ser més eficient que la matriu d'adjacència, ja que no ocupa tant espai en memòria.
 
-![bg right:37% fit](../../images/llista_adjacencia.png)
-
----
 #### Llista d'adjacència (2/2)
 
 * **Avantatges**:
@@ -163,8 +125,6 @@ math: mathjax3
     * No és fàcil saber si hi ha una aresta entre dos nodes.
     * La implementació pot ser més complexa que la matriu d'adjacència.
 * Apropiat per a grafs esparsos o per a grafs que es van a modificar.
-
----
 
 #### Matrius d'adjacència vs llistes d'adjacència
 
@@ -178,8 +138,6 @@ math: mathjax3
 | Eliminar node   |       O(n^2)        |      O(n + m)       |
 | Eliminar aresta |        O(1)         |        O(n)         |
 
----
-
 ### Tipus de problemes  (1/2)
 
 Alguns dels problemes típics sobre grafs són:
@@ -189,19 +147,11 @@ Alguns dels problemes típics sobre grafs són:
 * **Cicles**: trobar si un graf té cicles.
 * **Components**: trobar els components d'un graf.
 
-![bg right:40% fit](../../images/Shortest_path_with_direct_weights.png)
-
----
-
 ### Tipus de problemes (2/2)
 
 * **Colorejat de grafs**: nombre mínim de colors per a pintar els nodes d'un graf de manera que dos nodes adjacents no tinguin el mateix color.
 * **Ordenació topològica**: trobar un ordre lineal dels nodes d'un graf dirigit acíclic.
 * **Flux màxim**: trobar el flux màxim entre dos nodes.
-
-![bg right:40% fit](../../images/Petersen_graph_3-coloring.svg)
-
----
 
 ### Algorismes sobre grafs
 
@@ -215,17 +165,7 @@ Alguns dels més importants:
 * Algorisme de **Kruskal**
 * Algorisme de **Ford-Fulkerson**
 
-![bg right:47% fit](../../images/MinSpanningTree1.jpg)
-
----
-
-
-
 ## Arbres
-
-![bg opacity](../../images/1%20%281%29.jpg)
-
----
 
 ### Arbres
 
@@ -236,10 +176,6 @@ Alguns dels més importants:
     * **No dirigit**: les arestes no tenen direcció.
     * **Unic**: no hi ha més d'un camí entre qualsevol parell de nodes.
 
-![bg right:33% fit](../../images/W1f7J.png)
-
----
-
 ### Utilitat dels arbres
 
 * Els arbres són molt utilitzats en programació per a representar **jerarquies**.
@@ -249,8 +185,6 @@ Alguns dels més importants:
     * **Estructures de dades**.
         * S'utilitzen per a implementar altres estructures de dades com ara les taules de símbols o els diccionaris.
 
----
-
 ### Tipus d'arbres
 
 * **Arbre general**: cada node pot tenir un nombre arbitrari de fills.
@@ -258,8 +192,6 @@ Alguns dels més importants:
 * **Arbre binari**: cada node té com a màxim dos fills.
 * **Arbre binari de cerca**: cada node té com a màxim dos fills i el valor dels nodes de l'esquerra és menor que el del node i el dels nodes de la dreta és major.
 * **Heaps**: són arbres binaris balancejats que compleixen una propietat addicional. Els heaps es poden utilitzar per a implementar cues de prioritat.
-
----
 
 ### Arbres binaris de búsqueda
 
@@ -269,9 +201,7 @@ Alguns dels més importants:
     * Per a evitar aquest problema es poden utilitzar arbres balancejats com ara els AVL o els Red-Black.
 * Qualsevol arbre es pot representar com a arbre binari de búsqueda i, a partir d'ara, **parlarem sempre d'aquest tipus d'arbres** si no diem el contrari.
 
-![right fit](../../images/output163.png)
-
----
+![](../../images/output163.png)
 
 ### Estructures de dades en la representació d'arbres
 
@@ -292,8 +222,6 @@ root.right = Node(3)
 root.left.left = Node(4)
 ```
 
----
-
 ### Recorregut d'arbres
 
 * Quan tingam que fer qualsevol operació sobre l'arbre partirem del node arrel i anirem recorrent els nodes fins a arribar al node que ens interessa.
@@ -309,13 +237,9 @@ def buscar(node, value):
     return buscar(node.left, value) or buscar(node.right, value)
 ```
 
----
-
 ## Llistes, cues i piles
 
 ![44ZQ7xDEH.png](../../images/44ZQ7xDEH.png)
-
----
 
 ### Llistes enllaçades
 
@@ -326,9 +250,7 @@ def buscar(node, value):
 * El primer node de la llista és el **cap** i l'últim node és la **cua**.
 * Els nodes de la llista no tenen per què estar en posicions contigües de memòria.
 
-![right 80%](../../images/linked-list-diagram.png)
-
----
+![80%](../../images/linked-list-diagram.png)
 
 ### Vector vs llista enllaçada
 
@@ -345,8 +267,6 @@ def buscar(node, value):
 | Inserció        |  O(n)  |       O(1)       |
 | Eliminació      |  O(n)  |       O(1)       |
 
----
-
 ### Cua
 
 * Una **cua** és una estructura on els elements s'**inserixen** per un extrem i s'**eliminen** per l'altre.
@@ -355,9 +275,7 @@ def buscar(node, value):
 * En python podem utilitzar la classe `deque` del mòdul `collections`.
 * Alguns algorismes que utilitzen cues són el **BFS** (Breadth First Search), **UCS** i l'**Algorisme de Ford-Fulkerson**.
 
-![right fit](../../images/Queue-program-enqueue-dequeue.webp)
-
----
+![](../../images/Queue-program-enqueue-dequeue.webp)
 
 ### Cua de prioritat
 
@@ -367,9 +285,7 @@ def buscar(node, value):
 * Les cues de prioritat es poden implementar mitjançant un **heap** o un array ordenat (menys eficient).
 * En python podem utilitzar la classe `PriorityQueue` del mòdul `queue` o la classe `heapq` del mòdul `heapq`.
 
-![right fit 120%](../../images/introduction-to-heaps-array-representation-a83ad3eb4209b785.png)
-
----
+![120%](../../images/introduction-to-heaps-array-representation-a83ad3eb4209b785.png)
 
 ### Pila
 
@@ -379,15 +295,11 @@ def buscar(node, value):
 * En python podem utilitzar la classe `deque` del mòdul `collections`.
 * Alguns algorismes que utilitzen piles són el **DFS** (Depth First Search) i el **Backtracking**.
 
-![right fit](../../images/stack-operations.webp)
-
----
+![](../../images/stack-operations.webp)
 
 ## Complexitat
 
 ![Complete-Tutorial-on-big-O-big-oh-notation-740x414.png](../../images/Complete-Tutorial-on-big-O-big-oh-notation-740x414.png)
-
----
 
 ### Complexitat temporal i espacial (1/2)
 
@@ -397,8 +309,6 @@ def buscar(node, value):
 * La notació asimptòtica ens permet **classificar** els algorismes segons el seu **comportament** en funció de n.
 * També es coneix com a **complexitat asimptòtica** o d'**O-gran**.
 
----
-
 ### Complexitat temporal i espacial (2/2)
 
 * La notació asimptòtica es divideix en tres classes:
@@ -407,8 +317,6 @@ def buscar(node, value):
     * **Theta**: ens dona una cota superior i una cota inferior del temps d'execució o de l'espai en memòria.
     * **O-gran** és la més utilitzada.
 * La notació asimptòtica s'expressa en funció de **n**.
-
----
 
 ### Com calcular la complexitat temporal
 
@@ -420,8 +328,6 @@ def buscar(node, value):
     * **Descartar** els termes de menor ordre i els coeficients.
     * **Expressar** el resultat en funció de n.
 
----
-
 ### Com calcular la complexitat temporal
 
 #### Exemple: algorisme de cerca binària. (1/3)
@@ -430,8 +336,6 @@ def buscar(node, value):
 * En cada iteració es calcula l'índex mig i es compara amb l'element a cercar.
 * Si l'element és menor, l'índex final es desplaça cap a l'esquerra, si és major, l'índex inicial es desplaça cap a la dreta.
 * En cada iteració el nombre d'elements a cercar es redueix a la meitat.
-
----
 
 ### Com calcular la complexitat temporal
 
@@ -452,8 +356,6 @@ def binary_search(array, value):
     return -1
 ```
 
----
-
 ### Com calcular la complexitat temporal
 
 #### Exemple: algorisme de cerca binària. (3/3)
@@ -462,8 +364,6 @@ def binary_search(array, value):
     * El bucle s'executa $$log(n)$$ vegades (en cada iteració el nombre d'elements a cercar es redueix a la meitat)
     * En cada iteració es fan $$O(1)$$ operacions.
     * La complexitat temporal de l'algorisme és $$O(log(n))$$.
-
----
 
 ### Exemples de notació asimptòtica
 
@@ -475,8 +375,4 @@ def binary_search(array, value):
 * $$O(x^n)$$: exponencial. Torres de Hanoi.
 * $$O(n!)$$: factorial. Problema del viatjant de comerç per força bruta.
 
----
-
-![fit](../../images/1%205ZLci3SuR0zM_QlZOADv8Q.jpg)
-
----
+![](../../images/1%205ZLci3SuR0zM_QlZOADv8Q.jpg)

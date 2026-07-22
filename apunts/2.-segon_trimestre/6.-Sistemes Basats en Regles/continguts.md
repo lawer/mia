@@ -11,17 +11,7 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
-![bg opacity ](../../images/expert-system-icon-2048x2048-z3jy50rh.png)
-
----
-
-
-
 # IA simbólica
-
-![bg opacity](../../images/symbolic_ai.jpeg)
-
----
 
 ## Intel·ligència artificial simbòlica
 
@@ -33,8 +23,6 @@ Models d'intel·ligència artificial
     - Aprendre noves coses.
     - Millorar el coneixement existent.
 
----
-
 ## Representació del coneixement
 
 - Coneixement vs dades vs informació:
@@ -44,16 +32,10 @@ Models d'intel·ligència artificial
 
 > El coneixement és un conjunt d'informació estructurada i interrelacionada que permet a un agent realitzar tasques.
 
----
-
 ## Jerarquia del coneixement (I)
 
 - Moltes vegades definim el coneixement en relació a conceptes similars.
 - La jerarquia del coneixement o jerarquia de DIKW és un model que mostra la relació entre _dades_, _informació_, _coneixement_ i _saviesa_.
-
-![bg right](../../images/DIKW_Pyramid.png)
-
----
 
 ## Jerarquia del coneixement (II)
 
@@ -64,8 +46,6 @@ Models d'intel·ligència artificial
 - **Informació** (**I**nformation): És com les dades són interpretades per un agent. És subjectiva i depèn de l'agent.
   - Exemple: _"La temperatura corporal de la persona és de 37ºC"_
 
----
-
 ## Jerarquia del coneixement (III)
 
 - **Coneixement** (**K**nowledge): És informació integrada en el nostre model del mon. Depèn de l'agent i dels seus coneixements previs.
@@ -74,8 +54,6 @@ Models d'intel·ligència artificial
 
 - **Saviesa** (**W**isdom): Representa el meta-coneixement: coneixement sobre com i quan aplicar el coneixement.
   - Exemple: _"Si la persona té febre, llavors ha de prendre paracetamol"_
-
----
 
 ## Representació del coneixement (I)
 
@@ -86,21 +64,13 @@ Models d'intel·ligència artificial
   - Sigui **útil** per a resoldre problemes.
   - Sigui **eficient** per a ser processat per les màquines.
 
----
-
 ## Representació del coneixement (II)
 
 - Podem veure les diferents representacions com un **continuum**:
   - A l'esquerra tenim les representacions més **simples** (algorismes); utilitzables per els ordinadors de forma eficient pero molt poc flexibles.
   - A la dreta tenim les representacions més **flexibles** (text natural); molt potents pero no utilitzables diréctament per les màquines.
 
----
-
 ## Continuum del coneixement
-
-![bg fit](../../images/knowledge-spectrum.png)
-
----
 
 ## Representació del coneixement (III)
 
@@ -110,8 +80,6 @@ Models d'intel·ligència artificial
     - Les anomenem **xarxes semàntiques**.
   - Hi ha diferents tipus: Parells d'atributs i valors, representacions jeràrquiques, representacions procedurals, lógica, etc.
 
----
-
 ## Parells d'atributs i valors o triplets objecte-atribut-valor
 
 - Aprofitem que un graf es pot representar com una llista de nodes i arestes per a representar el coneixement.
@@ -119,8 +87,6 @@ Models d'intel·ligència artificial
   - _"El gos és un animal, el gos té quatre potes, el gos té pèl, el gos té cua, etc."_
   - _"El colom és un animal, el colom és un ocell, el colom té dues potes, etc."_
   - _"El cotxe és un vehicle, el cotxe té quatre rodes, el cotxe té un motor, etc."_
-
----
 
 ## Representacions jeràrquiques
 
@@ -131,8 +97,6 @@ Models d'intel·ligència artificial
   - Animals $\rightarrow$ Vertebrats $\rightarrow$ Ocells $\rightarrow$ Coloms $\rightarrow$ Colom comú
   - Objectes $\rightarrow$ Vehicles $\rightarrow$ Cotxes $\rightarrow$ Cotxe de gasolina
 
----
-
 ## Representacions procedurals
 
 - El coneixement es representa com un conjunt d'accions que es poden realitzar quan es donen certes condicions.
@@ -140,8 +104,6 @@ Models d'intel·ligència artificial
 - Són de la forma: **IF** (premissa) **THEN** (conclusió)
   - **IF** (la temperatura és superior a 37ºC) **THEN** (la persona té febre)
   - **IF** (la persona té febre) **THEN** (la persona ha de prendre paracetamol)
-
----
 
 ## Lògica
 
@@ -151,15 +113,7 @@ Models d'intel·ligència artificial
   - $p \rightarrow q$: "Si la persona té febre, llavors la persona ha de prendre paracetamol"
   - $p \land q$: "La persona té febre i la persona ha de prendre paracetamol"
 
----
-
-
-
 # Sistemes experts
-
-![bg opacity](../../images/experts.jpg)
-
----
 
 ## Aprofitament del coneixement humà
 
@@ -173,8 +127,6 @@ Models d'intel·ligència artificial
   - Actualment es prefereixen els sistemes basats en dades.
   - Així i tot, compleixen un paper important en la IA.
 
----
-
 ### Característiques
 
 - **Coneixement**:
@@ -185,17 +137,7 @@ Models d'intel·ligència artificial
 - **Explicació**:
   - Els SBC poden explicar el seu raonament i les seves conclusions.
 
-![bg right:33%](../../images/expert-systems-concept-icon-information-systems-kind-abstract-idea-thin-line-illustration-artificial-intelligence-method-isolated-outline-drawing-editable-stroke-vector.jpg)
-
----
-
-
-
 ## Sistemes basats en regles
-
-![bg opacity fit](../../images/246110377.0.x.jpg)
-
----
 
 ### Definició
 
@@ -208,8 +150,6 @@ Models d'intel·ligència artificial
 - Es pot representar en forma d'arbre de decisió.
   - Facilita la comprensió del raonament.
 
----
-
 ### Parts d'un sistema basat en regles (I)
 
 - **Memória activa** (base de fets):
@@ -218,12 +158,6 @@ Models d'intel·ligència artificial
   - Conjunt de regles que descriuen el coneixement dels experts. _Persistent_.
 - **Motor d'inferència**:
   - Busca les regles que s'apliquen a la situació actual (**conjunt conflictiu**) i les executa per ordre.
-
----
-
-![bg fit](../../images/partes_se.png)
-
----
 
 ### Parts d'un sistema basat en regles (II)
 
@@ -234,13 +168,7 @@ Models d'intel·ligència artificial
 - **Interfície d'usuari**:
   - Permet a l'usuari interactuar amb el sistema.
 
----
-
 ### Exemple: Classificar un animal (I)
-
-![bg 60%](../../images/AND-OR-Tree.png)
-
----
 
 ### Exemple: Classificar un animal (II)
 
@@ -251,8 +179,6 @@ Models d'intel·ligència artificial
 - La **memòria activa** conté els fets que descriuen la situació actual.
 - El **sistema de regles** mira que antecedents es compleixen i aplica les seves conclusions, agregant-les a la **memòria activa**.
 
----
-
 ### Exemple: Classificar un animal (III)
 
 - _Observacions_:
@@ -260,8 +186,6 @@ Models d'intel·ligència artificial
   - Les regles són difícils de mantenir.
   - Es fàcil que les regles entrin en contradicció.
     - Com representariem l'ornitorrinc?. És un mamífer o un ocell?
-
----
 
 ### Exemple: Dolor de queixal (I)
 
@@ -273,8 +197,6 @@ Models d'intel·ligència artificial
 - **IF** (tinc dolor de queixal) **THEN** (tinc una sinusitis)
 - **IF** (la geniva està _més roja_) **THEN** (tinc una infecció)
 
----
-
 ### Exemple: Dolor de queixal (II)
 
 - _Observacions_:
@@ -283,8 +205,6 @@ Models d'intel·ligència artificial
     - Ens falten eines per gestionar la **incertesa**.
   - No podem representar la regla _"si la geniva està més roja"_.
     - Ens falten eines per representar el **coneixement imprecís**.
-
----
 
 ### Problemes
 
@@ -297,8 +217,6 @@ Models d'intel·ligència artificial
   - Dificultat per **adaptar-se** a nous problemes.
   - Dificultat per **aprendre** nous coneixements.
 
----
-
 ### Estratègies d'inferència
 
 #### Encadenament cap endavant: _forward chaining_ (I)
@@ -310,8 +228,6 @@ Models d'intel·ligència artificial
 - **Problema**: Pot no trobar la conclusió.
   - Exemple: _"Si el gos està malalt, doncs el gos està malalt"_
 
----
-
 #### _Forward chaining_ (II)
 
 - El raonament **no ve guiat per la conclusió**.
@@ -321,10 +237,6 @@ Models d'intel·ligència artificial
   - Es pot millorar en heuristiques
 - **Problema**: Detecció de les regles que s'han de disparar.
   - Algorime RETE (Forgy, 1979)
-
-![bg right:33% fit](../../images/RedRete.png)
-
----
 
 ### Estratègies d'inferència
 
@@ -337,10 +249,6 @@ Models d'intel·ligència artificial
 - Els objectius determinen les regles a aplicar.
   - El raonament ve **guiat per la conclusió**.
 
-![bg right:33%](../../images/Backward_Chaining_Frog_Color_Example.png)
-
----
-
 ### Plataformes per a sistemes basats en regles
 
 - **CLIPS** (C Language Integrated Production System): Llenguatge de programació i motor d'inferència.
@@ -351,17 +259,11 @@ Models d'intel·ligència artificial
   - Llibreria _PyCLIPS_.
   - Llibreria _PyDrools_.
 
----
-
 ## Sistemes híbrids Regles/Dades (I)
 
 - Dos enfocaments:
   - Deducció de regles a partir de dades. - Facilita la **interpretació** del raonament.
   - Integració de regles definides per l'usuari i Aprenentatge Automàtic. - Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
-
-![bg right:40% fit](../../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
-
----
 
 ## Sistemes híbrids Regles/Dades (II)
 
@@ -374,15 +276,7 @@ Models d'intel·ligència artificial
   - Permet definir regles per a l'extracció d'informació per a textos.
   - Útil en casos on no es disposa de prou dades etiquetades o per casos específics.
 
----
-
-
-
 ## Sistemes de raonament imprecís
-
-![bg opacity](../../images/1280px-Fuzzy_logic_temperature_en.svg.png)
-
----
 
 ### Definició
 
@@ -396,8 +290,6 @@ Models d'intel·ligència artificial
   - Molt apropiats per a **sistemes de control**
   - Ens permeten tindre una **bona** solució, si no la **millor**.
 
----
-
 ### Lògica difusa (I)
 
 - La lògica proposicional és **binària**.
@@ -409,12 +301,6 @@ Models d'intel·ligència artificial
 - La pertinença d'un element a un conjunt vindrà donada per una **funció de pertinença**.
   - $\mu_A(x)$: Grau de pertinença d'$x$ al conjunt $A$.
 
----
-
-![bg fit](../../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
-
----
-
 ### Lògica difusa (II)
 
 - La lógica difusa facilita la **representació del coneixement humà**.
@@ -425,8 +311,6 @@ Models d'intel·ligència artificial
   - El poder treballar amb aquests conceptes facilta la creació de dispositius com **assecadors** o **termòstats**.
     - _"Si la temperatura és freda, llavors encén la calefacció"_
 
----
-
 ### Conceptes bàsics (I)
 
 - **Variable lingüística**: Variable que pot prendre valors lingüístics.
@@ -435,8 +319,6 @@ Models d'intel·ligència artificial
   - Exemple: $Fred, Calor$
 - **Funció de pertinença**: Funció que assigna a cada valor d'una variable lingüística un grau de pertinença a un valor lingüístic.
   - Exemple: $Temperatura = 27^oC \rightarrow Calor = 0.8,\; Molta\,Calor = 0.2$
-
----
 
 ### Conceptes bàsics (II)
 
@@ -448,8 +330,6 @@ Models d'intel·ligència artificial
   - Sistema basat en regles que utilitza la lògica difusa.
   - Exemple: Sistema de control de la temperatura d'un habitatge.
 
----
-
 ### Funcionament dels sistemes de raonament imprecís (I)
 
 - _Fuzzyfication_:
@@ -458,8 +338,6 @@ Models d'intel·ligència artificial
   - Utilitza les **funcions de pertinença**.
     - Assignen a cada valor d'entrada un grau de pertinença a cada **variable lingüística**
     - $$27^oC \rightarrow Calor = 0.8, Molta\:calor = 0.2$$
-
----
 
 ### Funcionament dels sistemes de raonament imprecís (II)
 
@@ -470,11 +348,7 @@ Models d'intel·ligència artificial
   - Es combinen les **funcions de pertinença** de les variables d'**entrada**
     - per a deduir la **pertinença** de la variable de **sortida**.
 
----
-
 ### Funcionament dels sistemes de raonament imprecís (III)
-
-![bg right:35% fit](../../images/defuzzy.png)
 
 - _Defuzzyfication_:
   - Conversió de les dades de sortida difuses a valors precisos.
@@ -483,17 +357,13 @@ Models d'intel·ligència artificial
     - Combina les conclusions de les regles per a deduir la conclusió final.
     - Es sol utilitzar la funció de **centre de gravetat** o **màxim**.
 
----
-
 ### Funcions de pertinença (I)
 
-![w:800](../../images/membership_fuctions.png)
+![](../../images/membership_fuctions.png)
 
 - Les més utilitzades són les **funcions trapezoïdals** i les **funcions triangulars**.
 - Les sinusoïdals són útils per a representar **periodes**.
 - Les sigmoidals són útils per a representar **probabilitats**.
-
----
 
 ### Exemple: Propines (I)
 
@@ -510,10 +380,6 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
   - **Mitjà**: $[0, 10]$
   - **Alt**: $[5, 10]$
 
-![bg right:33% fit](../../images/plot_tipping_problem_newapi_2.png)
-
----
-
 ### Exemple: Propines (II)
 
 #### Variables de sortida
@@ -523,10 +389,6 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
   - **Mitjana**: $[0, 25]$
   - **Alta**: $[13, 25]$
 
-![bg right:33% fit](../../images/plot_tipping_problem_newapi_3.png)
-
----
-
 ### Exemple: Propines (III)
 
 #### Regles
@@ -535,10 +397,6 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - **IF** (Qualitat del servei és **mitjana**) **THEN** (Propina és **mitjana**)
 - **IF** (Qualitat del servei és **alta** o Menjar és **alt**) **THEN** (Propina és **alta**)
 
-![bg right:40% fit](../../images/plot_tipping_problem_newapi_4.png)
-
----
-
 ### Exemple: Propines (IV)
 
 #### Inferència
@@ -546,7 +404,3 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - Qualitat del servei: **9.8**
 - Qualitat del menjar: **6.5**
 - Propina: **20.24%**
-
-![bg right fit](../../images/plot_tipping_problem_newapi_5.png)
-
----

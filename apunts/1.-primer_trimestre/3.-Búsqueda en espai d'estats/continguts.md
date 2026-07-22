@@ -11,9 +11,6 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
-![bg opacity](../../images/local.png)
-
----
 # Busqueda
 
 * Fonamental en molts dominis
@@ -25,8 +22,6 @@ math: mathjax3
     * Molt útil per aproximar
 * Les tècniques de cerca són la base de molts sistemes intel·ligents
 
----
-
 ## Busqueda en espais d'estats
 
 * Els **problemes de búsqueda** tindran
@@ -37,8 +32,6 @@ math: mathjax3
 
 * Una **solució** és una seqüència d'estats (un plà) que ens porten de l'estat inicial a l'estat final
 
----
-
 ## Exemple: Viatjar per Romania
 
 * **Espai d'estats**: Ciutats
@@ -46,10 +39,6 @@ math: mathjax3
 * **Estat inicial**: Arad
 * **Comprovar si un estat és final**: Estat = Bucharest
 * **Solució**: Seqüència de ciutats que ens porten d'Arad a Bucharest
-
-![bg right fit](../../images/rumania_color.png)
-
----
 
 ## Exemple: Botelles d'aigua (I)
 
@@ -62,8 +51,6 @@ math: mathjax3
 * **Comprovar si un estat és final**: Estat = (2,0)
 * **Solució**: Seqüència d'operacions que ens porten de (0,0) a (2,0)
 
----
-
 ## Exemple: Botelles d'aigua (II)
 
 ### Observacions
@@ -72,8 +59,6 @@ math: mathjax3
 * Alguns estats són impossibles d'aconseguir. Ex: (1, 2)
 * Algunes accions no produeixen canvis.
     * Ex: `(0,0) + buidar(4) = (0,0)`
-
----
 
 ## Exemple: Puzzle 8 (I)
 
@@ -86,10 +71,6 @@ math: mathjax3
 * **Comprovar si un estat és final**: -
 * **Solució**: -
 
-![bg right:33% fit](../../images/8puzzle_vert.png)
-
----
-
 ## Exemple: Puzzle 8 (II)
 
 * **Espai d'estats**: Les diferents posicions de les peces. _Quantes?_
@@ -97,10 +78,6 @@ math: mathjax3
 * **Estat inicial**: P.e. el de la figura anterior
 * **Comprovar si un estat és final**: Verificar que les peces estan a la posició correcta.
 * **Solució**: Seqüència de moviments que ens porten a l'estat final
-
-![bg right:33% fit](../../images/8puzzle_vert.png)
-
----
 
 ## Exemple: Puzzle 8 (III)
 
@@ -112,7 +89,6 @@ math: mathjax3
 * Hi ha moltes solucions
     * Quina és la millor?
 
----
 ## Situacions més complicades
 
 * En els exemples anteriors, de cada estat coneixíem
@@ -122,8 +98,6 @@ math: mathjax3
 * Veurem técniques per tractar algunes d'aquestes situacions
     * _Métodes probabilístics_: assignar probabilitats als estats successors
     * _Métodes de cerca adversarial_: els estats successors són determinats per un oponent
-
----
 
 ## Representació dels problemes de cerca
 
@@ -136,25 +110,14 @@ math: mathjax3
 * Podem aplicar algorismes de cerca de camins mínims
 * L'espai de cerca ha de ser finit
 
----
-
 ### Exemple: Viatjar per Romania
 
-![fit inline](../../images/arbre_busqueda_color.png)
+![](../../images/arbre_busqueda_color.png)
 
 * Els nodes ja visitats es mostren en gris
 * Els oberts en blanc i els encara per visitar en linees discontínues.
 
----
-
-
-
-
 # Algorismes de cerca
-
-![bg opacity](../../images/greedy-ques-e1547130916483.png)
-
----
 
 ## Definició
 
@@ -166,8 +129,6 @@ math: mathjax3
     * Una serie d'accions que ens porten de l'estat inicial a l'estat final
     * El resultat pot ser una solució òptima en cost, óptima en temps o no tindre cap tipus de garantia d'optimalitat.
 
----
-
 ## Funcionament general
 
 * Tindrem una llista d'estats coneguts pero per visitar anomenada **frontera**. Inicialment la frontera conté l'estat inicial.
@@ -177,24 +138,17 @@ math: mathjax3
     * Per cada estat anotarem el seu pare, per poder reconstruir la solució.
 * En cada iteració, podem aplicar una estratègia per decidir quin estat de la frontera agafem.
 
----
-
 ### Exemple de funcionament (Alternativa I)
-
 
 * Frontera: {**Arad**}. Objectiu: **Bucharest**
 
 1. Obrim **Arad**: {Z\<A>, T\<A>, **S\<A>**},
 2. Obrim **Sibiu**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, **F\<S,A>**, R\<S,A>}
-3. Obrim **Fagaras**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, R\<S,A>, S\<F,S,A>, **B\<F,S,A>}**![bg right:40% fit](../../images/rumania_color.png)
+3. Obrim **Fagaras**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, R\<S,A>, S\<F,S,A>, **B\<F,S,A>}**
 
 4. Tenim la solució en la frontera. Cost: 140+99+211 = **450**
 
----
-
 ### Exemple de funcionament (Alternativa II)
-
-![bg right:40% fit](../../images/rumania_color.png)
 
 1. Frontera: **{Arad}**. Objectiu: **Bucharest**
 2. Obrim **Arad**: {Z\<A>, T\<A>, **S\<A>**},
@@ -202,8 +156,6 @@ math: mathjax3
 4. Obrim **R.V**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, R\<S,A>, S\<R,S,A>, **P\<R,S,A>**, C\<R,S,A>}
 5. Obrim **Pitesti**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, R\<S,A>, S\<R,S,A>, P\<R,S,A>, C\<R,S,A>, R\<P,R,S,A>, C\<P,R,S,A>, **B\<P,R,S,A>}**
 5. Tenim la solució en la frontera. Cost: **140+80+97+101 = 418**
-
----
 
 <style ### Exemple de funcionament
 
@@ -218,8 +170,6 @@ math: mathjax3
     * El cost de la solució
     * El temps d'execució i l'espai de memòria necessari
 
----
-
 ## Propietats dels algorismes de cerca
 
 * **Criteris** per comparar algorismes de cerca
@@ -228,14 +178,7 @@ math: mathjax3
     * **Complexitat temporal**: Temps d'execució
     * **Complexitat espacial**: Memòria necessària
 
----
-
-
 ## Búsqueda no informada
-
-![bg opacity](../../images/v2-518371088124f9c8a6b4ab308de13d67_720w.jpg)
-
----
 
 ### Búsqueda no informada
 
@@ -248,7 +191,6 @@ math: mathjax3
 * Alguns algorismes de cerca no informada:
     * **Amplitud**, **Profunditat**, **Cost uniforme**, **Profunditat limitada**, **Profunditat iterativa**
 
----
 #### Búsqueda en amplitud
 
 * Estrategia utilitzable quan totes les accions tenen el mateix cost
@@ -257,11 +199,7 @@ math: mathjax3
 * Definim la **frontera** com una **cua** (FIFO)
 * Els estats ja visitats es guarden en una llista o conjunt (per evitar cicles)
 
-![inline fit](../../images/busqueda_amplitud.png)
-
----
-
-
+![](../../images/busqueda_amplitud.png)
 
 ##### Implementació
 
@@ -283,8 +221,6 @@ def cerca_amplada(estat_inicial):
                 frontera.append(succesor)
 ```
 
----
-
 ##### Exemple: Botelles d'aigua (I)
 
 * **Estat inicial**: `(0,0)` - **Estat final**: `(2,*)` o `(*, 2)`
@@ -298,8 +234,6 @@ def cerca_amplada(estat_inicial):
    **<(0,0),(0,4),(0,0)>**, **<(0,0),(0,4),(3,4)>**, **<(0,0),(0,4),(3,1)>**}
 5. ...
 
----
-
 ##### Exemple: Botelles d'aigua (II)
 
 * Representació de l'arbre de cerca
@@ -307,9 +241,6 @@ def cerca_amplada(estat_inicial):
     * La busca en amplitud explora l'arbre per nivells
     * Podem observar que solament s'explora un nombre molt reduït de tots els possibles estats
 
-![bg right:40% fit](../../images/mermaid-diagram-2023-08-21-225544.png)
-
----
 ##### Propietats
 
 | Propietat | Valor |Comentaris |
@@ -318,8 +249,6 @@ def cerca_amplada(estat_inicial):
 |Optimalitat|Sí     |Si totes les accions tenen el mateix cost, la primera solució trobada serà òptima.s |
 |Complexitat temporal| $O(b^d)$ |On $b$ és el factor de ramificació i $d$ és la profunditat de la solució|
 |Complexitat espacial|$O(b^d)$ | On $b$ és el factor de ramificació i $d$ és la profunditat de la solució|
-
----
 
 ##### Problemes
 
@@ -330,8 +259,6 @@ def cerca_amplada(estat_inicial):
     * Si es troba a una profunditat de **1000**, necessitarem **10PB**.
 * Típicament, _ens quedarem sense espai abans de quedar-nos sense temps_.
 
----
-
 #### Búsqueda en profunditat
 
 * L'estratègia de cerca en profunditat és similar a la de cerca en amplitud
@@ -339,9 +266,7 @@ def cerca_amplada(estat_inicial):
 * Aquesta estratègia **no** garanteix trobar la solució òptima
 * L'algorisme arriva fins a una profunditat màxima $m$ i després retrocedeix fins a trobar un camí alternatiu
 
-![inline](../../images/dfs.png)
-
----
+![](../../images/dfs.png)
 
 ##### Implementació
 
@@ -362,8 +287,6 @@ def cerca_profunditat(estat_inicial):
 
 ```
 
----
-
 ##### Exemple: Botelles d'aigua (I)
 
 * **Estat inicial**: `(0,0)` - **Estat final**: `(2,*)` o `(*, 2)`
@@ -377,9 +300,6 @@ def cerca_profunditat(estat_inicial):
    <(0,0), (3,0), (3,4)>, <(0,0),(3,0),(0,3)>, <(0,0),(0,4)>}
 5. ...
 
----
-
-
 ##### Exemple: Botelles d'aigua (II)
 
 * Representació de l'arbre de cerca
@@ -387,12 +307,6 @@ def cerca_profunditat(estat_inicial):
     * La busca en profunditat explora l'arbre fins a trobar una solució
     * Si no troba una solució, torna enrere fins a trobar un camí alternatiu
     * Si les solucions son infinites, l'algorisme pot no acabar mai
-
-![bg right:25% fit](../../images/mermaid-diagram-2023-08-22-093901_cropped.png)
-
----
-
-
 
 ##### Propietats
 
@@ -402,7 +316,6 @@ def cerca_profunditat(estat_inicial):
 |Optimalitat|No     |La primera solució trobada no té perquè ser òptima|
 |Complexitat temporal|$O(b^m)$| On $b$ és el factor de ramificació i $m$ és la profunditat màxima de l'arbre. En valors d'$m$ molt grans, pot ser molt alta |
 |Complexitat espacial|$O(bm)$| On $b$ és el factor de ramificació i $m$ és la profunditat màxima de l'arbre. És molt millor que la de la cerca en amplitud si no hi ha cicles; si hi ha cicles, és la mateixa que la de la cerca en amplitud |
----
 
 ##### Quan utilitzar-la?
 
@@ -414,7 +327,6 @@ def cerca_profunditat(estat_inicial):
     * No ens importa trobar la solució òptima
     * Verifiquem que no es creen cicles
 
----
 #### Búsqueda en profundidad limitada
 
 * La cerca en profunditat limitada és una variant de la cerca en profunditat
@@ -422,8 +334,6 @@ def cerca_profunditat(estat_inicial):
 * Si la solució es troba a una profunditat $d > l$, no es trobarà
 * La cerca en profunditat limitada és completa si $l$ és suficientment gran
 * Ens permet evitar el problema de la cerca en profunditat quan les solucions son infinites
-
----
 
 ##### Implementació
 
@@ -443,36 +353,25 @@ def cerca_profunditat_limitada(estat_inicial, l):
                 frontera.append(succesor)
 ```
 
----
 #### Búsqueda en profundidad iterativa
 
 * Solució al problema de la cerca en amplitud y la cerca en profunditat utilitzant una única estratègia
 * La cerca en profunditat iterativa és una cerca en profunditat limitada amb $l$ creixent
 * Comença amb $l=0$ i va incrementant $l$ fins a trobar la solució
 
-![bg right:40% 120%](../../images/img_1.png)
-
----
-
 ##### Traçat de l'algorisme (I)
 
-![inline fit left](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.25.46.png)
+![](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.25.46.png)
 
-![inline fit](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.26.10.png)
-
----
+![](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.26.10.png)
 
 ##### Traçat de l'algorisme (II)
 
-![inline fit](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.26.23.png)
-
----
+![](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.26.23.png)
 
 ##### Traçat de l'algorisme (III)
 
-![inline ](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.26.37.png)
-
----
+![](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.26.37.png)
 
 ##### Implementació
 
@@ -487,8 +386,6 @@ def cerca_profunditat_iterativa(estat_inicial):
         l += 1
 ```
 
----
-
 ##### Propietats
 
 | Propietat | Valor |Comentaris |
@@ -497,17 +394,12 @@ def cerca_profunditat_iterativa(estat_inicial):
 |Optimalitat|Sí     |La primera solució trobada serà òptima
 |Complexitat temporal i espacial|Com la de la cerca en profunditat|(com a màxim)|
 
----
 #### Búsqueda de cost uniforme
 
 * La cerca de cost uniforme és una variant de la cerca en amplitud
 * En aquest cas, la frontera s'ordena segons el cost del camí a cada estat (**cua de prioritat**)
 * Estats visitats: de manera iterativa, es van visitant tots els que tenen un cost menor que l'actual
 * Sí totes les accions tenen el mateix cost, la cerca de cost uniforme és equivalent a la cerca en amplitud
-
-![bg right:40% fit 100%](../../images/img_2.png)
-
----
 
 ##### Exemple: Viatjar per Romania (I)
 
@@ -517,22 +409,12 @@ def cerca_profunditat_iterativa(estat_inicial):
 * **Comprovar si un estat és final**: Estat = Bucharest
 * **Solució**: Seqüència de ciutats que ens porten d'Arad a Bucharest
 
-![bg right:50% fit](../../images/rumania_color.png)
-
----
-
 ##### Exemple: Viatjar per Romania (II)
 
 * Representació de l'arbre de cerca
     * Cada node és un parell de valors (a,b) que representen l'estat de les botelles
     * La busca en amplitud explora l'arbre per nivells
     * Podem observar que solament s'explora un nombre molt reduït de tots els possibles estats
-
-![bg right:40% fit](../../images/mermaid-diagram-2023-08-22-215428.png)
-
----
-
-
 
 ##### Implementació
 
@@ -554,8 +436,6 @@ def cerca_cost_uniforme(estat_inicial):
                 frontera.append(cost + cost_actual, succesor)
 ```
 
----
-
 ##### Propietats
 
 | Propietat | Valor |Comentaris |
@@ -563,8 +443,6 @@ def cerca_cost_uniforme(estat_inicial):
 |Completitud|Sí     |Si l'espai de cerca és finit, la solució es trobarà en algun moment|
 |Optimalitat|Sí     |La primera solució trobada serà òptima|
 |Complexitat temporal i espacial|$O(b^{1+C/\epsilon})$|On $b$ és el factor de ramificació i $C$ és el cost de la solució òptima|
-
----
 
 ### Gestió de fronteres
 
@@ -575,16 +453,7 @@ def cerca_cost_uniforme(estat_inicial):
         * Per estalviar-nos el *sobrecost* d'$O(log(n))$ de la cua de prioritat
     * Podriem, fins i tot, programar una implementació on pugam **variar l'objecte frontera**.
 
----
-
-
-
-
 ## Búsqueda informada
-
-![bg opacity](../../images/what-is-a-search-algorithm.png)
-
----
 
 ### Definició
 
@@ -592,8 +461,6 @@ def cerca_cost_uniforme(estat_inicial):
     * Busca en totes les direccions, sense tenir en compte la direcció cap a la solució
     * Per tant, analitza més estats dels que seria estrictament necessari
 * En aquesta part de la unitat veurem técniques per solucionar aquestos problemes
-
----
 
 ### Heurístiques
 
@@ -604,17 +471,9 @@ def cerca_cost_uniforme(estat_inicial):
     * Distància en línia recta (euclidiana)
     * Distància manhattan
 
-![bg right:45% fit](../../images/img_3.png)
-
----
-
 #### Exemple: Viatjar per Romania
 
 * **Heurística**: Distància en línia recta (euclidiana)
-
-![bg right:65% fit](../../images/rumania_color_heu.png)
-
----
 
 ### Búsqueda voraç
 
@@ -623,20 +482,11 @@ def cerca_cost_uniforme(estat_inicial):
     * Més eficient que la búsqueda de cost uniforme
     * No garanteix trobar la solució òptima
  height:330px
-![bg right fit](../../images/img_4.png)
-
----
 
 ### Búsqueda voraç
 
 * En verd la ruta correcta i en roig la nostra
 * Que podem fer perqué el nostre algorisme trobi la solució correcta?
-
-![bg right:67% fit](../../images/rumania_color_ruta_greedy.png)
-
----
-
-
 
 #### Implementació
 
@@ -658,8 +508,6 @@ def cerca_voraç(estat_inicial):
                 frontera.append(heuristica(succesor), succesor)
 ```
 
----
-
 #### Propietats
 
 | Propietat | Valor |Comentaris |
@@ -667,8 +515,6 @@ def cerca_voraç(estat_inicial):
 |Completitud|Sí     | Si l'espai de cerca és finit, trobarà una solució en algun moment|
 |Optimalitat|No     | La primera solució trobada no té perquè ser òptima|
 |Complexitat temporal i espacial|$O(bm)$| On $b$ és el factor de ramificació i $m$ és la profunditat màxima de l'arbre|
-
----
 
 ### A*
 
@@ -678,29 +524,17 @@ def cerca_voraç(estat_inicial):
     * L'algorisme **A*** ordena per la suma dels dos: **$f(n) = g(n) + h(n)$**
 > **Garanteix trobar la solució òptima _(si $h(n)$ és admissible)_**
 
----
-
-
 #### Exemple: Viatjar per Romania (I)
 
-![inline](../../images/Fig_03_18_0.PNG)
-
----
+![](../../images/Fig_03_18_0.PNG)
 
 #### Exemple: Viatjar per Romania (II)
 
-
 ![width:730px](../../images/Fig_03_18_B.PNG)
-
----
 
 #### Exemple: Viatjar per Romania (III)
 
-![inline fit](../../images/Fig_03_18_C.PNG)
-
----
-
-
+![](../../images/Fig_03_18_C.PNG)
 
 #### Implementació
 
@@ -724,8 +558,6 @@ def cerca_a_estrella(estat_inicial):
                  succesor)
 ```
 
----
-
 #### Propietats
 
 | Propietat | Valor |Comentaris |
@@ -736,8 +568,6 @@ def cerca_a_estrella(estat_inicial):
 
 > **Condició**: Aquestes propietats es compleixen si la heurística és **_admissible_**
 
----
-
 #### Heurístiques admissibles (I)
 
 * Una heurística és **admissible** si:
@@ -747,9 +577,6 @@ def cerca_a_estrella(estat_inicial):
     * L'algorisme **A*** és equivalent a la **búsqueda voraç**
 * Trobar una heurística admissible és un problema difícil.
 
----
-
-
 ##### Exemple: Puzzle 8 (I)
 
 * Técnica útil redüir el problema a un problema més senzill
@@ -757,10 +584,6 @@ def cerca_a_estrella(estat_inicial):
     1. Permetre que les peces s'intercanviïn entre elles
     2. Permetre que les peces es moguin a qualsevol posició, si està buida
     3. Permetre que les peces es moguin a qualsevol posició, sense restriccions (1+2)
-
-![bg right:25% fit](../../images/8puzzle_vert.png)
-
----
 
 ##### Exemple: Puzzle 8 (II)
 
@@ -773,9 +596,6 @@ def cerca_a_estrella(estat_inicial):
     * Suma de les peces que no estan a la seva posició final
     * És admissible perquè no sobreestima el cost de la solució
 
----
-
-
 ### Propietat Óptima de les heurístiques admissibles (I)
 
 * Si $\textbf{n}$ és una ruta óptima fins a $n_d$ amb cost $g(n_d)$.
@@ -786,19 +606,11 @@ def cerca_a_estrella(estat_inicial):
     * Així, $f(n'_g)$ > $f(n'')$ > $f(n_d)$
 * Les subrutes en la ruta òptima sempre seran més barates que en la ruta subòptima
 
-![bg right:25% fit](../../images/img_heur.png)
-
----
-
 ### Propietat Óptima de les heurístiques admissibles (II)
 
 * A* explora els nodes en ordre creixent de $f(n)$
 * Va agregant, de forma gradual, corves de nivell de grau $f$
 * Cada corba de nivell representa un conjunt de nodes amb un valor d'$f(n)$ inferior a un valor concret
-
-![bg right:59% fit](../../images/Captura%20de%20pantalla%202023-08-23%20a%20las%2016.05.30.png)
-
----
 
 ### Propietat Óptima de les heurístiques admissibles (III)
 
@@ -806,10 +618,6 @@ def cerca_a_estrella(estat_inicial):
 * Llavors, $h_2$ és més informativa que $h_1$
 * Per tant, $h_2$ serà més eficient que $h_1$
 * Es per això que, preferirem l'heurística Manhattan a l'heurística de peces fora de lloc
-
-![bg right:30% fit](../../images/8puzzle_vert.png)
-
----
 
 ### Limitacions de l'algorisme A*
 
@@ -822,8 +630,6 @@ def cerca_a_estrella(estat_inicial):
   * **A*** de profunditat iterativa
   * **A*** ponderat
 
----
-
 ### A* de profunditat iterativa
 
 * L'algorisme **A*** de profunditat iterativa és una variant de l'algorisme **A***
@@ -832,11 +638,7 @@ def cerca_a_estrella(estat_inicial):
 * Ens permet reduir l'espai de memòria necessari
   * A costa de tindre que visitar alguns nodes més d'una vegada
 
----
-
 #### Implementació (I)
-
-
 
 ```python
 def cerca_a_limitada(estat_inicial, l):
@@ -857,8 +659,6 @@ def cerca_a_limitada(estat_inicial, l):
                 frontera.append(cost_acumulat_h, succesor)
 ```
 
----
-
 #### Implementació (II)
 
 ```python
@@ -872,8 +672,6 @@ def cerca_a_iterativa(estat_inicial):
         l += 1
 ```
 
----
-
 ### A* Ponderat
 
 #### Definició
@@ -884,7 +682,6 @@ def cerca_a_iterativa(estat_inicial):
 * Si $\epsilon = 1$, l'algorisme **A*** ponderat és equivalent a l'algorisme **A***
 * Si $\epsilon > 1$, l'algorisme **A*** ponderat és s'apropa a la búsqueda voraç
 
----
 #### Utilitat
 
 * L'algorisme **A*** ponderat és útil per:
@@ -894,10 +691,6 @@ def cerca_a_iterativa(estat_inicial):
 * En l'exemple de la dreta en una $W = 2$ (la b)
     * S'estudien 7 vegades menys estats
     * Per una solució un $5\%$ menys eficient
-
-![bg right:40% fit](../../images/Captura%20de%20pantalla%202023-08-24%20a%20las%2010.08.22.png)
-
----
 
 #### Implementació
 
@@ -920,8 +713,6 @@ def cerca_a_ponderat(estat_inicial, epsilon):
                 frontera.append(cost_acumulat_h, succesor)
 ```
 
----
-
 ### Anytime A*
 
 * Podem aprofitar l'algorisme **A*** ponderat per construir un algorisme **Anytime A***
@@ -929,10 +720,6 @@ def cerca_a_ponderat(estat_inicial, epsilon):
     * Anem reduint $\epsilon$ fins a que $\epsilon = 1$
     * Així, obtenim una bona solució en un temps raonable
         * Si tenim temps, podem seguir buscant una solució millor, fins arribar a la solució òptima
-
-![bg right:30% fit](../../images/Captura%20de%20pantalla%202023-08-24%20a%20las%2015.48.17.png)
-
----
 
 #### Implementació
 
@@ -946,11 +733,8 @@ def cerca_anytime_a(estat_inicial):
         epsilon /= 2
 ```
 
----
 ### Demostració de búsquedes
 
 #### Pac-Man
-
-![bg right fit](../../images/pacman.png)
 
 [https://www.youtube.com/watch?v=2XjzjAfGWzY](https://www.youtube.com/watch?v=2XjzjAfGWzY)

@@ -11,17 +11,7 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
-![bg opacity](../../images/TS.jpg)
-
----
-
-
-
 # Optimització
-
-![bg opacity](../../images/201a54c9-a413-4d2a-88a8-fade8a2db739.jpg)
-
----
 
 ## Definició
 
@@ -32,8 +22,6 @@ Models d'intel·ligència artificial
   - O que no ens interessi el camí, sinó **només l'estat final**.
 - En aquests casos, pot ser fàcil **trobar una solució**, encara que no sigui la millor.
 - Aquesta solució es pot **refinar amb tècniques de cerca local**.
-
----
 
 ## Usos reals
 
@@ -46,8 +34,6 @@ Models d'intel·ligència artificial
   - Optimització de problemes de disseny
   - Optimització de problemes de fabricació
 
----
-
 ## Problemes NP-complets
 
 - Els problemes que no es poden resoldre amb una **complexitat polinòmica** s'anomenen **problemes NP-complets**.
@@ -55,15 +41,7 @@ Models d'intel·ligència artificial
 - Frequentment, els problemes d'optimització són problemes NP-complets, perquè cal **explorar tot l'espai d'estats** per a trobar la solució òptima.
 - Aixó fa que **no siga possible** trobar la solució òptima en un temps raonable.
 
----
-
-
-
 # Búsqueda local
-
-![bg opacity](../../images/3D-TSP-solved_with_simulated_annealing.gif)
-
----
 
 ## Característiques (I)
 
@@ -72,16 +50,12 @@ Models d'intel·ligència artificial
   - Aquests estats successors es generen **modificant l'estat actual**.
   - Les técniques de búsqueda local també s'anomenen metaheurístiques.
 
----
-
 ## Característiques (II)
 
   - Utilitzarem una **funció d'avaluació** que **maximitzirà** un valor. Representa la **qualitat** de l'estat, no el cost. Podem ponderar els valors de les variables segons les característiques de l'estat que volem potenciar.
 - Avantatges:
   - Utilitza **poca memòria** i **poca CPU**.
   - Permeten trobar solucions **raonables** en espais d'estats **molt grans**.
-
----
 
 ## Definició del problema
 
@@ -101,8 +75,6 @@ class ProblemaBusquedaLocal(object):
       type(self).__name__, self.inicial)
 ```
 
----
-
 ## Definició del problema
 
 ### Exemple: Viajant de comerç (I)
@@ -111,12 +83,6 @@ class ProblemaBusquedaLocal(object):
 - Les **variables** són les **ciutats** i els **dominis** són les **posicions**.
 - Les **restriccions** són que **no hi pugui haver dues ciutats en la mateixa posició**.
 - Les **solucions** són les **permutacions de les ciutats** que satisfan les restriccions.
-
----
-
-![bg fit](../../images/800px-GLPK_solution_of_a_travelling_salesman_problem.svg.png)
-
----
 
 ## Definició del problema
 
@@ -130,8 +96,6 @@ class ProblemaBusquedaLocal(object):
 - Anirem modificant l'estat inicial fins que no puguem millorar més.
 - Utilitzarem una **funció d'avaluació** que **millorá quan menor siga el valor** del camí.
 - A continuació podem veure una possible implementació.
-
----
 
 ### Exemple: Viajant de comerç - Implementació (I)
 
@@ -152,8 +116,6 @@ class TSP(ProblemaBusquedaLocal):
 
 ```
 
----
-
 ### Exemple: Viajant de comerç - Implementació (II)
 
 ```python
@@ -173,18 +135,12 @@ ciutats = [
 tsp = TSP(inicial=TSP.genera_estat_inicial(ciutats), ciutats=ciutats)
 ```
 
----
-
 ## Tornada enrere
 
 - La **tècnica de tornada enrere** o **backtracking** és una tècnica de cerca local.
 - Es basa en **explorar l'espai d'estats** fins a trobar una solució.
 - Si no es troba una solució, es **torna enrere** i es **modifica l'últim estat**.
 - Aquesta tècnica garanteix trobar la **solució òptima** però pot ser **molt lenta**.
-
----
-
-
 
 ### Implementació
 
@@ -207,11 +163,6 @@ def backtracking(problema):
 
   return millor_estat
 ```
-
----
-
-
-
 
 ### Execució
 
@@ -236,8 +187,6 @@ Millor fitness: 2718.3988057871697
 
 ```
 
----
-
 ## Algorisme d'Escalada
 
 - L'algorisme d'escalada o **Hill Climbing** és l'algorisme de cerca local més senzill.
@@ -245,14 +194,6 @@ Millor fitness: 2718.3988057871697
   - Sent l'alçada de cada punt el valor de la funció a optimitzar,
   - l'algorisme consisteix a **moure'ns** cap a **punts més alts**.
   - Si deixem de pujar entendrem que hem arribat al **màxim global** i hem trobat la solució.
-
----
-
-![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
-
----
-
-
 
 ### Implementació
 
@@ -275,11 +216,6 @@ def hill_climbing(problema, iteracions=10000):
       break
   return estat
 ```
-
----
-
-
-
 
 ### Execució
 
@@ -306,10 +242,6 @@ Inline:
 (mean ± std. dev. of 7 runs, 1 loop each)
 ```
 
-![bg right:47% 100%](../../images/exec_escalada.png)
-
----
-
 ### Consum de memòria
 
 - Un dels problemes que tenen els algorismes de búsqueda local que s'utilitza molta **memòria**.
@@ -317,10 +249,6 @@ Inline:
   - Podem **millorar** l'eficiència del algorisme de recuit simulat **eliminant** aquesta estructura de dades.
   - Per això, **no** generarem **estats successors** nous.
   - En lloc d'això, **modificarem l'estat actual** (`inline`) per generar el successor i, si no millora, **desfarem els canvis**.
-
----
-
-
 
 ### Implementació `inline`
 
@@ -347,8 +275,6 @@ def hill_climbing_inline(problema, iteracions=10000):
     return estat
 ```
 
----
-
 ### Problemes
 
 - L'algorisme d'escalada **no** garanteix trobar el **màxim global**.
@@ -360,8 +286,6 @@ def hill_climbing_inline(problema, iteracions=10000):
   - Escalada amb reinici aleatori
   - Escalada estocàstica
 
----
-
 ## Escalada de primer millor
 
 - L'algorisme d'escalada de primer millor **no** tria el **millor successor**.
@@ -369,8 +293,6 @@ def hill_climbing_inline(problema, iteracions=10000):
   - Si no hi ha cap successor que millori l'estat actual, l'algorisme s'atura.
   - Pot també parar quan s'arribe a un nombre màxim d'iteracions.
 - Pot ser molt útil quan el nombre de successors és molt gran.
-
----
 
 ### Implementació
 
@@ -386,9 +308,6 @@ def first_choice_hill_climbing(espai_estats, funcio, max_iteracions):
 
   return estat_actual
 ```
-
----
-
 
 ### Implementació `inline`
 
@@ -415,16 +334,12 @@ def first_choice_hill_climbing_inline(problema, iteracions=10000):
     return estat
 ```
 
----
-
 ## Escalada amb reinici aleatori
 
 - L'algorisme d'escalada amb reinici aleatori **reinicia l'algorisme** cada cert temps.
 - Això permet **escapar dels màxims locals**.
 - **No garanteix** trobar el **màxim global**, però **augmenta les possibilitats**.
 - Aquest algorisme es pot **combinar amb altres tècniques** de cerca local.
-
----
 
 ### Implementació
 
@@ -444,8 +359,6 @@ def random_restart_hill_climbing(problema, ciutats, iteracions=1000, restarts=10
   return millor_estat
 ```
 
----
-
 ### Execució
 
 ```python
@@ -460,10 +373,6 @@ Millor fitness: 12887.286272582816
 Millor fitness: 12798.50074780205
 ```
 
-![bg right:47% 100%](../../images/exec_escalada_reinici_aleatori.png)
-
----
-
 ## Algorisme de recuit simulat
 
 - L'algorisme de recuit simulat o **simulated annealing** es basa en el procés de **recuit** de la metal·lúrgia.
@@ -473,21 +382,12 @@ Millor fitness: 12798.50074780205
   - Permet acceptar estats que empitjoren l'actual, en certes condicions.
   - Incopora l'aleatorietat a l'algorisme d'escalada.
 
-
----
-
-![bg 70%](../../images/3-s2.0-B9780128150108000028-f02-14-9780128150108.jpg)
-
----
-
 ### Probabilitat d'acceptació
 
 - La probabilitat d'acceptar un estat empitjorant depèn de la **temperatura**.
   - A mesura que l'algorisme avança, la temperatura **disminueix** i fa que sigui **menys probable** acceptar un estat empitjorant.
   - La probabilitat d'acceptar un estat empitjorant es calcula amb la següent fórmula:
     - $P = e^{-\frac{\Delta E}{T}}$, on $\Delta E$ és la diferència entre el valor de l'estat actual i el valor de l'estat successor.
-
----
 
 ### Propietats
 
@@ -498,15 +398,6 @@ Millor fitness: 12798.50074780205
   - Optimització de xarxes neuronals
   - Optimització de circuits electrònics
   - Optimització de problemes de planificació
-
-
----
-
-![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.11.20.png)
-
----
-
-
 
 ### Implementació
 
@@ -530,10 +421,6 @@ def simulated_annealing(espai_estats, funcio, temperatura=100, refredament=0.9):
             return estat_actual
 ```
 
----
-
-
-
 ### Execució
 
 ```python
@@ -548,10 +435,6 @@ Cost:        11354.397010378212
 Cost:        11350.41254307539
 Cost final:  11350.41254307539
 ```
-
-![bg right:47% fit](../../images/exec_annealing.png)
-
----
 
 ### Implementació `inline` (I)
 
@@ -573,11 +456,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
         ...
 ```
 
----
-
-
-
-
 ### Implementació `inline` (II)
 
 ```python
@@ -598,15 +476,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 
 ```
 
----
-
-
-
 # Algorismes genètics
-
-![bg opacity](../../images/gen_algos.jpg)
-
----
 
 # Algorismes genètics
 
@@ -617,12 +487,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - Els **valors** dels gens representen els **valors** de les **variables**.
   - Els **individus** evolucionen **generant nous individus**.
 
----
-
-![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.36.24.png)
-
----
-
 ### Procediment
 
 - L'algorisme **genera una població inicial** d'estats.
@@ -631,8 +495,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - A més, **muta** alguns dels seus gens.
 - L'algorisme **selecciona els millors** de la nova població i **descarta la resta**.
 - L'algorisme **s'atura** quan s'arriba a un **nombre màxim d'iteracions**.
-
----
 
 ### Definició del problema
 
@@ -644,11 +506,7 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - _Viatjant de comerç_: Seqüència de nombres que representen les ciutats en ordre
   - _Motxilla_: Série de 0/1 que indica si un objecte està o no a la motxilla.
 
----
-
-![right fit](../../images/156770627-e6cc63e9-72b7-4afa-a968-60e994963a26.png)
-
----
+![](../../images/156770627-e6cc63e9-72b7-4afa-a968-60e994963a26.png)
 
 ### Funció d'avaluació
 
@@ -657,8 +515,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - Aquest valor **representa la qualitat** de l'individu.
 - Haurem de ponderar els valors de les variables, segons les característiques de l'inidividu que vullguem potenciar.
 
----
-
 ### Creació de la població inicial
 
 - El tercer pas és **crear una població inicial**.
@@ -666,9 +522,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - El nombre d'individus de la població inicial **ha de ser suficientment gran i divers**, sense fer-lo massa gran.
 - Opcionalment, ordenarem els individus segons la seva funció d'avaluació.
 
-![bg right:40% fit](../../images/156890925-13e0f1bf-ec4a-40fe-8d48-60d867cdacae.png)
-
----
 ### Selecció
 
 - Per evolucionar la població s'han de **seleccionar els millors individus** i serán els que **passaran els seus gens a la següent generació**.
@@ -676,12 +529,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Per torneig**: Es trien **$k$ individus aleatoris** i es **selecciona el millor**.
   - **Per ruleta**: S'**assigna una probabilitat** a cada individu, proporcional a la seva funció d'avaluació.
   - **Per rang**: La **probabilitat** serà proporcional a la seva posició.
-
----
-
-![bg fit](../../images/seleccio.png)
-
----
 
 ### Creuament
 
@@ -693,11 +540,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Creuament uniforme**: Es tria **aleatòriament** per a cada gen si es **hereta del pare o de la mare**.
   - **Altres tècniques**: recombinació ordenada, màscara, etc.
 
----
-
-![bg fit](../../images/156891548-bfafdc41-0158-4146-b6c6-b9d14d2c536a.png)
-
----
 ### Mutació
 
 - La **mutació** és el procés pel qual es **modifica un gen** d'un individu.
@@ -706,15 +548,6 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - Hi ha diverses tècniques de mutació:
   - **Mutació aleatòria**: Es tria un **gen aleatori** i es **modifica**.
   - **Mutació dirigida**: Es tria un **gen aleatori** i es **modifica** en una **direcció concreta**.
-
----
-
-![bg fit](../../images/156822218-716ea60d-4d6b-434e-9112-26cba6c93b2c.png)
-
----
-
-
-
 
 ### Implementació (I)
 
@@ -737,8 +570,6 @@ def genetic_algorithm(espai_estats, funcio, num_individus=100, num_iteracions=10
     return poblacio[0]
 ```
 
----
-
 ### Implementació (II)
 
 ```python
@@ -747,15 +578,12 @@ def creuament(pare, mare):
     fill = pare[:punt] + mare[punt:]
     return fill
 
-
 def mutacio(individu):
     punt = random.randint(0, len(individu))
     nou_valor = random.randint(0, 100)
     individu[punt] = nou_valor
     return individu
 ```
-
----
 
 ### Conclusions i problemes
 
@@ -765,15 +593,7 @@ def mutacio(individu):
 - Per molts problemes els operadors de creuament i mutació són difícils de definir.
 - La seva capacitat d'entrenar xarxes neuronals els fa molt útils en aquest camp.
 
----
-
-
-
 # Satisfacció de restriccions
-
-![bg opacity](../../images/1%20YDEWV2f7UsDm6S8YC0LYbQ.webp)
-
----
 
 ## Definicions (I)
 
@@ -784,8 +604,6 @@ def mutacio(individu):
   - Per això, s'han desenvolupat tècniques específiques per a aquests problemes.
   - Veurem també com podem **millorar** els resultats de les tècniques de cerca local.
 
----
-
 ## Definicions (II)
 
 - En aquests problemes, l'**estat** és un **conjunt de variables**.
@@ -794,8 +612,6 @@ def mutacio(individu):
 - Els **estats** que satisfan les **restriccions** són les **solucions**.
 - Els **estats** que no satisfan les **restriccions** són **incompatibles**.
 - Els **estats** que no són ni solucions ni incompatibles són **parcials**.
-
----
 
 ## Exemple: Mapa de colors (I)
 
@@ -808,8 +624,6 @@ def mutacio(individu):
   - Els **estats** són les **combinacions de colors** per a cada país.
   - Les **solucions** són les **combinacions de colors que satisfan les restriccions**.
 
----
-
 ## Exemple: Mapa de colors (II)
 
 - Els algorismes que veurem es basen en representar les restriccions com a **grafs**.
@@ -817,10 +631,6 @@ def mutacio(individu):
 - Els nodes del graf són les **variables**.
 - Les **arestes** del graf són les **restriccions**.
 - Les **solucions** són els **nodes del graf** que **no tenen cap aresta que els connecte**.
-
-![bg right:33% fit](../../images/mapes.png)
-
----
 
 ## Força bruta
 
@@ -832,15 +642,7 @@ def mutacio(individu):
   - El nombre de combinacions creix **exponencialment** amb el nombre de variables.
   - Aquest problema és **NP-complet**.
 
----
-
-
-
 ## Búsqueda en tornada (backtracking)
-
-![bg opacity](../../images/introduction-to-backtracking-1-1664198487.png)
-
----
 
 ### Descripció
 
@@ -851,11 +653,6 @@ def mutacio(individu):
   - Si no la viola, **assigna un valor** a la **següent variable**.
   - Si la viola, **desfà l'assignació** i **cambia el valor** de la **variable anterior**.
   - L'algorisme **s'atura** quan ha **assignat un valor a totes les variables**.
-
----
-
-
-
 
 ### Implementació
 
@@ -878,8 +675,6 @@ def _backtrack(estat, posicio):
   return None
 ```
 
----
-
 ### Problemes
 
 - L'algorisme de búsqueda en tornada **garanteix** trobar la **solució**.
@@ -887,8 +682,6 @@ def _backtrack(estat, posicio):
 - El **nombre d'estats** que cal **explorar** és molt **gran**.
   - Serà menor que el nombre d'estats de l'espai d'estats, però pot ser no molt menor.
 - Veurem algunes de les optimitzacions que podem aplicar
-
----
 
 ### Ordenació de variables
 
@@ -901,8 +694,6 @@ def _backtrack(estat, posicio):
   - **Grau (degree)**: La variable amb més restriccions.
     - Pot **resoldre incompatibilitats crítiques** abans.
 
----
-
 ### Ordenació de valors
 
 - L'**ordre** de selecció els valors també determina el **nombre d'estats** que cal **explorar**.
@@ -914,8 +705,6 @@ def _backtrack(estat, posicio):
   - **Aleatori**: El valor es tria aleatòriament.
     - Pot **donar més flexibilitat** al principi.
 
----
-
 ### Implementació de les optimitzacions (I)
 
 ```python
@@ -925,8 +714,6 @@ def backtrack():
 
   return _backtrack(estat, variables)
 ```
-
----
 
 ### Implementació de les optimitzacions (II)
 
@@ -946,15 +733,7 @@ def _backtrack(estat, variables):
       estat[var] = -1
 ```
 
----
-
-
-
 ## Algorisme de mínims conflictes
-
-![bg opacity](../../images/Fig_06_08.PNG)
-
----
 
 ### Descripció
 
@@ -965,8 +744,6 @@ def _backtrack(estat, variables):
 - Molt eficient si l'**assignació inicial** és bona.
   - Pot ser recomanable utilitzar un **algorisme voraç** per a trobar una bona assignació inicial.
 
----
-
 ### Exemple: N Reines (I)
 
 - Tenim un tauler d'escacs de **N x N**.
@@ -976,9 +753,6 @@ def _backtrack(estat, variables):
 - Els **dominis** són les **columnes**.
 - Les **restriccions** són que **no hi pugui haver dues reines en posició d'atac**.
 
-![bg right:35% fit](../../images/n_reines.png)
-
----
 ### Exemple: N Reines (II)
 
 - Per al problema de les $N$ reines i una $N = 8$, tindrem fins a $8^8 = 16.777.216$ estats.
@@ -986,10 +760,6 @@ def _backtrack(estat, variables):
 - **No** necessitem una **estructura de dades** que representi l'espai d'estats.
   - Aixó fa qué l'algorisme de mínims conflictes siga **més eficient que la búsqueda en tornada**.
 - L'algorisme de mínims conflictes **no** garanteix trobar la **solució** però **en la gran majoria dels casos** la troba.
-
----
-
-
 
 ### Exemple: N Reines (III) - Implementació
 
@@ -1015,5 +785,3 @@ def minims_conflictes(espai_estats, funcio, max_iteracions):
                     actual[i], actual[j] = actual[j], actual[i]
     return actual
 ```
-
----

@@ -11,17 +11,11 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
-![bg opacity](../../images/portada.png)
-
----
-
 ## Què és la IA?
 
 - **Intel·ligència**: capacitat d'aprendre, comprendre i resoldre problemes.
 - **Intel·ligència artificial**: intel·ligència exhibida per màquines.
 - Una màquina intel·ligent percep el seu entorn i pren accions per maximitzar les possibilitats d'èxit d'un objectiu.
-
----
 
 ## Agents intel·ligents
 
@@ -32,10 +26,6 @@ math: mathjax3
   - seleccionar una acció;
   - avaluar el resultat i adaptar-se quan calga.
 
-![bg right:35% fit](../../images/what-is-the-composition-for-agents-in-artificial-intelligence.png)
-
----
-
 ## Què estudiarem?
 
 - Com formular un problema perquè un sistema el puga resoldre.
@@ -44,15 +34,7 @@ math: mathjax3
 - Camps d'aplicació i impacte sobre les persones.
 - Riscos ètics, legals i de seguretat.
 
----
-
-
-
 ## Una mica d'història
-
-![bg opacity](../../images/History.jpg)
-
----
 
 ## Fites rellevants
 
@@ -62,16 +44,12 @@ math: mathjax3
 - **1997**: Deep Blue derrota Kasparov als escacs.
 - **2016**: AlphaGo mostra el potencial de combinar aprenentatge i cerca.
 
----
-
 ## Models fundacionals
 
 - Els Transformers han fet possibles models de llenguatge, visió i àudio a gran escala.
 - Els models actuals poden ser **multimodals**: text, imatge, veu, vídeo i codi.
 - També existeixen models oberts i models que poden executar-se localment.
 - La capacitat no elimina els límits: poden equivocar-se, inventar informació o reproduir biaixos.
-
----
 
 ## Situació actual
 
@@ -83,17 +61,7 @@ math: mathjax3
   - manteniment i dependència de proveïdors;
   - impacte sobre les persones afectades.
 
-![bg right:35% fit](../../images/State of AI.png)
-
----
-
-
-
 ## Tenim una màquina intel·ligent?
-
-![bg opacity](../../images/8860931.jpg)
-
----
 
 ## Intel·ligència humana i computacional
 
@@ -107,15 +75,11 @@ math: mathjax3
 
 La IA no intenta reproduir necessàriament una persona: construeix sistemes capaços de resoldre tasques definides.
 
----
-
 ## IA estreta i IA general
 
 - **IA estreta o feble**: resol molt bé una tasca específica, com classificar imatges o planificar una ruta.
 - **IA general o forta**: podria generalitzar la seua capacitat a qualsevol tasca intel·lectual humana.
 - Els sistemes que utilitzem actualment són IA estreta, fins i tot quan resulten molt versàtils.
-
----
 
 ## Racionalitat
 
@@ -128,15 +92,7 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
   - com mesurarem l'èxit;
   - què ha de fer el sistema quan no tinga prou evidència.
 
----
-
-
-
 ## Paradigmes de la IA
-
-![bg opacity](../../images/Rule-based-vs-Machine-Learning-upd-1-1536x799.png)
-
----
 
 ## Paradigma simbòlic
 
@@ -148,10 +104,6 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
   - raonament basat en casos;
   - planificació i satisfacció de restriccions.
 
-![bg right:30% fit](../../images/sistema expert.png)
-
----
-
 ## Paradigma connexionista
 
 - Representa la informació amb xarxes de neurones artificials.
@@ -159,17 +111,11 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
 - És útil en visió per computador, veu, llenguatge i control.
 - Sovint ofereix menys explicabilitat que una solució basada en regles.
 
-![bg right:30% fit](../../images/xarxa_neuronal.png)
-
----
-
 ## Paradigma estadístic
 
 - Analitza dades per estimar probabilitats i prendre decisions.
 - Inclou classificació, regressió, agrupament i detecció d'anomalies.
 - La qualitat del resultat depén de les dades, les mètriques i el context d'ús.
-
----
 
 ## Tècniques de IA
 
@@ -181,8 +127,6 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
 | Text, imatge, veu o codi | Xarxes neuronals i models fundacionals |
 | Consulta de documentació canviant | Recuperació d'informació o RAG |
 
----
-
 ## Seleccionar una solució
 
 Abans d'usar IA, hem de preguntar-nos:
@@ -193,15 +137,7 @@ Abans d'usar IA, hem de preguntar-nos:
 - Quin és el cost d'un error?
 - Qui revisarà els casos incerts o sensibles?
 
----
-
-
-
 ## Aplicacions de la IA
-
-![bg opacity](../../images/How_Artificial_Intelligence_is_Being_Deployed_Today.png)
-
----
 
 ## Alguns dominis
 
@@ -211,8 +147,6 @@ Abans d'usar IA, hem de preguntar-nos:
 - **Recomanació**: productes, música, continguts o recursos.
 - **Salut, finances, indústria i transport**: suport a decisions i automatització.
 
----
-
 ## IA responsable
 
 - Les dades poden contenir errors, desequilibris i biaixos.
@@ -220,10 +154,6 @@ Abans d'usar IA, hem de preguntar-nos:
 - Cal protegir dades personals i controlar qui pot accedir al sistema.
 - Els resultats generats necessiten verificació quan tenen conseqüències rellevants.
 - La responsabilitat no desapareix perquè la decisió l'haja proposada un sistema.
-
----
-
-
 
 # Idees clau
 

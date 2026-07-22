@@ -44,7 +44,21 @@ function contentFromMarp(sourcePath, markdown) {
   const cleanBody = body
     .replace(/<style scoped>[\s\S]*?<\/style>\s*/g, "")
     .replace(/<!--\s*[\s\S]*?\s*-->/g, "")
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, url) => {
+      if (/\bbg\b/.test(alt)) {
+        return "";
+      }
+
+      const contentAlt = alt
+        .replace(/\b(left|right|center|fit|inline|opacity)\b/g, "")
+        .replace(/\b(?:w:\d+|\d+%)\b/g, "")
+        .trim();
+      return `![${contentAlt}](${url})`;
+    })
+    .replace(/^---\s*$/gm, "")
+    .replace(/^(#{1,6})\s+!\[\]\(([^)]+)\)\s*$/gm, "![]($2)")
     .replace(/[ \t]+$/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
     .trim();
 
   return `${contentFrontMatter(contentPath)}\n> Aquesta pàgina es genera automàticament a partir de la presentació MARP \`${sourceName}\`. No l'edites directament.\n\n${cleanBody}\n`;

@@ -13,10 +13,6 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
-![bg opacity](../../images/img_5.png)
-
----
-
 ## Jocs
 
 - Fins ara en els nostres problemes de cerca, l'entorn era **determinista** i **totalment observable**.
@@ -26,8 +22,6 @@ Models d'intel·ligència artificial
   - La cooperació pot ocórrer, però solament si és beneficiosa per a tots els jugadors.
 - Els jocs són un **domini** molt important en la intel·ligència artificial.
   - Són un **domini** molt **comú**, **complexe** i útil per a la **investigació**.
-
----
 
 ### Propietats
 
@@ -39,8 +33,6 @@ Tindrem en compte les següents propietats:
 - **Determinista**: no hi ha aleatorietat.
 - Informació **perfecta**: els jugadors coneixen l'estat del joc en tot moment. (Escacs, Go, etc.)
 
----
-
 #### Dos jugadors i suma zero
 
 - Dos jugadors: $MAX$ i $MIN$.
@@ -51,12 +43,6 @@ Tindrem en compte les següents propietats:
   - Representaran els moviments possibles de cada jugador.
 - Una **funció d'utilitat** $u: T \rightarrow \mathbb{R}$ que
   - el valor de cada posició terminal per a $MAX$.
-
----
-
-![bg 90%](../../images/img_7.png)
-
----
 
 ## Arbre de joc (I)
 
@@ -71,13 +57,7 @@ Característiques:
   - Per a $MAX$ serà $U(t)$, per a $MIN$ $-U(t)$.
   - En la majoria de jocs que veurem, $U(t) \in \{-1, 0, 1\}$.
 
----
-
 ## Arbre de joc (II) - Exemple
-
-![bg 60%](../../images/img_8.png)
-
----
 
 ## Estratègies
 
@@ -89,15 +69,7 @@ Característiques:
   - Ha de decidir que fer **per a cada possible** **moviment** de $MIN$.
   - No hi ha prou en una seqüència d'accions predefinida, **dependrà de les accions** de $MIN$.
 
----
-
-
-
 ### MiniMax
-
-![bg opacity ](../../images/img_9.png)
-
----
 
 ### MiniMax
 
@@ -109,8 +81,6 @@ Característiques:
 
 **Minimitzant el guany de $\mathbf{MIN}$ estem maximitzant el nostre guany.**
 
----
-
 #### Exemple
 
 - En l'exemple de la dreta els nodes $\triangle$ són $MAX$ i els $\triangledown$ $MIN$.
@@ -118,10 +88,6 @@ Característiques:
 - La resta de nodes mostren la seva puntuació **minimax**
 - En l'arrel la millor opció per a $MAX$ és $a_1$, ja que porta al node en millor puntuació minimax
 - En el segon nivell la millor opció per a $MIN$ és $b_1$ per dur al node en menos puntuació
-
-![bg right:40% 105%](../../images/img_9.png)
-
----
 
 #### Algorisme
 
@@ -131,8 +97,6 @@ Característiques:
   - Si $n$ és un node terminal, retornar la seva utilitat.
   - Si $j$ és $MAX$: Retornar el màxim de les puntuacions dels fills.
   - Si $j$ és $MIN$: Retornar el mínim de les puntuacions dels fills.
-
----
 
 #### Implementació (I)
 
@@ -152,8 +116,6 @@ def valor_maxim(joc, jugador, estat):
     return v, moviment
 ```
 
----
-
 #### Implementació (II)
 
 ```python
@@ -168,8 +130,6 @@ def valor_minim(joc, jugador, estat):
     return v, moviment
 ```
 
----
-
 #### Problemes
 
 - **Complexitat**: $O(b^m)$
@@ -180,15 +140,7 @@ def valor_minim(joc, jugador, estat):
 - Això fa que sigui **impossible** explorar tot l'arbre de joc en jocs complexos.
   - Veurem técniques que poden ajudar-nos.
 
----
-
-
-
 ## Poda alfa-beta
-
-![bg opacity](../../images/alpha_beta.webp)
-
----
 
 ### Introducció
 
@@ -198,8 +150,6 @@ def valor_minim(joc, jugador, estat):
 - **Beta**: **valor** màxim que $MIN$ està **assegurat** de poder obtenir.
 - **Nodes a podar**: Nodes que, indepentment del seu valor, no modificarán el nivell superior.
 
----
-
 ### Exemple (I)
 
 - La primera fulla baix $B$ té valor $3$. Per tant $B$ (node $MIN$) té un valor màxim de $3$.
@@ -207,10 +157,6 @@ def valor_minim(joc, jugador, estat):
   - $MIN$ evitaria aquest moviment, per lo que $B$ encara té un valor màxim de $3$.
 - La tercera fulla baix $B$ té valor $8$. El valor de final de $B$ és $3$.
   - Podem deduir llavors que el valor mínim d'$A$ és $3$, al tindre un node terminal amb valor $3$.
-
-![bg right:45% 100%](../../images/Fig_05_05.PNG)
-
----
 
 ### Exemple (II)
 
@@ -220,10 +166,6 @@ def valor_minim(joc, jugador, estat):
   - Aquesta és la **poda alfa-beta**.
 - Al acabar l'exploració sabem els valors de cada node necessari.
 
-![bg right:46% 100%](../../images/Fig_05_05.PNG)
-
----
-
 ### Regles
 
 - La poda alfa-beta **no** afecta al resultat de l'algorisme.
@@ -231,12 +173,6 @@ def valor_minim(joc, jugador, estat):
   - Moltes vegades es poden, fins i tot, podar arbres sencers.
 - Principi general, per un node $n$:
   - Si hi ha una opció millor al mateix nivell $($m'$)$ o superior $($m$)$, $n$ no es visitarà.
-
-![bg right:39% fit](../../images/img_11.png)
-
----
-
-
 
 ### Implementació (I)
 
@@ -259,8 +195,6 @@ def valor_maxim_ab(joc, jugador, estat, alfa, beta):
     return v, moviment
 ```
 
----
-
 ### Implementació (II)
 
 ```python
@@ -280,8 +214,6 @@ def valor_minim_ab(joc, jugador, estat, alfa, beta):
     return v, moviment
 ```
 
----
-
 ### Millores
 
 - **Ordenació de nodes**: Ordenar els nodes fills corréctament permet podar més.
@@ -289,8 +221,6 @@ def valor_minim_ab(joc, jugador, estat, alfa, beta):
     - En un joc d'escacs, els moviments que mengen peces són més probables de ser bons.
 - Per no explorar estates repetits, es pot utilitzar una **taula de transposició** semblant al conjunt de visitats, però amb els valors de cada node.
 - Aplicar **heurístiques** per tallar l'avaluació: aplicar una funció d'avaluació a les posicions no terminals per fer-les terminals
-
----
 
 ## Funcions d'avaluació
 
@@ -301,8 +231,6 @@ def valor_minim_ab(joc, jugador, estat, alfa, beta):
 - La funció d'avaluació **no** ha de ser perfecta.
   - Ha de ser **rápida** de calcular.
   - Ha de ser **consistent** amb la utilitat real.
-
----
 
 ## Funcions d'avaluació
 
@@ -315,8 +243,6 @@ def valor_minim_ab(joc, jugador, estat, alfa, beta):
     0 & \text{altrament}
   \end{cases}$
   - Explicació: Sumem 1 per cada fitxa de $MAX$ i restem 1 per cada fitxa de $MIN$.
-
----
 
 ## Funcions d'avaluació
 
@@ -334,4 +260,3 @@ def avalua_tres_en_ratlla(joc, estat):
                 utilitat -= 1
     return utilitat
 ```
----

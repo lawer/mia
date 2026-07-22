@@ -11,19 +11,11 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
-![bg opacity](../../images/NLP-for-Beginners-Pythons-Natural-Language-Toolkit-NLTK_Watermarked.png)
-
----
-
 ## Processament del llenguatge natural
 
 - **Definició:** camp de la IA que tracta de la interacció entre els ordinadors i el llenguatge humà.
 - Se centra en la **comprensió** i **generació** de llenguatge humà.
 - Un dels camps més actius i complexos de la IA.
-
-![bg right fit](../../images/periodic-table-of-nlp-tasks-high.png)
-
----
 
 ## Aplicacions
 
@@ -34,8 +26,6 @@ Models d'intel·ligència artificial
 - Anàlisi de sentiments.
 - Classificació de text.
 
----
-
 ## Introducció (I)
 
 - Camp multidisciplinari que combina:
@@ -44,8 +34,6 @@ Models d'intel·ligència artificial
   - Ciències cognitives.
   - Informàtica.
   - etc.
-
----
 
 ## Introducció (II)
 
@@ -56,15 +44,7 @@ Models d'intel·ligència artificial
   - El llenguatge humà és **cultural**.
 - Aquestes característiques fan que el llenguatge humà no sigui **formal** i, per tant, no es puga tractar amb les tècniques de la IA tradicional.
 
----
-
-
-
 # El text com a dada
-
-![bg opacity](../../images/text.jpg)
-
----
 
 ## Introducció
 
@@ -73,8 +53,6 @@ Models d'intel·ligència artificial
 - El saber com tractar el text és **crític** per a moltes aplicacions.
 
 > Anomenem **text** a una seqüència coherent de símbols que pot ser interpretada com a un conjunt de paraules, utilitzant les regles gramaticals i sintàctiques d'una llengua.
-
----
 
 ## Significat
 
@@ -86,8 +64,6 @@ Models d'intel·ligència artificial
 $$\text{significant}(\text{simbol}) \Leftrightarrow \text{significat}(\text{idea})$$
 $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 
----
-
 ## Significat en els ordinadors
 
 - Com poden coneixer els ordinadors el significat de les paraules, frases i textos?.
@@ -97,8 +73,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
     - Ex: `roïn` és un sinònim de `dolent`, `malparit`, `miserable`, etc.
   - Els hyperònims permeten relacionar paraules amb significats més generals.
     - Exemple: `carnivor`, `vertebrat` serien hyperònims de `gat`.
-
----
 
 ## Problemes de WordNet i semblants
 
@@ -110,8 +84,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - Ex: `the shit` és un sinònim de `the best` en anglès que no apareix en WordNet.
 - Les solucions modernes es basen en les representacions del text.
 
----
-
 ## Representacions del text (I)
 
 - Els ordinadors necessiten representar el text com a dades numèriques.
@@ -121,18 +93,12 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - Els models de representació del text són **molt importants** en el processament del llenguatge natural.
 - A continuació veurem algunes de les tècniques més utilitzades.
 
----
-
 ## Representació de caràcters
 
 - Cada caràcter es representa per un número.
   - El diccionari serà molt petit (en el cas de l'ASCII, 128 caràcters).
   - El model ha de ser molt complex, ja que ha d'aprendre a combinar els caràcters per a formar paraules.
   - Exemple: "AND" es pot representar com a $[65, 78, 68]$
-
-![bg right:38% fit](../../images/ascii-character-map.png)
-
----
 
 ## Representació de paraules
 
@@ -141,8 +107,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - El model serà més senzill, ja que les paraules són unitats semàntiques.
   - Exemple: Si el nostre vocabulari és `["gat", "gos", "cavall", "ocell", "peix"]`, llavors "gat" es pot representar com a $1$ i "cavall" com a $3$.
 
----
-
 ## Representació de subparaules
 
 - Cada subparaula és representada per un número.
@@ -150,8 +114,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - El model serà més senzill, ja que les subparaules són unitats semàntiques.
     - Permet representar paraules rares i que no estan en el vocabulari.
     - Útil per a llengües amb moltes paraules compostes i derivades.
-
----
 
 ## Tokens i tokenització (I)
 
@@ -163,8 +125,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - És un procés **no trivial**. Depèn de la llengua i del domini.
     - Exemple: "New York" és un token o dos?
 
----
-
 ## Tokens i tokenització (II)
 
 - Qüestions a tindre en compte:
@@ -173,8 +133,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - **Stopwords**: paraules que no aporten informació al text (articles, preposicions, etc.).
   - **Idioma i domini**: el procés de tokenització depèn de l'idioma i del domini del text.
 
----
-
 ## Tokens i tokenització (III)
 
 - N-grams: seqüències de n tokens consecutius.
@@ -182,8 +140,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - Els n-grams permeten representar aquestes combinacions de paraules, augmentant el vocabulari amb les combinacions d'n-tokens que triem.
 - Bigrams: seqüències de dos tokens consecutius, trigrams: seqüències de tres tokens consecutius, etc.
 - Problema: augmenta molt el vocabulari i la complexitat del model.
-
----
 
 ## Vectorització (I)
 
@@ -194,8 +150,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - La **vectorització** és el procés de convertir un text en un vector numèric.
 - Els vectors són més fàcils de manipular per a les màquines i de comparar.
 
----
-
 ## Vectorització (II)
 
 - Algunes técniques de vectorització (embeddings):
@@ -203,8 +157,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - **Word2Vec**: cada paraula és un vector en un espai semàntic. El nombre de dimensions és fixe.
   - **FastText**: creat per Facebook. Similar a Word2Vec, però permet representar paraules rares i que no estan en el vocabulari.
   - **GloVe**: model basat en NNLM i Word2Vec.
-
----
 
 ## Word2Vec
 
@@ -215,8 +167,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 
 ![70%](../../images/Captura%20de%20pantalla%202024-01-14%20a%20las%2021.35.56.png)
 
----
-
 ## Word2Vec (II)
 
 - Per cada paraula obtenim un vector **dens** i de **longitud fixa**.
@@ -225,10 +175,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - Els vectors de paraules amb contextos semblants estaran propers en l'espai semàntic.
 
 > Facilita calcular la similitud entre paraules.
-
-![bg right:31% fit](../../images/embeddings.png)
-
----
 
 ## Word2Vec (III)
 
@@ -239,15 +185,7 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - Els _embeddings_ generats poden ser utilitzats en una gran varietat de tasques, com pot ser la classificació de textos, anàlisi de sentiments, etc.
 - Són models que necessiten un entrenament previ amb totes les paraules del vocabulari. A continuació veurem un exemple.
 
----
-
-
-
 # Representació de textos
-
-![bg opacity](../../images/tf-idf.png)
-
----
 
 ## Representació de textos
 
@@ -258,8 +196,6 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
   - **TF-IDF**: model basat en freqüències i inversa de freqüències
   - **Word Embeddings**. Vectorització de paraules amb _Word2Vec_, _FastText_, etc
 
----
-
 ### One-hot encoding
 
 - El model **one-hot encoding** és un model basat en tokens.
@@ -268,20 +204,12 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - Els vectors generats són **independents** de la semàntica.
 - No facilita calcular la similitud entre paraules i textos.
 
-![bg right:37% fit](../../images/one_hot.png)
-
----
-
 ### Bag of Words (BoW)
 
 - El model **BoW** és un model basat en freqüències.
 - Es pot entendre com una suma dels vectors one-hot.
 - Els vectors generats són **independents** de la semàntica.
 - El nombre del token es pot entendre com a **ordre** i en molts casos no és així. Aquesta discrepància pot afectar a la qualitat del model.
-
-![bg right:40% fit](../../images/bag-of-words.png)
-
----
 
 ### TF-IDF
 
@@ -290,15 +218,11 @@ $$\text{arbre} \Leftrightarrow \text{\{🌲, 🌳, 🌴, } \dots \}$$
 - El valor de cada cel·la és el producte de la freqüència del token en el document i la inversa de la freqüència del token en el conjunt de documents.
 - Dona més importància als tokens que apareixen en pocs documents. Raó: els tokens que apareixen en molts documents no solen aportar informació rellevant.
 
----
-
 ### Word Embeddings
 
 - Els _embeddings_ generats per Word2Vec són vectors de _n_ dimensions.
 - Els vectors generats són **densos**, de **longitud fixa** i amb **sentit semàntic**.
 - Per a representar un **text** pot utilitzar-se la mitjana dels _embeddings_ de les paraules que el formen, el màxim, la suma, etc.
-
----
 
 #### Generació de _embeddings_ amb Word2Vec i la llibreria Gensim
 
@@ -316,8 +240,6 @@ sentences = [
 model = Word2Vec(sentences, min_count=1)
 ```
 
----
-
 #### Visualització dels _embeddings_
 
 ```python
@@ -332,8 +254,6 @@ print(gavi)
                                          - 0.05015428 - 0.03763372
 ]
 ```
-
----
 
 #### Busquem paraules similars
 
@@ -353,8 +273,6 @@ model.wv.most_similar("Gavi")
  ('company', -0.7287455797195435)]
 ```
 
----
-
 #### Similitud del cosinus
 
 - Els _embeddings_ generats per Word2Vec són vectors de _n_ dimensions.
@@ -365,15 +283,7 @@ model.wv.most_similar("Gavi")
   - 1: vectors iguals.
 - Aquesta mesura és molt utilitzada en el processament del llenguatge natural.
 
----
-
-
-
 # Conversió de text a veu i veu a text
-
-![bg opacity](../../images/DALL%C2%B7E-2023-11-24-17.55.16-A-vibrant-and-abstract-representation-of-the-concept-of-audio-and-speech-recognition-symbolizing-the-Whisper-speech-to-text-model.-The-image-should-f.jpg)
-
----
 
 ## Reconeixement de veu i transcripció automàtica
 
@@ -383,25 +293,17 @@ model.wv.most_similar("Gavi")
 - Ambdues són unes tècniques molt importants en el processament del llenguatge natural; encara que no solen estar en primer pla.
 - En aquest apartat veurem com funcionen aquestes tècniques.
 
----
-
 ## Síntesi de veu
 
 - La **síntesi de veu** és el procés de **convertir un arxiu de text en un arxiu d'àudio**.
 - Aquesta tecnologia ha millorat molt en els últims anys, gràcies als models de llenguatge i a les xarxes neuronals.
 - Hi ha diversos enfocaments, a continuació veurem els més importants.
 
-![bg right fit](../../images/Voice-Synthesis.jpg)
-
----
-
 ### Síntesi de veu: concatenació de sons
 
 - Es basa en la grabació de **sons** i la seva **concatenació** per a formar paraules i frases.
 - Es busquen els sons més adaptats al context i es combinen de manera que soni el més natural possible.
 - Requereix una gran quantitat de dades i dificulata adapatar-se a contextos nous.
-
----
 
 ### Síntesi de veu: síntesi basada en formants
 
@@ -410,8 +312,6 @@ model.wv.most_similar("Gavi")
 - La síntesi de formants permet obtindre veus clares i precises.
 - Requereixen menys dades que la síntesi per concatenació de sons, tenen, però menys naturalitat i expressivitat.
 
----
-
 ### Síntesi de veu: síntesi basada en unitats
 
 - Es basa en la **síntesi d'unitats** més petites que les paraules, com ara **fonemes** o **diftongs**.
@@ -419,16 +319,12 @@ model.wv.most_similar("Gavi")
   - La síntesi de unitats permet obtenir veus més naturals i expressives.
   - Requereixen menys dades que la síntesi per concatenació de sons.
 
----
-
 ### Síntesi de veu: basada en xarxes neuronals (I)
 
 - Les xarxes neuronals són capaces de sintetitzar veus a partir de text.
 - Aquestes xarxes s'entrenen amb grans quantitats de dades de veu i text i són capaces de sintetitzar veus molt naturals.
 - S'utiltzen Xarxes Neural Recurrents (RNN) específiques, com ara les xarxes LSTM o GRU o models més moderns com ara les xarxes Transformer.
 - Aquestes xarxes són capaces de sintetitzar veus molt naturals i expressives, sempre que tinguin suficientes dades d'entrenament i suficient capacitat de procés.
-
----
 
 ### Síntesi de veu: basada en xarxes neuronals (II)
 
@@ -440,20 +336,12 @@ model.wv.most_similar("Gavi")
   - **Etapa de síntesi**: els espectrogrames es converteixen en veu.
   - **Etapa de postprocessament**: es millora la qualitat de la veu.
 
----
-
-![bg 70%](../../images/psesgmsndedform00a.jpg)
-
----
-
 ## Transcripció automàtica
 
 - En l'actualitat el **reconeixement de veu** és una tasca **molt madura**.
 - Els assistents virtuals com **Siri**, **Alexa** o **Google Assistant** són capaços de reconèixer veu amb una gran precisió.
 - Si volem implementar un sistema de reconeixement de veu, podem utilitzar eines com **Google Cloud Speech-to-Text** o **IBM Watson Speech to Text**.
 - Aquestes eines es basen en les matèixes tècniques que hem vist per a la síntesi de veu.
-
----
 
 ### Models de reconeixement de veu i transcripció automàtica
 
@@ -465,15 +353,7 @@ model.wv.most_similar("Gavi")
   - **Hugging Face Speech2Text**: model de reconeixement de veu.
   - **Bark**: Model de generació de veu de **Suno Labs**.
 
----
-
-
-
 # Similitud entre textos
-
-![bg opacity](../../images/similarity.jpg)
-
----
 
 ## Similitud entre textos
 
@@ -481,8 +361,6 @@ model.wv.most_similar("Gavi")
 - És una de les funcions més obvies del processament del llenguatge natural.
 - El càlcul de la similitud entre textos, però, és una tasca **difícil**.
 - Anem a veure algunes tècniques de les més utilitzades.
-
----
 
 ### Técniques per a calcular la similitud entre textos (I)
 
@@ -492,8 +370,6 @@ model.wv.most_similar("Gavi")
   - **Recompte de paraules**: És el nombre comú de paraules entre dos textos.
   - **Distància de Jaccard**: És el nombre de paraules comunes entre dos textos dividit pel nombre total de paraules dels dos textos.
 
----
-
 ### Técniques per a calcular la similitud entre textos (II)
 
 - **Basades en característiques sintàctiques**: Es basen en les característiques sintàctiques i gramaticals dels textos. Impliquen un procés de **parsejat** dels textos per analitzar la seva
@@ -502,15 +378,11 @@ model.wv.most_similar("Gavi")
   - **Word Mover's Distance**: Mesura la distància entre dos textos com la distància entre els vectors de les paraules dels dos textos.
   - **Similitud del cosinus**: Utilitza el cosinus de l'angle entre ells.
 
----
-
 ### Técniques per a calcular la similitud entre textos (II)
 
 - **Basades en l'aprenentatge automàtic**: Es basen en l'aprenentatge automàtic per a calcular la similitud entre textos.
   - **BERT i GPT**: Models de llenguatge basats en xarxes neuronals que pot ser utilitzat per a calcular la similitud entre textos.
   - **Universal Sentence Encoder**: Model específicament entrenat per al _transfer learning_ (aprenentatge per a la transferència; utilitzar un model entrenat per a una tasca per a una altra).
-
----
 
 ### Utilitats de la similitud entre textos
 
@@ -518,8 +390,6 @@ model.wv.most_similar("Gavi")
 - **Classificació de textos**: Per a classificar un text es busca el text més semblant.
 - **Agrupació de textos**: Útil per a agrupar textos similars en clusters.
 - **Búsqueda de resposte**: Per a trobar la resposta a una pregunta es busquen texts semblants a la pregunta.
-
----
 
 ### Word Embeddings
 
@@ -530,8 +400,6 @@ model.wv.most_similar("Gavi")
 - Els vectors generats són **densos**, de **longitud fixa** i amb **sentit semàntic**.
 - Facilita calcular la similitud entre paraules i textos.
 
----
-
 ### LLMS (Language Models)
 
 - Els **LLMs** són models complexos basats en xarxes neuronals recurrents i l'arquitectura **Transformer**.
@@ -539,15 +407,7 @@ model.wv.most_similar("Gavi")
 - Demostren un gran rendiment en moltes tasques, com pot ser el càlcul de la similitud entre textos.
 - Són complexos i necessiten un entrenament previ amb un gran volum de dades.
 
----
-
-
-
 # Classificació de textos i anàlisi de sentiments
-
-![bg opacity](../../images/sentiment.png)
-
----
 
 ## Anàlisi de sentiments
 
@@ -555,8 +415,6 @@ model.wv.most_similar("Gavi")
 - L'objectiu és determinar l'actitud d'un autor respecte a un tema o producte.
 - Es basa en la **polaritat** del text, que pot ser **positiva**, **negativa** o **neutra**.
 - També poden buscar-se emocions concretes, com pot ser **alegria**, **tristesa**, **ira**, etc.
-
----
 
 ## Anàlisi subjectiva i objectiva
 
@@ -567,8 +425,6 @@ model.wv.most_similar("Gavi")
 - Ex: "_La pel·lícula té grans moments, però el final és molt trist_".
   - Anàlisi subjectiva: "_La pel·lícula és bona_".
   - Anàlisi objectiva: "_El final és trist_".
-
----
 
 ## Preprocessament del text
 
@@ -581,16 +437,12 @@ model.wv.most_similar("Gavi")
   - **Stemming** i **lematització**: convertir les paraules a forma base.
   - **Gestió de negacions i modalitats**: convertir a un format estàndard.
 
----
-
 ### Preprocessament: tokenització
 
 - Com ja hem vist, la tokenització és el procés de dividir un text en tokens.
 - Els tokens poden ser paraules, subparaules, signes de puntuació, etc.
 - Facilita una anàlisi més profund del text i extreure característiques rellevants.
 - Ex: "El Barça està en crisi" $\rightarrow$ `["El", "Barça", "està", "en", "crisi"]`.
-
----
 
 ### Preprocessament: normalització
 
@@ -600,16 +452,12 @@ model.wv.most_similar("Gavi")
   - Ex: "El Barça està en crisi! 😡" $\rightarrow$ "el Barça està en crisi".
 - La normalització facilita la comparació entre textos i la detecció de paraules clau.
 
----
-
 ### Preprocessament: eliminació d'stopwords
 
 - Les **stopwords** són paraules que no aporten informació al text.
 - Són paraules molt comunes en un idioma, com pot ser articles, preposicions, etc.
 - Els textos després de processar-se amb stopwords són més fàcils de tractar i més ràpids de processar.
 - Ex: "El Barça està en crisi" $\rightarrow$ `["Barça", "crisi"]`.
-
----
 
 ### Preprocessament: stemming i lematització
 
@@ -619,16 +467,12 @@ model.wv.most_similar("Gavi")
   - Ex de lematització: "jugar", "jugaré", "jugarà" $\rightarrow$ "jugar".
 - El stemming és més ràpid, però la lematització és més precisa.
 
----
-
 ### Preprocessament: negacions i modalitats
 
 - Les **negacions** i **modalitats** poden canviar el significat d'una frase.
 - Ex: _"El Barça no està en crisi"_, _"El Barça pot estar en crisi"_, _"Deuries anar a l'estadi"_.
 - Els models de NLP no poden interpretar aquestes frases sense un tractament previ.
 - Necessitem técniques específiques, com la detecció de **dobles negacions** i la **reassignació de polaritat**.
-
----
 
 ## Enfocaments per a l'anàlisi de sentiments
 
@@ -637,8 +481,6 @@ model.wv.most_similar("Gavi")
   - Basats en **regles**
   - Basats en l'**aprenentatge automàtic supervisat**
   - Basats en l'**aprenentatge automàtic no supervisat**
-
----
 
 ### Enfocament basat en regles
 
@@ -650,8 +492,6 @@ model.wv.most_similar("Gavi")
   - _"Me fa il·lusió anar a l'estadi"_. _"il·lusió"_ $\rightarrow$ **1** $\rightarrow$ **positiu**.
   - _"El partit va acabar en empat"_. _"empat"_ $\rightarrow$ **0** $\rightarrow$ **neutre**.
 
----
-
 ### Enfocament basat en l'AA supervisat
 
 - Els enfocaments basats en l'aprenentatge automàtic supervisat són alguns dels més utilitzats.
@@ -659,16 +499,12 @@ model.wv.most_similar("Gavi")
 - El model identifica els patrons en el text que determinen la polaritat.
 - Alguns dels models més utilitzats són: **Naive Bayes**, **Support Vector Machines**, **Random Forest**, **Xarxes neuronals**
 
----
-
 ### Enfocament basat en l'AA no supervisat
 
 - Els enfocaments basats en l'aprenentatge es basen en identificar patrons en el text sense necessitar etiquetes predefinides.
 - Es poden utilitzar tècniques com la **clusterització** per a agrupar els textos en clusters segons la seva polaritat.
 - Una vegada agrupats els textos, es poden etiquetar manualment els clusters.
 - Aquestes tècniques són útils per a detectar patrons en el text i per a agrupar textos semblants (segons la distància entre textos).
-
----
 
 ## Models per a l'anàlisi de sentiments
 
@@ -680,22 +516,12 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - **Transformers**: com ja hem vist, els transformers són models específics per a NLP molt potents. Un dels models més utilitzats és **BERT**, de qüal utilitzarem una implementació en la segona
   pràctica.
 
----
-
 ## Xarxes neuronals per a l'anàlisi de sentiments
 
 - Les xarxes neuronals són un dels models més utilitzats per a l'anàlisi de sentiments.
 - Les xarxes neuronals són capaces d'aprendre els patrons en el text i de generar els seus propis _embeddings_.
 
----
-
-
-
 # Models de llenguatge
-
-![bg opacity](../../images/language-model.png)
-
----
 
 ## Models de llenguatge
 
@@ -703,8 +529,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Hem comentat que els models de llenguatge són eines molt potentes que poden ser utilitzades en moltes tasques.
 - En aquesta secció veurem què són els models de llenguatge i com funcionen.
 - També veurem alguns dels més utilitzats i les seves aplicacions.
-
----
 
 ## Aplicacions dels models de llenguatge
 
@@ -718,8 +542,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - **Classificació de text**: classificar un text en una categoria.
   - **Generació de textos**: generar textos a partir d'un tema o un estil.
 
----
-
 ### Definició
 
 - Un **model de llenguatge** assigna una probabilitat a una seqüència de paraules.
@@ -730,8 +552,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - No és el mateix que la **correcció** d'una seqüència de paraules.
   - Intentem modelar el llenguatge humà, amb els seus **matissos i ambigüitats**.
 
----
-
 ## Història: Models basats en regles
 
 - Els models de llenguatge són un dels camps més antics del processament del llenguatge natural.
@@ -740,8 +560,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - No són flexibles i no poden adaptar-se a nous contextos.
 - Ex: Gramàtica de Chomsky, Gramàtica de Montague, etc.
 
----
-
 ## Història: Models estocàstics
 
 - Els models basats en regles van ser substituïts pels basats en **estadístiques**, més flexibles i que modelen millor el llenguatge. Els models de Markov van ser els primers en tindre resultats acceptables.
@@ -749,8 +567,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - **N-gram**: modela cada paraula en funció de les n paraules anteriors. (uni, bi, tri, etc).
   - **Skip-gram**: modela cada paraula en funció de les n paraules anteriors i posteriors.
   - **Syntax-based**: es basen en l'estructura sintàctica de les frases i no en la seva seqüència.
-
----
 
 ## Història: RNN
 
@@ -761,8 +577,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - Permeten processar seqüències de longitud variable.
   - Els models de llenguatge basats en RNN van ser els primers en obtenir resultats acceptables.
 
----
-
 ## Història: LLM
 
 - Els models basats en RNN van ser substituïts per models basats en **transformers**.
@@ -772,8 +586,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - Necessiten un entrenament previ amb un **gran** volum de dades (_corpus_)
   - Mostren la capacitat d'entendre el context, la semàntica i la sintàxis del text.
 
----
-
 ## Història: LLM (II)
 
 - El mecanisme d'atenció és un mecanisme que permet a les xarxes neuronals aprendre a **centrar-se** en les parts importants de les seves entrades.
@@ -781,15 +593,7 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Podem entendre'l com una **capa** que s'afegeix a una xarxa neuronal.
 - Els transformers són models basats en xarxes neuronals que utilitzen una variant del mecanisme d'atenció anomenada **self-attention**.
 
----
-
-
-
 # Arquitectures per a NLP
-
-![bg opacity](../../images/recursive_nn_nlp.png)
-
----
 
 ## Cadenes de Markov
 
@@ -801,19 +605,11 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 
 - El seu principal desavantatge és que no poden modelar dependències a llarg termini.
 
-![bg right:35% fit](../../images/mdp.png)
-
----
-
 ## Xarxes neuronals recurrents (RNN)
 
 - Com ja hem parlat, les xarxes neuronals recurrents (RNN) són xarxes neuronals que poden processar seqüències de longitud variable de forma eficient.
 
 - En aquesta secció veuren en més detall com funcionen les RNN i com són utilitzades en NLP.
-
-![bg right:40% fit](../../images/rnn.png)
-
----
 
 ### Memòria
 
@@ -824,8 +620,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - Apareix un nou problema: el **desvaiment del gradient**. Quina informació es manté i quina no?
   - Per aixó han anat diferents aquitectures al llarg del temps.
 
----
-
 ### Xarxes Recurrents Tradicionals (I)
 
 - La sortida d'una neurona pot anar determinada per la sortida d'ella mateixa.
@@ -834,18 +628,10 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Per facilitar la comprensió es solen mostrar de forma **desplegada**, com veurem a continuació.
 - Són una millora respecte als models ocults de Markov, però molt vulnerables als problemes de desvaiment del gradient.
 
----
-
 ### Xarxes Recurrents Tradicionals (II)
 
 - En el cas de les RNN, la memòria es manté en la capa oculta.
 - En el següent esquema podem veure com es representa una RNN sense desplegar.
-
-![bg right:50% fit](../../images/rnn_comprimida.png)
-
----
-
-
 
 ### Xarxes Recurrents Tradicionals (III)
 
@@ -855,16 +641,12 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 
 ## ![40%](../../images/rnn_desplegada.png)
 
----
-
 ### LSTM (Long Short-Term Memory) (I)
 
 - Les **LSTM** són una millora de les RNN tradicionals implementant una **memòria a llarg termini**.
 - Tenen una **memòria interna** que pot ser mantinguda, **modificada** o **eliminada** segons les necessitats.
 - **Millora el desvaiment** del gradient **a costa de ser més complexa i costosa** de processar.
 - Cada cel·la LSTM equival a quatre capes en una RNN tradicional.
-
----
 
 ### LSTM (Long Short-Term Memory) (II)
 
@@ -875,13 +657,7 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - **Porta de sortida**: Si s'activa la cel·la generarà la sortida.
 - Aquestes portes permeten a la LSTM mantenir la informació important i descartar la que no ho és.
 
----
-
 ### LSTM (Long Short-Term Memory) (III)
-
-![bg fit 90%](../../images/lstm_hor.png)
-
----
 
 ### GRU (Gated Recurrent Unit)
 
@@ -889,8 +665,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - No tenen una memòria interna com les LSTM, però són més senzilles i més ràpides de processar.
 - Hi ha dues portes: porta d'actualització i porta de reinici. En conjunt determinen la quantitat d'informació que es manté i la que es descarta.
 - Millora el desvaiment del gradient sense ser tan complexa com les LSTM.
-
----
 
 ### GRU (Gated Recurrent Unit) (II)
 
@@ -900,21 +674,9 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - Aquesta informació pot ser la mateixa que la anterior o una combinació de la nova i la anterior. El poder retenir la informació anterior és el que fa que les GRU no tinguin una memòria interna com les LSTM.
 - L'efecte és semblant al de les LSTM, però amb menys complexitat.
 
----
-
 ### GRU (Gated Recurrent Unit) (III)
 
-![bg fit 90%](../../images/gru_hor.png)
-
----
-
-
-
 ## Transformers
-
-![bg opacity](../../images/transformers.png)
-
----
 
 ### Introducció
 
@@ -922,8 +684,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Són els models més utilitzats en l'actualitat en el processament del llenguatge natural.
 - La seva arquitectura innovadora permet obtenir resultats molt millors que els models anteriors i aprofitar el **parallelisme** i les **GPU**.
 - Per la seva complexitat anem a veurel's en més detall.
-
----
 
 ### Orige
 
@@ -933,17 +693,11 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - El seu primer ús va ser en la tasca de traducció automàtica.
 - Va posar en primer pla el mecanisme d'atenció com a eina fonamental en el processament del llenguatge natural.
 
----
-
 ### Arquitectura dels transformers (I)
 
 - Els transformers són models moderns i molt complexos.
 - Per contra, si veiem les seves parts per separat, és més fàcil entendre'l's.
 - Anem a veure punt per punt les seves parts principals i com funcionen.
-
-![bg right:38% fit](../../images/transformers_arquitectura.png)
-
----
 
 ### Arquitectura dels transformers (II)
 
@@ -952,10 +706,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - La seva complexitat rau en la seva arquitectura interna.
 - Els transformers tenen _dos_ parts principals: **encoders** i **decoders**.
 
-![bg right:40%](../../images/transformer_ml01-768x644.png)
-
----
-
 ### Arquitectura dels transformers (III)
 
 - L'entrada passa per una sèrie de capes d'encoders.
@@ -963,20 +713,12 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - En el paper original: **6 capes d'encoders i 6 capes de decoders**.
 - També podem passar un "**target**" com a entrada, **per entrenar**
 
-![bg right:40%](../../images/transformer_ml02-768x644.png)
-
----
-
 ### Encoders i decoders
 
 - Els **encoders** i **decoders** són les parts principals dels transformers.
 - A nivell intern son semblants i comparteixen moltes característiques.
   - Tenen en l'entrada una (o més) capa d'**atenció** i com a sortida una capa **feed-forward**.
 - La diferència principal és que els **encoders** solament tenen una capa d'atenció, mentre que els **decoders** tenen dues.
-
-![bg right:45% ](../../images/transformer_ml03-768x644-1.png)
-
----
 
 ### Embeddings i posicions
 
@@ -986,22 +728,12 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - $$PE_{(pos, 2i)} = \sin(pos / 10000^{2i/d_{model}})$$
 - Aquest encoding manté la informació de la posició de les paraules en la seqüència; al mateix temps que permet **enviar tots els tokens a la xarxa al mateix temps**.
 
----
-
-![bg  fit](../../images/transformers_arquitectura_inputs.png)
-
----
-
 ### Encoder
 
 - Els **encoders** estan compostos per tres capes:
   - **Self-attention**: per a calcular la importància de cada paraula en la seqüència. A continuació veurem com funciona.
   - **Feed-forward**: per a processar la informació obtinguda de l'atenció.
   - **Normalization i conexions residuals**: per a evitar el desvaiment del gradient i facilitar el seu entrenament.
-
-![bg right:40%](../../images/transformer_ml04-768x644.png)
-
----
 
 ### Self-attention (I)
 
@@ -1012,8 +744,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - El que el diccionari siga "soft" vol dir que pot anar modificant-se.
   - En la frase "El gat va a la casa gris" l'atenció de $gris$ en $casa$ serà $1$.
 
----
-
 ### Self-attention (II)
 
 - Per calcular el self-attention es generen tres matrius a partir de la seqüència d'entrada: **Q** (query), **K** (key) i **V** (value)
@@ -1023,12 +753,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - El resultat el multiplicarem pel valor de **V**.
   - Obtindrem la matriu d'atencions.
 
----
-
-![bg fit](../../images/ejemplo-self-attention-768x336.png)
-
----
-
 ### Self-attention (III)
 
 - Els transformers utilitzen el **multi-head attention**.
@@ -1037,17 +761,11 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Dels resultats es fa un promig i el resultat, segons els estudis es molt més significatiu.
 - És important ressaltar que tot el procñes d'atenció es paral·lel i accelerat per la GPU (multiplicació de matrius), per lo que es molt ràpid.
 
----
-
 ### Altres tipus d'atenció
 
 - A més del **self-attention**, els transformers utilitzen altres tipus d'atenció:
   - **Cross-attention**: les entrades del decoder són les sortides de l'encoder. Això permet al encoder condicionar el decoder, donant-li informació sobre el context.
   - **Masked attention**: en el decoder, les paraules futures no poden ser utilitzades per a calcular l'atenció. Això evita que el model "mire al futur".
-
-![bg right:33% fit](../../images/transformers_arquitectura_attention-1.png)
-
----
 
 ### Normalització i conexions residuals
 
@@ -1057,21 +775,11 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - La normalització permet que els valors d'entrada es mantinguen en un rang determinat.
   - Això facilita el seu entrenament i millora el seu rendiment.
 
----
-
-![bg fit](../../images/transformers_arquitectura_addnorm.png)
-
----
-
 ### Feed-forward
 
 - La capa **feed-forward** és una capa de xarxa neuronal normal.
 - La seva funció és processar la informació obtinguda de l'atenció.
 - Hi haurà dues capes de _dropout_ per a evitar l'overfitting i una funció d'activació no lineal (ReLU en el paper original).
-
-![bg right fit](../../images/transformers_arquitectura_mlp.png)
-
----
 
 ### Decoder
 
@@ -1080,10 +788,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Per contra, en els models de llenguatge, el **target** es passa com a entrada per a entrenar el model.
 - Això permet que el model aprenga a generar el text de sortida.
 
-![bg right:40%](../../images/transformer_ml05-768x644.png)
-
----
-
 ### Sortida final del model
 
 - Recordem que utilitzem múltiples capes d'encoders i decoders.
@@ -1091,8 +795,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Aquesta sortida és un vector de longitud igual al nombre de paraules del vocabulari.
 - Aquest vector representa la probabilitat de cada paraula en el vocabulari (de 0 a 1).
 - La paraula amb més probabilitat serà la paraula de sortida.
-
----
 
 ### Aplicacions dels transformers
 
@@ -1105,8 +807,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 
 - Tots aquests usos els fan una eina molt potent i que poden arribar a substituir molts dels models actuals.
 
----
-
 ### Classificació dels LLM
 
 - **Encoder-only**: No necessiten generar un text de sortida, processen el text d'entrada.
@@ -1116,8 +816,6 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - **Encoder + Decoder**: Processen el text d'entrada i generen un text de sortida
   - Utilitats: traducció automàtica, resum, esquematització, etc. Ex: T5, BART, etc.
 
----
-
 ## Utilització dels LLM
 
 - Els transformers són models molt complexos i necessiten un entrenament previ amb un gran volum de dades.
@@ -1126,5 +824,3 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
   - El fine-tuning consisteix en entrenar el model amb un conjunt de dades específic per a la tasca que volem realitzar.
   - S'utilitza un conjunt de dades més petit que el corpus original.
   - En les pràctiques utilitzarem un model ja entrenat i li farem fine-tuning per a millorar el rendiment en les tasques que realitzem.
-
----
