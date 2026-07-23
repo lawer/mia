@@ -5,11 +5,13 @@ parent: 9. Robótica
 math: mathjax3
 ---
 
+> Aquesta pàgina es genera automàticament a partir de la presentació MARP `9-robotica.md`. No l'edites directament.
+
 # 9. Robòtica
 
 Models d'intel·ligència artificial
 
-![bg opacity](../../images/community-jetracer_2020.jpg)
+![](../../images/community-jetracer_2020.jpg)
 
 ## Introducció
 
@@ -23,7 +25,7 @@ Models d'intel·ligència artificial
 - Per fer-ho, els robots utilitzen actuadors per interactuar amb el món real.
 - Els canvis podem ser físics (moure objectes) o digitals (enviar informació).
 
-![bg right:40%](../../images/robot.png)
+![](../../images/robot.png)
 
 ### Sensors
 
@@ -32,7 +34,7 @@ Models d'intel·ligència artificial
   - **Mesurar l'estat de l'entorn**: càmeres, radars, ultrasons, etc.
   - **Mesurar l'estat del robot**: acceleròmetres, giroscopis, encoders, etc.
 
-![bg right:33%](../../images/sensors.png)
+![](../../images/sensors.png)
 
 ### Operacions
 
@@ -50,7 +52,7 @@ Models d'intel·ligència artificial
 
 ### Intel·ligència artificial
 
-- Tot el discutit fins ara ens poryta a que els robots **impliquen molts conceptes** dels vists durant el curs.
+- Tot el discutit fins ara ens porta a que els robots **impliquen molts conceptes** dels vists durant el curs.
 - Per alguns dels conceptes vistos trobarem en la robòtica una **aplicació pràctica** i real Per exemple, els robots autònoms utilitzen xarxes neuronals per processar la informació dels sensors i prendre decisions.
 - Altres conceptes es veuran **ampliats**: per exemple, els algoritmes d'optimització han de ser adaptats per funcionar en entorns no deterministes.
 
@@ -67,11 +69,15 @@ Models d'intel·ligència artificial
 - **Braços robòtics**: robots que poden moure objectes. També coneguts com a **robots manipuladors**. Són els més comuns, especialment en la indústria.
 - **Robots mòbils**: robots que poden moure's pel seu entorn. Poden ser **terrestres, aquàtics o aeris**. Són els més comuns en la robòtica autònoma.
 
-![bg left%](../../images/antro.webp)
+![%](../../images/antro.webp)
 
-![bg center%](../../images/arm.png)
+![%](../../images/arm.png)
 
-![bg right%](../../images/mobile.jpg)
+![%](../../images/mobile.jpg)
+
+## Sensors i actuadors
+
+![](../../images/sensors2.png)
 
 ### Tipus de sensors
 
@@ -92,7 +98,7 @@ Permeten als robots mesurar la distància a objectes.
 
 ##### LIDAR
 
-![bg fit](../../images/lidar.webp)
+![](../../images/lidar.webp)
 
 #### Sensors de localització
 
@@ -119,7 +125,7 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - **Sensors de llum**: permeten als robots mesurar la llum ambiental.
 - **Sensors de so**: permeten als robots mesurar el so ambiental.
 
-![bg fit](../../images/sensors.jpg)
+![](../../images/sensors.jpg)
 
 ### Actuadors
 
@@ -129,7 +135,11 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - **Motors pas a pas**: permeten moure's en un eix amb una gran precisió.
   - **Hidràulics**: permeten moure's amb una gran força. Molt utilitzats en robots industrials.
 
-![bg fit](../../images/actuators.png)
+![](../../images/actuators.png)
+
+## Programació de robots
+
+![](../../images/robot_programming.png)
 
 ## Programació de robots
 
@@ -161,7 +171,7 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - **SLAM visual**: utilitza càmeres per localitzar-se i construir un mapa.
   - **SLAM LIDAR**: utilitza LIDAR per localitzar-se i construir un mapa.
 
-![bg fit](../../images/SLAM.png)
+![](../../images/SLAM.png)
 
 #### Altres tipus de percepció
 
@@ -186,7 +196,7 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Els vehicles mostren comportaments complexos com seguir la llum, evitar obstacles, etc.
 - Son representatius de la **robòtica BEAM** (Biology, Electronics, Aesthetics, Mechanics).
 
-![bg fit](../../images/braitenberg.png)
+![](../../images/braitenberg.png)
 
 #### Seguiment de línies
 
@@ -195,7 +205,7 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Els robots que segueixen línies utilitzen un algoritme senzill per determinar la direcció en la que han de moure's.
 - En la forma més senzilla, el robot gira cap a la línia quan la veu i rectifica la seva trajectòria quan la perd.
 
-![bg fit](../../images/LINE-FOLLOWER-ALGORITHM.jpg)
+![](../../images/LINE-FOLLOWER-ALGORITHM.jpg)
 
 #### Màquines d'estats finits
 
@@ -207,16 +217,17 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Robots reactius: les decisions es prenen segons l'estat actual
 - FSM: **En funció de les entrades actuals i de l'estat en el que es troba el robot**.
 
-#### Exemple de màquina d'estats finits
+#### Exemple de màquina d'estats finits (I)
 
 - Un exemple senzill del que podem fer amb una màquina d'estats finits és el de buscar un objectiu.
 
 - En aquest cas, tenim quatre estats:
-
   - **Esquerra**: el robot gira a l'esquerra buscant l'objectiu.
   - **Dreta**: el robot gira a la dreta buscant l'objectiu.
   - **Endavant**: el robot va endavant.
   - **Objectiu**: el robot ha trobat l'objectiu i s'atura.
+
+#### Exemple de màquina d'estats finits (II)
 
 - Les transicions entre estats es fan en funció de les dades dels sensors:
   - Si el robot passa de +45º passa a l'estat **Dreta**.
@@ -224,7 +235,7 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - Si el robot passa detecta l'objectiu passa a l'estat **Endavant** i comença a moure's cap a l'objectiu.
   - Quan el robot arriba a l'objectiu passa a l'estat **Objectiu** i s'atura.
 
-![bg fit](../../images/buscar_objectiu.png)
+![](../../images/buscar_objectiu.png)
 
 #### Estat de l'algorisme
 
@@ -243,21 +254,24 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Les XN Recurrents són més complexes però més potents.
   - Serien equivalents a un sistema basat en FSM.
 
-![bg fit](../../images/nn_robotics.jpeg)
+![](../../images/nn_robotics.jpeg)
 
-#### Aprenentatge
+#### Aprenentatge (I)
 
 - Per entrenar les xarxes neuronals podem utilitzar tècniques d'aprenentatge supervisat o no supervisat.
   - **Supervisat**: donem un conjunt de dades d'entrada i sortida i la xarxa apren a partir d'aquestes dades.
     - Replegarem dades de sensors i actuadors per entrenar la xarxa.
     - Si volem que el robot segueixi una línia, recollirem dades de sensors de línia i actuadors de moviment.
     - Una vegada entrenada la xarxa, el robot serà capaç de seguir la línia sense necessitat de programar-lo.
-  - **Aprenentatge per reforç**: les xarxes aprenen a partir de la interacció amb l'entorn.
-    - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
-  - **Neuroevolució**: utilitzar algoritmes evolutius per evolucionar les xarxes neuronals.
-    - Crearem una població de xarxes neuronals i les farem competir entre elles. Les xarxes més eficients es reproduiran i evolucionaran.
 
-![bg fit](../../images/rl_robot.png)
+#### Aprenentatge (II)
+
+- **Aprenentatge per reforç**: les xarxes aprenen a partir de la interacció amb l'entorn.
+  - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
+- **Neuroevolució**: utilitzar algoritmes evolutius per evolucionar les xarxes neuronals.
+  - Crearem una població de xarxes neuronals i les farem competir entre elles. Les xarxes més eficients es reproduiran i evolucionaran.
+
+![](../../images/rl_robot.png)
 
 ## Conclusions
 

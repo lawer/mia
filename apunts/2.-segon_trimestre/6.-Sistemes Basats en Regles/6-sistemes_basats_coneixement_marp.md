@@ -1,5 +1,6 @@
 ---
 marp: true
+published: false
 size: 16:9
 theme: lawer
 class: default
@@ -23,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 Models d'intel·ligència artificial
 
-![bg opacity ](../images/expert-system-icon-2048x2048-z3jy50rh.png)
+![bg opacity ](../../images/expert-system-icon-2048x2048-z3jy50rh.png)
 
 ---
 
@@ -42,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # IA simbólica
 
-![bg opacity](../images/symbolic_ai.jpeg)
+![bg opacity](../../images/symbolic_ai.jpeg)
 
 ---
 
@@ -74,7 +75,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Moltes vegades definim el coneixement en relació a conceptes similars.
 - La jerarquia del coneixement o jerarquia de DIKW és un model que mostra la relació entre _dades_, _informació_, _coneixement_ i _saviesa_.
 
-![bg right](../images/DIKW_Pyramid.png)
+![bg right](../../images/DIKW_Pyramid.png)
 
 ---
 
@@ -121,7 +122,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Continuum del coneixement
 
-![bg fit](../images/knowledge-spectrum.png)
+![bg fit](../../images/knowledge-spectrum.png)
 
 ---
 
@@ -197,7 +198,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 # Sistemes experts
 
-![bg opacity](../images/experts.jpg)
+![bg opacity](../../images/experts.jpg)
 
 ---
 
@@ -229,7 +230,7 @@ h1, h2, h3, h4, h5, h6, p {
 - **Explicació**:
   - Els SBC poden explicar el seu raonament i les seves conclusions.
 
-![bg right:33%](../images/expert-systems-concept-icon-information-systems-kind-abstract-idea-thin-line-illustration-artificial-intelligence-method-isolated-outline-drawing-editable-stroke-vector.jpg)
+![bg right:33%](../../images/expert-systems-concept-icon-information-systems-kind-abstract-idea-thin-line-illustration-artificial-intelligence-method-isolated-outline-drawing-editable-stroke-vector.jpg)
 
 ---
 
@@ -248,7 +249,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Sistemes basats en regles
 
-![bg opacity fit](../images/246110377.0.x.jpg)
+![bg opacity fit](../../images/246110377.0.x.jpg)
 
 ---
 
@@ -278,7 +279,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/partes_se.png)
+![bg fit](../../images/partes_se.png)
 
 ---
 
@@ -295,7 +296,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ### Exemple: Classificar un animal (I)
 
-![bg 60%](../images/AND-OR-Tree.png)
+![bg 60%](../../images/AND-OR-Tree.png)
 
 ---
 
@@ -385,7 +386,7 @@ h1, h2, h3, h4, h5, h6, p {
 - **Problema**: Detecció de les regles que s'han de disparar.
   - Algorime RETE (Forgy, 1979)
 
-![bg right:33% fit](../images/RedRete.png)
+![bg right:33% fit](../../images/RedRete.png)
 
 ---
 
@@ -402,7 +403,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Els objectius determinen les regles a aplicar.
   - El raonament ve **guiat per la conclusió**.
 
-![bg right:33%](../images/Backward_Chaining_Frog_Color_Example.png)
+![bg right:33%](../../images/Backward_Chaining_Frog_Color_Example.png)
 
 ---
 
@@ -426,7 +427,7 @@ h1, h2, h3, h4, h5, h6, p {
   - Deducció de regles a partir de dades. - Facilita la **interpretació** del raonament.
   - Integració de regles definides per l'usuari i Aprenentatge Automàtic. - Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
 
-![bg right:40% fit](../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
+![bg right:40% fit](../../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
 
 ---
 
@@ -459,7 +460,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Sistemes de raonament imprecís
 
-![bg opacity](../images/1280px-Fuzzy_logic_temperature_en.svg.png)
+![bg opacity](../../images/1280px-Fuzzy_logic_temperature_en.svg.png)
 
 ---
 
@@ -494,7 +495,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![bg fit](../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
+![bg fit](../../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
 
 ---
 
@@ -567,7 +568,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ### Funcionament dels sistemes de raonament imprecís (III)
 
-![bg right:35% fit](../images/defuzzy.png)
+![bg right:35% fit](../../images/defuzzy.png)
 
 - _Defuzzyfication_:
   - Conversió de les dades de sortida difuses a valors precisos.
@@ -580,7 +581,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ### Funcions de pertinença (I)
 
-![w:800](../images/membership_fuctions.png)
+![w:800](../../images/membership_fuctions.png)
 
 - Les més utilitzades són les **funcions trapezoïdals** i les **funcions triangulars**.
 - Les sinusoïdals són útils per a representar **periodes**.
@@ -605,7 +606,7 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
   - **Mitjà**: $[0, 10]$
   - **Alt**: $[5, 10]$
 
-![bg right:33% fit](../images/plot_tipping_problem_newapi_2.png)
+![bg right:33% fit](../../images/plot_tipping_problem_newapi_2.png)
 
 ---
 
@@ -618,7 +619,7 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
   - **Mitjana**: $[0, 25]$
   - **Alta**: $[13, 25]$
 
-![bg right:33% fit](../images/plot_tipping_problem_newapi_3.png)
+![bg right:33% fit](../../images/plot_tipping_problem_newapi_3.png)
 
 ---
 
@@ -632,7 +633,7 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - **IF** (Qualitat del servei és **mitjana**) **THEN** (Propina és **mitjana**)
 - **IF** (Qualitat del servei és **alta** o Menjar és **alt**) **THEN** (Propina és **alta**)
 
-![bg right:40% fit](../images/plot_tipping_problem_newapi_4.png)
+![bg right:40% fit](../../images/plot_tipping_problem_newapi_4.png)
 
 ---
 
@@ -644,6 +645,6 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - Qualitat del menjar: **6.5**
 - Propina: **20.24%**
 
-![bg right fit](../images/plot_tipping_problem_newapi_5.png)
+![bg right fit](../../images/plot_tipping_problem_newapi_5.png)
 
 ---

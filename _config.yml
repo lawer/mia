@@ -5,3 +5,11 @@ theme: just-the-docs
 url: https://lawer.github.io/mia/
 
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+
+exclude:
+  - node_modules
+  - vendor
+  - .bundle
+  - scripts
+  - package.json
+  - package-lock.json

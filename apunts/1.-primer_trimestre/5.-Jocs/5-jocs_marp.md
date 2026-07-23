@@ -1,5 +1,6 @@
 ---
 marp: true
+published: false
 size: 16:9
 theme: lawer
 class: default
@@ -25,7 +26,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 Models d'intel·ligència artificial
 
-![bg opacity](../images/img_5.png)
+![bg opacity](../../images/img_5.png)
 
 ---
 
@@ -68,7 +69,7 @@ Tindrem en compte les següents propietats:
 
 ---
 
-![bg 90%](../images/img_7.png)
+![bg 90%](../../images/img_7.png)
 
 ---
 
@@ -91,7 +92,7 @@ Característiques:
 
 ## Arbre de joc (II) - Exemple
 
-![bg 60%](../images/img_8.png)
+![bg 60%](../../images/img_8.png)
 
 ---
 
@@ -124,7 +125,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ### MiniMax
 
-![bg opacity ](../images/img_9.png)
+![bg opacity ](../../images/img_9.png)
 
 ---
 
@@ -152,7 +153,7 @@ h1, h2, h3, h4, h5, h6, p {
 - En l'arrel la millor opció per a $MAX$ és $a_1$, ja que porta al node en millor puntuació minimax
 - En el segon nivell la millor opció per a $MIN$ és $b_1$ per dur al node en menos puntuació
 
-![bg right:40% 105%](../images/img_9.png)
+![bg right:40% 105%](../../images/img_9.png)
 
 ---
 
@@ -232,7 +233,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Poda alfa-beta
 
-![bg opacity](../images/alpha_beta.webp)
+![bg opacity](../../images/alpha_beta.webp)
 
 ---
 
@@ -256,7 +257,7 @@ h1, h2, h3, h4, h5, h6, p {
 - La tercera fulla baix $B$ té valor $8$. El valor de final de $B$ és $3$.
   - Podem deduir llavors que el valor mínim d'$A$ és $3$, al tindre un node terminal amb valor $3$.
 
-![bg right:45% 100%](../images/Fig_05_05.PNG)
+![bg right:45% 100%](../../images/Fig_05_05.PNG)
 
 ---
 
@@ -270,7 +271,7 @@ h1, h2, h3, h4, h5, h6, p {
   - Aquesta és la **poda alfa-beta**.
 - Al acabar l'exploració sabem els valors de cada node necessari.
 
-![bg right:46% 100%](../images/Fig_05_05.PNG)
+![bg right:46% 100%](../../images/Fig_05_05.PNG)
 
 ---
 
@@ -284,7 +285,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Principi general, per un node $n$:
   - Si hi ha una opció millor al mateix nivell $($m'$)$ o superior $($m$)$, $n$ no es visitarà.
 
-![bg right:39% fit](../images/img_11.png)
+![bg right:39% fit](../../images/img_11.png)
 
 ---
 
