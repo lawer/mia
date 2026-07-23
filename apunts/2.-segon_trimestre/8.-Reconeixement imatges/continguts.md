@@ -11,6 +11,8 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
+![](../../images/visio_artificial.png)
+
 # Introducció
 
 - La visió artificial és una de les àrees més antigues de la intel·ligència artificial.
@@ -54,6 +56,8 @@ Models d'intel·ligència artificial
 
 # Característiques de les imatges
 
+![](../../images/Feature_Detection_Result_b.jpg)
+
 ## Definició
 
 - En una imatge hi ha molta informació que no és rellevant.
@@ -68,6 +72,8 @@ Models d'intel·ligència artificial
 - Permeten **identificar objectes**.
 - Simplifiquen la imatge i permeten **reduir la quantitat d'informació**.
 - Passem d'una imatge molt gran a una **matriu de vores**
+
+![](../../images/vores_vert.png)
 
 ### Detecció de vores
 
@@ -86,11 +92,15 @@ Models d'intel·ligència artificial
   3. Es detecten les vores: **mètode de supressió de no-màxims**.
   4. Es decideixen quines vores són vàlides: **mètode de la histèresi**.
 
+![](../../images/edge_vert.png)
+
 ## Textura
 
 - En visió artificial entenem com a textura un **patró de píxels** que es observable en una imatge.
   - Ex: Finestres en un edifici, taques en una vaca, etc.
 - Ajuden, al igual que les vores, a **identificar objectes**.
+
+![](../../images/textures_vert.jpg)
 
 ### Característiques de la textura
 
@@ -117,6 +127,8 @@ Models d'intel·ligència artificial
 - Els algoritmes de visió artificial són capaços de calcular el fluix òptic a partir de diferents imatges.
 - Important per moltes tasques: **reconstrucció 3D**, la **compensació de moviment**, **compressió**...
 
+![](../../images/optical_flow_vert.jpg)
+
 ## Segments
 
 - Anomenen **segments** a les **regions** de la imatge que tenen alguna propietat comuna (color, textura, forma, etc.).
@@ -124,7 +136,11 @@ Models d'intel·ligència artificial
   - **Basat en límits**: es busquen els límits de les regions. Es pot entendre com un problema de _classificació_ on cada pixel pertany o no a un segment i es soluciona amb tècniques de machine learning i models preentrenats.
   - **Basat en regions**: s'agrupen els pixels en regions segons alguna propietat comuna. Es pot entendre com un problema de _clustering_ i s'utilitzen tècniques com _k-means_.
 
+![](../../images/tipus_segments.png)
+
 # Tasques de visió artificial
+
+![](../../images/opencv_tasks.jpg)
 
 ## Tasques
 
@@ -151,12 +167,15 @@ Models d'intel·ligència artificial
 - Els histogrames es poden calcular per cada canal de color (R, G, B) o per la imatge en escala de grisos.
 - S'utilitzen molt en la **normalització** d'imatges.
 
+![](../../images/histo.png)
+
 ### Equalització de l'histograma
 
 - L'**equalització de l'histograma** és una tècnica que es fa servir per tal de millorar el contrast d'una imatge.
 - L'objectiu és que la distribució dels píxels sigui més uniforme.
 - Es divideix l'histograma en _bins_ i es redistribueixen els píxels de manera que la distribució sigui més uniforme.
 - El resultat poden no ser realistes, però si útils per a tasques de visió artificial.
+  ![](../../images/hist_eq.png)
 
 ### Filtratge
 
@@ -190,6 +209,8 @@ Models d'intel·ligència artificial
 - És una forma simple de **segmentació**: es vol separar la imatge en _objecte_ i _fons_.
 - Per binaritzar, sol ser millor opció que ajustar la lluminositat i el contrast.
 
+![](../../images/thresholding.png)
+
 ### Transformacions
 
 - Les **transformacions** són tècniques que es fan servir per tal de canviar la forma de la imatge.
@@ -208,6 +229,8 @@ L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es
   - Els algorismes més comú son el de **Lucas-Kanade** i el de **Farnebäck**.
 
 ### Extracció del fluix óptic (_optical flow_)
+
+![](../../images/dense_sparse_optical_flow_hor.png)
 
 ### Llibreries
 
@@ -251,6 +274,8 @@ L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es
 
 #### Convolució
 
+![](../../images/feature_map.jpg)
+
 #### Funcions d'activació
 
 - Després de la convolució, s'aplica una **funció d'activació**.
@@ -284,6 +309,8 @@ L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es
 - Aquestes capes són les que es fan servir per tal de **reduir la dimensió** del vector de característiques.
 
 #### Estructura d'una xarxa neuronal convolucional
+
+![](../../images/estructura_cnn.png)
 
 #### Funcionament d'una CNN (I)
 
@@ -400,7 +427,11 @@ L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es
 - **Segmentació d'instàncies**: es segmenta en instàncies d'objectes. (Ex: _mask-RCNN_)
 - **Segmentació panòptica**: es segmenta en categories predefinides, però també es segmenten les instàncies d'objectes. (Ex: _mask-RCNN_)
 
+![](../../images/segment.png)
+
 # Aplicacions
+
+![](../../images/computer_vision_applications.png)
 
 ## Aplicacions
 
@@ -417,6 +448,8 @@ L'**extracció del fluix òptic** és pot fer amb diferents tècniques, però es
 - S'ha avançat molt en els últims anys, però encara hi ha molts reptes per resoldre.
 - A continuació veurem en que ens pot ajudar.
 
+![](../../images/deteccio_persones.jpg)
+
 #### Usos
 
 - **Seguretat**: construir sistemes de seguretat més efectius i menys intrusius.
@@ -431,6 +464,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - Alguns aspectes com la **detecció de la postura** (determinar la posició de les articulacions) estan molt avançats.
 - Es relativament fàcil, ja que les articulacions tenen una forma i una posició concreta, les relacions entre les articulacions són conegudes i els efectes sobre las perspectiva són previsibles.
 - Per contra, preveure el que està fent una persona és molt més difícil.
+
+![](../../images/pose.png)
 
 #### Descripció de l'acció
 
@@ -456,6 +491,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
   - **Bottleneck**: el vector de característiques. És la part més important de l'autoencoder.
   - **Decoder**: pren el vector de característiques i el converteix en la imatge d'entrada.
 
+![](../../images/autoencoder.png)
+
 #### Utilitats de l'autoencoder
 
 - **Reducció de la dimensió**: l'autoencoder pot ser utilitzat per tal de reduir la dimensió de la imatge.
@@ -469,6 +506,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - El punt de partida és el mateix, però no generar un vector de característiques, sino una **distribució de probabilitat** que es fa servir per tal de generar imatges.
 - Generarem imatges amb un aspecte similar a les imatges d'entrada, però no iguals.
 
+![](../../images/vae.jpg)
+
 ### GANs (Generative Adversarial Networks)
 
 - Les **GANs** són un tipus de xarxes neuronals que es fan servir per tal de generar imatges.
@@ -478,6 +517,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
   - Les dues xarxes es **entrenen enfrontades**. El generador intenta enganyar el discriminador i el discriminador intenta no ser enganyat.
 
 ### GANs (Generative Adversarial Networks)
+
+![](../../images/GANS.png)
 
 ## Control del moviment
 
@@ -498,6 +539,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - El **model del mon** és una representació del mon que permet al vehicle preveure el que passarà en el futur.
 - Ex: en verd es mostra els llocs on el vehicle pot anar i els objectes es mostren envoltats per una caixa vermella.
 
+![](../../images/mobileye.png)
+
 ### Navegació autònoma
 
 - La tasca de **navegació autònoma** consisteix en **moure's** per un entorn sense la **intervenció humana**.
@@ -506,6 +549,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
   - **Planiﬁcació de trajectòries**: Una vegada el robot té un mapa 3D de l'entorn i sap on és, l'objectiu és **planificar** una **trajectòria** que el porti al seu destí sense col·lisions.
 
 ### Mapeig i Planiﬁcació de trajectòries
+
+![](../../images/navegacio_autonoma.png)
 
 ## Seguiment d'objectes
 
@@ -540,6 +585,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
   - Ex: quantes persones passen per un carrer en una hora.
 - No es tant utilitzat per etiquetatge
 
+![](../../images/mot.gif)
+
 #### Seguiment de múltiples objectes - Funcionament
 
 - Dues fases, **Detecció** (identificar tots els objectes en una imatge) i **Associació** (associar els objectes detectats en una imatge amb els objectes detectats en la imatge anterior - _tracklets_).
@@ -547,6 +594,8 @@ Molts més, en videojocs, en la indústria, en la medicina, etc.
 - Es més freqüent fer servir una xarxa per la detecció, i una altra per la identificació i re-identificació: **Tracking by detection**. El rendiment, però, és més baix.
 
 ##### Tracking by detection
+
+![](../../images/tracking-by-detection.png)
 
 ##### Identificació i re-identificació
 
@@ -627,6 +676,8 @@ Transformers i Models de Difusió
    - Es comença amb soroll pur i s'aplica el procés invers per generar noves imatges.
 
 ### Procés de Difusió
+
+![](../../images/diffu.png)
 
 ### Aplicacions dels Models de Difusió
 

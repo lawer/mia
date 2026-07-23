@@ -13,6 +13,8 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
+![](../../images/img_5.png)
+
 ## Jocs
 
 - Fins ara en els nostres problemes de cerca, l'entorn era **determinista** i **totalment observable**.
@@ -44,6 +46,8 @@ Tindrem en compte les següents propietats:
 - Una **funció d'utilitat** $u: T \rightarrow \mathbb{R}$ que
   - el valor de cada posició terminal per a $MAX$.
 
+![](../../images/img_7.png)
+
 ## Arbre de joc (I)
 
 Característiques:
@@ -59,6 +63,8 @@ Característiques:
 
 ## Arbre de joc (II) - Exemple
 
+![](../../images/img_8.png)
+
 ## Estratègies
 
 - $MAX$ vol **maximitzar** la seva utilitat.
@@ -70,6 +76,8 @@ Característiques:
   - No hi ha prou en una seqüència d'accions predefinida, **dependrà de les accions** de $MIN$.
 
 ### MiniMax
+
+![](../../images/img_9.png)
 
 ### MiniMax
 
@@ -88,6 +96,8 @@ Característiques:
 - La resta de nodes mostren la seva puntuació **minimax**
 - En l'arrel la millor opció per a $MAX$ és $a_1$, ja que porta al node en millor puntuació minimax
 - En el segon nivell la millor opció per a $MIN$ és $b_1$ per dur al node en menos puntuació
+
+![](../../images/img_9.png)
 
 #### Algorisme
 
@@ -142,6 +152,8 @@ def valor_minim(joc, jugador, estat):
 
 ## Poda alfa-beta
 
+![](../../images/alpha_beta.webp)
+
 ### Introducció
 
 - **Poda alfa-beta**: **técnica** per reduir el nombre de nodes a explorar en l'arbre de joc.
@@ -158,6 +170,8 @@ def valor_minim(joc, jugador, estat):
 - La tercera fulla baix $B$ té valor $8$. El valor de final de $B$ és $3$.
   - Podem deduir llavors que el valor mínim d'$A$ és $3$, al tindre un node terminal amb valor $3$.
 
+![](../../images/Fig_05_05.PNG)
+
 ### Exemple (II)
 
 - La primera fulla baix $C$ té valor $2$. Per tant $C$, que es un node $MIN$, té un valor màxim de $2$.
@@ -166,6 +180,8 @@ def valor_minim(joc, jugador, estat):
   - Aquesta és la **poda alfa-beta**.
 - Al acabar l'exploració sabem els valors de cada node necessari.
 
+![](../../images/Fig_05_05.PNG)
+
 ### Regles
 
 - La poda alfa-beta **no** afecta al resultat de l'algorisme.
@@ -173,6 +189,8 @@ def valor_minim(joc, jugador, estat):
   - Moltes vegades es poden, fins i tot, podar arbres sencers.
 - Principi general, per un node $n$:
   - Si hi ha una opció millor al mateix nivell $($m'$)$ o superior $($m$)$, $n$ no es visitarà.
+
+![](../../images/img_11.png)
 
 ### Implementació (I)
 

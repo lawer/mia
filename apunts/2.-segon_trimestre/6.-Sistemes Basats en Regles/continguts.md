@@ -11,7 +11,11 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
+![](../../images/expert-system-icon-2048x2048-z3jy50rh.png)
+
 # IA simbólica
+
+![](../../images/symbolic_ai.jpeg)
 
 ## Intel·ligència artificial simbòlica
 
@@ -36,6 +40,8 @@ Models d'intel·ligència artificial
 
 - Moltes vegades definim el coneixement en relació a conceptes similars.
 - La jerarquia del coneixement o jerarquia de DIKW és un model que mostra la relació entre _dades_, _informació_, _coneixement_ i _saviesa_.
+
+![](../../images/DIKW_Pyramid.png)
 
 ## Jerarquia del coneixement (II)
 
@@ -71,6 +77,8 @@ Models d'intel·ligència artificial
   - A la dreta tenim les representacions més **flexibles** (text natural); molt potents pero no utilitzables diréctament per les màquines.
 
 ## Continuum del coneixement
+
+![](../../images/knowledge-spectrum.png)
 
 ## Representació del coneixement (III)
 
@@ -115,6 +123,8 @@ Models d'intel·ligència artificial
 
 # Sistemes experts
 
+![](../../images/experts.jpg)
+
 ## Aprofitament del coneixement humà
 
 ### Definició
@@ -137,7 +147,11 @@ Models d'intel·ligència artificial
 - **Explicació**:
   - Els SBC poden explicar el seu raonament i les seves conclusions.
 
+![](../../images/expert-systems-concept-icon-information-systems-kind-abstract-idea-thin-line-illustration-artificial-intelligence-method-isolated-outline-drawing-editable-stroke-vector.jpg)
+
 ## Sistemes basats en regles
+
+![](../../images/246110377.0.x.jpg)
 
 ### Definició
 
@@ -159,6 +173,8 @@ Models d'intel·ligència artificial
 - **Motor d'inferència**:
   - Busca les regles que s'apliquen a la situació actual (**conjunt conflictiu**) i les executa per ordre.
 
+![](../../images/partes_se.png)
+
 ### Parts d'un sistema basat en regles (II)
 
 - **Mitjans d'explicació**:
@@ -169,6 +185,8 @@ Models d'intel·ligència artificial
   - Permet a l'usuari interactuar amb el sistema.
 
 ### Exemple: Classificar un animal (I)
+
+![](../../images/AND-OR-Tree.png)
 
 ### Exemple: Classificar un animal (II)
 
@@ -238,6 +256,8 @@ Models d'intel·ligència artificial
 - **Problema**: Detecció de les regles que s'han de disparar.
   - Algorime RETE (Forgy, 1979)
 
+![](../../images/RedRete.png)
+
 ### Estratègies d'inferència
 
 #### Encadenament cap enrere: _backward chaining_ (I)
@@ -248,6 +268,8 @@ Models d'intel·ligència artificial
   - $$p \rightarrow q, q \vdash p$$
 - Els objectius determinen les regles a aplicar.
   - El raonament ve **guiat per la conclusió**.
+
+![](../../images/Backward_Chaining_Frog_Color_Example.png)
 
 ### Plataformes per a sistemes basats en regles
 
@@ -265,6 +287,8 @@ Models d'intel·ligència artificial
   - Deducció de regles a partir de dades. - Facilita la **interpretació** del raonament.
   - Integració de regles definides per l'usuari i Aprenentatge Automàtic. - Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
 
+![](../../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
+
 ## Sistemes híbrids Regles/Dades (II)
 
 ### Llibreries
@@ -277,6 +301,8 @@ Models d'intel·ligència artificial
   - Útil en casos on no es disposa de prou dades etiquetades o per casos específics.
 
 ## Sistemes de raonament imprecís
+
+![](../../images/1280px-Fuzzy_logic_temperature_en.svg.png)
 
 ### Definició
 
@@ -300,6 +326,8 @@ Models d'intel·ligència artificial
   - $0: Fals$, $1: Cert$, $0.5:$ $Cert$ en un $50\%$
 - La pertinença d'un element a un conjunt vindrà donada per una **funció de pertinença**.
   - $\mu_A(x)$: Grau de pertinença d'$x$ al conjunt $A$.
+
+![](../../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
 
 ### Lògica difusa (II)
 
@@ -350,6 +378,8 @@ Models d'intel·ligència artificial
 
 ### Funcionament dels sistemes de raonament imprecís (III)
 
+![](../../images/defuzzy.png)
+
 - _Defuzzyfication_:
   - Conversió de les dades de sortida difuses a valors precisos.
   - Passem de valors difusos a valors precisos.
@@ -380,6 +410,8 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
   - **Mitjà**: $[0, 10]$
   - **Alt**: $[5, 10]$
 
+![](../../images/plot_tipping_problem_newapi_2.png)
+
 ### Exemple: Propines (II)
 
 #### Variables de sortida
@@ -389,6 +421,8 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
   - **Mitjana**: $[0, 25]$
   - **Alta**: $[13, 25]$
 
+![](../../images/plot_tipping_problem_newapi_3.png)
+
 ### Exemple: Propines (III)
 
 #### Regles
@@ -397,6 +431,8 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - **IF** (Qualitat del servei és **mitjana**) **THEN** (Propina és **mitjana**)
 - **IF** (Qualitat del servei és **alta** o Menjar és **alt**) **THEN** (Propina és **alta**)
 
+![](../../images/plot_tipping_problem_newapi_4.png)
+
 ### Exemple: Propines (IV)
 
 #### Inferència
@@ -404,3 +440,5 @@ Utilitzarem funcions triangulars per a representar les variables d'entrada i sor
 - Qualitat del servei: **9.8**
 - Qualitat del menjar: **6.5**
 - Propina: **20.24%**
+
+![](../../images/plot_tipping_problem_newapi_5.png)

@@ -11,7 +11,11 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
+![](../../images/TS.jpg)
+
 # Optimització
+
+![](../../images/201a54c9-a413-4d2a-88a8-fade8a2db739.jpg)
 
 ## Definició
 
@@ -42,6 +46,8 @@ Models d'intel·ligència artificial
 - Aixó fa que **no siga possible** trobar la solució òptima en un temps raonable.
 
 # Búsqueda local
+
+![](../../images/3D-TSP-solved_with_simulated_annealing.gif)
 
 ## Característiques (I)
 
@@ -83,6 +89,8 @@ class ProblemaBusquedaLocal(object):
 - Les **variables** són les **ciutats** i els **dominis** són les **posicions**.
 - Les **restriccions** són que **no hi pugui haver dues ciutats en la mateixa posició**.
 - Les **solucions** són les **permutacions de les ciutats** que satisfan les restriccions.
+
+![](../../images/800px-GLPK_solution_of_a_travelling_salesman_problem.svg.png)
 
 ## Definició del problema
 
@@ -195,6 +203,8 @@ Millor fitness: 2718.3988057871697
   - l'algorisme consisteix a **moure'ns** cap a **punts més alts**.
   - Si deixem de pujar entendrem que hem arribat al **màxim global** i hem trobat la solució.
 
+![](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
+
 ### Implementació
 
 ```python
@@ -241,6 +251,8 @@ Inline:
 2.13 s ± 922 ms per loop
 (mean ± std. dev. of 7 runs, 1 loop each)
 ```
+
+![](../../images/exec_escalada.png)
 
 ### Consum de memòria
 
@@ -373,6 +385,8 @@ Millor fitness: 12887.286272582816
 Millor fitness: 12798.50074780205
 ```
 
+![](../../images/exec_escalada_reinici_aleatori.png)
+
 ## Algorisme de recuit simulat
 
 - L'algorisme de recuit simulat o **simulated annealing** es basa en el procés de **recuit** de la metal·lúrgia.
@@ -381,6 +395,8 @@ Millor fitness: 12798.50074780205
   - Això permet que les molècules es **reorganicin** i **minimitzin l'energia**.
   - Permet acceptar estats que empitjoren l'actual, en certes condicions.
   - Incopora l'aleatorietat a l'algorisme d'escalada.
+
+![](../../images/3-s2.0-B9780128150108000028-f02-14-9780128150108.jpg)
 
 ### Probabilitat d'acceptació
 
@@ -398,6 +414,8 @@ Millor fitness: 12798.50074780205
   - Optimització de xarxes neuronals
   - Optimització de circuits electrònics
   - Optimització de problemes de planificació
+
+![](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.11.20.png)
 
 ### Implementació
 
@@ -435,6 +453,8 @@ Cost:        11354.397010378212
 Cost:        11350.41254307539
 Cost final:  11350.41254307539
 ```
+
+![](../../images/exec_annealing.png)
 
 ### Implementació `inline` (I)
 
@@ -478,6 +498,8 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 
 # Algorismes genètics
 
+![](../../images/gen_algos.jpg)
+
 # Algorismes genètics
 
 - Els **algorismes genètics** són una tècnica d'optimització inspirada en la **evolució biològica**.
@@ -486,6 +508,8 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - Cada **gen** de l'individu representa una **variable** de l'estat.
   - Els **valors** dels gens representen els **valors** de les **variables**.
   - Els **individus** evolucionen **generant nous individus**.
+
+![](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%207.36.24.png)
 
 ### Procediment
 
@@ -522,6 +546,8 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - El nombre d'individus de la població inicial **ha de ser suficientment gran i divers**, sense fer-lo massa gran.
 - Opcionalment, ordenarem els individus segons la seva funció d'avaluació.
 
+![](../../images/156890925-13e0f1bf-ec4a-40fe-8d48-60d867cdacae.png)
+
 ### Selecció
 
 - Per evolucionar la població s'han de **seleccionar els millors individus** i serán els que **passaran els seus gens a la següent generació**.
@@ -529,6 +555,8 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Per torneig**: Es trien **$k$ individus aleatoris** i es **selecciona el millor**.
   - **Per ruleta**: S'**assigna una probabilitat** a cada individu, proporcional a la seva funció d'avaluació.
   - **Per rang**: La **probabilitat** serà proporcional a la seva posició.
+
+![](../../images/seleccio.png)
 
 ### Creuament
 
@@ -540,6 +568,8 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
   - **Creuament uniforme**: Es tria **aleatòriament** per a cada gen si es **hereta del pare o de la mare**.
   - **Altres tècniques**: recombinació ordenada, màscara, etc.
 
+![](../../images/156891548-bfafdc41-0158-4146-b6c6-b9d14d2c536a.png)
+
 ### Mutació
 
 - La **mutació** és el procés pel qual es **modifica un gen** d'un individu.
@@ -548,6 +578,8 @@ def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10
 - Hi ha diverses tècniques de mutació:
   - **Mutació aleatòria**: Es tria un **gen aleatori** i es **modifica**.
   - **Mutació dirigida**: Es tria un **gen aleatori** i es **modifica** en una **direcció concreta**.
+
+![](../../images/156822218-716ea60d-4d6b-434e-9112-26cba6c93b2c.png)
 
 ### Implementació (I)
 
@@ -595,6 +627,8 @@ def mutacio(individu):
 
 # Satisfacció de restriccions
 
+![](../../images/1%20YDEWV2f7UsDm6S8YC0LYbQ.webp)
+
 ## Definicions (I)
 
 - Alguns problemes es poden modelar millor com a problemes de satisfacció de restriccions **CSP** (**Constraint Satisfaction Problems**)
@@ -632,6 +666,8 @@ def mutacio(individu):
 - Les **arestes** del graf són les **restriccions**.
 - Les **solucions** són els **nodes del graf** que **no tenen cap aresta que els connecte**.
 
+![](../../images/mapes.png)
+
 ## Força bruta
 
 - Una forma de solucionar aquest problema és **provar totes les combinacions**.
@@ -643,6 +679,8 @@ def mutacio(individu):
   - Aquest problema és **NP-complet**.
 
 ## Búsqueda en tornada (backtracking)
+
+![](../../images/introduction-to-backtracking-1-1664198487.png)
 
 ### Descripció
 
@@ -735,6 +773,8 @@ def _backtrack(estat, variables):
 
 ## Algorisme de mínims conflictes
 
+![](../../images/Fig_06_08.PNG)
+
 ### Descripció
 
 - L'algorisme de mínims conflictes o **minimum conflicts** és un algorisme de búsqueda local **específic per a CSP**.
@@ -752,6 +792,8 @@ def _backtrack(estat, variables):
 - Les **variables** són les **files**.
 - Els **dominis** són les **columnes**.
 - Les **restriccions** són que **no hi pugui haver dues reines en posició d'atac**.
+
+![](../../images/n_reines.png)
 
 ### Exemple: N Reines (II)
 

@@ -45,13 +45,10 @@ function contentFromMarp(sourcePath, markdown) {
     .replace(/<style scoped>[\s\S]*?<\/style>\s*/g, "")
     .replace(/<!--\s*[\s\S]*?\s*-->/g, "")
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, url) => {
-      if (/\bbg\b/.test(alt)) {
-        return "";
-      }
-
       const contentAlt = alt
-        .replace(/\b(left|right|center|fit|inline|opacity)\b/g, "")
-        .replace(/\b(?:w:\d+|\d+%)\b/g, "")
+        .replace(/\b(bg|left|right|center|fit|inline|opacity)\b/g, "")
+        .replace(/(?:\b(?:w:\d+|width:\d+px)|\b\d+%)/g, "")
+        .replace(/[:\s]+/g, " ")
         .trim();
       return `![${contentAlt}](${url})`;
     })

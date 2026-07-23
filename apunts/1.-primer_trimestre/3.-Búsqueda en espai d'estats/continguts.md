@@ -11,6 +11,8 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
+![](../../images/local.png)
+
 # Busqueda
 
 * Fonamental en molts dominis
@@ -39,6 +41,8 @@ math: mathjax3
 * **Estat inicial**: Arad
 * **Comprovar si un estat és final**: Estat = Bucharest
 * **Solució**: Seqüència de ciutats que ens porten d'Arad a Bucharest
+
+![](../../images/rumania_color.png)
 
 ## Exemple: Botelles d'aigua (I)
 
@@ -71,6 +75,8 @@ math: mathjax3
 * **Comprovar si un estat és final**: -
 * **Solució**: -
 
+![](../../images/8puzzle_vert.png)
+
 ## Exemple: Puzzle 8 (II)
 
 * **Espai d'estats**: Les diferents posicions de les peces. _Quantes?_
@@ -78,6 +84,8 @@ math: mathjax3
 * **Estat inicial**: P.e. el de la figura anterior
 * **Comprovar si un estat és final**: Verificar que les peces estan a la posició correcta.
 * **Solució**: Seqüència de moviments que ens porten a l'estat final
+
+![](../../images/8puzzle_vert.png)
 
 ## Exemple: Puzzle 8 (III)
 
@@ -119,6 +127,8 @@ math: mathjax3
 
 # Algorismes de cerca
 
+![](../../images/greedy-ques-e1547130916483.png)
+
 ## Definició
 
 * Els algorismes de cerca són algorismes de propòsit general
@@ -144,11 +154,13 @@ math: mathjax3
 
 1. Obrim **Arad**: {Z\<A>, T\<A>, **S\<A>**},
 2. Obrim **Sibiu**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, **F\<S,A>**, R\<S,A>}
-3. Obrim **Fagaras**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, R\<S,A>, S\<F,S,A>, **B\<F,S,A>}**
+3. Obrim **Fagaras**: {Z\<A>, T\<A>, A\<S,A>, O\<S,A>, R\<S,A>, S\<F,S,A>, **B\<F,S,A>}**![](../../images/rumania_color.png)
 
 4. Tenim la solució en la frontera. Cost: 140+99+211 = **450**
 
 ### Exemple de funcionament (Alternativa II)
+
+![](../../images/rumania_color.png)
 
 1. Frontera: **{Arad}**. Objectiu: **Bucharest**
 2. Obrim **Arad**: {Z\<A>, T\<A>, **S\<A>**},
@@ -179,6 +191,8 @@ math: mathjax3
     * **Complexitat espacial**: Memòria necessària
 
 ## Búsqueda no informada
+
+![](../../images/v2-518371088124f9c8a6b4ab308de13d67_720w.jpg)
 
 ### Búsqueda no informada
 
@@ -240,6 +254,8 @@ def cerca_amplada(estat_inicial):
     * Cada node és un parell de valors (a,b) que representen l'estat de les botelles
     * La busca en amplitud explora l'arbre per nivells
     * Podem observar que solament s'explora un nombre molt reduït de tots els possibles estats
+
+![](../../images/mermaid-diagram-2023-08-21-225544.png)
 
 ##### Propietats
 
@@ -308,6 +324,8 @@ def cerca_profunditat(estat_inicial):
     * Si no troba una solució, torna enrere fins a trobar un camí alternatiu
     * Si les solucions son infinites, l'algorisme pot no acabar mai
 
+![](../../images/mermaid-diagram-2023-08-22-093901_cropped.png)
+
 ##### Propietats
 
 | Propietat | Valor |Comentaris |
@@ -359,6 +377,8 @@ def cerca_profunditat_limitada(estat_inicial, l):
 * La cerca en profunditat iterativa és una cerca en profunditat limitada amb $l$ creixent
 * Comença amb $l=0$ i va incrementant $l$ fins a trobar la solució
 
+![](../../images/img_1.png)
+
 ##### Traçat de l'algorisme (I)
 
 ![](../../images/Captura%20de%20pantalla%202023-08-22%20a%20las%2011.25.46.png)
@@ -401,6 +421,8 @@ def cerca_profunditat_iterativa(estat_inicial):
 * Estats visitats: de manera iterativa, es van visitant tots els que tenen un cost menor que l'actual
 * Sí totes les accions tenen el mateix cost, la cerca de cost uniforme és equivalent a la cerca en amplitud
 
+![](../../images/img_2.png)
+
 ##### Exemple: Viatjar per Romania (I)
 
 * **Estat inicial**: Arad
@@ -409,12 +431,16 @@ def cerca_profunditat_iterativa(estat_inicial):
 * **Comprovar si un estat és final**: Estat = Bucharest
 * **Solució**: Seqüència de ciutats que ens porten d'Arad a Bucharest
 
+![](../../images/rumania_color.png)
+
 ##### Exemple: Viatjar per Romania (II)
 
 * Representació de l'arbre de cerca
     * Cada node és un parell de valors (a,b) que representen l'estat de les botelles
     * La busca en amplitud explora l'arbre per nivells
     * Podem observar que solament s'explora un nombre molt reduït de tots els possibles estats
+
+![](../../images/mermaid-diagram-2023-08-22-215428.png)
 
 ##### Implementació
 
@@ -455,6 +481,8 @@ def cerca_cost_uniforme(estat_inicial):
 
 ## Búsqueda informada
 
+![](../../images/what-is-a-search-algorithm.png)
+
 ### Definició
 
 * L'algorisme de búsqueda de cost uniforme és un algoritme molt eficient, té, però alguns problemes
@@ -471,9 +499,13 @@ def cerca_cost_uniforme(estat_inicial):
     * Distància en línia recta (euclidiana)
     * Distància manhattan
 
+![](../../images/img_3.png)
+
 #### Exemple: Viatjar per Romania
 
 * **Heurística**: Distància en línia recta (euclidiana)
+
+![](../../images/rumania_color_heu.png)
 
 ### Búsqueda voraç
 
@@ -482,11 +514,14 @@ def cerca_cost_uniforme(estat_inicial):
     * Més eficient que la búsqueda de cost uniforme
     * No garanteix trobar la solució òptima
  height:330px
+![](../../images/img_4.png)
 
 ### Búsqueda voraç
 
 * En verd la ruta correcta i en roig la nostra
 * Que podem fer perqué el nostre algorisme trobi la solució correcta?
+
+![](../../images/rumania_color_ruta_greedy.png)
 
 #### Implementació
 
@@ -530,7 +565,7 @@ def cerca_voraç(estat_inicial):
 
 #### Exemple: Viatjar per Romania (II)
 
-![width:730px](../../images/Fig_03_18_B.PNG)
+![](../../images/Fig_03_18_B.PNG)
 
 #### Exemple: Viatjar per Romania (III)
 
@@ -585,6 +620,8 @@ def cerca_a_estrella(estat_inicial):
     2. Permetre que les peces es moguin a qualsevol posició, si està buida
     3. Permetre que les peces es moguin a qualsevol posició, sense restriccions (1+2)
 
+![](../../images/8puzzle_vert.png)
+
 ##### Exemple: Puzzle 8 (II)
 
 * La primera opció ens porta la heurística **distància manhattan**
@@ -606,11 +643,15 @@ def cerca_a_estrella(estat_inicial):
     * Així, $f(n'_g)$ > $f(n'')$ > $f(n_d)$
 * Les subrutes en la ruta òptima sempre seran més barates que en la ruta subòptima
 
+![](../../images/img_heur.png)
+
 ### Propietat Óptima de les heurístiques admissibles (II)
 
 * A* explora els nodes en ordre creixent de $f(n)$
 * Va agregant, de forma gradual, corves de nivell de grau $f$
 * Cada corba de nivell representa un conjunt de nodes amb un valor d'$f(n)$ inferior a un valor concret
+
+![](../../images/Captura%20de%20pantalla%202023-08-23%20a%20las%2016.05.30.png)
 
 ### Propietat Óptima de les heurístiques admissibles (III)
 
@@ -618,6 +659,8 @@ def cerca_a_estrella(estat_inicial):
 * Llavors, $h_2$ és més informativa que $h_1$
 * Per tant, $h_2$ serà més eficient que $h_1$
 * Es per això que, preferirem l'heurística Manhattan a l'heurística de peces fora de lloc
+
+![](../../images/8puzzle_vert.png)
 
 ### Limitacions de l'algorisme A*
 
@@ -692,6 +735,8 @@ def cerca_a_iterativa(estat_inicial):
     * S'estudien 7 vegades menys estats
     * Per una solució un $5\%$ menys eficient
 
+![](../../images/Captura%20de%20pantalla%202023-08-24%20a%20las%2010.08.22.png)
+
 #### Implementació
 
 ```python
@@ -721,6 +766,8 @@ def cerca_a_ponderat(estat_inicial, epsilon):
     * Així, obtenim una bona solució en un temps raonable
         * Si tenim temps, podem seguir buscant una solució millor, fins arribar a la solució òptima
 
+![](../../images/Captura%20de%20pantalla%202023-08-24%20a%20las%2015.48.17.png)
+
 #### Implementació
 
 ```python
@@ -736,5 +783,7 @@ def cerca_anytime_a(estat_inicial):
 ### Demostració de búsquedes
 
 #### Pac-Man
+
+![](../../images/pacman.png)
 
 [https://www.youtube.com/watch?v=2XjzjAfGWzY](https://www.youtube.com/watch?v=2XjzjAfGWzY)

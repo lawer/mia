@@ -11,6 +11,8 @@ math: mathjax3
 
 Models d'intel·ligència artificial
 
+![](../../images/community-jetracer_2020.jpg)
+
 ## Introducció
 
 - La robòtica és una branca de la tecnologia que es dedica al disseny i construcció de robots.
@@ -23,12 +25,16 @@ Models d'intel·ligència artificial
 - Per fer-ho, els robots utilitzen actuadors per interactuar amb el món real.
 - Els canvis podem ser físics (moure objectes) o digitals (enviar informació).
 
+![](../../images/robot.png)
+
 ### Sensors
 
 - Els sensors són dispositius que permeten als robots percebre el seu entorn.
 - Hi ha molts tipus de sensors. Els grups més importants son:
   - **Mesurar l'estat de l'entorn**: càmeres, radars, ultrasons, etc.
   - **Mesurar l'estat del robot**: acceleròmetres, giroscopis, encoders, etc.
+
+![](../../images/sensors.png)
 
 ### Operacions
 
@@ -63,7 +69,15 @@ Models d'intel·ligència artificial
 - **Braços robòtics**: robots que poden moure objectes. També coneguts com a **robots manipuladors**. Són els més comuns, especialment en la indústria.
 - **Robots mòbils**: robots que poden moure's pel seu entorn. Poden ser **terrestres, aquàtics o aeris**. Són els més comuns en la robòtica autònoma.
 
+![%](../../images/antro.webp)
+
+![%](../../images/arm.png)
+
+![%](../../images/mobile.jpg)
+
 ## Sensors i actuadors
+
+![](../../images/sensors2.png)
 
 ### Tipus de sensors
 
@@ -83,6 +97,8 @@ Permeten als robots mesurar la distància a objectes.
 - **LIDAR**: utilitzen làser per mesurar la distància a objectes amb una gran precisió. Molt utilitzats en vehicles autònoms terrestres.
 
 ##### LIDAR
+
+![](../../images/lidar.webp)
 
 #### Sensors de localització
 
@@ -109,6 +125,8 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - **Sensors de llum**: permeten als robots mesurar la llum ambiental.
 - **Sensors de so**: permeten als robots mesurar el so ambiental.
 
+![](../../images/sensors.jpg)
+
 ### Actuadors
 
 - Els actuadors són els components del robot que permeten moure's pel seu entorn. Els més comuns són:
@@ -117,7 +135,11 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - **Motors pas a pas**: permeten moure's en un eix amb una gran precisió.
   - **Hidràulics**: permeten moure's amb una gran força. Molt utilitzats en robots industrials.
 
+![](../../images/actuators.png)
+
 ## Programació de robots
+
+![](../../images/robot_programming.png)
 
 ## Programació de robots
 
@@ -149,6 +171,8 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - **SLAM visual**: utilitza càmeres per localitzar-se i construir un mapa.
   - **SLAM LIDAR**: utilitza LIDAR per localitzar-se i construir un mapa.
 
+![](../../images/SLAM.png)
+
 #### Altres tipus de percepció
 
 - Hi ha altres tipus de percepció que són importants en robòtica com poden ser els de **temperatura, llum, olor, etc.**
@@ -172,12 +196,16 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Els vehicles mostren comportaments complexos com seguir la llum, evitar obstacles, etc.
 - Son representatius de la **robòtica BEAM** (Biology, Electronics, Aesthetics, Mechanics).
 
+![](../../images/braitenberg.png)
+
 #### Seguiment de línies
 
 - El seguiment de línies és una tasca comuna en robòtica mòbil.
 - Consisteix en seguir una línia en el terra utilitzant sensors d'infrarojos o càmeres.
 - Els robots que segueixen línies utilitzen un algoritme senzill per determinar la direcció en la que han de moure's.
 - En la forma més senzilla, el robot gira cap a la línia quan la veu i rectifica la seva trajectòria quan la perd.
+
+![](../../images/LINE-FOLLOWER-ALGORITHM.jpg)
 
 #### Màquines d'estats finits
 
@@ -207,6 +235,8 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - Si el robot passa detecta l'objectiu passa a l'estat **Endavant** i comença a moure's cap a l'objectiu.
   - Quan el robot arriba a l'objectiu passa a l'estat **Objectiu** i s'atura.
 
+![](../../images/buscar_objectiu.png)
+
 #### Estat de l'algorisme
 
 - Quasi tots els algorismes de robòtica són **estatals**.
@@ -224,6 +254,8 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
 - Les XN Recurrents són més complexes però més potents.
   - Serien equivalents a un sistema basat en FSM.
 
+![](../../images/nn_robotics.jpeg)
+
 #### Aprenentatge (I)
 
 - Per entrenar les xarxes neuronals podem utilitzar tècniques d'aprenentatge supervisat o no supervisat.
@@ -238,6 +270,8 @@ Es refereix a la capacitat dels robots de saber la seva posició i orientació e
   - Definirem un **premi** per a les accions desitjades i un **càstig** per a les accions no desitjades. El robot provarà diferents accions i aprendrà quines són les millors a partir dels premis rebuts.
 - **Neuroevolució**: utilitzar algoritmes evolutius per evolucionar les xarxes neuronals.
   - Crearem una població de xarxes neuronals i les farem competir entre elles. Les xarxes més eficients es reproduiran i evolucionaran.
+
+![](../../images/rl_robot.png)
 
 ## Conclusions
 

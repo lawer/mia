@@ -13,6 +13,8 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
+![trees-graphs.jpeg](../../images/trees-graphs.jpeg)
+
 # Conceptes previs
 
 * Per a poder afrontar els temes relacionats en **búsquedes** necessitarem alguns **conceptes previs**.
@@ -26,6 +28,8 @@ math: mathjax3
 
 ## Grafs
 
+![](../../images/508px-Graph_example_%28Graph_theory%29.png)
+
 ### Teoria de grafs
 
 * **Branca de les matemàtiques** que estudia les **relacions**.
@@ -38,6 +42,8 @@ math: mathjax3
     * **Dependències** (dependències entre tasques, processos, etc.).
 * **Exemple**: Graf no dirigit amb 6 nodes i 7 arestes.
 
+![](../../images/6n-graf.svg)
+
 ### Història
 
 #### Els ponts de Königsberg (1/2)
@@ -45,6 +51,8 @@ math: mathjax3
 * Els grafs van ser introduïts per **Leonhard Euler** al segle XVIII per resoldre el **problema dels ponts de Königsberg**.
 * El problema consistia en trobar un camí que passés per **tots els ponts** de la ciutat sense passar per **cap pont més d'una vegada**.
 * El problema es pot representar com a graf sense perdua de generalitat.
+
+![](../../images/7_bridges.png)
 
 ### Història
 
@@ -55,6 +63,8 @@ math: mathjax3
 * Un graf és eulerià si té **tots els nodes de grau parell**.
 * El graf dels ponts de Königsberg no és eulerià perquè té 4 nodes de grau imparell.
 * Aquesta demostració va ser el **punt de partida** de la teoria de grafs.
+
+![](../../images/euler%20bridges.png)
 
 ### Definicions (1/2)
 
@@ -98,6 +108,8 @@ math: mathjax3
 * Si el graf te **pesos** les posicions de la matriu contindran els pesos de les arestes.
 * En python podem utilitzar una llista de llistes per a representar la matriu.
 
+![](../../images/matriu_adjacencia.png)
+
 #### Matriu d'adjacència (2/2)
 
 * **Avantatges**:
@@ -114,6 +126,8 @@ math: mathjax3
 * Si el graf no és dirigit i _B_ és adjacent a _A_, _A_ també serà adjacent a _B_.
 * Si el graf té pesos, la llista contindrà tuples amb el node adjacent i el pes de l'aresta.
 * Generalment, sol ser més eficient que la matriu d'adjacència, ja que no ocupa tant espai en memòria.
+
+![](../../images/llista_adjacencia.png)
 
 #### Llista d'adjacència (2/2)
 
@@ -147,11 +161,15 @@ Alguns dels problemes típics sobre grafs són:
 * **Cicles**: trobar si un graf té cicles.
 * **Components**: trobar els components d'un graf.
 
+![](../../images/Shortest_path_with_direct_weights.png)
+
 ### Tipus de problemes (2/2)
 
 * **Colorejat de grafs**: nombre mínim de colors per a pintar els nodes d'un graf de manera que dos nodes adjacents no tinguin el mateix color.
 * **Ordenació topològica**: trobar un ordre lineal dels nodes d'un graf dirigit acíclic.
 * **Flux màxim**: trobar el flux màxim entre dos nodes.
+
+![](../../images/Petersen_graph_3-coloring.svg)
 
 ### Algorismes sobre grafs
 
@@ -165,7 +183,11 @@ Alguns dels més importants:
 * Algorisme de **Kruskal**
 * Algorisme de **Ford-Fulkerson**
 
+![](../../images/MinSpanningTree1.jpg)
+
 ## Arbres
+
+![](../../images/1%20%281%29.jpg)
 
 ### Arbres
 
@@ -175,6 +197,8 @@ Alguns dels més importants:
     * **Acíclic**: no hi ha cicles.
     * **No dirigit**: les arestes no tenen direcció.
     * **Unic**: no hi ha més d'un camí entre qualsevol parell de nodes.
+
+![](../../images/W1f7J.png)
 
 ### Utilitat dels arbres
 
@@ -250,7 +274,7 @@ def buscar(node, value):
 * El primer node de la llista és el **cap** i l'últim node és la **cua**.
 * Els nodes de la llista no tenen per què estar en posicions contigües de memòria.
 
-![80%](../../images/linked-list-diagram.png)
+![](../../images/linked-list-diagram.png)
 
 ### Vector vs llista enllaçada
 
@@ -285,7 +309,7 @@ def buscar(node, value):
 * Les cues de prioritat es poden implementar mitjançant un **heap** o un array ordenat (menys eficient).
 * En python podem utilitzar la classe `PriorityQueue` del mòdul `queue` o la classe `heapq` del mòdul `heapq`.
 
-![120%](../../images/introduction-to-heaps-array-representation-a83ad3eb4209b785.png)
+![](../../images/introduction-to-heaps-array-representation-a83ad3eb4209b785.png)
 
 ### Pila
 

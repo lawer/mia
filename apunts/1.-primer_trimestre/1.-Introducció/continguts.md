@@ -11,6 +11,8 @@ math: mathjax3
 
 ### Models d'intel·ligència artificial
 
+![](../../images/portada.png)
+
 ## Què és la IA?
 
 - **Intel·ligència**: capacitat d'aprendre, comprendre i resoldre problemes.
@@ -26,6 +28,8 @@ math: mathjax3
   - seleccionar una acció;
   - avaluar el resultat i adaptar-se quan calga.
 
+![](../../images/what-is-the-composition-for-agents-in-artificial-intelligence.png)
+
 ## Què estudiarem?
 
 - Com formular un problema perquè un sistema el puga resoldre.
@@ -35,6 +39,8 @@ math: mathjax3
 - Riscos ètics, legals i de seguretat.
 
 ## Una mica d'història
+
+![](../../images/History.jpg)
 
 ## Fites rellevants
 
@@ -61,7 +67,11 @@ math: mathjax3
   - manteniment i dependència de proveïdors;
   - impacte sobre les persones afectades.
 
+![](../../images/State of AI.png)
+
 ## Tenim una màquina intel·ligent?
+
+![](../../images/8860931.jpg)
 
 ## Intel·ligència humana i computacional
 
@@ -94,6 +104,8 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
 
 ## Paradigmes de la IA
 
+![](../../images/Rule-based-vs-Machine-Learning-upd-1-1536x799.png)
+
 ## Paradigma simbòlic
 
 - Representa coneixement amb símbols, fets i regles.
@@ -104,12 +116,16 @@ La IA no intenta reproduir necessàriament una persona: construeix sistemes capa
   - raonament basat en casos;
   - planificació i satisfacció de restriccions.
 
+![](../../images/sistema expert.png)
+
 ## Paradigma connexionista
 
 - Representa la informació amb xarxes de neurones artificials.
 - Aprén patrons a partir de dades.
 - És útil en visió per computador, veu, llenguatge i control.
 - Sovint ofereix menys explicabilitat que una solució basada en regles.
+
+![](../../images/xarxa_neuronal.png)
 
 ## Paradigma estadístic
 
@@ -138,6 +154,8 @@ Abans d'usar IA, hem de preguntar-nos:
 - Qui revisarà els casos incerts o sensibles?
 
 ## Aplicacions de la IA
+
+![](../../images/How_Artificial_Intelligence_is_Being_Deployed_Today.png)
 
 ## Alguns dominis
 
