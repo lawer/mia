@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "build:marp": "node scripts/build-marp.js",
-    "build": "npm run build:marp && bundle exec jekyll build"
+    "build": "npm run build:marp && bundle exec jekyll build",
+    "test:marp": "node --test scripts/build-marp.test.js"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "4.5.0"

@@ -20,8 +20,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Detect MARP changes
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            marp:
+              - 'apunts/**/*.md'
+              - 'scripts/build-marp.js'
+              - 'themes/lawer.css'
+              - 'package.json'
+              - 'package-lock.json'
+
       - name: Set up Node
         uses: actions/setup-node@v4
+        if: steps.changes.outputs.marp == 'true'
         with:
           node-version: 22
           cache: npm
@@ -33,9 +46,11 @@ jobs:
           bundler-cache: true
 
       - name: Install presentation dependencies
+        if: steps.changes.outputs.marp == 'true'
         run: npm ci
 
       - name: Generate MARP presentations and content pages
+        if: steps.changes.outputs.marp == 'true'
         run: npm run build:marp
 
       - name: Configure Pages

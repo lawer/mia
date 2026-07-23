@@ -676,6 +676,7 @@ Alguns dels models més utilitzats per a l'anàlisi de sentiments són:
 - Els valors a entrenar en les neurones recurrents són tres: pes de la entrada, pes de la entrada recurrent i el biaix.
 
 ![](../../images/rnn_desplegada.png)
+
 ### LSTM (Long Short-Term Memory) (I)
 
 - Les **LSTM** són una millora de les RNN tradicionals implementant una **memòria a llarg termini**.

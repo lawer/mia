@@ -7,6 +7,7 @@ const { basename, dirname, join, relative } = require("node:path");
 const root = process.cwd();
 const notesDirectory = join(root, "apunts");
 const themePath = join(root, "themes", "lawer.css");
+const defaultContentFrontMatter = "---\nlayout: default\ntitle: Continguts\n---\n";
 
 function markdownFiles(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -29,36 +30,72 @@ function isMarp(markdown) {
   return /^---\r?\n[\s\S]*?^marp:\s*true\s*$/m.test(markdown);
 }
 
+function removeScopedStyles(markdown) {
+  return markdown.replace(/<style scoped>[\s\S]*?<\/style>\s*/g, "");
+}
+
+function removeMarpComments(markdown) {
+  return markdown.replace(/<!--\s*[\s\S]*?\s*-->/g, "");
+}
+
+function normaliseImageAltText(alt) {
+  return alt
+    .replace(/\b(bg|left|right|center|fit|inline|opacity)\b/g, "")
+    .replace(/(?:\b(?:w:\d+|width:\d+px)|\b\d+%)/g, "")
+    .replace(/[:\s]+/g, " ")
+    .trim();
+}
+
+function convertMarpImages(markdown) {
+  return markdown.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, url) => {
+    return `![${normaliseImageAltText(alt)}](${url})`;
+  });
+}
+
+function removeSlideSeparators(markdown) {
+  return markdown.replace(/^---\s*$/gm, "");
+}
+
+function convertImageOnlyHeadings(markdown) {
+  return markdown.replace(/^(#{1,6})[ \t]+!\[\]\(([^)]+)\)[ \t]*$/gm, "![]($2)");
+}
+
+function normaliseWhitespace(markdown) {
+  return markdown
+    .replace(/[ \t]+$/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function contentBodyFromMarp(marpBody) {
+  return normaliseWhitespace(
+    convertImageOnlyHeadings(
+      removeSlideSeparators(
+        convertMarpImages(
+          removeMarpComments(
+            removeScopedStyles(marpBody),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
 function contentFrontMatter(contentPath) {
   if (!existsSync(contentPath)) {
-    return "---\nlayout: default\ntitle: Continguts\n---\n";
+    return defaultContentFrontMatter;
   }
 
-  return splitFrontMatter(readFileSync(contentPath, "utf8")).frontMatter || "---\nlayout: default\ntitle: Continguts\n---\n";
+  return splitFrontMatter(readFileSync(contentPath, "utf8")).frontMatter || defaultContentFrontMatter;
 }
 
 function contentFromMarp(sourcePath, markdown) {
   const { body } = splitFrontMatter(markdown);
   const sourceName = basename(sourcePath);
   const contentPath = join(dirname(sourcePath), "continguts.md");
-  const cleanBody = body
-    .replace(/<style scoped>[\s\S]*?<\/style>\s*/g, "")
-    .replace(/<!--\s*[\s\S]*?\s*-->/g, "")
-    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, url) => {
-      const contentAlt = alt
-        .replace(/\b(bg|left|right|center|fit|inline|opacity)\b/g, "")
-        .replace(/(?:\b(?:w:\d+|width:\d+px)|\b\d+%)/g, "")
-        .replace(/[:\s]+/g, " ")
-        .trim();
-      return `![${contentAlt}](${url})`;
-    })
-    .replace(/^---\s*$/gm, "")
-    .replace(/^(#{1,6})\s+!\[\]\(([^)]+)\)\s*$/gm, "![]($2)")
-    .replace(/[ \t]+$/gm, "")
-    .replace(/\n{3,}/g, "\n\n")
-    .trim();
+  const contentBody = contentBodyFromMarp(body);
 
-  return `${contentFrontMatter(contentPath)}\n> Aquesta pàgina es genera automàticament a partir de la presentació MARP \`${sourceName}\`. No l'edites directament.\n\n${cleanBody}\n`;
+  return `${contentFrontMatter(contentPath)}\n> Aquesta pàgina es genera automàticament a partir de la presentació MARP \`${sourceName}\`. No l'edites directament.\n\n${contentBody}\n`;
 }
 
 function validateAssets(sourcePath, markdown) {
@@ -91,15 +128,31 @@ function validateTheme(htmlPath) {
   }
 }
 
-const sources = markdownFiles(notesDirectory).filter((path) => isMarp(readFileSync(path, "utf8")));
+function buildMarpMaterials() {
+  const sources = markdownFiles(notesDirectory).filter((path) => isMarp(readFileSync(path, "utf8")));
 
-for (const sourcePath of sources) {
-  const markdown = readFileSync(sourcePath, "utf8");
-  const contentPath = join(dirname(sourcePath), "continguts.md");
+  for (const sourcePath of sources) {
+    const markdown = readFileSync(sourcePath, "utf8");
+    const contentPath = join(dirname(sourcePath), "continguts.md");
 
-  validateAssets(sourcePath, markdown);
-  writeFileSync(contentPath, contentFromMarp(sourcePath, markdown));
-  validateTheme(render(sourcePath, "html"));
-  render(sourcePath, "pdf");
-  console.log(`Generated ${relative(root, contentPath)}`);
+    validateAssets(sourcePath, markdown);
+    writeFileSync(contentPath, contentFromMarp(sourcePath, markdown));
+    validateTheme(render(sourcePath, "html"));
+    render(sourcePath, "pdf");
+    console.log(`Generated ${relative(root, contentPath)}`);
+  }
 }
+
+if (require.main === module) {
+  buildMarpMaterials();
+}
+
+module.exports = {
+  contentBodyFromMarp,
+  convertImageOnlyHeadings,
+  convertMarpImages,
+  normaliseImageAltText,
+  removeMarpComments,
+  removeScopedStyles,
+  removeSlideSeparators,
+};
