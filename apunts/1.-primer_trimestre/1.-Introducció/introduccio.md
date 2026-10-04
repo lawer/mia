@@ -22,4 +22,6 @@ nav_order: 1
 
 | Exercici                                            |                                                                                                                        Enllaç |
 | :-------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------: |
-| [Exercici](https://classroom.github.com/a/gzyK9ex4) | [![PDF](https://img.shields.io/badge/GitHub%20Classroom-Exercicis-blue?logo=github)](https://classroom.github.com/a/gzyK9ex4) |
+| [Activitat de Classroom](https://classroom.github.com/a/gzyK9ex4) | [![GitHub Classroom](https://img.shields.io/badge/GitHub%20Classroom-Activitat-blue?logo=github)](https://classroom.github.com/a/gzyK9ex4) |
+
+La durada orientativa de 3 hores cobreix el treball presencial d'introducció. L'activitat de Classroom és externa; no n'he comptat el temps perquè el seu contingut no està disponible al repositori.
