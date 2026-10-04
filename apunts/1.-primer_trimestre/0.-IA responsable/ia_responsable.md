@@ -1,15 +1,15 @@
 ---
-title: 0. IA responsable, segura i centrada en les persones
-parent: 1. Primera Avaluació
+title: 1.2 Ús responsable, segur i centrat en les persones
+parent: 1. Introducció i fonaments de la IA
 layout: default
 has_children: true
 has_toc: false
-nav_order: 0
+nav_order: 2
 ---
 
-# 0. IA responsable, segura i centrada en les persones
+# 1.2 Ús responsable, segur i centrat en les persones
 
-**Durada orientativa: 5 hores.** Unitat d'obertura del mòdul 5071. Presenta criteris que es reprendran en les pràctiques de cerca, sistemes basats en regles, lògica difusa, PLN, visió i robòtica.
+**Durada orientativa: 3 hores.** Segon bloc del tema 1, després de la introducció conceptual. Aplica criteris de responsabilitat amb exercicis breus i una fitxa de riscos que es reprendrà en les pràctiques tècniques.
 
 ## Material
 
