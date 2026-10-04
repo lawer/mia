@@ -64,7 +64,7 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 - [x] Crear el primer borrador de la Unidad 0 de IA responsable, privacidad y seguridad: `apunts/1.-primer_trimestre/0.-IA responsable/ia_responsable.md`.
   - Duracion orientativa: 5 horas; se situa antes de la unidad de introduccion.
-  - Incluye presentacion MARP, secuencia de trabajo, practica con datos ficticios y criterios de evaluacion.
+  - Incluye presentacion MARP, secuencia de trabajo, dos ejercicios de aula con casos y datos ficticios, practica integradora y criterios de evaluacion.
   - Incluye consulta del RGPD y el Reglamento Europeo de IA en fuentes oficiales, sin convertir el material en asesoramiento juridico.
 
 - [x] Crear una ficha de analisis de riesgos reutilizable en las practicas relevantes.

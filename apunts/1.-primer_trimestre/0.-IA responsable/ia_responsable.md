@@ -32,13 +32,14 @@ En acabar la unitat, l'alumnat podrà:
 | --- | --- |
 | Presentació MARP | [PDF](0.-ia-responsable-marp.pdf) · [HTML](0.-ia-responsable-marp.html) |
 | Apunts generats | [Continguts](continguts.md) |
+| Fitxes de treball | [Exercicis i dades sintètiques](exercicis.md) |
 
 ## Seqüència de treball
 
 | Sessió | Contingut i activitat | Evidència |
 | --- | --- | --- |
-| 1 h | Propòsit, context, persones afectades i cost de l'error. Decidir si cal IA. | Declaració del problema i alternatives |
-| 1 h | Dades, representativitat, biaix i mètriques per grups. Analitzar exemples sintètics. | Taula de riscos i proves |
+| 1 h | Propòsit, context, persones afectades i cost de l'error. Fer l'exercici 1 per triar una solució proporcionada. | Matriu de casos, decisions i justificacions |
+| 1 h | Dades, representativitat, biaix i mètriques per grups. Fer l'exercici 2 amb dades sintètiques. | Matrius de confusió, mètriques i cauteles |
 | 1 h | Privacitat, minimització, procedència i seguretat de dades. | Inventari de dades i controls |
 | 1 h | Transparència, accessibilitat, supervisió humana i marc normatiu. | Mesures de supervisió i comunicació |
 | 1 h | Cas integrador: classificar peticions fictícies de suport tècnic i defensar el disseny. | Fitxa de riscos completa i presentació breu |
