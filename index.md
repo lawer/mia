@@ -8,6 +8,21 @@ nav_order: 1
 
 En aquesta web trobareu els materials de suport a les classes de Models d'Intel·ligència Artificial del Curs d'especialització en Intel·ligència Artificial i Big Data de l'Institut Benigasló.
 
+## Distribució horària orientativa
+
+El mòdul es planifica en **90 hores**. La unitat d'IA responsable obri el curs i la seua fitxa de riscos es reutilitza en les pràctiques tècniques.
+
+| Bloc | Hores |
+| --- | ---: |
+| Unitat 0: IA responsable, segura i centrada en les persones | 5 |
+| Fonaments i selecció de models | 8 |
+| Cerca, planificació, optimització i CSP | 20 |
+| Sistemes experts, regles i lògica difusa | 14 |
+| PLN, embeddings, Transformers i RAG | 18 |
+| Visió i robòtica | 10 |
+| Projecte integrador | 15 |
+| **Total** | **90** |
+
 ## Extras
 
 | [Scraping](scrapy_marp.pdf) | [![PDF](https://img.shields.io/badge/PDF-scrapy_marp.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](scrapy_marp.pdf) <br/> [![HTML](https://img.shields.io/badge/HTML-scrapy_marp-blue?logo=html5&logoColor=white)](scrapy_marp.html) |
