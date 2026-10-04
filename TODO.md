@@ -100,19 +100,13 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 ## Proyecto integrador
 
-- [ ] Disenar un proyecto final de 15 horas, separado de la Unidad 0.
-  - Caso propuesto: sistema de apoyo a la gestion de incidencias.
-  - Reglas para priorizar y derivar casos.
-  - Recuperacion documental para fundamentar respuestas.
-  - LLM para redactar respuestas con citas y limites.
-  - Pruebas normales, sin evidencia y adversarias.
-  - Memoria tecnica con arquitectura, evaluacion y ficha de riesgos.
-
-- [ ] Definir una rubrica comun para el proyecto.
-  - Adecuacion del modelo elegido al problema.
-  - Correccion y evaluacion tecnica.
-  - Trazabilidad, seguridad, privacidad y gestion de sesgos.
-  - Calidad de documentacion, demo y comunicacion de limites.
+- [x] Crear el proyecto final de 15 horas en `apunts/2.-segon_trimestre/10.-Projecte integrador/`.
+  - Guia en cinc sessions, prototip amb regles, RAG, esborranys i revisio humana.
+  - Corpus i onze incidencies sintetiques, incloent-hi casos bilingues, fora de corpus, d'alt risc, d'injeccio i document obsolet.
+  - Criteris tecnics d'acceptacio, lliurables, memoria i defensa.
+- [x] Definir una rubrica comuna per al projecte.
+  - Adequacio del disseny, funcionament tecnic i avaluacio.
+  - Responsabilitat, privacitat, seguretat, documentacio i comunicacio.
 
 ## Distribucion orientativa de 90 horas
 
