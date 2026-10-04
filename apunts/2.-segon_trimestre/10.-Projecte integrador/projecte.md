@@ -57,7 +57,7 @@ Les sessions són una proposta de distribució. Es poden adaptar sense canviar e
 ## Criteris tècnics d'acceptació
 
 - Les regles retornen categoria, derivació i motiu traçable.
-- En les incidències cobertes, el sistema recupera com a mínim un fragment pertinent entre els tres primers resultats en **8 de cada 10** proves pertinents.
+- En les incidències cobertes, el sistema recupera com a mínim un fragment pertinent entre els tres primers resultats en **8 de les 9** incidències amb suport documental.
 - Les respostes inclouen identificadors de font i no afirmen haver resolt una incidència.
 - Les consultes fora del corpus s'abstenen en lloc d'inventar una solució.
 - Els casos de seguretat o risc físic arriben a revisió humana.
