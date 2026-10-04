@@ -10,15 +10,14 @@ En aquesta web trobareu els materials de suport a les classes de Models d'Intel�
 
 ## Distribució horària orientativa
 
-El mòdul es planifica en **90 hores**. La unitat d'IA responsable obri el curs i la seua fitxa de riscos es reutilitza en les pràctiques tècniques.
+El mòdul es planifica en **90 hores**. El tema 1 integra els fonaments de la IA i un bloc breu d'ús responsable, que apareix després de la introducció conceptual.
 
 | Bloc | Hores |
 | --- | ---: |
-| Unitat 0: IA responsable, segura i centrada en les persones | 5 |
-| Fonaments i selecció de models | 8 |
-| Cerca, planificació, optimització i CSP | 20 |
+| Tema 1: Introducció i fonaments de la IA, amb ús responsable | 6 |
+| Cerca, planificació, optimització i CSP | 23 |
 | Sistemes experts, regles i lògica difusa | 14 |
-| PLN, embeddings, Transformers i RAG | 18 |
+| PLN, embeddings, Transformers i RAG | 22 |
 | Visió i robòtica | 10 |
 | [Projecte integrador]({% link apunts/2.-segon_trimestre/10.-Projecte integrador/projecte_integrador.md %}) | 15 |
 | **Total** | **90** |
