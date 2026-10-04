@@ -1,5 +1,5 @@
 ---
-title: 1. Introducció
+title: 1. Introducció i fonaments de la IA
 parent: 1. Primera Avaluació
 layout: default
 has_children: true
@@ -7,7 +7,9 @@ has_toc: false
 nav_order: 1
 ---
 
-# 1. Introducció a la intel·ligència artificial
+# 1. Introducció i fonaments de la intel·ligència artificial
+
+**Durada orientativa: 3 hores.** Presentació del camp, agents, paradigmes i principals famílies de tècniques. El bloc d'ús responsable va a continuació, dins d'aquest mateix tema.
 
 ## Material
 
