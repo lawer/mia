@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Exercicis IA responsable
-parent: 0. IA responsable, segura i centrada en les persones
+parent: 1.2 Ús responsable, segur i centrat en les persones
 ---
 
 # Exercicis d'aula: decidir, mesurar i revisar

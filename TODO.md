@@ -62,10 +62,10 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 ## Fase 3 - Nuevos contenidos y practicas
 
-- [x] Crear el primer borrador de la Unidad 0 de IA responsable, privacidad y seguridad: `apunts/1.-primer_trimestre/0.-IA responsable/ia_responsable.md`.
-  - Duracion orientativa: 5 horas; se situa antes de la unidad de introduccion.
-  - Incluye presentacion MARP, secuencia de trabajo, dos ejercicios de aula con casos y datos ficticios, practica integradora y criterios de evaluacion.
-  - Incluye consulta del RGPD y el Reglamento Europeo de IA en fuentes oficiales, sin convertir el material en asesoramiento juridico.
+- [x] Integrar l'ús responsable dins del tema 1, després dels fonaments: `apunts/1.-primer_trimestre/0.-IA responsable/ia_responsable.md`.
+  - El tema 1 queda en 6 hores: 3 hores d'introducció i 3 hores d'aplicació responsable.
+  - La seqüència responsable inclou dos exercicis breus, un cas integrador i una rúbrica amb evidències observables.
+  - Inclou consulta del RGPD i el Reglament Europeu d'IA en fonts oficials, sense convertir el material en assessorament jurídic.
 
 - [x] Crear una ficha de analisis de riesgos reutilizable en las practicas relevantes.
   - Proposito, usuarios, personas afectadas, alternativas y limites.
@@ -100,29 +100,22 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 ## Proyecto integrador
 
-- [ ] Disenar un proyecto final de 15 horas, separado de la Unidad 0.
-  - Caso propuesto: sistema de apoyo a la gestion de incidencias.
-  - Reglas para priorizar y derivar casos.
-  - Recuperacion documental para fundamentar respuestas.
-  - LLM para redactar respuestas con citas y limites.
-  - Pruebas normales, sin evidencia y adversarias.
-  - Memoria tecnica con arquitectura, evaluacion y ficha de riesgos.
-
-- [ ] Definir una rubrica comun para el proyecto.
-  - Adecuacion del modelo elegido al problema.
-  - Correccion y evaluacion tecnica.
-  - Trazabilidad, seguridad, privacidad y gestion de sesgos.
-  - Calidad de documentacion, demo y comunicacion de limites.
+- [x] Crear el proyecto final de 15 horas en `apunts/2.-segon_trimestre/10.-Projecte integrador/`.
+  - Guía en cinco sesiones con reglas, RAG, borradores de respuesta y revisión humana.
+  - Corpus y once incidencias sintéticas: casos bilingües, fuera del corpus, de riesgo, de inyección y documentos obsoletos.
+  - Criterios técnicos de aceptación, entregables, memoria y defensa.
+- [x] Definir una rúbrica común para el proyecto.
+  - Adecuación del diseño, funcionamiento técnico y evaluación.
+  - Responsabilidad, privacidad, seguridad, documentación y comunicación.
 
 ## Distribucion orientativa de 90 horas
 
 | Bloque | Horas |
 | --- | ---: |
-| Unidad 0: IA responsable, segura y centrada en las personas | 5 |
-| Fundamentos y seleccion de modelos | 8 |
-| Busqueda, planificacion, optimizacion y CSP | 20 |
+| Tema 1: Introduccion y fundamentos de IA, con uso responsable | 6 |
+| Busqueda, planificacion, optimizacion y CSP | 23 |
 | Sistemas expertos, reglas y logica difusa | 14 |
-| PLN, embeddings, Transformers y RAG | 18 |
+| PLN, embeddings, Transformers y RAG | 22 |
 | Vision y robotica | 10 |
 | Proyecto integrador | 15 |
 | **Total** | **90** |

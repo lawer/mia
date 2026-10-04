@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Guia docent: IA responsable
-parent: 0. IA responsable, segura i centrada en les persones
+parent: 1.2 Ús responsable, segur i centrat en les persones
 ---
 
-# Guia docent: IA responsable, segura i centrada en les persones
+# Bloc 1.2: ús responsable, segur i centrat en les persones
 
 ## Propòsit
 
@@ -33,13 +33,12 @@ En acabar la unitat, l'alumnat podrà:
 
 | Sessió | Contingut i activitat | Evidència |
 | --- | --- | --- |
-| 1 h | Propòsit, context, persones afectades i cost de l'error. Fer l'exercici 1 per triar una solució proporcionada. | Matriu de casos, decisions i justificacions |
-| 1 h | Dades, representativitat, biaix i mètriques per grups. Fer l'exercici 2 amb dades sintètiques. | Matrius de confusió, mètriques i cauteles |
-| 1 h | Privacitat, minimització, procedència i seguretat de dades. | Inventari de dades i controls |
-| 1 h | Transparència, accessibilitat, supervisió humana i marc normatiu. | Mesures de supervisió i comunicació |
-| 1 h | Cas integrador: classificar peticions fictícies de suport tècnic i defensar el disseny. | Fitxa de riscos completa i presentació breu |
+| 30 min | Propòsit, persones afectades, cost de l'error i decisió d'usar IA o no. Exercici 1 en parelles. | Justificacions breus amb risc i control |
+| 60 min | Dades, biaix i mètriques per grups. Exercici 2 amb dades sintètiques i posada en comú. | Matrius de confusió, mètriques i cauteles |
+| 30 min | Privacitat, transparència, seguretat i supervisió humana: triar els controls imprescindibles per al cas. | Inventari de dades i controls prioritaris |
+| 60 min | Cas integrador: classificar peticions fictícies de suport tècnic, completar la fitxa de riscos i defensar el disseny. | Fitxa de riscos i defensa breu |
 
-Les sessions poden adaptar-se al calendari. En la pràctica s'utilitzen dades fictícies; no s'han d'introduir dades reals d'alumnat, famílies o personal en eines públiques.
+La seqüència suma 3 hores. Les activitats d'exercicis ocupen aproximadament 60–75 minuts; la resta es dedica a explicació breu, discussió i cas integrador. En la pràctica s'utilitzen dades fictícies; no s'han d'introduir dades reals d'alumnat, famílies o personal en eines públiques.
 
 ## Pràctica integradora
 
@@ -79,6 +78,8 @@ Cal completar aquesta fitxa abans d'una pràctica amb dades o resultats que pugu
 ## Connexió amb la resta del mòdul
 
 La fitxa es reutilitzarà, adaptada, en pràctiques amb dades, models o dispositius físics. Per exemple, en PLN s'afegiran proves d'instruccions malicioses i verificació de fonts; en visió, consentiment, representativitat i vigilància; en robòtica, límits físics, parada segura i cessió del control.
+
+La fitxa i els criteris es reprendran de manera integrada en el [projecte final de 15 hores]({% link apunts/2.-segon_trimestre/10.-Projecte integrador/projecte_integrador.md %}), on es combinen regles, recuperació documental, generació sota revisió i proves adversàries.
 
 ## Fonts per a consulta
 
