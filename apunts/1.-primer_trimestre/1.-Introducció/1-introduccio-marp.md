@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p {
 - Diferents tècniques per construir agents intel·ligents.
 - Avantatges, limitacions i costos de cada tècnica.
 - Camps d'aplicació i impacte sobre les persones.
-- Riscos ètics, legals i de seguretat.
+- Com triar entre famílies de tècniques i entendre'n les limitacions.
 
 ---
 
@@ -208,15 +208,9 @@ _class: invert lead
 
 ---
 
-## Seleccionar una solució
+## Seleccionar una tècnica
 
-Abans d'usar IA, hem de preguntar-nos:
-
-- Es pot resoldre amb una regla, una consulta o un procés convencional?
-- Disposem de dades adequades i amb permís per usar-les?
-- Necessitem una resposta explicable i auditable?
-- Quin és el cost d'un error?
-- Qui revisarà els casos incerts o sensibles?
+Relacionem el problema amb la família de tècniques: regles per a condicions estables, cerca per a rutes i plans, aprenentatge per a patrons en dades, i recuperació o RAG per a documentació. La idoneïtat i els riscos d'ús es treballen al bloc següent.
 
 ---
 
@@ -242,13 +236,9 @@ _class: invert lead
 
 ---
 
-## IA responsable
+## Responsabilitat al llarg del mòdul
 
-- Les dades poden contenir errors, desequilibris i biaixos.
-- Un model pot perjudicar persones o grups encara que tinga una mètrica global alta.
-- Cal protegir dades personals i controlar qui pot accedir al sistema.
-- Els resultats generats necessiten verificació quan tenen conseqüències rellevants.
-- La responsabilitat no desapareix perquè la decisió l'haja proposada un sistema.
+La tria tècnica té conseqüències per a les persones, les dades i l'organització. En el bloc següent aplicarem aquests criteris a biaixos, privacitat, verificació, supervisió i responsabilitat.
 
 ---
 
