@@ -80,6 +80,8 @@ Cal completar aquesta fitxa abans d'una pràctica amb dades o resultats que pugu
 
 La fitxa es reutilitzarà, adaptada, en pràctiques amb dades, models o dispositius físics. Per exemple, en PLN s'afegiran proves d'instruccions malicioses i verificació de fonts; en visió, consentiment, representativitat i vigilància; en robòtica, límits físics, parada segura i cessió del control.
 
+La fitxa i els criteris es reprendran de manera integrada en el [projecte final de 15 hores]({% link apunts/2.-segon_trimestre/10.-Projecte integrador/projecte_integrador.md %}), on es combinen regles, recuperació documental, generació sota revisió i proves adversàries.
+
 ## Fonts per a consulta
 
 - [Comissió Europea: marc regulador de la intel·ligència artificial](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
