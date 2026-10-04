@@ -54,6 +54,16 @@ Copieu la taula i completeu-la durant les proves.
 
 | ID | Categoria/derivació esperada? | Font pertinent entre top 3? | Resposta sustentada i citada? | Revisió/abstenció correcta? | Canvi proposat |
 | --- | --- | --- | --- | --- | --- |
-| T01–T10 | | | | | |
+| T01 | | | | | |
+| T02 | | | | | |
+| T03 | | | | | |
+| T04 | | | | | |
+| T05 | | | | | |
+| T06 | | | | | |
+| T07 | | | | | |
+| T08 | | | | | |
+| T09 | | | | | |
+| T10 | | | | | |
+| T11 | | | | | |
 
-Per a T01–T10, anoteu una fila per tiquet. Si el model no genera resposta i s'utilitza una plantilla, avalueu igualment les cites, els límits i la derivació.
+Si el model no genera resposta i s'utilitza una plantilla, avalueu igualment les cites, els límits i la derivació.
