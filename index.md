@@ -20,7 +20,7 @@ El mòdul es planifica en **90 hores**. La unitat d'IA responsable obri el curs 
 | Sistemes experts, regles i lògica difusa | 14 |
 | PLN, embeddings, Transformers i RAG | 18 |
 | Visió i robòtica | 10 |
-| Projecte integrador | 15 |
+| [Projecte integrador]({% link apunts/2.-segon_trimestre/10.-Projecte integrador/projecte_integrador.md %}) | 15 |
 | **Total** | **90** |
 
 ## Extras
