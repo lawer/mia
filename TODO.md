@@ -62,17 +62,16 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 ## Fase 3 - Nuevos contenidos y practicas
 
-- [ ] Crear un bloque practico de IA responsable, privacidad y seguridad.
-  - RGPD: minimizacion, finalidad, datos sensibles y conservacion.
-  - Reglamento Europeo de IA: riesgo, transparencia, supervision humana y documentacion.
-  - Sesgos, trazabilidad, explicabilidad y accesibilidad.
-  - Seguridad por diseno y riesgos de LLM: prompt injection, fuga de datos y automatizacion no supervisada.
+- [x] Crear el primer borrador de la Unidad 0 de IA responsable, privacidad y seguridad: `apunts/1.-primer_trimestre/0.-IA responsable/ia_responsable.md`.
+  - Duracion orientativa: 5 horas; se situa antes de la unidad de introduccion.
+  - Incluye presentacion MARP, secuencia de trabajo, practica con datos ficticios y criterios de evaluacion.
+  - Incluye consulta del RGPD y el Reglamento Europeo de IA en fuentes oficiales, sin convertir el material en asesoramiento juridico.
 
-- [ ] Anadir una ficha de riesgos obligatoria a cada practica relevante.
-  - Problema, usuarios afectados y limites del sistema.
-  - Origen, licencia y datos personales del conjunto de datos.
-  - Metricas, casos de fallo y mecanismo de supervision humana.
-  - Riesgos de sesgo, privacidad y seguridad, con mitigaciones.
+- [x] Crear una ficha de analisis de riesgos reutilizable en las practicas relevantes.
+  - Proposito, usuarios, personas afectadas, alternativas y limites.
+  - Origen, licencia, minimizacion y datos personales.
+  - Metricas, casos de fallo, sesgos y mitigaciones.
+  - Supervision humana, comunicacion y condiciones para detener el uso.
 
 - [ ] Crear una practica de RAG con fuentes verificables.
   - Preparacion, segmentacion e indexacion de un corpus delimitado.
@@ -101,7 +100,7 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 ## Proyecto integrador
 
-- [ ] Disenar un proyecto final de 10 a 15 horas.
+- [ ] Disenar un proyecto final de 15 horas, separado de la Unidad 0.
   - Caso propuesto: sistema de apoyo a la gestion de incidencias.
   - Reglas para priorizar y derivar casos.
   - Recuperacion documental para fundamentar respuestas.
@@ -119,9 +118,11 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 | Bloque | Horas |
 | --- | ---: |
-| Fundamentos y seleccion de modelos | 10 |
-| Busqueda, planificacion, optimizacion y CSP | 22 |
-| Sistemas expertos, reglas y logica difusa | 15 |
-| PLN, embeddings, Transformers y RAG | 20 |
-| Vision y robotica | 13 |
-| IA responsable y proyecto integrador | 10 |
+| Unidad 0: IA responsable, segura y centrada en las personas | 5 |
+| Fundamentos y seleccion de modelos | 8 |
+| Busqueda, planificacion, optimizacion y CSP | 20 |
+| Sistemas expertos, reglas y logica difusa | 14 |
+| PLN, embeddings, Transformers y RAG | 18 |
+| Vision y robotica | 10 |
+| Proyecto integrador | 15 |
+| **Total** | **90** |
