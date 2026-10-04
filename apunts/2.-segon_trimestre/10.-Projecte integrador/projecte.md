@@ -27,7 +27,7 @@ L'assistent no diagnostica persones, no demana contrasenyes, no executa accions,
 - Tracteu indicis de risc físic, seguretat o incidència compartida com a motiu de revisió urgent; no presenteu una hipòtesi com un fet confirmat.
 - Si falten dades o hi ha conflicte entre indicis, deriveu el cas a una persona.
 
-### 2. Recuperació documental (RAG)
+### 2. Recuperació augmentada per generació (RAG)
 
 - Indexeu només els documents de prova de la pàgina de dades.
 - Recupereu fragments rellevants i mostreu l'identificador i el títol del document.
