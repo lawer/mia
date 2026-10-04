@@ -101,12 +101,12 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 ## Proyecto integrador
 
 - [x] Crear el proyecto final de 15 horas en `apunts/2.-segon_trimestre/10.-Projecte integrador/`.
-  - Guia en cinc sessions, prototip amb regles, RAG, esborranys i revisio humana.
-  - Corpus i onze incidencies sintetiques, incloent-hi casos bilingues, fora de corpus, d'alt risc, d'injeccio i document obsolet.
-  - Criteris tecnics d'acceptacio, lliurables, memoria i defensa.
-- [x] Definir una rubrica comuna per al projecte.
-  - Adequacio del disseny, funcionament tecnic i avaluacio.
-  - Responsabilitat, privacitat, seguretat, documentacio i comunicacio.
+  - Guía en cinco sesiones con reglas, RAG, borradores de respuesta y revisión humana.
+  - Corpus y once incidencias sintéticas: casos bilingües, fuera del corpus, de riesgo, de inyección y documentos obsoletos.
+  - Criterios técnicos de aceptación, entregables, memoria y defensa.
+- [x] Definir una rúbrica común para el proyecto.
+  - Adecuación del diseño, funcionamiento técnico y evaluación.
+  - Responsabilidad, privacidad, seguridad, documentación y comunicación.
 
 ## Distribucion orientativa de 90 horas
 
