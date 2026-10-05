@@ -4,10 +4,10 @@ Documento de trabajo para adaptar el modulo `5071 - Modelos de Inteligencia Arti
 
 ## Fase 1 - Correcciones y actualizacion base
 
-- [ ] Corregir las implementaciones didacticas de UCS y A* en `apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/continguts.md`.
-  - UCS debe conservar y actualizar el menor coste conocido de cada estado.
-  - A* debe priorizar correctamente `f(n) = g(n) + h(n)`.
-  - Incluir casos de prueba que comparen coste, nodos explorados y ruta encontrada.
+- [x] Corregir las implementaciones didacticas de UCS y A*.
+  - UCS descarta entradas duplicadas de la frontera antes de expandirlas.
+  - A* mantiene separados `f(n)` y `g(n)` sin acumular heuristicas dentro de `g(n)`.
+  - El ejercicio de Rumania compara coste y estados expandidos para los pesos 0, 1, 2 y 100.
 
 - [ ] Corregir conceptos de sistemas basados en reglas en `apunts/2.-segon_trimestre/6.-Sistemes Basats en Regles/continguts.md`.
   - Definir el encadenamiento hacia atras como razonamiento deductivo dirigido por objetivos.

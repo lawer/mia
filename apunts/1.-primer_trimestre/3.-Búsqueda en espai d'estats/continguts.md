@@ -452,14 +452,19 @@ def cerca_cost_uniforme(estat_inicial):
 
     while frontera:
         cost_actual, estat = frontera.pop()
+
+        # La frontera pot contenir el mateix estat més d'una vegada.
+        if estat in visitats:
+            continue
+
         visitats.add(estat)
 
         if es_solucio(estat):
             return estat
 
-        for cost, succesor in succesors(estat):
+        for cost_accio, succesor in succesors(estat):
             if succesor not in visitats:
-                frontera.append(cost + cost_actual, succesor)
+                frontera.append(cost_actual + cost_accio, succesor)
 ```
 
 ##### Propietats
@@ -557,6 +562,7 @@ def cerca_voraç(estat_inicial):
     * La búsqueda de cost uniforme ordena pel cost del camí o _cost cap enrere_: **$g(n)$**
     * La búsqueda voraç ordena pel cost de la heurística o _cost endavant_: **$h(n)$**
     * L'algorisme **A*** ordena per la suma dels dos: **$f(n) = g(n) + h(n)$**
+    * El cost real recorregut **sempre és $g(n)$**; $f(n)$ només serveix per ordenar la frontera
 > **Garanteix trobar la solució òptima _(si $h(n)$ és admissible)_**
 
 #### Exemple: Viatjar per Romania (I)
@@ -576,21 +582,26 @@ def cerca_voraç(estat_inicial):
 ```python
 def cerca_a_estrella(estat_inicial):
     """Cerca A* en un problema."""
-    frontera = priority_queue([(0, estat_inicial)])
+    frontera = priority_queue([(h(estat_inicial), 0, estat_inicial)])
     visitats = set()
 
     while frontera:
-        cost_actual, estat = frontera.pop()
+        _, cost_actual, estat = frontera.pop()
+
+        if estat in visitats:
+            continue
+
         visitats.add(estat)
 
         if es_solucio(estat):
-            return estat
+            return estat, cost_actual
 
-        for cost, succesor in succesors(estat):
+        for cost_accio, succesor in succesors(estat):
             if succesor not in visitats:
-                cost_acumulat_h = cost + cost_actual + h(succesor)
-                frontera.append(cost_acumulat_h,
-                 succesor)
+                nou_cost = cost_actual + cost_accio
+                prioritat = nou_cost + h(succesor)
+                frontera.append(prioritat, nou_cost, succesor)
+
 ```
 
 #### Propietats
@@ -601,7 +612,15 @@ def cerca_a_estrella(estat_inicial):
 |Optimalitat|Sí
 |Complexitat temporal i espacial| $O(b^d)$| On $b$ és el factor de ramificació i $d$ és la profunditat de la solució|
 
-> **Condició**: Aquestes propietats es compleixen si la heurística és **_admissible_**
+> **Condició**: Aquestes propietats es compleixen si la heurística és **_consistent_** (com la distància en línia recta de Romania).
+
+#### Connexió amb l'exercici de Romania
+
+* Podem ponderar la heurística amb $f_w(n) = g(n) + w h(n)$
+    * $w = 0$: cerca de cost uniforme
+    * $w = 1$: A* amb heurística admissible
+    * $w > 1$: A* ponderat; explora menys estats, però pot perdre optimalitat i apropar-se a la cerca voraç
+* Prova-ho a l'[exercici de Romania](4.-romania.ipynb) comparant els pesos 0, 1, 2 i 100.
 
 #### Heurístiques admissibles (I)
 
