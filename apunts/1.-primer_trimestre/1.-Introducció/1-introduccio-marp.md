@@ -14,10 +14,12 @@ style: |
   section.lead h1 { font-size: 2em; }
   section table { font-size: 0.9em; }
   section footer, section::after { font-size: 14px; }
+  section p:has(a) { font-size: 16px; }
 ---
 
 <!-- Transcripció del PDF original 1-introduccio.pdf: 55 diapositives.
-Es conserven el contingut i els errors originals; la revisió queda pendent.
+Primera revisió conceptual: història, models, comparació humana/IA, racionalitat, regles, lògica difusa i cerca.
+Es mantenen l’ordre i les 55 diapositives originals.
 Només les il·lustracions són imatges: el text, les llistes i les taules són Markdown editable. -->
 
 <!-- Diapositiva 1 del PDF original -->
@@ -78,11 +80,19 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 <!-- Diapositiva 5 del PDF original -->
 
+<<<<<<< HEAD
 <!-- _class: lead -->
 
 ![bg](images/original/diapositiva-05.png)
 
 # Una mica d'història
+=======
+- Com formular un problema perquè un sistema el puga resoldre.
+- Diferents tècniques per construir agents intel·ligents.
+- Avantatges, limitacions i costos de cada tècnica.
+- Camps d'aplicació i impacte sobre les persones.
+- Com triar entre famílies de tècniques i entendre'n les limitacions.
+>>>>>>> 207e18b9b28f9ffea178f8a540286d47fe1a7e43
 
 ---
 
@@ -94,9 +104,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 1950: Alan Turing
 
-- La prova de Turing és una proposta de test per a la intel·ligència d'una màquina
-- La va proposar Alan Turing el 1950 en el seu article *"Computing Machinery and Intelligence"*.
-- L'objectiu de la prova és determinar *si una màquina pot pensar*.
+- Turing publica *Computing Machinery and Intelligence*.
+- Proposa substituir «poden pensar les màquines?» pel **joc d’imitació**, una prova del comportament observable.
+- La prova avalua la capacitat de conversar de manera semblant a una persona.
+- Superar-la no demostra, per si sol, consciència o comprensió.
+
+Font: [Turing (1950)](https://www.cse.msu.edu/~cse841/papers/Turing.html).
 
 ---
 
@@ -108,8 +121,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## El test
 
-- Un humà, aïllat en una habitació, ha de mantenir una conversa escrita amb **dues persones, una humana i una màquina**.
-- Si l'humà *no pot distingir* entre les dues, la màquina es **considera que pensa**.
+- En la versió habitual, una persona conversa per escrit amb **un humà i una màquina**, sense veure’ls.
+- Ha d’identificar quin interlocutor és la màquina a partir de les respostes.
+- El resultat depén de les preguntes, el temps i les condicions de la prova.
+- Imitar una conversa humana no equival a demostrar totes les capacitats intel·lectuals humanes.
+
+Font: [Turing (1950)](https://www.cse.msu.edu/~cse841/papers/Turing.html).
 
 ---
 
@@ -117,10 +134,14 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## La pregunta de Turing
 
-| | |
-| --- | --- |
-| **Poden pensar les màquines?:** | La pregunta de si les màquines poden pensar és massa vaga, i hauria de ser reemplaçada per una altra pregunta que pugui ser contestada per mitjà d'un sí o un no, que tingui una significació precisa. |
-| **Poden les màquines fer el que els humans poden fer?:** | Aquesta nova pregunta té l'avantatge que és possible contestar-la definitivament i que molts arguments que s'han fet per contestar la pregunta original poden ser reutilitzats. \_\_ |
+- **Pregunta inicial:** «Poden pensar les màquines?»
+- **Dificultat:** no hi ha una definició única i operativa de «pensar».
+- **Proposta:** estudiar si una màquina pot participar amb èxit en el joc d’imitació.
+- **Abast:** és un criteri de comportament en una situació concreta, no una prova general de consciència.
+
+Aquest resum és una paràfrasi de l’article, no una citació literal.
+
+Font: [Turing (1950), apartats 1 i 6](https://www.cse.msu.edu/~cse841/papers/Turing.html).
 
 ---
 
@@ -130,12 +151,14 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ![bg right:45% fit](images/original/diapositiva-09.png)
 
-## 1956 - 1974: Els inicis
+## 1955–1974: Els inicis
 
-- **1956**: *John McCarthy* - La conferència de Dartmouth. El naixement de la IA.
-- **1957**: *Herbert Simon* - "En 10 anys el campió mundial d'escacs serà una màquina"
-- **1958**: *Frank Rosenblatt* - El perceptró
-- **1967**: *Marvin Minsky* - "En una generació, el problema de la IA estarà resolt"
+- **1955:** McCarthy i col·laboradors utilitzen el terme *intel·ligència artificial* en la proposta de Dartmouth.
+- **1956:** se celebra la trobada de Dartmouth.
+- **1958:** Rosenblatt publica el seu treball sobre el perceptró, un model que aprén a classificar.
+- Les primeres demostracions generen expectatives que superen les capacitats dels sistemes de l’època.
+
+Fonts: [Dartmouth (1955)](https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html), [Rosenblatt (1958)](https://www.cs.cmu.edu/~epxing/Class/10715/reading/Rosenblatt.perceptron.pdf).
 
 ---
 
@@ -145,12 +168,14 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ![bg right:45% fit](images/original/diapositiva-10.png)
 
-## 1974 - 1993: Hi ha esperança?
+## 1974–1993: Expectatives i límits
 
-- **1974-1980**: Pocs avenços, desencantament i crisi de finançament (AI Winter)
-- **Principis dels 80**: Apareixen els sistemes experts
-- **1982 - 1992**: Projecte Japonès de la 5a generació
-- **1987-1993**: Els sistemes experts fracassen. (II AI Winter)
+- Els **hiverns de la IA** són períodes de desencantament i reducció del finançament.
+- Als anys 80 creix l’ús comercial dels **sistemes experts**, amb antecedents com DENDRAL als anys 60.
+- Recollir i mantenir el coneixement expert resulta costós.
+- Les dificultats comercials no fan desaparèixer la recerca ni els sistemes basats en regles.
+
+Font: [Història de DENDRAL i dels sistemes experts](https://softwarepreservation.computerhistory.org/AI/DENDRAL/).
 
 ---
 
@@ -162,10 +187,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 1997: Deep Blue
 
-- Deep Blue guanya a Kasparov, el campió mundial d'escacs.
-- Els sistemes experts són capaços de superar a humans en tasques específiques.
-- Després de la victòria, IBM desmantella el projecte.
-- **Els sistemes experts no són capaços de superar a humans en tasques generals.**
+- Deep Blue, d’IBM, derrota el campió mundial Garri Kaspàrov en un matx d’escacs.
+- Combina **cerca**, avaluació de posicions i maquinari especialitzat.
+- Mostra que una màquina pot superar els millors humans en una tasca delimitada.
+- Guanyar als escacs no demostra intel·ligència general.
+
+Font: [IBM: Deep Blue](https://www.ibm.com/history/deep-blue).
 
 ---
 
@@ -177,10 +204,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 2002: Roomba
 
-- Roomba va ser el primer robot domèstic comercialitzat.
-- És capaç de netejar una habitació sense cap mena d'ajuda humana.
-- Detecta obstacles i els evita, i torna a la seva base quan s'acaba la bateria.
-- **El 2017, Roomba va vendre més de 20 milions d'unitats.**
+- iRobot llança Roomba el **2002** i contribueix a popularitzar els robots aspiradors domèstics.
+- Combina sensors i accions per netejar el terra i reaccionar davant d’obstacles.
+- L’autonomia no elimina el manteniment ni la preparació de l’entorn per part de l’usuari.
+- Les funcions, com el retorn a la base o la creació de mapes, depenen del model i la generació.
+
+Font: [Història d’iRobot](https://about.irobot.com/history).
 
 ---
 
@@ -190,13 +219,14 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ![bg right:45% fit](images/original/diapositiva-13.png)
 
-## 2005: DARPA Grand Challenge
+## 2004–2005: DARPA Grand Challenge
 
-- Després de 4 anys de preparació, el 2004 es va celebrar la primera edició del DARPA Grand Challenge.
-- Els participants havien de construir un vehicle autònom capaç de recórrer 240 km per un terreny desèrtic.
-- Els vehicles havien de ser capaços de prendre decisions sense cap mena d'ajuda humana.
-- Els 15 equips participants no van ser capaços de completar el recorregut.
-- **El 2005, 5 equips van completar el recorregut**.
+- El **2004**, 15 vehicles intenten recórrer autònomament una ruta desèrtica d’uns **229 km**.
+- Cap vehicle completa el recorregut.
+- El **2005**, cinc equips completen una nova ruta d’uns **212 km**.
+- El repte impulsa la integració de percepció, planificació i control per a la conducció autònoma.
+
+Fonts: [DARPA: 2004](https://www.darpa.mil/news/2014/grand-challenge-ten-years-later), [DARPA: 2005](https://www.darpa.mil/about/innovation-timeline/grand-challenge).
 
 ---
 
@@ -208,10 +238,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 2011: Watson
 
-- Watson guanya a Jeopardy, un concurs de preguntes i respostes
-- Va guanyar 1 milió de dòlars, que va donar a caritat.
-- Watson és capaç de processar llenguatge natural i respondre preguntes.
-- Va superar a dos dels millors jugadors de Jeopardy, que havien guanyat més de 3 milions de dòlars.
+- Watson, d’IBM, guanya a **Ken Jennings i Brad Rutter** en una competició de *Jeopardy!*.
+- Processa preguntes en llenguatge natural i busca possibles respostes.
+- Combina evidències i estima la confiança de cada resposta.
+- L’èxit en el concurs no implica que comprenga qualsevol situació com una persona.
+
+Font: [IBM: Watson a Jeopardy!](https://www.ibm.com/history/watson-jeopardy).
 
 ---
 
@@ -223,9 +255,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 2016: AlphaGo
 
-- AlphaGo guanya a Lee Sedol, un dels millors jugadors de Go.
-- El Go és un joc de tauler molt més complex que els escacs; fins aleshores, es considerava impossible de resoldre.
-- El moviment 37 de la partida 2 va sorprendre a tots els experts. AlphaGo va fer un moviment mai vist i que va acabar guanyant la partida.
+- AlphaGo derrota **Lee Sedol per 4–1** en un matx de Go.
+- Combina **xarxes neuronals, aprenentatge per reforç i cerca**.
+- El moviment 37 de la segona partida exemplifica una jugada sorprenent per als experts.
+- Assolir un nivell superhumà no significa haver resolt matemàticament el joc.
+
+Font: [Google DeepMind: AlphaGo](https://deepmind.google/research/alphago/).
 
 ---
 
@@ -237,9 +272,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 2017: AlphaGo Zero
 
-- AlphaGo Zero és capaç de jugar a Go sense cap mena d'informació sobre les regles.
-- Apren a jugar a Go jugant contra si mateix.
-- AlphaGo Zero va ser capaç de superar a AlphaGo amb només 3 dies d'entrenament.
+- Parteix de les **regles del Go**, sense entrenar-se amb partides humanes.
+- Aprén jugant contra si mateix mitjançant **aprenentatge per reforç**.
+- Combina una xarxa neuronal amb cerca per seleccionar jugades.
+- Després de tres dies d’entrenament, supera per **100–0** la versió d’AlphaGo que havia derrotat Lee Sedol.
+
+Font: [Silver i Hassabis (2017)](https://deepmind.google/blog/alphago-zero-starting-from-scratch/).
 
 ---
 
@@ -251,12 +289,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 2020: GPT-3
 
-- Forma part de la família de GPT-2, un model de llenguatge basat en xarxes neuronals.
-- Algunes de les aplicacions de GPT-3:
-  - Generar textos a partir d'un text d'entrada.
-  - Traduir textos a un altre idioma.
-  - Contestar preguntes.
-  - Programar a partir de descripcions textuals.
+- Model de llenguatge **autoregressiu** de la família GPT, basat en Transformers.
+- La versió més gran presentada té **175.000 milions de paràmetres**.
+- Genera text predient el token següent a partir del context.
+- Pot fer tasques com traducció i resposta a preguntes amb instruccions i exemples dins del context, sense actualitzar els pesos.
+
+Font: [Brown i col·laboradors (2020)](https://arxiv.org/abs/2005.14165).
 
 ---
 
@@ -268,9 +306,12 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## 2021: DALL·E
 
-- DALL·E és capaç de generar imatges a partir d'una descripció textual.
-- Funciona de forma similar a GPT-3, però en comptes de generar text, genera imatges.
-- Disposa d'una base de dades de 12GB d'imatges i textos.
+- El primer DALL·E genera imatges a partir de descripcions textuals.
+- Utilitza un Transformer que modela seqüències de tokens de text i d’imatge.
+- El model té **12.000 milions de paràmetres**: aquesta xifra no és la mida d’una base de dades en GB.
+- S’entrena amb parelles de text i imatge.
+
+Font: [Ramesh i col·laboradors (2021)](https://arxiv.org/abs/2102.12092).
 
 ---
 
@@ -280,11 +321,14 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ![bg right:45% fit](images/original/diapositiva-19.png)
 
-## 2022: GPT-4
+## 2023: GPT-4
 
-- Al igual que GPT-3, GPT-4 és un model de llenguatge basat en l'arquitectura transformer.
-- GPT-4 utilitza 10 bilions de paràmetres, 100 vegades més que GPT-3.
-- És capaç de generar textos, imatges, codi, música, etc.
+- L’informe de 2023 presenta un model basat en **Transformers** que accepta text i imatges i produeix **text**.
+- Pot generar explicacions, resums i codi; això no equival a generar directament imatges o àudio.
+- L’informe no publica el nombre de paràmetres.
+- Pot produir errors i informació inventada, encara que la resposta semble convincent.
+
+Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 
 ---
 
@@ -371,30 +415,29 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 <!-- Diapositiva 26 del PDF original -->
 
-## I. computacional vs. I. humana
+## Intel·ligència humana i artificial
 
-| Intel·ligència humana | Intel·ligència computacional |
-| --- | --- |
-| Biològica | Computacional |
-| General | Específica |
-| Conscient | Inconscient |
-| Emocional | Racional |
-| Adaptativa | Estàtica |
-| Evolutiva | Dissenyada |
+| Aspecte | Persones | Sistemes d’IA |
+| --- | --- | --- |
+| Aprenentatge | Experiència, cos i interacció social | Dades, regles i interacció, segons el sistema |
+| Adaptació | Transferència entre contextos | Variable; cal avaluar-la en cada tasca |
+| Decisions | Raonament, emocions i biaixos | Objectius definits, aproximacions i biaixos |
+| Limitacions | Errors i recursos limitats | Errors i dependència del disseny i les dades |
+
+El rendiment observable no demostra, per si sol, consciència o experiència subjectiva.
 
 ---
 
 <!-- Diapositiva 27 del PDF original -->
 
-## Tipus d'intel·ligència artificial
+## IA estreta, IA general i IA forta
 
-- **IA feble**: La IA és capaç de superar a humans en tasques específiques.
-  - No significa que no siga potent.
-  - Alguns experts prefireixen el nom **IA estreta**
-- **IA forta**: La IA és capaç de superar a humans en tasques generals.
-  - També es coneix com **IA general** o **AGI** (artificial general intelligence).
-  - Es comportaria com un humà en qualsevol situació, generalitzant el seu coneixement.
-  - No existeix encara (tal vegada per sort - singularitat tecnològica).
+- **IA estreta:** especialitzada en tasques o dominis delimitats; pot superar el rendiment humà en aquests àmbits.
+- **IA general (AGI):** capacitat d’aprendre i transferir coneixement entre una gran varietat de tasques. La definició i l’avaluació són objecte de debat.
+- **IA forta, en sentit filosòfic:** tesi que un sistema computacional pot tenir comprensió o estats mentals reals.
+- Són distincions diferents: amplitud de capacitats i naturalesa de la comprensió. No convé usar «general» i «forta» com a sinònims automàtics.
+
+Font: [McCarthy sobre el debat de la IA forta](https://www-formal.stanford.edu/jmc/chinese.html).
 
 ---
 
@@ -410,10 +453,15 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 <!-- Diapositiva 29 del PDF original -->
 
-- Els humans *no sempre prenen les millors decisions*; l'IA pot ajudar-nos en aquestes tasques.
-- **Però, què és una decisió racional?**
-  - Una decisió racional és aquella que **maximitza la probabilitat** d'aconseguir un objectiu.
-  - Per tant, entendrem que una màquina **intel·ligent** és aquella que **pren decisions racionals**.
+
+## Què és una decisió racional?
+
+- Un agent racional selecciona l’acció amb **més utilitat o rendiment esperat**, segons la informació disponible.
+- Cal considerar els possibles resultats, les seues probabilitats, els costos i les restriccions.
+- **Exemple:** un robot pot triar una ruta més llarga si redueix prou el risc de col·lisió.
+- Racionalitat no significa omniscència: una bona decisió pot tenir un resultat desfavorable.
+
+Font: [Poole i Mackworth: utilitat esperada](https://artint.info/3e/html/ArtInt3e.Ch12.S1.html).
 
 ---
 
@@ -496,6 +544,7 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ---
 
+<<<<<<< HEAD
 <!-- Diapositiva 36 del PDF original -->
 
 ## Definicions
@@ -503,6 +552,11 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 - **Técnica**: Conjunt de procediments o recursos que s'han d'aplicar per a aconseguir un objectiu.
 - **Tècniques de la IA**: Conjunt de tècniques, algorismes i mètodes que s'apliquen per a resoldre problemes d'IA.
 - Combinant diferents paradigmes, podem obtenir **diferents tècniques**.
+=======
+## Seleccionar una tècnica
+
+Relacionem el problema amb la família de tècniques: regles per a condicions estables, cerca per a rutes i plans, aprenentatge per a patrons en dades, i recuperació o RAG per a documentació. La idoneïtat i els riscos d'ús es treballen al bloc següent.
+>>>>>>> 207e18b9b28f9ffea178f8a540286d47fe1a7e43
 
 ---
 
@@ -535,6 +589,7 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ---
 
+<<<<<<< HEAD
 <!-- Diapositiva 39 del PDF original -->
 
 ## Sistemes experts (II)
@@ -546,6 +601,11 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 - Una vegada solucionat el problema, el cas es guarda per a utilitzar-lo en el futur.
 - D'aquesta forma, el sistema va aprenent a resoldre problemes més complexos.
 - Camps d'aplicació: **Medicina**, **enginyeria**, **disseny**, etc.
+=======
+## Responsabilitat al llarg del mòdul
+
+La tria tècnica té conseqüències per a les persones, les dades i l'organització. En el bloc següent aplicarem aquests criteris a biaixos, privacitat, verificació, supervisió i responsabilitat.
+>>>>>>> 207e18b9b28f9ffea178f8a540286d47fe1a7e43
 
 ---
 
@@ -555,11 +615,13 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ### Sistemes basats en regles
 
-- Es defineixen regles que representen coneixement.
-- Les regles seran definides per humans experts en el domini.
-- El sistema inferirà noves regles a partir de les regles existents.
-- Útils en dominis on falten experts.
-- Camps d'aplicació: **Diagnòstic mèdic**, **control de processos**, **sistemes de recomanació**, etc.
+- La base de coneixement conté **fets i regles**, sovint definits amb ajuda d’experts.
+- El motor d’inferència aplica les regles per derivar **nous fets o conclusions**.
+- **Exemple:** «si el sòl està sec, cal regar» + «el sòl està sec» → «cal regar».
+- Inferir conclusions no és el mateix que aprendre o generar noves regles.
+- Aplicacions: diagnòstic, control de processos i suport a decisions.
+
+Font: [Poole i Mackworth: inferència amb clàusules definides](https://artint.info/2e/html2e/ArtInt2e.Ch5.S3.SS2.html).
 
 ---
 
@@ -569,10 +631,13 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ### Sistemes basats en lògica difusa
 
-- Útils per a representar coneixement amb incertesa.
-- Cada regla té un grau de certesa i es pot aplicar parcialment.
-- Permeten definir regles amb vocabulari semblant al dels humans: "molt", "poc", "bastant", etc.
-- Camps d'aplicació: **Robòtica**, **control de processos**, **sistemes de recomanació**, etc.
+- Representen conceptes graduals, com «temperatura alta» o «velocitat baixa».
+- Un **grau de pertinença entre 0 i 1** indica fins a quin punt un valor encaixa en un conjunt difús.
+- **Exemple:** 28 °C pot pertànyer a «calor» amb grau 0,7, segons la funció definida. No significa un 70 % de probabilitat que faça calor.
+- Les regles s’activen gradualment i combinen els seus resultats.
+- Aplicacions: control de temperatura, robòtica i altres sistemes de control.
+
+Font: [Fuzzy sets, Scholarpedia](https://www.scholarpedia.org/article/Fuzzy_sets).
 
 ---
 
@@ -641,11 +706,14 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## Algorismes de cerca
 
-- Un algorisme de cerca és un algorisme que permet trobar una solució a un problema.
-- Els algorismes de cerca més utilitzats són:
-  - **Cerca no informada**: Cerca en amplada, cerca en profunditat, cerca en profunditat limitada, cerca en profunditat iterativa, cerca bidireccional, etc.
-  - **Cerca informada**: Cerca per avarícia, cerca de cost uniforme, cerca en profunditat limitada, cerca en profunditat iterativa, cerca bidireccional, etc.
-- Útils per a resoldre problemes de **planificació**, **disseny**, **control**, etc.
+- Exploren estats i accions per trobar una solució.
+- **Cerca no informada:** no utilitza una estimació heurística del cost restant.
+  - Amplada, profunditat, profunditat limitada, aprofundiment iteratiu i **cost uniforme**.
+- **Cerca informada:** utilitza una heurística per orientar l’exploració.
+  - Cerca voraç i **A\***.
+- Cost uniforme ordena pel cost acumulat; A* combina aquest cost amb l’estimació del cost restant.
+
+Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 ---
 

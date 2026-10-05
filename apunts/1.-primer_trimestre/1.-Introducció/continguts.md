@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Continguts introducció
-parent: 1. Introducció
+parent: 1. Introducció i fonaments de la IA
 math: mathjax3
 ---
 
