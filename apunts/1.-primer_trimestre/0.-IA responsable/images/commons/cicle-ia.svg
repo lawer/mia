@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">AI system lifecycle assurance loop</title>
+  <desc id="desc">A seven-stage circular lifecycle links context and purpose, data and design, build and validate, release decision, operate and monitor, incident and change, and retire and learn, with evidence gates at every stage.</desc>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:title>AI system lifecycle assurance loop</dc:title>
+        <dc:creator>OpenAI Codex; prompted and reviewed by the ISO Checklist editorial team</dc:creator>
+        <dc:date>2026-07-18</dc:date>
+        <dc:description>Original educational vector diagram showing a generic AI system lifecycle assurance loop. It does not reproduce ISO/IEC 42001 requirements or controls and is not an ISO publication.</dc:description>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title{font:700 48px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .subtitle{font:400 23px Arial,Helvetica,sans-serif;fill:#475569}
+      .stage{font:700 22px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .small{font:400 17px Arial,Helvetica,sans-serif;fill:#475569}
+      .number{font:700 20px Arial,Helvetica,sans-serif;fill:#ffffff}
+      .center{font:700 34px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .center2{font:400 21px Arial,Helvetica,sans-serif;fill:#475569}
+      .footer{font:400 16px Arial,Helvetica,sans-serif;fill:#64748b}
+      .node{fill:#ffffff;stroke:#cbd5e1;stroke-width:2;rx:20;filter:url(#shadow)}
+      .flow{fill:none;stroke:#2563eb;stroke-width:5;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1600" height="14" fill="#0f766e"/>
+  <text x="90" y="88" class="title">AI system lifecycle assurance loop</text>
+  <text x="90" y="132" class="subtitle">Evidence, decision authority and reassessment travel with the system</text>
+
+  <path d="M900 205 C1035 205 1130 245 1215 300" class="flow"/>
+  <path d="M1370 372 C1400 415 1410 470 1390 520" class="flow"/>
+  <path d="M1240 625 C1195 690 1130 730 1065 755" class="flow"/>
+  <path d="M870 825 C800 850 730 850 660 825" class="flow"/>
+  <path d="M500 715 C420 680 350 630 320 590" class="flow"/>
+  <path d="M270 505 C255 450 280 400 330 355" class="flow"/>
+  <path d="M470 285 C560 220 650 195 705 195" class="flow"/>
+
+  <circle cx="800" cy="510" r="178" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="3"/>
+  <circle cx="800" cy="510" r="135" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+  <text x="800" y="482" text-anchor="middle" class="center">Continuous assurance</text>
+  <text x="800" y="522" text-anchor="middle" class="center2">Evidence at every gate</text>
+  <text x="800" y="555" text-anchor="middle" class="center2">Reassess when context changes</text>
+
+  <g transform="translate(640 145)">
+    <rect width="320" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#2563eb"/><text x="42" y="49" text-anchor="middle" class="number">1</text>
+    <text x="82" y="48" class="stage">Context &amp; purpose</text>
+    <text x="28" y="82" class="small">Scope • intended use • affected parties</text>
+    <text x="28" y="106" class="small">Gate: enter governance scope?</text>
+  </g>
+
+  <g transform="translate(1090 255)">
+    <rect width="360" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#2563eb"/><text x="42" y="49" text-anchor="middle" class="number">2</text>
+    <text x="82" y="48" class="stage">Data &amp; design</text>
+    <text x="28" y="82" class="small">Provenance • rights • safeguards</text>
+    <text x="28" y="106" class="small">Gate: ready for validation?</text>
+  </g>
+
+  <g transform="translate(1140 515)">
+    <rect width="360" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#2563eb"/><text x="42" y="49" text-anchor="middle" class="number">3</text>
+    <text x="82" y="48" class="stage">Build &amp; validate</text>
+    <text x="28" y="82" class="small">Testing • limits • risk treatment</text>
+    <text x="28" y="106" class="small">Gate: acceptance criteria met?</text>
+  </g>
+
+  <g transform="translate(870 720)">
+    <rect width="360" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#2563eb"/><text x="42" y="49" text-anchor="middle" class="number">4</text>
+    <text x="82" y="48" class="stage">Release decision</text>
+    <text x="28" y="82" class="small">Authority • conditions • rollback</text>
+    <text x="28" y="106" class="small">Gate: approve, restrict or stop?</text>
+  </g>
+
+  <g transform="translate(370 720)">
+    <rect width="360" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#0f766e"/><text x="42" y="49" text-anchor="middle" class="number">5</text>
+    <text x="82" y="48" class="stage">Operate &amp; monitor</text>
+    <text x="28" y="82" class="small">Performance • drift • overrides</text>
+    <text x="28" y="106" class="small">Gate: continue within conditions?</text>
+  </g>
+
+  <g transform="translate(100 515)">
+    <rect width="360" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#b45309"/><text x="42" y="49" text-anchor="middle" class="number">6</text>
+    <text x="82" y="48" class="stage">Incident &amp; change</text>
+    <text x="28" y="82" class="small">Escalation • cause • reassessment</text>
+    <text x="28" y="106" class="small">Gate: recover, modify or suspend?</text>
+  </g>
+
+  <g transform="translate(150 255)">
+    <rect width="360" height="120" class="node"/>
+    <circle cx="42" cy="42" r="23" fill="#be123c"/><text x="42" y="49" text-anchor="middle" class="number">7</text>
+    <text x="82" y="48" class="stage">Retire &amp; learn</text>
+    <text x="28" y="82" class="small">Exit • records • dependencies • lessons</text>
+    <text x="28" y="106" class="small">Gate: closure complete and verified?</text>
+  </g>
+
+  <line x1="90" y1="952" x2="1510" y2="952" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="90" y="980" class="footer">Independent educational diagram • Original synthesis • CC BY 4.0</text>
+  <text x="1510" y="980" text-anchor="end" class="footer">Not an ISO, IEC or certification-body publication</text>
+</svg>

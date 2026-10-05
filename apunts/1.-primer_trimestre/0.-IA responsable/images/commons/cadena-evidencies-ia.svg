@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">AI governance evidence chain</title>
+  <desc id="desc">Six connected stages show how scope and governance lead to an AI system inventory, risk and impact decisions, controls and ownership, evidence and testing, and finally decisions and improvement.</desc>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:title>AI governance evidence chain</dc:title>
+        <dc:creator>OpenAI Codex; prompted and reviewed by the ISO Checklist editorial team</dc:creator>
+        <dc:date>2026-07-18</dc:date>
+        <dc:description>Original educational vector diagram showing a generic AI governance evidence chain. It does not reproduce ISO/IEC 42001 requirements or controls and is not an ISO publication.</dc:description>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title{font:700 48px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .subtitle{font:400 23px Arial,Helvetica,sans-serif;fill:#475569}
+      .step{font:700 18px Arial,Helvetica,sans-serif;fill:#2563eb;letter-spacing:1.5px}
+      .heading{font:700 28px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .body{font:400 20px Arial,Helvetica,sans-serif;fill:#334155}
+      .artifact{font:700 17px Arial,Helvetica,sans-serif;fill:#0f766e}
+      .footer{font:400 16px Arial,Helvetica,sans-serif;fill:#64748b}
+      .card{fill:#ffffff;stroke:#cbd5e1;stroke-width:2;rx:22;filter:url(#shadow)}
+      .connector{fill:none;stroke:#2563eb;stroke-width:5;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1600" height="14" fill="#2563eb"/>
+  <text x="90" y="88" class="title">AI governance evidence chain</text>
+  <text x="90" y="132" class="subtitle">Trace each conclusion back to scope and forward to an accountable decision</text>
+
+  <path d="M490 320 H555" class="connector"/>
+  <path d="M1005 320 H1070" class="connector"/>
+  <path d="M1280 452 V530 H800" class="connector"/>
+  <path d="M1070 700 H1005" class="connector"/>
+  <path d="M555 700 H490" class="connector"/>
+
+  <g transform="translate(90 205)">
+    <rect width="400" height="245" class="card"/>
+    <circle cx="50" cy="50" r="27" fill="#dbeafe"/>
+    <text x="50" y="57" text-anchor="middle" class="step">01</text>
+    <text x="92" y="58" class="heading">Scope &amp; governance</text>
+    <text x="34" y="112" class="body">Define purpose, boundaries, roles,</text>
+    <text x="34" y="142" class="body">decision rights and review triggers.</text>
+    <rect x="34" y="179" width="332" height="42" rx="10" fill="#ecfdf5"/>
+    <text x="50" y="206" class="artifact">Output: approved scope and authority</text>
+  </g>
+
+  <g transform="translate(585 205)">
+    <rect width="420" height="245" class="card"/>
+    <circle cx="50" cy="50" r="27" fill="#dbeafe"/>
+    <text x="50" y="57" text-anchor="middle" class="step">02</text>
+    <text x="92" y="58" class="heading">AI system inventory</text>
+    <text x="34" y="112" class="body">Record purpose, owner, provider,</text>
+    <text x="34" y="142" class="body">users, dependencies and lifecycle.</text>
+    <rect x="34" y="179" width="352" height="42" rx="10" fill="#ecfdf5"/>
+    <text x="50" y="206" class="artifact">Output: stable system identifiers</text>
+  </g>
+
+  <g transform="translate(1100 205)">
+    <rect width="410" height="245" class="card"/>
+    <circle cx="50" cy="50" r="27" fill="#dbeafe"/>
+    <text x="50" y="57" text-anchor="middle" class="step">03</text>
+    <text x="92" y="58" class="heading">Risk &amp; impact</text>
+    <text x="34" y="112" class="body">Preserve scenarios, assumptions,</text>
+    <text x="34" y="142" class="body">affected parties and acceptance.</text>
+    <rect x="34" y="179" width="342" height="42" rx="10" fill="#ecfdf5"/>
+    <text x="50" y="206" class="artifact">Output: reasoned risk decisions</text>
+  </g>
+
+  <g transform="translate(1100 575)">
+    <rect width="410" height="245" class="card"/>
+    <circle cx="50" cy="50" r="27" fill="#dbeafe"/>
+    <text x="50" y="57" text-anchor="middle" class="step">04</text>
+    <text x="92" y="58" class="heading">Controls &amp; ownership</text>
+    <text x="34" y="112" class="body">Assign safeguards, operating criteria,</text>
+    <text x="34" y="142" class="body">owners, exceptions and due dates.</text>
+    <rect x="34" y="179" width="342" height="42" rx="10" fill="#ecfdf5"/>
+    <text x="50" y="206" class="artifact">Output: controlled responsibilities</text>
+  </g>
+
+  <g transform="translate(585 575)">
+    <rect width="420" height="245" class="card"/>
+    <circle cx="50" cy="50" r="27" fill="#dbeafe"/>
+    <text x="50" y="57" text-anchor="middle" class="step">05</text>
+    <text x="92" y="58" class="heading">Evidence &amp; testing</text>
+    <text x="34" y="112" class="body">Collect current records and test a</text>
+    <text x="34" y="142" class="body">defined population or sample.</text>
+    <rect x="34" y="179" width="352" height="42" rx="10" fill="#ecfdf5"/>
+    <text x="50" y="206" class="artifact">Output: reproducible assurance</text>
+  </g>
+
+  <g transform="translate(90 575)">
+    <rect width="400" height="245" class="card"/>
+    <circle cx="50" cy="50" r="27" fill="#dbeafe"/>
+    <text x="50" y="57" text-anchor="middle" class="step">06</text>
+    <text x="92" y="58" class="heading">Decide &amp; improve</text>
+    <text x="34" y="112" class="body">Record authority, conditions, actions,</text>
+    <text x="34" y="142" class="body">expiry and effectiveness review.</text>
+    <rect x="34" y="179" width="332" height="42" rx="10" fill="#ecfdf5"/>
+    <text x="50" y="206" class="artifact">Output: closed governance loop</text>
+  </g>
+
+  <line x1="90" y1="900" x2="1510" y2="900" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="90" y="938" class="footer">Independent educational diagram • Original synthesis • CC BY 4.0</text>
+  <text x="1510" y="938" text-anchor="end" class="footer">Not an ISO, IEC or certification-body publication</text>
+</svg>

@@ -9,7 +9,7 @@ nav_order: 1
 
 # 1. Introducció i fonaments de la intel·ligència artificial
 
-**Durada orientativa: 3 hores.** Presentació del camp, agents, paradigmes i principals famílies de tècniques. El bloc d'ús responsable va a continuació, dins d'aquest mateix tema.
+**Durada orientativa: 3 hores.** Presentació del camp, agents, paradigmes i principals famílies de tècniques. El tema 1.1 es tanca amb el treball pràctic d'anàlisi d'una aplicació; després, el bloc 1.2 aprofundeix en com valorar-ne l'ús i els riscos.
 
 ## Material
 
@@ -22,6 +22,6 @@ nav_order: 1
 
 | Exercici                                            |                                                                                                                        Enllaç |
 | :-------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------: |
-| [Activitat de Classroom](https://classroom.github.com/a/gzyK9ex4) | [![GitHub Classroom](https://img.shields.io/badge/GitHub%20Classroom-Activitat-blue?logo=github)](https://classroom.github.com/a/gzyK9ex4) |
+| [Guia del treball pràctic 1: anàlisi d'una aplicació d'IA](treball-practic-1.md) | [Instruccions i criteris](treball-practic-1.md) |
 
-La durada orientativa de 3 hores cobreix el treball presencial d'introducció. L'activitat de Classroom és externa; no n'he comptat el temps perquè el seu contingut no està disponible al repositori.
+La durada orientativa de 3 hores cobreix el treball presencial d'introducció. El treball pràctic tanca el bloc 1.1 aplicant els conceptes a una aplicació concreta; la seua guia inclou l'estructura i els criteris d'avaluació.

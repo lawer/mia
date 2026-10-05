@@ -18,7 +18,7 @@ style: |
 ---
 
 <!-- Transcripció del PDF original 1-introduccio.pdf: 55 diapositives.
-Primera revisió conceptual: història, models, comparació humana/IA, racionalitat, regles, lògica difusa i cerca.
+Revisió conceptual i lingüística completada; fonts incorporades a les diapositives corresponents.
 Es mantenen l’ordre i les 55 diapositives originals.
 Només les il·lustracions són imatges: el text, les llistes i les taules són Markdown editable. -->
 
@@ -41,8 +41,8 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 | | |
 | --- | --- |
 | **Intel·ligència** | La intel·ligència és la capacitat d'aprendre, comprendre i resoldre problemes. |
-| **Intel·ligència artificial** | La intel·ligència artificial és la inteligència exhibida per màquines. |
-| **Màquina intel·ligent** | Una màquina intel·ligent és un sistema que pot percebre el seu entorn i prendre accions que maximitzen les seves possibilitats d'èxit en un objectiu. |
+| **Intel·ligència artificial** | La intel·ligència artificial estudia i construeix sistemes capaços de percebre, raonar, aprendre o actuar per assolir objectius. |
+| **Màquina intel·ligent** | Un sistema intel·ligent utilitza informació de l’entorn per seleccionar accions orientades a un objectiu. |
 
 ---
 
@@ -54,10 +54,10 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 ## Agents intel·ligents (I)
 
-- Un **agent** percep el seu entorn mitjançant **sensors** i actua sobre ell mitjançant **actuadors**.
-- Un **agent intel·ligent** és un agent que actua de forma intel·ligent.
-  - **Actuar de forma intel·ligent**: Actuar de forma que maximitza les seves possibilitats d'èxit en un objectiu.
-  - **Objectiu**: Una funció que mesura el rendiment de l'agent en un entorn.
+- Un **agent** percep l’entorn mitjançant **sensors** i hi actua amb **actuadors**.
+- Un **agent racional** selecciona accions per maximitzar el rendiment esperat amb la informació disponible.
+- L’**objectiu** descriu què es vol aconseguir.
+- La **mesura de rendiment** permet avaluar el resultat: per exemple, neteja, temps i energia consumida.
 
 ---
 
@@ -80,19 +80,19 @@ Només les il·lustracions són imatges: el text, les llistes i les taules són 
 
 <!-- Diapositiva 5 del PDF original -->
 
-<<<<<<< HEAD
 <!-- _class: lead -->
 
 ![bg](images/original/diapositiva-05.png)
 
 # Una mica d'història
-=======
+
+<!-- Nota del professor recuperada de la versió alternativa:
 - Com formular un problema perquè un sistema el puga resoldre.
 - Diferents tècniques per construir agents intel·ligents.
 - Avantatges, limitacions i costos de cada tècnica.
 - Camps d'aplicació i impacte sobre les persones.
 - Com triar entre famílies de tècniques i entendre'n les limitacions.
->>>>>>> 207e18b9b28f9ffea178f8a540286d47fe1a7e43
+-->
 
 ---
 
@@ -350,13 +350,13 @@ Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 
 <!-- Diapositiva 21 del PDF original -->
 
-## Mon laboral
+## Món laboral
 
-- Els avenços en IA estan transformant el mercat laboral.
-- La IA està substituint a humans en moltes tasques.
-- Al mateix temps, la IA està creant nous llocs de treball.
-- Aquest és un procés que no s'aturarà i, per tant, cal adaptar-se.
-- Intentarem que aquest curs us ajudi a millorar la vostra ocupabilitat en aquest nou mercat laboral.
+- La IA pot automatitzar tasques i canviar la manera de treballar.
+- Automatitzar una tasca no implica substituir tota una professió.
+- L’impacte depén del sector, de l’organització i de les decisions d’adopció.
+- Cal saber avaluar les eines, revisar-ne els resultats i adaptar els processos.
+- Aquest curs us ajudarà a desenvolupar criteris i competències per a aplicar la IA.
 
 ---
 
@@ -391,11 +391,11 @@ Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 
 ## Intel·ligència humana (II)
 
-- La intel·ligència humana és molt més que la suma de les seves parts.
-- Encara sabem molt poc sobre com funciona.
-- Turing va proposar que és el resultat de la interacció entre molts processos simples.
-- Aquesta és la idea que ha inspirat el disseny de molts algoritmes d'IA.
-- Però, **és suficient per a crear una màquina intel·ligent**?
+- La intel·ligència humana implica percepció, memòria, aprenentatge, raonament i interacció social.
+- Aquests processos es relacionen entre si i amb l’experiència de cada persona.
+- Els models computacionals permeten estudiar i reproduir aspectes concrets d’aquestes capacitats.
+- Resoldre una tasca amb èxit no implica utilitzar els mateixos mecanismes que una persona.
+- **Com podem avaluar les capacitats i els límits d’un sistema?**
 
 ---
 
@@ -407,9 +407,10 @@ Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 
 ## Intel·ligència computacional
 
-- *La intel·ligència artificial intenta entendre i modelar la intel·ligència humana com a un procés computacional.*
-- Així, intentem construir sistemes **la computació dels quals** aconsegueixi o s'aproximi a una noció desitjada d' intel·ligència.
-- Per tant, la IA és part de la **Ciència de la Computació**.
+- La IA estudia i construeix sistemes capaços de percebre, raonar, aprendre o actuar per assolir objectius.
+- Alguns enfocaments s’inspiren en la intel·ligència humana; altres busquen solucions diferents.
+- Avaluem els sistemes segons les tasques que resolen i les condicions en què funcionen.
+- És un camp de la **informàtica** amb aportacions de les matemàtiques, la psicologia i altres disciplines.
 
 ---
 
@@ -453,7 +454,6 @@ Font: [McCarthy sobre el debat de la IA forta](https://www-formal.stanford.edu/j
 
 <!-- Diapositiva 29 del PDF original -->
 
-
 ## Què és una decisió racional?
 
 - Un agent racional selecciona l’acció amb **més utilitat o rendiment esperat**, segons la informació disponible.
@@ -483,8 +483,10 @@ Font: [Poole i Mackworth: utilitat esperada](https://artint.info/3e/html/ArtInt3
 
 ## Definicions
 
-- **Paradigma**: Enfoca la resolució de problemes des d'un punt de vista concret.
-- **Paradigma de la IA**: Model o patró que serveix de referència per a imitar-lo o copiar-lo en el disseny de sistemes intel·ligents.
+- Un **paradigma** és un enfocament per a representar i resoldre problemes.
+- En IA podem destacar els enfocaments **simbòlic**, **connexionista** i **estadístic**.
+- Aquesta classificació és orientativa: els enfocaments se solapen i es poden combinar.
+- Per exemple, una xarxa neuronal també es pot entrenar amb mètodes estadístics.
 
 ---
 
@@ -496,11 +498,10 @@ Font: [Poole i Mackworth: utilitat esperada](https://artint.info/3e/html/ArtInt3
 
 ## Paradigma simbòlic
 
-- **Símbol**: Representació de la realitat.
-- El paradigma simbòlic està basat en l'ús de símbols per a representar coneixement.
-- Els símbols poden ser manipulats per a inferir noves conclusions.
-- La intel·ligència és el resultat de la manipulació de símbols.
-- Utilitats: **Sistemes experts**, **sistemes basats en regles**, **sistemes basats en casos**, etc.
+- Representa coneixement explícit amb **símbols, fets, relacions i regles**.
+- Manipula aquestes representacions per inferir conclusions o construir plans.
+- La validesa dels resultats depén del coneixement i de les regles utilitzades.
+- Exemples: **sistemes basats en regles**, **planificació** i **raonament lògic**.
 
 ---
 
@@ -512,10 +513,12 @@ Font: [Poole i Mackworth: utilitat esperada](https://artint.info/3e/html/ArtInt3
 
 ## Paradigma connexionista
 
-- El paradigma connexionista està basat en la **simulació de xarxes neuronals**.
-- Les xarxes neuronals són un model computacional que intenta imitar el funcionament del cervell humà.
-- La intel·ligència és el resultat de la interacció entre molts processos simples.
-- Utilitats: **Xarxes neuronals**, **sistemes basats en aprenentatge**, etc.
+- Utilitza **xarxes de neurones artificials**, unitats de càlcul interconnectades.
+- Ajusta els pesos de les connexions durant l’aprenentatge.
+- La inspiració biològica és parcial: aquestes xarxes no reprodueixen fidelment el cervell.
+- Aplicacions: reconeixement d’imatges, llenguatge i control.
+
+Font: [Stanford CS231n: neurones artificials](https://cs231n.github.io/neural-networks-1/).
 
 ---
 
@@ -527,10 +530,11 @@ Font: [Poole i Mackworth: utilitat esperada](https://artint.info/3e/html/ArtInt3
 
 ## Paradigma estadístic
 
-- El paradigma estadístic està basat en l'**anàlisi estadística**.
-- La intel·ligència és el resultat de l'anàlisi de grans quantitats de dades.
-- Els sistemes basats en aquest paradigma són capaços d'**aprendre** a partir de dades.
-- Utilitats: **sistemes de recomanació**, **processament de llenguatge natural**, etc.
+- Utilitza models estadístics i probabilístics per a analitzar dades i representar la incertesa.
+- Estima patrons o relacions i avalua les prediccions amb dades.
+- La qualitat depén de les dades, dels supòsits del model i del context d’ús.
+- Es combina amb altres enfocaments, incloses les xarxes neuronals.
+- Exemples: classificació, regressió i agrupament.
 
 ---
 
@@ -544,19 +548,19 @@ Font: [Poole i Mackworth: utilitat esperada](https://artint.info/3e/html/ArtInt3
 
 ---
 
-<<<<<<< HEAD
 <!-- Diapositiva 36 del PDF original -->
 
 ## Definicions
 
-- **Técnica**: Conjunt de procediments o recursos que s'han d'aplicar per a aconseguir un objectiu.
+- **Tècnica**: Conjunt de procediments o recursos que s'han d'aplicar per a aconseguir un objectiu.
 - **Tècniques de la IA**: Conjunt de tècniques, algorismes i mètodes que s'apliquen per a resoldre problemes d'IA.
-- Combinant diferents paradigmes, podem obtenir **diferents tècniques**.
-=======
+- Una tècnica pot combinar idees de diferents paradigmes.
+
+<!-- Nota del professor recuperada de la versió alternativa:
 ## Seleccionar una tècnica
 
 Relacionem el problema amb la família de tècniques: regles per a condicions estables, cerca per a rutes i plans, aprenentatge per a patrons en dades, i recuperació o RAG per a documentació. La idoneïtat i els riscos d'ús es treballen al bloc següent.
->>>>>>> 207e18b9b28f9ffea178f8a540286d47fe1a7e43
+-->
 
 ---
 
@@ -583,13 +587,12 @@ Relacionem el problema amb la família de tècniques: regles per a condicions es
 
 ## Sistemes experts
 
-- Un sistema expert és un sistema que utilitza coneixement expert per a resoldre problemes.
-- El coneixement expert és el coneixement que té un expert en un domini concret.
-- Permiten automatitzar tasques que requeririen l'ajuda d'un expert.
+- Un sistema expert utilitza coneixement especialitzat per resoldre problemes en un domini concret.
+- Combina una representació del coneixement amb mecanismes de raonament.
+- Pot donar suport a tasques que requereixen experiència, però els resultats depenen de la qualitat del coneixement incorporat.
 
 ---
 
-<<<<<<< HEAD
 <!-- Diapositiva 39 del PDF original -->
 
 ## Sistemes experts (II)
@@ -599,13 +602,14 @@ Relacionem el problema amb la família de tècniques: regles per a condicions es
 - S'intenta resoldre un problema a partir de casos similars resolts anteriorment.
 - Es recuperen casos similars i s'adapten a la nova situació.
 - Una vegada solucionat el problema, el cas es guarda per a utilitzar-lo en el futur.
-- D'aquesta forma, el sistema va aprenent a resoldre problemes més complexos.
+- Els casos nous, una vegada revisats, poden ampliar el coneixement reutilitzable del sistema.
 - Camps d'aplicació: **Medicina**, **enginyeria**, **disseny**, etc.
-=======
+
+<!-- Nota del professor recuperada de la versió alternativa:
 ## Responsabilitat al llarg del mòdul
 
 La tria tècnica té conseqüències per a les persones, les dades i l'organització. En el bloc següent aplicarem aquests criteris a biaixos, privacitat, verificació, supervisió i responsabilitat.
->>>>>>> 207e18b9b28f9ffea178f8a540286d47fe1a7e43
+-->
 
 ---
 
@@ -649,11 +653,13 @@ Font: [Fuzzy sets, Scholarpedia](https://www.scholarpedia.org/article/Fuzzy_sets
 
 ## Xarxes neuronals
 
-- Les xarxes neuronals són un model computacional que intenta imitar el funcionament del cervell humà.
-- Diferents capes de neurones (nodes) interconnectades mijançant sinapsis (arcs) amb pesos.
-- Les neurones s'activen en funció de les neurones de la capa anterior.
-- Una capa d'entrada, una capa de sortida i podem tenir capes ocultes.
-- Poden ser utilitzades per a resoldre problemes de classificació, regressió, etc.
+- Models formats per **unitats de càlcul** i connexions amb pesos que s’ajusten durant l’entrenament.
+- En una xarxa de **propagació endavant**, la informació va de l’entrada a l’eixida sense cicles.
+- En un perceptró multicapa, cada capa transforma l’eixida de l’anterior.
+- Altres arquitectures incorporen recurrència o connexions entre capes no consecutives.
+- Aplicacions: classificació, regressió i generació de contingut.
+
+Font: [Deep Learning, capítol 6](https://www.deeplearningbook.org/contents/mlp.html).
 
 ---
 
@@ -661,10 +667,12 @@ Font: [Fuzzy sets, Scholarpedia](https://www.scholarpedia.org/article/Fuzzy_sets
 
 ## Tipus de xarxes neuronals
 
-- **Perceptrons**: Les xarxes neuronals més simples.
-- **Xarxes neuronals profundes**: Xarxes neuronals amb múltiples capes ocultes.
-- **Xarxes neuronals recurrents**: Xarxes neuronals amb connexions cícliques.
-- **Xarxes neuronals convolucionals**: Xarxes neuronals amb capes convolucionals (filtres).
+- **Perceptró:** model senzill de classificació amb una frontera de decisió lineal.
+- **Xarxes profundes:** combinen múltiples capes de transformació per aprendre representacions.
+- **Xarxes recurrents:** mantenen un estat que s’actualitza en processar una seqüència.
+- **Xarxes convolucionals:** utilitzen filtres compartits per detectar patrons locals, per exemple en imatges.
+
+Aquestes categories se solapen: una xarxa convolucional o recurrent també pot ser profunda.
 
 ---
 
@@ -678,7 +686,7 @@ Font: [Fuzzy sets, Scholarpedia](https://www.scholarpedia.org/article/Fuzzy_sets
 
 - Els algorismes genètics són una tècnica d'**optimització** basada en la teoria de l'evolució de Darwin.
 - Es tracta de generar una població d'individus i aplicar-los operadors genètics.
-- Els individus més aptes (**els més ben adaptats al seu entorn**) tenen més probabilitats de reproduir-se.
+- La selecció afavoreix els individus amb millor valor de la **funció d’aptitud**, definida segons el problema.
 - Útils per a resoldre problemes d'**optimització i de cerca**.
 
 ---
@@ -723,13 +731,12 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 ![bg right:45% fit](images/original/diapositiva-47.png)
 
-## Algorismes d'aprenentatge
+## Algorismes d’aprenentatge
 
-- Un algorisme d'aprenentatge és un algorisme que permet aprendre a partir de dades.
-- Els algorismes d'aprenentatge més utilitzats són:
-  - **Aprenentatge supervisat**: Classificació, regressió, etc.
-  - **Aprenentatge no supervisat**: Clustering, etc.
-  - **Aprenentatge per reforç**: Q-learning, etc.
+- Ajusten un model a partir de dades o de la interacció amb un entorn.
+- **Supervisat:** aprén amb exemples que inclouen la resposta esperada; classificació i regressió.
+- **No supervisat:** busca estructura en dades sense respostes etiquetades; per exemple, agrupament.
+- **Per reforç:** aprén a seleccionar accions a partir de recompenses; per exemple, Q-learning.
 
 ---
 
@@ -752,8 +759,8 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 ## Robòtica
 
 - La robòtica és una de les aplicacions més conegudes de la IA.
-- La robòtica és la ciència i la tecnologia de robots.
-- Un robot és un sistema capaç d'interactuar amb el seu entorn.
+- La robòtica estudia el disseny, la construcció i el control de robots.
+- Un robot és un sistema físic programable que actua sobre el seu entorn.
 - Els robots poden ser **autònoms** o **teleoperats**.
 - Camps d'aplicació: **Indústria**, **sanitat**, **exploració espacial**, **militar**, **domèstic**, etc.
 
@@ -765,12 +772,12 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 ![bg right:45% fit](images/original/diapositiva-50.png)
 
-## Processament de llenguatge natural
+## Processament del llenguatge natural
 
-- Acumula molt del desenvolupament de la IA.
-- El processament de llenguatge natural és la capacitat d'un ordinador per a entendre el llenguatge humà.
-- Els humans utilitzem el llenguatge per a comunicar-nos i per a transmetre coneixement.
-- Camps d'aplicació: **Traducció automàtica**, **reconeixement de veu**, **resum de textos**, **chatbots**, etc.
+- El **PLN** estudia mètodes per a analitzar, representar i generar llenguatge humà.
+- El context i l’ambigüitat fan que una mateixa expressió puga tenir interpretacions diferents.
+- Les respostes d’un sistema poden ser útils sense implicar comprensió humana.
+- Aplicacions: **traducció automàtica**, **resum de textos**, **classificació de documents** i **assistents conversacionals**.
 
 ---
 
@@ -782,10 +789,11 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 ## Visió per computador
 
-- La visió per computador és la capacitat d'un ordinador per a entendre imatges.
-- Els humans utilitzem la visió per a entendre el món que ens envolta.
-- Ens permet identificar objectes, persones, colors, etc.
-- Camps d'aplicació: **Reconeixement facial**, **reconeixement d'objectes**, **reconstrucció 3D**, **reconstrucció de models**, **reconstrucció de paisatges**, **reconstrucció de monuments**, etc.
+- Extrau i interpreta informació d’imatges i vídeos per resoldre tasques concretes.
+- **Classificació:** assigna una categoria a una imatge.
+- **Detecció i segmentació:** localitzen objectes o assignen categories als píxels.
+- Aplicacions: inspecció industrial, seguiment d’objectes i reconstrucció 3D.
+- Els resultats poden canviar amb la il·luminació, el punt de vista i la qualitat de la imatge.
 
 ---
 
@@ -799,7 +807,7 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 - Un sistema de recomanació és un sistema que recomana un conjunt d'elements a un usuari.
 - Els humans utilitzem la recomanació per a prendre decisions.
-- L'accés a grans quantitats de dades ha fet que els sistemes de recomanació siguin cada vegada més importants.
+- L'accés a grans quantitats de dades ha fet que els sistemes de recomanació siguen cada vegada més importants.
 - Camps d'aplicació: **Recomanació de productes**, **recomanació de música**, **recomanació de pel·lícules**, **recomanació de llibres**, **recomanació de notícies**, etc.
 
 ---
@@ -814,8 +822,8 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 - Els jocs ens serveixen per a entendre la intel·ligència.
 - Els humans utilitzem els jocs per a aprendre, per a divertir-nos i per a competir.
-- El tindre molts sistemes prenent decisions en un entorn controlat els fa ser un bon banc de proves per a la IA.
-- Camps d'aplicació: **Jocs de tauler**, **jocs de cartes**, **jocs de rol**, **jocs d'estratègia**, **etc**.
+- Les regles i els resultats mesurables fan dels jocs un bon banc de proves per a la IA.
+- Camps d'aplicació: **Jocs de tauler**, **jocs de cartes**, **jocs de rol**, **jocs d'estratègia**, etc.
 
 ---
 
@@ -823,11 +831,11 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 ## Altres aplicacions
 
-- **Medicina**: Diagnòstic mèdic, cirugia, medicina personalitzada.
+- **Medicina**: suport al diagnòstic, cirurgia assistida i medicina personalitzada.
 - **Enginyeria**: Disseny, control de processos.
 - **Finances**: Predicció de mercats, recomanació d'inversions.
-- **Militar**: Drones, armes autònomes.
-- **Domèstic**: Robots, assistents virtuals, domòtica.
+- **Àmbit militar**: drons i sistemes autònoms.
+- **Àmbit domèstic**: robots, assistents virtuals i domòtica.
 - **Transport**: Vehicles autònoms, planificació de rutes.
 
 ---
@@ -841,3 +849,23 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 - [Deep Learning](https://www.deeplearningbook.org/)
 - [Machine Learning](https://www.cs.ubc.ca/~murphyk/MLbook/)
 - [Fast.ai](https://www.fast.ai/)
+
+---
+
+<!-- _class: side -->
+
+![bg right:40% fit](images/original/diapositiva-49.png)
+
+## Treball pràctic 1 · Analitza una aplicació d'IA
+
+Tria una aplicació documentada i explica:
+
+- quin problema resol, qui la fa servir i què rep o produeix;
+- quines tècniques del tema 1.1 hi intervenen;
+- quines proves en mostren els resultats i quins límits tenen.
+
+**Lliurament:** informe breu i explicació de 3 minuts.
+
+[Guia, estructura i criteris d'avaluació](treball-practic-1.md)
+
+La pregunta sobre persones afectades, riscos i controls obrirà el tema 1.2.
