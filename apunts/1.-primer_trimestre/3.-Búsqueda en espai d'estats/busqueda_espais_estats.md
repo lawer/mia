@@ -4,7 +4,7 @@ parent: 1. Primera Avaluació
 layout: default
 has_children: true
 has_toc: false
-nav_order: 3
+nav_order: 4
 ---
 
 # 3. Búsqueda en espais d'estats
@@ -33,9 +33,6 @@ nav_order: 3
 | :----------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Solució](botelles.ipynb) del problema de les botelles d'aigua.                |            [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/botelles.ipynb) |
 | [Exemples](resolucio_problemes.ipynb) solucionats de cerca en espais d'estats. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/resolucio_problemes.ipynb) |
-| [Romania solucionat](4.-romania_solucionat.ipynb).                              |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/4.-romania_solucionat.ipynb) |
 
 <!--
-| [Sokoban solucionat](2.-sokoban_solucionat.ipynb).                             |     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/2.-sokoban_solucionat.ipynb) |
-| [Word ladder solucionat](3.-word_ladder_solucionat.ipynb).                     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/3.-word_ladder_solucionat.ipynb) |
 -->

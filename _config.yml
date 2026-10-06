@@ -11,6 +11,13 @@ exclude:
   - vendor
   - .bundle
   - scripts
+  - apunts/llibre.md
   - _solucionaris
+  - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/4.-romania_solucionat.ipynb
+  - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/2.-sokoban_solucionat.ipynb
+  - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/3.-word_ladder_solucionat.ipynb
+  - apunts/1.-primer_trimestre/4.-Búsqueda local i Satisfacció de restriccions/exercicis/1.-exercicis_solucionats.ipynb
+  - apunts/1.-primer_trimestre/0.-IA responsable/images/errors-per-idioma.svg
+  - apunts/1.-primer_trimestre/0.-IA responsable/guia_docent.md
   - package.json
   - package-lock.json

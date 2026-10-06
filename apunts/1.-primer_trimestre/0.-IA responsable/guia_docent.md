@@ -40,7 +40,7 @@ En acabar la unitat, l'alumnat podrà:
 
 **Total: 180 minuts.** Els exercicis 1 i 2 ocupen 60 minuts. La prova de seguretat forma part del taller, no és temps addicional. Si el grup necessita més suport, el càlcul de precisió positiva queda com a ampliació opcional.
 
-La presentació té 31 diapositives. Atureu-la en «Activitat 2» abans de mostrar el gràfic amb la solució. En tot el bloc s’utilitzen dades fictícies i no cal accedir a cap servei d’IA. La defensa es fa simultàniament entre parelles d’equips per ajustar-la al temps disponible.
+La presentació ja no conté el gràfic amb les respostes de l’«Activitat 2». Després que l’alumnat complete l’exercici, consulteu el solucionari local per a la correcció. En tot el bloc s’utilitzen dades fictícies i no cal accedir a cap servei d’IA. La defensa es fa simultàniament entre parelles d’equips per ajustar-la al temps disponible.
 
 ## Pràctica integradora
 

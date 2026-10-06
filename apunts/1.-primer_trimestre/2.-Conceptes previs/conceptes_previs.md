@@ -4,7 +4,7 @@ parent: 1. Primera Avaluació
 layout: default
 has_children: true
 has_toc: false
-nav_order: 2
+nav_order: 3
 ---
 
 # 2. Conceptes previs

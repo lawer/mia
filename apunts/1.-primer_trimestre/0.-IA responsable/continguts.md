@@ -4,7 +4,6 @@ title: Continguts IA responsable
 parent: 1.2 Ús responsable, segur i centrat en les persones
 ---
 
-> Pàgina generada automàticament des de `0.-ia-responsable-marp.md`.
 
 # IA responsable, segura i centrada en les persones
 
@@ -189,13 +188,9 @@ Treballarem amb **20 peticions sintètiques**, 10 per idioma.
 
 No cal entrenar un model: la fitxa ja inclou les prediccions.
 
-![](images/errors-per-idioma.svg)
+## Una mitjana pot ocultar diferències
 
-## El 80 % global no explica tota la història
-
-![Encert valencià, castellà, total. Detecció , i , respectivament](images/errors-per-idioma.svg)
-
-Només hi ha **cinc urgències per idioma**: cada error canvia la detecció en 20 punts. No generalitzem a poblacions reals.
+Compara els resultats per idioma abans de mirar el total. En una mostra amb només cinc urgències per idioma, un sol error canvia la detecció en 20 punts. No generalitzes aquests resultats a persones reals.
 
 ## Provar abans i després del desplegament
 

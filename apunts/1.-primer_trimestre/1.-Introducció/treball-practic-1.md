@@ -11,19 +11,19 @@ nav_order: 1
 
 Tria una aplicació real d'intel·ligència artificial i explica **quin problema resol, com funciona a grans trets i quines tècniques de les estudiades en el tema 1.1 hi reconeixes**. Acaba valorant què permet fer, quins límits tenen les proves disponibles i quina informació encara necessitaries.
 
-El treball tanca la primera part del tema 1: aplica els conceptes d'agents, tècniques i àmbits d'ús a un cas concret. En el tema 1.2 reprendrem l'aplicació per estudiar amb més detall les persones afectades, els riscos i els controls.
+Amb aquest treball tanques la primera part del tema 1: aplica els conceptes d'agents, tècniques i àmbits d'ús a un cas concret. En la secció 1.2 estudiaràs amb més detall les persones afectades, els riscos i els controls.
 
 ## Tria del cas
 
 Pot ser una aplicació comercial, un servei públic o un prototip de recerca. Tria un cas amb informació pública suficient sobre la tasca i el seu funcionament; no cal que siga una aplicació creada per un grup d'I+D, però sí que has de trobar almenys una font tècnica o primària fiable.
 
-Exemples: un sistema de recomanació, un assistent de text, una eina de traducció, un sistema de diagnòstic assistit, un detector d'objectes, un robot o un agent que resol problemes mitjançant cerca. Pots proposar un altre cas si el docent en pot verificar la documentació.
+Exemples: un sistema de recomanació, un assistent de text, una eina de traducció, un sistema de diagnòstic assistit, un detector d'objectes, un robot o un agent que resol problemes mitjançant cerca. Pots proposar un altre cas si trobes documentació que permeta verificar-ne el funcionament.
 
 **Abast:** analitza una aplicació concreta i una tasca principal. No intentes explicar tota una empresa, una família sencera de models o «la IA en medicina» en general. No cal programar ni crear un compte en cap servei.
 
 ## Informe
 
-Extensió orientativa: **4–6 pàgines**, sense comptar portada, bibliografia i annexos. Es pot fer individualment o per parelles, segons indique el docent. Inclou aquests apartats:
+Extensió orientativa: **4–6 pàgines**, sense comptar portada, bibliografia i annexos. Treballa individualment o per parelles, d'acord amb l'organització de classe. Inclou aquests apartats:
 
 ### 1. Identificació i resum
 

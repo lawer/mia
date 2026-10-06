@@ -6,7 +6,7 @@ parent: 1.2 Ús responsable, segur i centrat en les persones
 
 # Exercicis d'aula: decidir, mesurar i revisar
 
-**Durada dels exercicis 1 i 2: 60 minuts (20 + 40).** El taller integrador posterior dura 60 minuts i inclou una prova breu de seguretat. Es poden fer en parelles. Tots els casos i registres són ficticis; no s'han d'afegir dades reals de l'alumnat o del centre.
+**Durada dels exercicis 1 i 2: 60 minuts (20 + 40).** El taller integrador posterior dura 60 minuts i inclou una prova breu de seguretat. Pots treballar en parella. Tots els casos i registres són ficticis; no hi introduïsques dades personals reals ni informació interna del centre.
 
 ## Exercici 1. Cal usar IA per a aquest problema?
 
@@ -99,7 +99,7 @@ En la pràctica de la cua de suport tècnic, reutilitzeu el raonament dels exerc
 
 ## Taller integrador: disseny sobre paper
 
-**60 minuts · equips de 2–3.** No cal entrenar models, programar ni usar un servei d’IA. Podeu treballar amb paper o un document compartit aprovat pel centre. La [fitxa de riscos](guia_docent.md#fitxa-danàlisi-de-riscos) serveix de plantilla.
+**60 minuts · equips de 2–3.** No cal entrenar models, programar ni usar un servei d’IA. Treballeu sobre paper o en un document aprovat pel centre. Completeu la fitxa de riscos que trobareu al final d'aquest document.
 
 | Minuts | Tasca | Resultat |
 | --- | --- | --- |
@@ -142,7 +142,22 @@ No cal executar l’atac. Una resposta escrita «no puc fer-ho» no prova que el
 | | | | | | | |
 | | | | | | | |
 
-La prova és un **disseny**, no una execució. Marqueu els resultats com a «pendents d’execució»; no inventeu resultats ni afirmeu que el sistema és segur.
+La prova és un **disseny**, no una execució. Marqueu els resultats com a «pendents d'execució»; no inventeu resultats ni afirmeu que el sistema és segur.
+
+### Fitxa de riscos i decisió
+
+Useu aquestes preguntes per resumir el disseny del vostre equip:
+
+| Pregunta | Resposta de l'equip |
+| --- | --- |
+| Quin problema resolem i quina alternativa tenim sense IA? | |
+| Qui utilitza el sistema i qui en pot rebre les conseqüències? | |
+| Quines dades són necessàries i quines cal excloure? | |
+| Quins errors són previsibles i quin seria el més perjudicial? | |
+| Quines proves i controls reduiran aquests riscos? Qui se n'encarrega? | |
+| Quin resultat ens faria continuar, limitar o aturar el pilot? | |
+| Qui revisa i corregeix els casos dubtosos? | |
+| Quins límits continuen sense resoldre's? | |
 
 ### Eixida individual
 

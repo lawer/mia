@@ -2,7 +2,7 @@
 
 const { execFileSync } = require("node:child_process");
 const { existsSync, readdirSync, readFileSync, writeFileSync } = require("node:fs");
-const { basename, dirname, join, relative } = require("node:path");
+const { dirname, join, relative } = require("node:path");
 
 const root = process.cwd();
 const notesDirectory = join(root, "apunts");
@@ -91,11 +91,10 @@ function contentFrontMatter(contentPath) {
 
 function contentFromMarp(sourcePath, markdown) {
   const { body } = splitFrontMatter(markdown);
-  const sourceName = basename(sourcePath);
   const contentPath = join(dirname(sourcePath), "continguts.md");
   const contentBody = contentBodyFromMarp(body);
 
-  return `${contentFrontMatter(contentPath)}\n> Aquesta pàgina es genera automàticament a partir de la presentació MARP \`${sourceName}\`. No l'edites directament.\n\n${contentBody}\n`;
+  return `${contentFrontMatter(contentPath)}\n${contentBody}\n`;
 }
 
 function validateAssets(sourcePath, markdown) {
@@ -149,6 +148,7 @@ if (require.main === module) {
 
 module.exports = {
   contentBodyFromMarp,
+  contentFromMarp,
   convertImageOnlyHeadings,
   convertMarpImages,
   normaliseImageAltText,

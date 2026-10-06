@@ -2,6 +2,7 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const {
   contentBodyFromMarp,
+  contentFromMarp,
   normaliseImageAltText,
 } = require("./build-marp.js");
 
@@ -35,4 +36,11 @@ test("normalises MARP image modifiers and image-only headings", () => {
 
   assert.equal(contentBodyFromMarp(marpBody), "![](diagram.png)\n\n![](chart.png)");
   assert.equal(normaliseImageAltText("bg right:35% fit"), "");
+});
+
+test("generated student content does not expose authoring instructions", () => {
+  const page = contentFromMarp("/tmp/topic/lesson.md", "# Contingut per a l'alumnat");
+
+  assert.match(page, /# Contingut per a l'alumnat/);
+  assert.doesNotMatch(page, /generada automàticament|no l'edites/i);
 });

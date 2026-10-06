@@ -9,7 +9,7 @@ nav_order: 1
 
 # 1. Introducció i fonaments de la intel·ligència artificial
 
-**Durada orientativa: 3 hores.** Presentació del camp, agents, paradigmes i principals famílies de tècniques. El tema 1.1 es tanca amb el treball pràctic d'anàlisi d'una aplicació; després, el bloc 1.2 aprofundeix en com valorar-ne l'ús i els riscos.
+**Durada orientativa: 3 hores.** Coneixeràs què és la IA, com s'organitzen els agents i quines tècniques s'utilitzen en diferents aplicacions. Tanca aquest bloc amb el treball pràctic 1: analitza una aplicació concreta i explica què fa, com funciona i quines proves en coneixem. Després, en la secció 1.2, estudiaràs com valorar-ne l'ús i els riscos.
 
 ## Material
 
@@ -24,4 +24,4 @@ nav_order: 1
 | :-------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------: |
 | [Guia del treball pràctic 1: anàlisi d'una aplicació d'IA](treball-practic-1.md) | [Instruccions i criteris](treball-practic-1.md) |
 
-La durada orientativa de 3 hores cobreix el treball presencial d'introducció. El treball pràctic tanca el bloc 1.1 aplicant els conceptes a una aplicació concreta; la seua guia inclou l'estructura i els criteris d'avaluació.
+El treball pràctic tanca el bloc 1.1: aplicaràs els conceptes a una aplicació concreta. La guia inclou l'estructura de l'informe i els criteris d'avaluació.

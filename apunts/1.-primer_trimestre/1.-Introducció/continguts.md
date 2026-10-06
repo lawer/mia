@@ -5,7 +5,6 @@ parent: 1. Introducció i fonaments de la IA
 math: mathjax3
 ---
 
-> Pàgina generada automàticament des de `1-introduccio-marp.md`.
 
 ![](images/original/diapositiva-01.png)
 
@@ -203,19 +202,17 @@ Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 
 ## Situació actual
 
-- Els avenços en IA són constants.
-- La IA està present en molts aspectes de la nostra vida.
-- És una tecnologia amb moltes aplicacions...
-- ... amb molts riscos.
-- ... i amb reptes ètics i morals per resoldre.
+- Els sistemes d’IA poden treballar amb text, imatges, àudio, prediccions o accions, segons el model i la tasca.
+- Les seues capacitats i limitacions varien: un bon resultat en una prova no garanteix el mateix rendiment en qualsevol context.
+- Per valorar una aplicació, pregunta’t què fa, amb quines dades i en quines condicions.
 
 ## Món laboral
 
-- La IA pot automatitzar tasques i canviar la manera de treballar.
-- Automatitzar una tasca no implica substituir tota una professió.
-- L’impacte depén del sector, de l’organització i de les decisions d’adopció.
-- Cal saber avaluar les eines, revisar-ne els resultats i adaptar els processos.
-- Aquest curs us ajudarà a desenvolupar criteris i competències per a aplicar la IA.
+- La IA pot automatitzar, complementar o reorganitzar tasques. **Exposició potencial no és una predicció de llocs de treball que desapareixeran.**
+- Segons l’OIT (2025), una de cada quatre persones treballadores està en una ocupació amb algun grau d’exposició a la IA generativa. L’estudi apunta que és més probable que moltes ocupacions es transformen que no que desapareguen.
+- L’OCDE compara capacitats de la IA amb tasques de les ocupacions; els efectes reals també depenen de l’adopció, la regulació i les decisions de cada organització i societat.
+- Per valorar un cas concret, analitza quines tasques canvien, qui n’assumeix les conseqüències i quines competències o controls calen.
+
 
 ![](images/original/diapositiva-22.png)
 
@@ -518,6 +515,8 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 - [Deep Learning](https://www.deeplearningbook.org/)
 - [Machine Learning](https://www.cs.ubc.ca/~murphyk/MLbook/)
 - [Fast.ai](https://www.fast.ai/)
+- [OIT (2025), *Generative AI and jobs: A 2025 update*](https://www.ilo.org/publications/generative-ai-and-jobs-2025-update)
+- [OCDE (2026), *The OECD AI exposure measure*](https://www.oecd.org/en/publications/the-oecd-ai-exposure-measure_f3da0f0a-en.html)
 
 ![](images/original/diapositiva-49.png)
 
