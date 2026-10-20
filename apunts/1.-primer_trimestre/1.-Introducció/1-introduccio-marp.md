@@ -348,6 +348,10 @@ Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 
 <!-- Diapositiva 21 del PDF original -->
 
+<!-- _class: compact -->
+
+![bg right:36% Persona en una trobada de treball sobre IA.](images/commons/ai-roundtable.jpg)
+
 ## Món laboral
 
 - La IA pot automatitzar, complementar o reorganitzar tasques. **Exposició potencial no és una predicció de llocs de treball que desapareixeran.**
@@ -662,6 +666,10 @@ Font: [Deep Learning, capítol 6](https://www.deeplearningbook.org/contents/mlp.
 
 <!-- Diapositiva 43 del PDF original -->
 
+<!-- _class: compact -->
+
+![bg right:42% fit Diagrama d’una xarxa neuronal amb capes d’entrada, ocultes i d’eixida.](images/commons/xarxa-neuronal.svg)
+
 ## Tipus de xarxes neuronals
 
 - **Perceptró:** model senzill de classificació amb una frontera de decisió lineal.
@@ -751,7 +759,7 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 <!-- _class: side -->
 
-![bg right:45% fit](images/original/diapositiva-49.png)
+![bg right:42% Robot industrial treballant en una màquina; la fotografia no indica si incorpora IA.](images/commons/robot-arm.jpg)
 
 ## Robòtica
 
@@ -825,6 +833,10 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 ---
 
 <!-- Diapositiva 54 del PDF original -->
+
+<!-- _class: compact -->
+
+![bg right:42% fit Cadira de rodes assistida, exemple de tecnologia accessible; la imatge no demostra que utilitze IA.](images/commons/cadira-intel-ligent.jpg)
 
 ## Altres aplicacions
 

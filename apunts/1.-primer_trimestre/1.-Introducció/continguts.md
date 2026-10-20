@@ -5,7 +5,6 @@ parent: 1. Introducció i fonaments de la IA
 math: mathjax3
 ---
 
-
 ![](images/original/diapositiva-01.png)
 
 # 1. Introducció a la intel·ligència artificial
@@ -206,13 +205,14 @@ Font: [Informe tècnic de GPT-4 (2023)](https://arxiv.org/abs/2303.08774).
 - Les seues capacitats i limitacions varien: un bon resultat en una prova no garanteix el mateix rendiment en qualsevol context.
 - Per valorar una aplicació, pregunta’t què fa, amb quines dades i en quines condicions.
 
+![Persona en una trobada de treball sobre IA.](images/commons/ai-roundtable.jpg)
+
 ## Món laboral
 
 - La IA pot automatitzar, complementar o reorganitzar tasques. **Exposició potencial no és una predicció de llocs de treball que desapareixeran.**
 - Segons l’OIT (2025), una de cada quatre persones treballadores està en una ocupació amb algun grau d’exposició a la IA generativa. L’estudi apunta que és més probable que moltes ocupacions es transformen que no que desapareguen.
 - L’OCDE compara capacitats de la IA amb tasques de les ocupacions; els efectes reals també depenen de l’adopció, la regulació i les decisions de cada organització i societat.
 - Per valorar un cas concret, analitza quines tasques canvien, qui n’assumeix les conseqüències i quines competències o controls calen.
-
 
 ![](images/original/diapositiva-22.png)
 
@@ -399,6 +399,8 @@ Font: [Fuzzy sets, Scholarpedia](https://www.scholarpedia.org/article/Fuzzy_sets
 
 Font: [Deep Learning, capítol 6](https://www.deeplearningbook.org/contents/mlp.html).
 
+![Diagrama d’una xarxa neuronal amb capes d’entrada, ocultes i d’eixida.](images/commons/xarxa-neuronal.svg)
+
 ## Tipus de xarxes neuronals
 
 - **Perceptró:** model senzill de classificació amb una frontera de decisió lineal.
@@ -452,7 +454,7 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 
 # Aplicacions de la IA
 
-![](images/original/diapositiva-49.png)
+![Robot industrial treballant en una màquina; la fotografia no indica si incorpora IA.](images/commons/robot-arm.jpg)
 
 ## Robòtica
 
@@ -498,6 +500,8 @@ Font: [Poole i Mackworth: cerca A*](https://artint.info/html1e/ArtInt_57.html).
 - Els humans utilitzem els jocs per a aprendre, per a divertir-nos i per a competir.
 - Les regles i els resultats mesurables fan dels jocs un bon banc de proves per a la IA.
 - Camps d'aplicació: **Jocs de tauler**, **jocs de cartes**, **jocs de rol**, **jocs d'estratègia**, etc.
+
+![Cadira de rodes assistida, exemple de tecnologia accessible; la imatge no demostra que utilitze IA.](images/commons/cadira-intel-ligent.jpg)
 
 ## Altres aplicacions
 

@@ -23,4 +23,4 @@ nav_order: 2
 
 | Exercici | Enllaç |
 | :--- | :---: |
-| Fitxa d'exercicis amb dades sintètiques | [![Fitxa](https://img.shields.io/badge/Markdown-exercicis-blue?logo=markdown&logoColor=white)](exercicis.md) |
+| Fitxa d'exercicis: pilots, mètriques i dades | [![Fitxa](https://img.shields.io/badge/Markdown-exercicis-blue?logo=markdown&logoColor=white)](exercicis.md) |

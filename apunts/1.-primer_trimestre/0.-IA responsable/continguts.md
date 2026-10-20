@@ -4,7 +4,6 @@ title: Continguts IA responsable
 parent: 1.2 Ús responsable, segur i centrat en les persones
 ---
 
-
 # IA responsable, segura i centrada en les persones
 
 **Tema 1.2 · Mòdul 5071 · 3 hores**
@@ -24,7 +23,7 @@ Cas conductor: una cua de suport tècnic.
 
 **Resultat observable:** una decisió raonada —provar, limitar o no usar IA— i una fitxa amb proves i controls. No cal programar ni contractar serveis.
 
-![](images/supervisio-humana-ia.png)
+![Col·legues reunits per a revisar una tasca.](images/commons/equip-reunio.jpg)
 
 ## Per què cal aquest tema?
 
@@ -37,7 +36,7 @@ Que un model done una resposta correcta sovint **no demostra** que siga adequat 
 
 Per això, la qualitat d’un sistema també depén del **propòsit, les conseqüències, les proves i la capacitat d’intervindre**.
 
-![](images/matriu-confusio.svg)
+![Espai d’atenció tècnica.](images/commons/technical-help-desk.jpg)
 
 ## Quina utilitat pràctica té?
 
@@ -50,7 +49,7 @@ Abans d’entrenar o connectar cap model, l’equip pren quatre decisions:
 
 El producte del tema és una **proposta de pilot revisable**, no una promesa que la IA sempre encerta.
 
-![](images/cicle-responsable.svg)
+![Tècnic revisant un servidor.](images/commons/tecnic-servidor.jpg)
 
 ## El cas: qui atenem primer?
 
@@ -63,7 +62,7 @@ Un centre rep peticions fictícies: «no funciona la xarxa», «vull instal·lar
 
 **Pregunta:** què passa si una avaria urgent queda al final de la cua?
 
-![](images/supervisio-humana-ia.png)
+![Espai d’atenció tècnica.](images/commons/technical-help-desk.jpg)
 
 ## La responsabilitat és un cicle
 
@@ -85,7 +84,7 @@ Font: [NIST · AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-ma
 
 Acordem el criteri d’urgència abans d’etiquetar dades.
 
-![](images/supervisio-humana-ia.png)
+![Participants en una taula rodona sobre intel·ligència artificial.](images/commons/taula-rodona-ia.jpg)
 
 ## IA, regles o procés convencional?
 
@@ -96,7 +95,7 @@ Acordem el criteri d’urgència abans d’etiquetar dades.
 
 Les regles també poden formar part de la IA simbòlica. La distinció útil és **què necessita el problema i com ho comprovarem**.
 
-![](images/commons/cicle-ia.svg)
+![Tècnic revisant un servidor.](images/commons/tecnic-servidor.jpg)
 
 ## Quan convé limitar o ajornar l’ús?
 
@@ -107,9 +106,9 @@ Les regles també poden formar part de la IA simbòlica. La distinció útil és
 
 Un risc alt exigeix garanties proporcionades. Afegir una persona revisora **no converteix qualsevol ús en segur o admissible**.
 
-**Activitat 1:** comparar tècniques i controls, en parelles.
+**Activitat 1:** decidiu si provar, limitar o no desplegar cada ús de la fitxa, i justifiqueu-ho amb proves i controls.
 
-![](images/cicle-responsable.svg)
+![Robot industrial en funcionament; la imatge il·lustra una aplicació física, no el cas de suport tècnic.](images/commons/brac-robotic.jpg)
 
 ## Només les dades necessàries
 
@@ -117,6 +116,8 @@ Un risc alt exigeix garanties proporcionades. Afegir una persona revisora **no c
 - Per contactar: dades de contacte en un circuit separat, si calen.
 - Excloem contrasenyes, historials personals i informació aliena a la tasca.
 - Revisem també text lliure i fitxers adjunts.
+
+**Activitat 3:** en una petició fictícia, separa les dades necessàries per a valorar la incidència de les dades de contacte.
 
 ![](images/minimitzacio-dades-ia.png)
 
@@ -132,7 +133,7 @@ Edat, lloc i una incidència poc freqüent poden identificar algú encara que no
 
 Font: [Comissió Europea · dades personals](https://commission.europa.eu/law/law-topic/data-protection/data-protection-explained_en).
 
-![](images/commons/cadenat.svg)
+![Ordinador portàtil subjecte amb una cadena.](images/commons/portatil-blocat.jpg)
 
 ## Abans de compartir dades
 
@@ -145,7 +146,7 @@ Font: [Comissió Europea · dades personals](https://commission.europa.eu/law/la
 
 Font: [RGPD · articles 5, 6 i 32](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng).
 
-![](images/matriu-confusio.svg)
+![Portàtil que es tanca parcialment per protegir la privacitat; metàfora visual, no control suficient.](images/commons/portatil-privacitat.jpg)
 
 ## D’on poden vindre els biaixos?
 
@@ -156,7 +157,7 @@ Font: [RGPD · articles 5, 6 i 32](https://eur-lex.europa.eu/eli/reg/2016/679/oj
 
 Una diferència d’errors és un senyal per investigar; **no demostra per si sola la causa ni una discriminació**.
 
-![](images/matriu-confusio.svg)
+![Dues treballadores anoten dades per a entrenar sistemes d’IA.](images/commons/anotacio-dades.jpg)
 
 ## Quatre resultats possibles
 
@@ -175,7 +176,7 @@ Positiu = «urgent». Un **FN** retarda una urgència; un **FP** pot desplaçar 
 
 Si el denominador és zero, indiquem «no definida». No confonguem **precisió positiva** amb **encert**.
 
-![](images/matriu-confusio.svg)
+![Esquema de matriu de confusió files de revisió i columnes de predicció.](images/matriu-confusio.svg)
 
 ## Activitat 2: què amaga la mitjana?
 
@@ -188,9 +189,15 @@ Treballarem amb **20 peticions sintètiques**, 10 per idioma.
 
 No cal entrenar un model: la fitxa ja inclou les prediccions.
 
+![Treballadores preparant dades; no es mostren resultats de l’activitat.](images/commons/anotacio-dades.jpg)
+
 ## Una mitjana pot ocultar diferències
 
-Compara els resultats per idioma abans de mirar el total. En una mostra amb només cinc urgències per idioma, un sol error canvia la detecció en 20 punts. No generalitzes aquests resultats a persones reals.
+- Compara les mètriques per idioma abans de mirar el total.
+- Amb només cinc urgències per idioma, un error canvia la detecció en 20 punts.
+- Una mostra tan menuda no permet generalitzar a persones reals.
+
+![Equip reunint-se per a interpretar resultats amb cautela.](images/commons/equip-reunio.jpg)
 
 ## Provar abans i després del desplegament
 
@@ -202,7 +209,7 @@ Compara els resultats per idioma abans de mirar el total. En una mostra amb nom�
 
 L’equilibri d’una mostra no garanteix que siga representativa.
 
-![](images/commons/cicle-ia.svg)
+![Tècnic revisant infraestructura abans de posar-la en servei.](images/commons/tecnic-servidor.jpg)
 
 ## Incertesa: saber quan derivar
 
@@ -213,7 +220,7 @@ L’equilibri d’una mostra no garanteix que siga representativa.
 
 **Exemple:** una petició que descriu una caiguda general del servei es deriva a revisió prioritària encara que el model dubte.
 
-![](images/commons/cicle-ia.svg)
+![Una persona demana ajuda tècnica.](images/commons/technical-help-desk.jpg)
 
 ## Supervisió humana amb capacitat real
 
@@ -240,7 +247,7 @@ Exemple de missatge a l’usuari:
 
 És un exemple didàctic; cal adaptar-lo al funcionament real.
 
-![](images/supervisio-humana-ia.png)
+![Cadira de rodes amb tecnologia assistiva; exemple visual d’accessibilitat, no prova d’un sistema d’IA.](images/commons/cadira-accessible.jpg)
 
 ## Una resposta convincent pot ser falsa
 
@@ -251,7 +258,7 @@ Exemple de missatge a l’usuari:
 
 **Exemple:** un resum no pot inventar un termini que el reglament no especifica.
 
-![](images/supervisio-humana-ia.png)
+![Servei d’atenció on es pot comprovar una resposta.](images/commons/technical-help-desk.jpg)
 
 ## Les dades no són instruccions
 
@@ -267,7 +274,7 @@ Una petició inclou aquest text fictici:
 
 Font: [OWASP · Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
 
-![](images/minimitzacio-dades-ia.png)
+![Portàtil subjecte amb cadena; metàfora, no control de seguretat real.](images/commons/portatil-blocat.jpg)
 
 ## Controls que limiten les conseqüències
 
@@ -280,7 +287,7 @@ Font: [OWASP · Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-i
 
 Un avís escrit al prompt no substitueix aquests controls.
 
-![](images/supervisio-humana-ia.png)
+![Personal tècnic treballant amb infraestructura.](images/commons/tecnic-servidor.jpg)
 
 ## Si apareix un incident
 
@@ -292,7 +299,7 @@ Un avís escrit al prompt no substitueix aquests controls.
 
 No esborrem evidències ni copiem dades sensibles sense criteri. Seguim el procediment de l’organització.
 
-![](images/supervisio-humana-ia.png)
+![Espai d’atenció tècnica per a gestionar incidències.](images/commons/technical-help-desk.jpg)
 
 ## Marc normatiu: preguntes que cal fer
 
@@ -315,7 +322,7 @@ Fonts: [RGPD](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng) · [Reglament d
 
 **Decisió possible:** conservar una regla convencional i reservar la IA per als casos en què aporta valor.
 
-![](images/commons/cicle-ia.svg)
+![Infraestructura que requereix manteniment i recursos.](images/commons/tecnic-servidor.jpg)
 
 ## Taller integrador: dissenyar, no programar
 
@@ -343,7 +350,7 @@ Lliurament: fitxa breu + taula de proves + defensa de 2 minuts.
 
 Superar aquesta prova **no garanteix** que no hi haja errors en casos nous.
 
-![](images/cicle-responsable.svg)
+![Equip d’atenció que pot revisar i corregir una petició.](images/commons/technical-help-desk.jpg)
 
 ## Evidència d’aprenentatge
 

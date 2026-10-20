@@ -17,11 +17,13 @@ nav_order: 1
 | :------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Presentacio](1-introduccio-marp.pdf)                                            | [![PDF](https://img.shields.io/badge/PDF-1.--introduccio.pdf-blue?logo=adobe-acrobat-reader&logoColor=white)](1-introduccio-marp.pdf) <br /> [![HTML](https://img.shields.io/badge/HTML-1.--introduccio-blue?logo=html5&logoColor=white)](1-introduccio-marp.html) |
 | [Continguts]({% link apunts/1.-primer_trimestre/1.-Introducció/continguts.md %}) | [![HTML](https://img.shields.io/badge/HTML-continguts-blue?logo=html5&logoColor=white)]({% link apunts/1.-primer_trimestre/1.-Introducció/continguts.md %}) |
+| [Crèdits visuals](imatges.md) | [Autoria i llicències](imatges.md) |
 
 ## Exercici
 
 | Exercici                                            |                                                                                                                        Enllaç |
 | :-------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------: |
+| [Fitxa d'exercicis 1.1](exercicis.md) | [Pràctica guiada](exercicis.md) |
 | [Guia del treball pràctic 1: anàlisi d'una aplicació d'IA](treball-practic-1.md) | [Instruccions i criteris](treball-practic-1.md) |
 
-El treball pràctic tanca el bloc 1.1: aplicaràs els conceptes a una aplicació concreta. La guia inclou l'estructura de l'informe i els criteris d'avaluació.
+La fitxa practica els conceptes abans del treball pràctic. El treball tanca el bloc 1.1 aplicant-los a una aplicació documentada; la guia inclou l'estructura de l'informe i els criteris d'avaluació.

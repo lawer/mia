@@ -6,31 +6,30 @@ parent: 1.2 Ús responsable, segur i centrat en les persones
 
 # Exercicis d'aula: decidir, mesurar i revisar
 
-**Durada dels exercicis 1 i 2: 60 minuts (20 + 40).** El taller integrador posterior dura 60 minuts i inclou una prova breu de seguretat. Pots treballar en parella. Tots els casos i registres són ficticis; no hi introduïsques dades personals reals ni informació interna del centre.
+**Durada dels exercicis 1, 2 i 3: 70 minuts (20 + 40 + 10).** El taller integrador posterior dura 60 minuts i inclou una prova breu de seguretat. Pots treballar en parella. Tots els casos i registres són ficticis; no hi introduïsques dades personals reals ni informació interna del centre.
 
-## Exercici 1. Cal usar IA per a aquest problema?
+## Exercici 1. Autoritzaríem un pilot?
 
 **Temps:** 20 minuts.
 
-Per a cada cas, trieu una opció: **càlcul o regla convencional**, **cerca o optimització**, **model d’aprenentatge automàtic**, **generació amb recuperació de fonts**, o **decisió humana sense automatitzar**. Es pot combinar més d’una tècnica. Les regles també poden formar part de la IA simbòlica: justifiqueu el mecanisme i els controls, no només l’etiqueta «IA».
+En grups de dos, reviseu els tres usos hipotètics. Per a cadascun, decidiu si **provaríeu en un pilot limitat**, **només permetríeu un ús acotat amb més controls** o **no el desplegaríeu** amb la informació disponible. Una persona revisora no és, per si sola, una garantia suficient.
 
-Completeu la taula i justifiqueu la resposta amb una frase.
-
-| Cas | Opció triada | Per què és adequada? | Error o risc principal | Control necessari |
+| Ús proposat | Alternativa sense IA | Qui pot rebre les conseqüències? | Error més perjudicial | Evidència o control que falta |
 | --- | --- | --- | --- | --- |
-| 1. Calcular el total d'una factura a partir de quantitats i preus coneguts. | | | | |
-| 2. Trobar una ruta per a un robot en un mapa amb obstacles i zones prohibides. | | | | |
-| 3. Classificar peticions de suport tècnic a partir d'exemples ja revisats. | | | | |
-| 4. Redactar una resposta a partir del reglament intern i indicar quina font la justifica. | | | | |
-| 5. Decidir automàticament si una persona rep una beca a partir del seu historial personal. | | | | |
+| Un model suggereix la categoria i la prioritat de les peticions de suport; el personal revisa la cua. | | | | |
+| Un generador redacta una resposta a partir del reglament del centre i proposa un enllaç a la font. | | | | |
+| Un sistema decideix automàticament si una persona rep una beca a partir del seu historial. | | | | |
 
-**Preguntes de posada en comú**
+Per a cada ús, anoteu també quina decisió preneu —**pilot limitat, ús acotat o no desplegar**— i quin resultat concret us faria aturar-lo.
 
-- En quin cas una regla simple és més fàcil d'auditar que un model?
-- En quin cas és essencial que una persona puga revisar o anul·lar el resultat?
-- Què hauríem de saber abans d'usar les dades d'un cas real?
+**Preguntes per a la posada en comú**
 
-**Evidència:** taula completada amb una justificació, un risc i un control per cas.
+- Quina tasca no necessita un model perquè una regla o un procediment ja la resol?
+- Quines dades mínimes necessitaria el sistema i quines dades exclouríeu?
+- Quina prova comprovaria els errors abans que afectaren persones?
+- Qui té autoritat, temps i informació per a corregir o aturar l’ús?
+
+**Evidència:** una decisió argumentada per cas, una alternativa i un control verificable.
 
 ## Exercici 2. Quins errors veu la mitjana i quins amaga?
 
@@ -86,6 +85,28 @@ Un classificador fictici suggereix si una petició de suport tècnic és urgent.
 **Precaució:** només hi ha deu exemples per idioma. El conjunt és equilibrat i fabricat expressament; no permet generalitzar a persones reals ni demostrar per si sol una causa del comportament. Les etiquetes de revisió també poden ser discutibles. Cal més informació, proves representatives i una anàlisi del procés de dades.
 
 **Evidència:** càlculs, una explicació de les limitacions i una mesura de supervisió.
+
+## Exercici 3. Quines dades necessita la petició?
+
+**Temps:** 10 minuts.** El text següent és fictici; les etiquetes entre claudàtors són marcadors, no dades reals:
+
+> «Soc [NOM FICTICI] de [AULA FICTÍCIA]. No hi ha xarxa a cap aula des de les 9.00. La clau temporal és [VALOR FICTICI]. Contacta’m al [TELÈFON FICTICI].»
+
+Decidiu quina informació cal per a classificar la incidència i quina només seria necessària per a contactar la persona. No copieu mai una contrasenya o una dada real a un servei d’IA.
+
+| Fragment | Necessari per a valorar urgència? | Acció abans del tractament |
+| --- | --- | --- |
+| «No hi ha xarxa a cap aula» | | |
+| Hora d’inici de la incidència | | |
+| Identitat o aula concreta | | |
+| Clau temporal | | |
+| Telèfon de contacte | | |
+
+1. Escriu una versió mínima de la petició que conserve la informació necessària per a valorar-ne la prioritat.
+2. Indica com es gestionaria la informació de contacte si calguera respondre a la persona.
+3. Proposa un control fora del prompt per evitar que una credencial arribe al model o als registres.
+
+**Evidència:** text minimitzat, justificació de cada exclusió i un control tècnic o de procediment.
 
 ## Connexió amb la pràctica integradora
 
