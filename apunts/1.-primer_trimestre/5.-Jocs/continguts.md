@@ -5,8 +5,6 @@ parent: 5. Jocs
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `5-jocs_marp.md`. No l'edites directament.
-
 # Búsqueda amb adversaris
 
 ### Jocs

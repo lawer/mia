@@ -5,8 +5,6 @@ parent: 4. Búsqueda local i satisfacció de restriccions
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `4-busqueda_local_i_satisfaccio_restriccions_marp.md`. No l'edites directament.
-
 # 4. Búsqueda local i satisfacció de restriccions
 
 Models d'intel·ligència artificial

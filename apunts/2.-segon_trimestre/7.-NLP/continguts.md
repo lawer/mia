@@ -5,8 +5,6 @@ parent: 7. Processament del llenguatge natural
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `7-processament_llenguatge_natural_marp.md`. No l'edites directament.
-
 # 7. Processament del llenguatge natural
 
 Models d'intel·ligència artificial

@@ -5,8 +5,6 @@ parent: 8. Visió per computador
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `8-visio_artificial.md`. No l'edites directament.
-
 # 8. Visió artificial
 
 Models d'intel·ligència artificial

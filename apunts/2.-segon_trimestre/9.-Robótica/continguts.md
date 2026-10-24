@@ -5,8 +5,6 @@ parent: 9. Robótica
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `9-robotica.md`. No l'edites directament.
-
 # 9. Robòtica
 
 Models d'intel·ligència artificial

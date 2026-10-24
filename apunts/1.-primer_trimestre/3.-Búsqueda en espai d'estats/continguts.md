@@ -5,8 +5,6 @@ parent: 3. Búsqueda en espais d'estats
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `3.2-busqueda-marp.md`. No l'edites directament.
-
 # Busqueda en espais d'estats
 
 ### Models d'intel·ligència artificial

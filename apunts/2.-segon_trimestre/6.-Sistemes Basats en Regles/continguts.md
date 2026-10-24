@@ -5,8 +5,6 @@ parent: 6. Sistemes basats en regles
 math: mathjax3
 ---
 
-> Aquesta pàgina es genera automàticament a partir de la presentació MARP `6-sistemes_basats_coneixement_marp.md`. No l'edites directament.
-
 # 6. Sistemes basats en regles
 
 Models d'intel·ligència artificial
