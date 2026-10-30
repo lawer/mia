@@ -8,6 +8,8 @@ nav_order: 1
 
 En aquesta web trobareu els materials de suport a les classes de Models d'Intel·ligència Artificial del Curs d'especialització en Intel·ligència Artificial i Big Data de l'Institut Benigasló.
 
+[Ver el sitio en español]({% link index-es.md %}).
+
 ## Distribució horària orientativa
 
 El mòdul es planifica en **90 hores**. El tema 1 integra els fonaments de la IA i un bloc breu d'ús responsable, que apareix després de la introducció conceptual.

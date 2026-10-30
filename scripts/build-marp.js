@@ -2,7 +2,7 @@
 
 const { execFileSync } = require("node:child_process");
 const { existsSync, readdirSync, readFileSync, writeFileSync } = require("node:fs");
-const { dirname, join, relative } = require("node:path");
+const { basename, dirname, join, relative } = require("node:path");
 
 const root = process.cwd();
 const notesDirectory = join(root, "apunts");
@@ -89,9 +89,14 @@ function contentFrontMatter(contentPath) {
   return splitFrontMatter(readFileSync(contentPath, "utf8")).frontMatter || defaultContentFrontMatter;
 }
 
+function contentPathFor(sourcePath) {
+  const contentName = basename(sourcePath).endsWith("-es.md") ? "continguts-es.md" : "continguts.md";
+  return join(dirname(sourcePath), contentName);
+}
+
 function contentFromMarp(sourcePath, markdown) {
   const { body } = splitFrontMatter(markdown);
-  const contentPath = join(dirname(sourcePath), "continguts.md");
+  const contentPath = contentPathFor(sourcePath);
   const contentBody = contentBodyFromMarp(body);
 
   return `${contentFrontMatter(contentPath)}\n${contentBody}\n`;
@@ -132,7 +137,7 @@ function buildMarpMaterials() {
 
   for (const sourcePath of sources) {
     const markdown = readFileSync(sourcePath, "utf8");
-    const contentPath = join(dirname(sourcePath), "continguts.md");
+    const contentPath = contentPathFor(sourcePath);
 
     validateAssets(sourcePath, markdown);
     writeFileSync(contentPath, contentFromMarp(sourcePath, markdown));

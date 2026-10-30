@@ -1,3 +1,16 @@
+{% assign source_file = page.path | split: "/" | last %}
+{% if source_file contains "-es.md" %}
+  {% assign counterpart_path = page.path | replace: "-es.md", ".md" %}
+  {% assign language_label = "Valencià" %}
+{% else %}
+  {% assign counterpart_path = page.path | replace: ".md", "-es.md" %}
+  {% assign language_label = "Español" %}
+{% endif %}
+{% assign counterpart = site.pages | where: "path", counterpart_path | first %}
+{% if counterpart %}
+<p class="language-switch"><a href="{{ counterpart.url | relative_url }}">{{ language_label }}</a></p>
+{% endif %}
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
     Carles Gonzàlez 2024/2025 <br />
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"

@@ -13,6 +13,18 @@ exclude:
   - scripts
   - apunts/llibre.md
   - _solucionaris
+  # Versions antigues duplicades; el web enllaça les presentacions Marp vigents.
+  - apunts/1.-primer_trimestre/1.-Introducció/1-introduccio.pdf
+  - apunts/1.-primer_trimestre/1.-Introducció/continguts.pdf
+  - apunts/1.-primer_trimestre/2.-Conceptes previs/3.1-conceptes_previs_compress.pdf
+  - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/3.2-busqueda.pdf
+  - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/continguts.pdf
+  - apunts/1.-primer_trimestre/4.-Búsqueda local i Satisfacció de restriccions/4-busqueda_local_i_satisfaccio_restriccions.pdf
+  - apunts/1.-primer_trimestre/5.-Jocs/5-jocs.pdf
+  - apunts/2.-segon_trimestre/6.-Sistemes Basats en Regles/6-sistemes_basats_regles.pdf
+  - apunts/2.-segon_trimestre/7.-NLP/7-processament_llenguatge_natural.pdf
+  - apunts/2.-segon_trimestre/9.-Robótica/9-robotica_typora.pdf
+  - apunts/images/referencia.pdf
   - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/4.-romania_solucionat.ipynb
   - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/2.-sokoban_solucionat.ipynb
   - apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/3.-word_ladder_solucionat.ipynb

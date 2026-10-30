@@ -1,5 +1,8 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
 const {
   contentBodyFromMarp,
   contentFromMarp,
@@ -43,4 +46,17 @@ test("generated student content does not expose authoring instructions", () => {
 
   assert.match(page, /# Contingut per a l'alumnat/);
   assert.doesNotMatch(page, /generada automàticament|no l'edites/i);
+});
+
+test("Spanish MARP sources use a separate Spanish contents page", () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "mia-marp-es-"));
+  const spanishContentsPath = path.join(directory, "continguts-es.md");
+  fs.writeFileSync(spanishContentsPath, "---\nlayout: default\ntitle: Contenidos\n---\n");
+
+  try {
+    const page = contentFromMarp(path.join(directory, "lesson-es.md"), "# Tema");
+    assert.match(page, /title: Contenidos/);
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
 });
