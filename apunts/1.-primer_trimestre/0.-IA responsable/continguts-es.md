@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Contenidos
+title: Contenidos de IA responsable
 lang: es
+parent: 1.2 Uso responsable, seguro y centrado en las personas
+description: "Material didáctico en español: Contenidos de IA responsable."
 ---
 
 # IA responsable, segura y centrada en las personas

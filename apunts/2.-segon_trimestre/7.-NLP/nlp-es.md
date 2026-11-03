@@ -4,8 +4,8 @@ parent: 2. Segunda evaluación
 layout: default
 has_children: true
 has_toc: false
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 7. Procesamiento del lenguaje natural."
 ---
 
 # 7. Procesamiento del lenguaje natural

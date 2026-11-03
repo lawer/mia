@@ -8,7 +8,7 @@
 {% endif %}
 {% assign counterpart = site.pages | where: "path", counterpart_path | first %}
 {% if counterpart %}
-<p class="language-switch"><a href="{{ counterpart.url | relative_url }}">{{ language_label }}</a></p>
+<p class="language-switch"><a href="{{ counterpart.url | relative_url }}" hreflang="{% if page.lang == 'es' %}ca{% else %}es{% endif %}" lang="{% if page.lang == 'es' %}ca{% else %}es{% endif %}" aria-label="{% if page.lang == 'es' %}Ver la versión en valenciano{% else %}Ver la versión en español{% endif %}">{{ language_label }}</a></p>
 {% endif %}
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">

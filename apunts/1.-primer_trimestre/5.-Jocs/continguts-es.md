@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Contenidos
+title: Contenidos de juegos
 lang: es
+parent: 5. Juegos
+description: "Material didáctico en español: Contenidos de juegos."
 ---
 
 # Búsqueda con adversarios

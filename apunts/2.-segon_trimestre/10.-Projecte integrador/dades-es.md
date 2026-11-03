@@ -2,8 +2,8 @@
 layout: default
 title: Corpus e incidencias de prueba
 parent: 10. Proyecto integrador
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: Corpus e incidencias de prueba."
 ---
 
 # Corpus e incidencias de prueba

@@ -10,13 +10,14 @@ Els noms de les funcions, les API, les variables i les dades tècniques es conse
 
 - La versió en castellà conviu amb l'original i acaba en `-es` (`tema-es.md`, `exercici-es.ipynb`).
 - Els continguts Marp generats en castellà van a `continguts-es.md`, per no substituir els continguts valencians.
-- Les pàgines de castellà indiquen `nav_exclude: true`; s'hi accedeix des de la versió valenciana i des del selector d'idioma.
+- La navegació lateral i les cerques mostren només els resultats de l’idioma actiu; les pàgines traduïdes formen una branca pròpia. El selector del peu de pàgina porta a la pàgina parella.
 - Les imatges, les dades i els enllaços tècnics es comparteixen sempre que siga possible.
 
 ## Estat
 
 - [x] Generador Marp: separa els continguts en `continguts-es.md` i conserva els originals valencians.
-- [x] Selector d'idioma al peu de pàgina per a les pàgines que tenen parella traduïda.
+- [x] Selector d’idioma al peu de pàgina i accés bidireccional entre els índexs.
+- [x] Navegació lateral, cerca, capçalera i etiquetes accessibles localitzats per idioma; els apunts de cada presentació queden dins del tema corresponent.
 - [x] Índex en castellà i navegació de les dues avaluacions.
 - [x] Pàgines, activitats, exercicis, treball pràctic i materials del projecte integrador per als temes 1–10.
 - [x] Les 10 presentacions dels temes tenen font Marp, HTML i PDF en castellà: 0, 1, 3.1, 3.2, 4, 5, 6, 7, 8 i 9. S'ha comprovat que cada PDF té el mateix nombre de pàgines que l'original (31, 56, 38, 78, 76, 27, 51, 112, 98 i 44, respectivament).

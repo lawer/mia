@@ -3,11 +3,14 @@ title: Índice
 layout: home
 nav_exclude: true
 lang: es
+description: "Índice de materiales de IA en español."
 ---
 
 # Modelos de inteligencia artificial
 
 En esta web encontrarás materiales de apoyo para la asignatura Modelos de Inteligencia Artificial del Curso de Especialización en Inteligencia Artificial y Big Data del Institut Benigasló.
+
+[Ver el sitio en valenciano]({% link index.md %}).
 
 ## Distribución horaria orientativa
 

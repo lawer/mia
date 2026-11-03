@@ -19,3 +19,73 @@
 </script>
 
 {% endcase %}
+<script>
+  // Separa la navegación, la cabecera y las búsquedas según el idioma de la página.
+  const idiomaActual = {{ page.lang | default: site.lang | default: "ca" | jsonify }};
+  const mostrarEspanol = idiomaActual === "es";
+  document.documentElement.lang = idiomaActual;
+
+  if (mostrarEspanol) {
+    document.title = document.title.replace(/ \| .+$/, " | Modelos de IA");
+    const nombreSitio = document.querySelector('meta[property="og:site_name"]');
+    if (nombreSitio) nombreSitio.content = "Modelos de IA";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const inicio = document.querySelector(".site-header > .site-title");
+    if (inicio && mostrarEspanol) {
+      inicio.href = {{ "/index-es.html" | relative_url | jsonify }};
+      inicio.setAttribute("aria-label", "Inicio: Modelos de IA");
+    }
+
+    const nav = document.querySelector("#site-nav");
+    if (nav) {
+      nav.setAttribute("aria-label", mostrarEspanol ? "Navegación principal" : "Navegació principal");
+      nav.querySelectorAll("a.nav-list-link").forEach(function (enlace) {
+        const ruta = new URL(enlace.href, window.location.href).pathname;
+        if (!ruta.endsWith(".html")) return;
+        const esEspanol = /-es\.html$/.test(ruta);
+        if (esEspanol !== mostrarEspanol) {
+          const elemento = enlace.closest("li.nav-list-item");
+          if (elemento) elemento.style.display = "none";
+        }
+      });
+    }
+
+    const menu = document.querySelector("#menu-button");
+    if (menu) menu.setAttribute("aria-label", mostrarEspanol ? "Menú" : "Menú de navegació");
+    const salto = document.querySelector(".skip-to-main");
+    if (salto) salto.textContent = mostrarEspanol ? "Saltar al contenido principal" : "Salta al contingut principal";
+
+    const botonBusqueda = document.querySelector("#search-button");
+    if (botonBusqueda) botonBusqueda.setAttribute("aria-label", mostrarEspanol ? "Enfocar la búsqueda" : "Ves al camp de cerca");
+
+    const resultados = document.querySelector("#search-results");
+    const entrada = document.querySelector("#search-input");
+    if (resultados) {
+      let temporizador;
+      const filtrarResultados = function () {
+        resultados.querySelectorAll("a.search-result").forEach(function (enlace) {
+          const ruta = new URL(enlace.href, window.location.href).pathname;
+          const esEspanol = /-es\.html$/.test(ruta);
+          if (esEspanol !== mostrarEspanol) enlace.closest("li")?.remove();
+        });
+        const sinResultados = resultados.querySelector(".search-no-result");
+        if (sinResultados) sinResultados.textContent = mostrarEspanol ? "No se encontraron resultados" : "No s'han trobat resultats";
+        clearTimeout(temporizador);
+        temporizador = setTimeout(function () {
+          if (entrada && entrada.value.trim() && resultados.querySelector(".search-results-list") && !resultados.querySelector("a.search-result")) {
+            let aviso = resultados.querySelector(".search-no-result-filtered");
+            if (!aviso) {
+              aviso = document.createElement("div");
+              aviso.className = "search-no-result search-no-result-filtered";
+              resultados.appendChild(aviso);
+            }
+            aviso.textContent = mostrarEspanol ? "No se encontraron resultados" : "No s'han trobat resultats";
+          }
+        }, 250);
+      };
+      new MutationObserver(filtrarResultados).observe(resultados, { childList: true, subtree: true });
+    }
+  });
+</script>

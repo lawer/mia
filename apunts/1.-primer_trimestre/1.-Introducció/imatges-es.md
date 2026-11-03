@@ -4,6 +4,7 @@ title: Créditos visuales de introducción a la IA
 parent: 1. Introducción y fundamentos de la IA
 nav_exclude: true
 lang: es
+description: "Material didáctico en español: Créditos visuales de introducción a la IA."
 ---
 
 # Créditos visuales

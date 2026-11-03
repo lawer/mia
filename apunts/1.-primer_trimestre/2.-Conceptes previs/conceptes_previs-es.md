@@ -5,8 +5,8 @@ layout: default
 has_children: true
 has_toc: false
 nav_order: 3
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 2. Conceptos previos."
 ---
 
 # 2. Conceptos previos

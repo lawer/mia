@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Contenidos
+title: Contenidos de búsqueda local
 lang: es
+parent: 4. Búsqueda local y satisfacción de restricciones
+description: "Material didáctico en español: Contenidos de búsqueda local."
 ---
 
 # 4. Búsqueda local y satisfacción de restricciones

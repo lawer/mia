@@ -3,8 +3,8 @@ layout: default
 title: "Trabajo práctico 1: análisis de una aplicación de IA"
 parent: 1. Introducción y fundamentos de la IA
 nav_order: 1
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: Trabajo práctico 1: análisis de una aplicación de IA."
 ---
 
 # Trabajo práctico 1: análisis de una aplicación de IA

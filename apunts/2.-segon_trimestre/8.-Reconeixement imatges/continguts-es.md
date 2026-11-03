@@ -1,6 +1,9 @@
 ---
 layout: default
-title: Continguts
+title: Contenidos de visión por computador
+parent: 8. Visión por computador
+lang: es
+description: "Material didáctico en español: Contenidos de visión por computador."
 ---
 
 # 8. Visión artificial

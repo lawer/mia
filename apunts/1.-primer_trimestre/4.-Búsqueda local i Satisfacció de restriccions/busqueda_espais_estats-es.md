@@ -5,8 +5,8 @@ layout: default
 has_children: true
 has_toc: false
 nav_order: 5
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 4. Búsqueda local y satisfacción de restricciones."
 ---
 
 # 4. Búsqueda local y satisfacción de restricciones

@@ -2,8 +2,8 @@
 layout: default
 title: Guía del proyecto final
 parent: 10. Proyecto integrador
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: Guía del proyecto final."
 ---
 
 # Guía del proyecto final

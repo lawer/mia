@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Contenidos
+title: Contenidos de introducción a la IA
 lang: es
+parent: 1. Introducción y fundamentos de la IA
+description: "Material didáctico en español: Contenidos de introducción a la IA."
 ---
 
 ![](images/original/diapositiva-01.png)

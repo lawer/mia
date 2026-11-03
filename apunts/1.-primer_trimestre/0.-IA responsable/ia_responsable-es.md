@@ -5,8 +5,8 @@ layout: default
 has_children: true
 has_toc: false
 nav_order: 2
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 1.2 Uso responsable, seguro y centrado en las personas."
 ---
 
 # 1.2 Uso responsable, seguro y centrado en las personas

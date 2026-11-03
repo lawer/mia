@@ -1,0 +1,5 @@
+{% if site.logo %}
+  <div class="site-logo" role="img" aria-label="{% if page.lang == 'es' %}{{ site.title_es | default: site.title }}{% else %}{{ site.title }}{% endif %}"></div>
+{% else %}
+  {% if page.lang == 'es' %}{{ site.title_es | default: site.title }}{% else %}{{ site.title }}{% endif %}
+{% endif %}

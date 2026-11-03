@@ -4,6 +4,7 @@ title: Créditos visuales de IA responsable
 parent: 1.2 Uso responsable, seguro y centrado en las personas
 nav_exclude: true
 lang: es
+description: "Material didáctico en español: Créditos visuales de IA responsable."
 ---
 
 # Procedencia de los recursos visuales

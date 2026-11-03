@@ -2,8 +2,8 @@
 layout: default
 title: Ejercicios de IA responsable
 parent: 1.2 Uso responsable, seguro y centrado en las personas
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: Ejercicios de IA responsable."
 ---
 
 # Ejercicios de aula: decidir, medir y revisar

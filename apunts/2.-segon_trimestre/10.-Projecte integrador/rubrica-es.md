@@ -2,8 +2,8 @@
 layout: default
 title: Rúbrica del proyecto final
 parent: 10. Proyecto integrador
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: Rúbrica del proyecto final."
 ---
 
 # Rúbrica del proyecto final

@@ -1,6 +1,9 @@
 ---
 layout: default
-title: Continguts
+title: Contenidos de procesamiento del lenguaje natural
+parent: 7. Procesamiento del lenguaje natural
+lang: es
+description: "Material didáctico en español: Contenidos de procesamiento del lenguaje natural."
 ---
 
 # 7. Procesamiento del lenguaje natural

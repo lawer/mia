@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Contenidos
+title: Contenidos de búsqueda en espacios de estados
 lang: es
+parent: 3. Búsqueda en espacios de estados
+description: "Material didáctico en español: Contenidos de búsqueda en espacios de estados."
 ---
 
 # Búsqueda en espacios de estados

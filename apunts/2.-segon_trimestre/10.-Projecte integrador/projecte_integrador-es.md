@@ -5,8 +5,8 @@ layout: default
 has_children: true
 has_toc: false
 nav_order: 10
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 10. Proyecto integrador."
 ---
 
 # 10. Proyecto integrador: asistente para incidencias de soporte técnico

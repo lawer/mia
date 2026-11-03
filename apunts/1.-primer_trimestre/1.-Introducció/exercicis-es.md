@@ -3,8 +3,8 @@ layout: default
 title: Ficha de ejercicios 1.1 · Introducción a la IA
 parent: 1. Introducción y fundamentos de la IA
 nav_order: 2
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: Ficha de ejercicios 1.1 · Introducción a la IA."
 ---
 
 # Ficha de ejercicios 1.1 · Introducción a la IA

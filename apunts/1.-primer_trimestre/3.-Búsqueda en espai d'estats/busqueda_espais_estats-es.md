@@ -5,8 +5,8 @@ layout: default
 has_children: true
 has_toc: false
 nav_order: 4
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 3. Búsqueda en espacios de estados."
 ---
 
 # 3. Búsqueda en espacios de estados

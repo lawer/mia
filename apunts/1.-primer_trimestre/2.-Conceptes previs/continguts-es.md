@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Contenidos
+title: Contenidos de conceptos previos
 lang: es
+parent: 2. Conceptos previos
+description: "Material didáctico en español: Contenidos de conceptos previos."
 ---
 
 <style>

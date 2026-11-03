@@ -1,6 +1,9 @@
 ---
 layout: default
-title: Continguts
+title: Contenidos de robótica
+parent: 9. Robótica
+lang: es
+description: "Material didáctico en español: Contenidos de robótica."
 ---
 
 # 9. Robótica

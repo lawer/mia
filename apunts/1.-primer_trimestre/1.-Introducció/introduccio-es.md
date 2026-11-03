@@ -5,8 +5,8 @@ layout: default
 has_children: true
 has_toc: false
 nav_order: 1
-nav_exclude: true
 lang: es
+description: "Material didáctico en español: 1. Introducción y fundamentos de la IA."
 ---
 
 # 1. Introducción y fundamentos de la inteligencia artificial

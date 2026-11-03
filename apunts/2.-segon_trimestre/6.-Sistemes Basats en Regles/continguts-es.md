@@ -1,6 +1,9 @@
 ---
 layout: default
-title: Continguts
+title: Contenidos de sistemas basados en reglas
+parent: 6. Sistemas basados en reglas
+lang: es
+description: "Material didáctico en español: Contenidos de sistemas basados en reglas."
 ---
 
 # 6. Sistemas basados en reglas
