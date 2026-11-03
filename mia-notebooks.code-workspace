@@ -8,6 +8,7 @@
 		}
 	],
 	"settings": {
+		"notebook.diff.enablePreview": false,
 		"markdown.marp.themes": [
 			"https://raw.githubusercontent.com/lawer/marp_themes/main/lawer.css"
 		],

@@ -1,5 +1,6 @@
 {
   "isGitignoreExtActive": true,
+  "notebook.diff.enablePreview": false,
   "marp.themes": [
     "./themes/lawer.css"
   ]
