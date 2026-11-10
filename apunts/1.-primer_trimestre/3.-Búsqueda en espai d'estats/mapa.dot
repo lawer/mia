@@ -1,0 +1,23 @@
+digraph tresor {
+  graph [rankdir=LR, bgcolor="white", pad=0.35, nodesep=0.7, ranksep=1.05, dpi=160];
+  node [shape=circle, style=filled, fillcolor="#E7F1FA", color="#245A82", penwidth=2, fontname="DejaVu Sans", fontsize=19, width=0.9, fixedsize=true];
+  edge [color="#34495E", fontcolor="#152D40", penwidth=2, arrowsize=0.9, fontname="DejaVu Sans", fontsize=18];
+  A [label="A\nh=4"];
+  B [label="B\nh=3"];
+  C [label="C\nh=3"];
+  D [label="D\nh=3"];
+  E [label="E\nh=4"];
+  G [label="G\nh=0", fillcolor="#FADBD8", color="#B33A30"];
+  H [label="H\nh=0", fillcolor="#FADBD8", color="#B33A30"];
+  {rank=same; B; C}
+  {rank=same; D; E}
+  {rank=same; G; H}
+  A -> B [label="2"];
+  A -> C [label="1"];
+  B -> D [label="2"];
+  B -> G [label="7"];
+  C -> D [label="3"];
+  C -> E [label="2"];
+  D -> G [label="3"];
+  E -> H [label="4"];
+}
