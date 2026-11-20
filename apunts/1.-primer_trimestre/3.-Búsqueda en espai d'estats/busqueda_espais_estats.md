@@ -18,6 +18,8 @@ nav_order: 4
 
 ## Exercicis
 
+**La cursa de la mina** · [Notebook](mina.ipynb) · [Colab](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/mina.ipynb) · [Python](mina/bot_model.py)
+
 | Exercici                                |                                                                                                                                                                                                                                Enllaç |
 | :-------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Exercicis curts](1.-exercicis.ipynb)   |   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/1.-exercicis.ipynb) |
