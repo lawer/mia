@@ -22,10 +22,9 @@ En esta unidad representarás problemas mediante estados, acciones y costes, y a
 
 ## Ejercicios disponibles en castellano
 
-**La carrera de la mina** · [Notebook](mina-es.ipynb) · [Colab](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/mina-es.ipynb) · [Python](mina/bot_model.py)
-
 | Ejercicio | Enlace |
 | --- | :---: |
+| La carrera de la mina | [Duelo web](mina/duel-es.html) · [Notebook](mina-es.ipynb) · [Colab](https://colab.research.google.com/github/lawer/mia/blob/main/apunts/1.-primer_trimestre/3.-B%C3%BAsqueda%20en%20espai%20d%27estats/mina-es.ipynb) · [Python](mina/bot_model.py) |
 | Ejercicios breves de búsqueda | [Notebook](1.-exercicis-es.ipynb) |
 | Sokoban: UCS, Greedy y A* | [Notebook](2.-sokoban-es.ipynb) |
 | Word Ladder: costes y heurísticas | [Notebook](3.-word_ladder-es.ipynb) |

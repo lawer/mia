@@ -89,11 +89,11 @@ def genera_mina(llavor):
             return replace(mina, bomba=rng.choice(candidats))
 
 
-def juga(mina, bots, maxim_torns=60):
-    """Retorna (guanyador, historial). Guanyador és 0, 1 o None si hi ha empat."""
+def torns_partida(mina, bots, maxim_torns=60):
+    """Produeix un estat per torn i retorna el guanyador en acabar."""
     robots = tuple(Robot(posicio, mina.bateria) for posicio in mina.eixides)
     disponible = True
-    historial = [(robots, disponible)]
+    yield 0, robots, disponible
     for torn in range(1, maxim_torns + 1):
         nous = list(robots)
         for i, bot in enumerate(bots):
@@ -114,11 +114,26 @@ def juga(mina, bots, maxim_torns=60):
                     rival = 1 - primers[0]
                     nous[rival] = replace(nous[rival], retard=RETARD)
         robots = tuple(nous)
-        historial.append((robots, disponible))
+        yield torn, robots, disponible
         arribades = [i for i, robot in enumerate(robots) if robot.posicio == mina.tresor]
         if arribades:
-            return (arribades[0] if len(arribades) == 1 else None), historial
-    return None, historial
+            return arribades[0] if len(arribades) == 1 else None
+    return None
+
+
+
+def juga(mina, bots, maxim_torns=60, *, en_torn=None):
+    """Retorna (guanyador, historial). Guanyador és 0, 1 o None si hi ha empat."""
+    torns = torns_partida(mina, bots, maxim_torns)
+    historial = []
+    while True:
+        try:
+            torn, robots, disponible = next(torns)
+        except StopIteration as fi:
+            return fi.value, historial
+        historial.append((robots, disponible))
+        if en_torn is not None:
+            en_torn(torn, robots, disponible)
 
 
 def dibuixa(mina, robots, disponible):
@@ -131,3 +146,18 @@ def dibuixa(mina, robots, disponible):
         f, c = robot.posicio
         mapa[f][c] = "X" if mapa[f][c] == "1" else str(i + 1)
     return "\n".join(" ".join(fila) for fila in mapa)
+
+
+_ICONES = {
+    "#": "🧱", ".": "⬛", ":": "🟫", "T": "💎", "B": "💣",
+    "1": "🔵", "2": "🟠", "X": "🟣",
+}
+
+
+def dibuixa_emojis(mina, robots, disponible):
+    """Mostra el tauler amb els colors dels robots i del terreny."""
+    tauler = dibuixa(mina, robots, disponible)
+    return "\n".join(
+        " ".join(_ICONES[simbol] for simbol in fila.split())
+        for fila in tauler.splitlines()
+    )

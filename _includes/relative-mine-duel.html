@@ -1,0 +1,48 @@
+{% assign castellano = false %}
+{% if page.lang == 'es' %}{% assign castellano = true %}{% endif %}
+<section id="mina-duel"
+  {% if castellano %}
+  data-loading="Cargando Python…" data-stopped="Partida detenida."
+  data-timeout="Python ha tardado demasiado." data-runtime-error="No se ha podido ejecutar la partida."
+  data-draw="Empate" data-win="Gana" data-turn="Turno"
+  {% else %}
+  data-loading="Carregant Python…" data-stopped="Partida aturada."
+  data-timeout="Python ha tardat massa." data-runtime-error="No s’ha pogut executar la partida."
+  data-draw="Empat" data-win="Guanya" data-turn="Torn"
+  {% endif %}>
+  <h1>{{ page.title }}</h1>
+  {% if castellano %}
+  <p>Carga dos bots Python con la función <code>decideix(vista)</code> y mira el duelo en directo. Si dejas un campo vacío, jugará el bot de ejemplo.</p>
+  {% else %}
+  <p>Carrega dos bots Python amb la funció <code>decideix(vista)</code> i mira el duel en directe. Si deixes un camp buit, jugarà el bot d’exemple.</p>
+  {% endif %}
+  <form>
+    <p><label>🔵 {% if castellano %}Bot azul{% else %}Bot blau{% endif %} <input name="blue" type="file" accept=".py"></label></p>
+    <p><label>🟠 {% if castellano %}Bot naranja{% else %}Bot taronja{% endif %} <input name="orange" type="file" accept=".py"></label></p>
+    <p>
+      <label>{% if castellano %}Semilla{% else %}Llavor{% endif %}
+        <input name="seed" type="text" inputmode="numeric" pattern="[0-9]+" size="12" placeholder="{% if castellano %}Aleatoria{% else %}Aleatòria{% endif %}">
+      </label>
+      <label>{% if castellano %}Ritmo{% else %}Ritme{% endif %}
+        <select name="interval">
+          <option value="650">{% if castellano %}Lento{% else %}Lent{% endif %}</option>
+          <option value="350" selected>Normal</option>
+          <option value="120">{% if castellano %}Rápido{% else %}Ràpid{% endif %}</option>
+        </select>
+      </label>
+    </p>
+    <button class="btn btn-primary" type="submit">{% if castellano %}Iniciar duelo{% else %}Inicia el duel{% endif %}</button>
+    <button class="btn" type="button" data-stop disabled>{% if castellano %}Detener{% else %}Atura{% endif %}</button>
+  </form>
+  <p role="status"></p>
+  <pre style="font-size:clamp(.8rem, 3.5vw, 1.4rem); line-height:1.4; overflow:auto" aria-label="{% if castellano %}Tablero{% else %}Tauler{% endif %}"></pre>
+  <div data-players style="white-space:pre-wrap"></div>
+  {% if castellano %}
+  <p>🟣 Ambos bots · 💎 Tesoro · 💣 Bomba · 🧱 Muro · ⬛ Terreno normal · 🟫 Terreno difícil</p>
+  <p>El navegador descarga el intérprete Python. Usa bots propios o revisados, porque sus archivos se ejecutan como código.</p>
+  {% else %}
+  <p>🟣 Els dos bots · 💎 Tresor · 💣 Bomba · 🧱 Mur · ⬛ Terreny normal · 🟫 Terreny difícil</p>
+  <p>El navegador descarrega l’intèrpret Python. Usa bots propis o revisats, perquè els fitxers s’executen com a codi.</p>
+  {% endif %}
+</section>
+<script type="module" src="./duel.mjs"></script>

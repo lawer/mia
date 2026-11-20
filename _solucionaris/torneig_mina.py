@@ -3,6 +3,10 @@
 Des de l'arrel del repositori:
 PYTHONPATH="apunts/1.-primer_trimestre/3.-Búsqueda en espai d'estats/mina" python _solucionaris/torneig_mina.py lliuraments --mapes 5
 
+Afig --directe per veure totes les partides o --directe anna joan per
+projectar només els enfrontaments entre dos àlies. Amb --interval pots
+canviar la pausa entre torns (per defecte, 0.35 segons).
+
 Posa un .py per alumne a lliuraments, amb el seu àlies com a nom de fitxer.
 Tanca els lliuraments abans de generar les mines. Guarda la llavor del
 resultat per poder repetir-lo amb --llavor. Les partides duren 60 torns
@@ -14,15 +18,17 @@ import argparse
 from collections import Counter
 from dataclasses import replace
 from itertools import combinations
+from math import isfinite
 from pathlib import Path
 from random import Random
 from runpy import run_path
 from secrets import randbits
 from signal import ITIMER_REAL, SIGALRM, setitimer, signal
 import sys
+from time import sleep
 from contextlib import redirect_stdout
 
-from mina import genera_mina, juga
+from mina import dibuixa_emojis, genera_mina, juga
 
 
 def _temps_esgotat(_senyal, _marc):
@@ -45,7 +51,7 @@ def carrega(cami):
     return decideix
 
 
-def duel(mina, fitxers):
+def duel(mina, fitxers, *, en_torn=None):
     errors = {}
 
     def prepara(i, fitxer):
@@ -68,7 +74,7 @@ def duel(mina, fitxers):
         return bot
 
     bots = tuple(prepara(i, fitxer) for i, fitxer in enumerate(fitxers))
-    guanyador, historial = juga(mina, bots)
+    guanyador, historial = juga(mina, bots, en_torn=en_torn)
     if errors:
         primer_torn = min(torn for torn, _ in errors.values())
         primers = [i for i, (torn, _) in errors.items() if torn == primer_torn]
@@ -76,15 +82,37 @@ def duel(mina, fitxers):
     return guanyador, len(historial) - 1, errors
 
 
+def vista_en_directe(mina, noms, titol, interval):
+    def mostra(torn, robots, disponible):
+        if sys.stdout.isatty():
+            print("\033[2J\033[H", end="")
+        print(f"{titol} · Torn {torn} · {' vs '.join(noms)}")
+        print(dibuixa_emojis(mina, robots, disponible))
+        for icona, nom, robot in zip(("🔵", "🟠"), noms, robots):
+            print(f"{icona} {nom} · 🔋 {robot.energia} · ⏳ {robot.retard}")
+        sys.stdout.flush()
+        sleep(interval)
+    return mostra
+
+
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("lliuraments", type=Path, help="Directori amb un fitxer .py per alumne")
     parser.add_argument("--mapes", type=int, default=5)
     parser.add_argument("--llavor", type=int, help="Permet repetir un torneig anterior")
+    parser.add_argument("--directe", nargs="*", metavar="ÀLIES",
+                        help="Projecta totes les partides o indica els dos bots a mostrar")
+    parser.add_argument("--interval", type=float, default=0.35,
+                        help="Pausa en segons després de cada torn visible")
     args = parser.parse_args()
     fitxers = sorted(args.lliuraments.glob("*.py"))
     if len(fitxers) < 2 or args.mapes < 1:
         parser.error("Calen almenys dos bots i un mapa")
+    if not isfinite(args.interval) or args.interval < 0:
+        parser.error("L'interval ha de ser un nombre finit i no negatiu")
+    if args.directe and (len(set(args.directe)) != 2 or len(args.directe) != 2
+                         or not set(args.directe) <= {p.stem for p in fitxers}):
+        parser.error("--directe accepta dos àlies diferents de bots del torneig")
     signal(SIGALRM, _temps_esgotat)
     llavor = randbits(64) if args.llavor is None else args.llavor
     rng = Random(llavor)
@@ -96,7 +124,11 @@ def main():
         noms = [p.stem for p in parella]
         for numero, mina in enumerate(mines, 1):
             for volta, eixides in enumerate((mina.eixides, mina.eixides[::-1]), 1):
-                guanyador, torns, errors = duel(replace(mina, eixides=eixides), parella)
+                tauler = replace(mina, eixides=eixides)
+                mostra = None
+                if args.directe == [] or (args.directe and set(args.directe) == set(noms)):
+                    mostra = vista_en_directe(tauler, noms, f"Mina {numero}.{volta}", args.interval)
+                guanyador, torns, errors = duel(tauler, parella, en_torn=mostra)
                 if guanyador is None:
                     punts.update(noms)
                     empats.update(noms)
