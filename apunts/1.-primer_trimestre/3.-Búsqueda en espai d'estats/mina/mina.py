@@ -57,20 +57,32 @@ def _abast(mina, origen):
     return millor
 
 
-def genera_mina(llavor):
+def genera_mina(llavor, files=9, columnes=13):
+    """Genera una mina jugable a partir de la llavor i les dimensions."""
+    if not 5 <= files <= 21 or not 5 <= columnes <= 25:
+        raise ValueError("Calen 5–21 files i 5–25 columnes")
     rng = Random(llavor)
-    eixides = ((1, 1), (1, 11))
-    tresor = (7, 6)
-    while True:
+    eixides = ((1, 1), (1, columnes - 2))
+    tresor = (files - 2, columnes // 2)
+    distancia_base = files - 3 + columnes // 2 - 1
+    for intent in range(100):
         mapa = tuple(
             "".join(
                 "." if (f, c) in (*eixides, tresor)
                 else rng.choices("#.:", (23, 55, 22))[0]
-                for c in range(13)
+                for c in range(columnes)
             )
-            for f in range(9)
+            for f in range(files)
         )
-        bateria = rng.randint(19, 24)
+        if intent == 99:
+            # Garanteix una galeria fins al tresor si la resta de mapes fallen.
+            graella = [list(fila) for fila in mapa]
+            for c in range(1, columnes - 1):
+                graella[1][c] = "."
+            for f in range(1, files - 1):
+                graella[f][tresor[1]] = "."
+            mapa = tuple("".join(fila) for fila in graella)
+        bateria = max(7, rng.randint(19, 24) + 2 * (distancia_base - 11))
         mina = Mina(mapa, eixides, tresor, tresor, bateria)
         abasts = [_abast(mina, eixida) for eixida in eixides]
         if any(tresor not in abast for abast in abasts):

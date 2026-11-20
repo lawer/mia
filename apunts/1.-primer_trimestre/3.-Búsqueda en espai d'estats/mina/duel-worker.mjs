@@ -10,17 +10,18 @@ async function text(path) {
 self.onmessage = async ({ data }) => {
   try {
     if (data.type === "start") {
-      const [{ loadPyodide }, motor, model] = await Promise.all([
+      const [{ loadPyodide }, motor] = await Promise.all([
         import(`${CDN}pyodide.mjs`),
         text("mina.py"),
-        text("bot_model.py"),
       ]);
       python = await loadPyodide({ indexURL: CDN });
       python.FS.writeFile("mina.py", motor);
       for (const [index, source] of data.bots.entries()) {
-        python.FS.writeFile(`jugador_${index}.py`, source ?? model);
+        python.FS.writeFile(`jugador_${index}.py`, source);
       }
       python.globals.set("llavor_text", data.seed);
+      python.globals.set("files", data.rows);
+      python.globals.set("columnes", data.columns);
       python.runPython(`
 import json
 from runpy import run_path
@@ -37,7 +38,7 @@ def bot(index):
         return accio
     return valida
 
-mina = genera_mina(int(llavor_text))
+mina = genera_mina(int(llavor_text), files, columnes)
 torns = torns_partida(mina, (bot(0), bot(1)))
 
 def seguent():

@@ -31,12 +31,29 @@
         </select>
       </label>
     </p>
+    <p>
+      <label>{% if castellano %}Filas{% else %}Files{% endif %}
+        <input name="rows" type="number" min="5" max="21" step="1" value="9" required>
+      </label>
+      <label>{% if castellano %}Columnas{% else %}Columnes{% endif %}
+        <input name="columns" type="number" min="5" max="25" step="1" value="13" required>
+      </label>
+    </p>
     <button class="btn btn-primary" type="submit">{% if castellano %}Iniciar duelo{% else %}Inicia el duel{% endif %}</button>
     <button class="btn" type="button" data-stop disabled>{% if castellano %}Detener{% else %}Atura{% endif %}</button>
   </form>
   <p role="status"></p>
-  <pre style="font-size:clamp(.8rem, 3.5vw, 1.4rem); line-height:1.4; overflow:auto" aria-label="{% if castellano %}Tablero{% else %}Tauler{% endif %}"></pre>
+  <pre data-board style="font-size:clamp(.8rem, 3.5vw, 1.4rem); line-height:1.4; overflow:auto" aria-label="{% if castellano %}Tablero{% else %}Tauler{% endif %}"></pre>
   <div data-players style="white-space:pre-wrap"></div>
+  <details data-default-bot open>
+    <summary>{% if castellano %}Código Python del bot de ejemplo{% else %}Codi Python del bot d’exemple{% endif %}</summary>
+    {% if castellano %}
+    <p>Los dos bots usan este código si dejas los dos campos vacíos.</p>
+    {% else %}
+    <p>Els dos bots fan servir aquest codi si deixes els dos camps buits.</p>
+    {% endif %}
+    <pre><code></code></pre>
+  </details>
   {% if castellano %}
   <p>🟣 Ambos bots · 💎 Tesoro · 💣 Bomba · 🧱 Muro · ⬛ Terreno normal · 🟫 Terreno difícil</p>
   <p>El navegador descarga el intérprete Python. Usa bots propios o revisados, porque sus archivos se ejecutan como código.</p>
