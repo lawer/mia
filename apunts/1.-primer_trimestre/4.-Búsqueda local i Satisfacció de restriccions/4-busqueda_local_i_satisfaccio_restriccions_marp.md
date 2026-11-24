@@ -115,30 +115,23 @@ h1, h2, h3, h4, h5, h6, p {
 
 ## Característiques (II)
 
-  - Utilitzarem una **funció d'avaluació** que **maximitzirà** un valor. Representa la **qualitat** de l'estat, no el cost. Podem ponderar els valors de les variables segons les característiques de l'estat que volem potenciar.
+  - Una **funció d’avaluació** assigna un valor a cada estat. Segons el problema, volem maximitzar el valor o minimitzar el cost.
 - Avantatges:
   - Utilitza **poca memòria** i **poca CPU**.
   - Permeten trobar solucions **raonables** en espais d'estats **molt grans**.
 
 ---
 
-## Definició del problema
+## Algorisme d’escalada
 
-```python
-class ProblemaBusquedaLocal(object):
-  def __init__(self, inicial=None, **kwds):
-    self.__dict__.update(inicial=inicial, **kwds)
+- Partim d’un estat inicial i avaluem els seus veïns.
+- Passem al millor veí si millora l’estat actual.
+- Quan cap veí el millora, ens aturem en un òptim local.
+- En el viatjant, millorar vol dir fer el circuit més curt.
 
-  def estats_successors(self, estat):    raise NotImplementedError
+---
 
-  def es_solucio(self, estat):           raise NotImplementedError
-
-  def funcio_avaluacio(self, state):     return NotImplementedError
-
-  def __repr__(self):
-    return '{}({!r})'.format(
-      type(self).__name__, self.inicial)
-```
+![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
 
 ---
 
@@ -159,257 +152,102 @@ class ProblemaBusquedaLocal(object):
 
 ---
 
-<style scoped>section { font-size:30px; }</style>
+### El viatjant com a problema de cerca local
 
-
-## Definició del problema
-
-### Exemple: Viajant de comerç (II)
-
-- El **nombre d'estats** que cal **explorar** és **molt gran**.
-  - Per a 10 ciutats, el nombre d'estats és de $$10! = 3.628.800$$.
-- El plantejarem com a búsqueda local.
-- No ens cal una **estructura de dades** que representi l'espai d'estats.
-- Solament ens cal un **estat inicial** i una **funció d'avaluació**.
-- Anirem modificant l'estat inicial fins que no puguem millorar més.
-- Utilitzarem una **funció d'avaluació** que **millorá quan menor siga el valor** del camí.
-- A continuació podem veure una possible implementació.
+- **Estat**: una ruta que manté la ciutat 0 al principi.
+- **Cost**: la distància total, inclòs el retorn a la ciutat 0.
+- **Veïns**: intercanviem dues ciutats de la ruta.
+- A cada pas, busquem un intercanvi que reduïsca la distància.
 
 ---
 
-<style scoped>section { font-size:34px; }</style>
-
-### Exemple: Viajant de comerç - Implementació (I)
+### Viatjant · Dades i ruta inicial
 
 ```python
-class TSP(ProblemaBusquedaLocal):
-  def estats_successors(self, estat):
-    successors = []
-    for i in range(len(estat)):
-      for j in range(i + 1, len(estat)):
-        successor = estat.copy()
-        successor[i], successor[j] = successor[j], successor[i]
-        successors.append(successor)
-    return successors
+from itertools import combinations, permutations
+from math import dist, exp
+from random import Random
 
-  def distancia(self, ciutat1, ciutat2):
-    # Formula de la distancia euclidiana
-    return math.sqrt((ciutat1[0] - ciutat2[0]) ** 2 + (ciutat1[1] - ciutat2[1]) ** 2)
-
+rng = Random(1)
+ciutats = [(rng.randrange(100), rng.randrange(100)) for _ in range(8)]
+inicial = tuple(range(len(ciutats)))
 ```
 
 ---
 
-<style scoped>section { font-size:33px; }</style>
+<style scoped>section { font-size: 28px; }</style>
 
-### Exemple: Viajant de comerç - Implementació (II)
+### Viatjant · Cost i successors
 
 ```python
-  def funcio_avaluacio(self, estat):
-    distancia = 0
-    for i in range(len(estat)):
-      distancia += self.distancia(estat[i], estat[(i + 1) % len(estat)])
-    return 1/distancia
+def cost(ruta):
+    circuit = ruta + (ruta[0],)
+    return sum(dist(ciutats[a], ciutats[b]) for a, b in zip(circuit, circuit[1:]))
 
-  @classmethod
-  def genera_estat_inicial(cls, ciutats):
-    return random.sample(ciutats, len(ciutats))
+def intercanvia(ruta, i, j):
+    nova = list(ruta)
+    nova[i], nova[j] = nova[j], nova[i]
+    return tuple(nova)
 
-ciutats = [
-  (random.randint(0, 1000), random.randint(0, 1000)) for _ in range(100)
-]
-tsp = TSP(inicial=TSP.genera_estat_inicial(ciutats), ciutats=ciutats)
+def veines(ruta):
+    for i, j in combinations(range(1, len(ruta)), 2):
+        yield intercanvia(ruta, i, j)
 ```
 
 ---
 
-## Tornada enrere
-
-- La **tècnica de tornada enrere** o **backtracking** és una tècnica de cerca local.
-- Es basa en **explorar l'espai d'estats** fins a trobar una solució.
-- Si no es troba una solució, es **torna enrere** i es **modifica l'últim estat**.
-- Aquesta tècnica garanteix trobar la **solució òptima** però pot ser **molt lenta**.
-
----
-
-<!--
-_footer:  ""
--->
-
-<style scoped>section { font-size:34px; }</style>
-
-### Implementació
+### El primer pas de l’escalada
 
 ```python
-def backtracking(problema):
-  cua = [problema.inicial]
-  visitats = set()
-  millor_estat, millor_fitness = None, float('inf')
-  while cua:
-    estat = cua.pop(0)
-    if problema.es_solucio(estat) and problema.funcio_avaluacio(estat) > millor_fitness:
-        millor_estat = estat
-        millor_fitness = problema.funcio_avaluacio(estat)
-    if str(estat) not in visitats:
-      visitats.add(str(estat))
-      successors = problema.estats_successors(estat)
-      for successor in successors:
-        if es_compleixen_restriccions(successor):
-            cua.append(successor)
-
-  return millor_estat
+millor_vei = min(veines(inicial), key=cost)
+print(inicial, round(cost(inicial), 2))
+print(millor_vei, round(cost(millor_vei), 2))
 ```
 
 ---
 
-<!--
-_footer:  ""
--->
-
-
-<style scoped>section { font-size:34px; }</style>
-
-### Execució
+### Hill climbing
 
 ```python
-ciutats = [
-  (random.randint(0, 1000),
-    random.randint(0, 1000))
-  for _ in range(7)
-]
-tsp = TSP(
-  inicial=TSP.genera_estat_inicial(ciutats),
-  ciutats=ciutats
-)
-solucio = backtracking(tsp)
-
-Millor fitness: 4030.1303415460707
-...
-Millor fitness: 2718.3988057871697
-
-3min 52s ± 24.7 s per loop
-(mean ± std. dev. of 7 runs, 1 loop each)
-
+def hill_climbing(ruta):
+    while True:
+        millor = min(veines(ruta), key=cost, default=ruta)
+        if cost(millor) >= cost(ruta):
+            return ruta
+        ruta = millor
 ```
 
 ---
 
-<style scoped>section { font-size:34px; }</style>
-
-## Algorisme d'Escalada
-
-- L'algorisme d'escalada o **Hill Climbing** és l'algorisme de cerca local més senzill.
-- Si plantegem els estats com a **punts en un espai**,
-  - Sent l'alçada de cada punt el valor de la funció a optimitzar,
-  - l'algorisme consisteix a **moure'ns** cap a **punts més alts**.
-  - Si deixem de pujar entendrem que hem arribat al **màxim global** i hem trobat la solució.
-
----
-
-![bg fit](../../images/Captura%20de%20pantalla%202023-08-25%20a%20las%200.03.25.png)
-
----
-
-<!--
-_footer:  ""
--->
-
-### Implementació
+### Comprova l’òptim local
 
 ```python
-def hill_climbing(problema, iteracions=10000):
-  estat = problema.inicial
-  fitness = problema.funcio_avaluacio(estat)
-
-  for _ in range(iteracions):
-    successors = problema.estats_successors(estat)
-    if not successors:
-      break
-    successor = min(successors, key=problema.funcio_avaluacio)
-    fitness_succ = problema.funcio_avaluacio(successor)
-    if fitness_succ > fitness:
-      print(f"{fitness_succ} > {fitness}")
-      estat = successor
-      fitness = fitness_succ
-    else:
-      break
-  return estat
+local = hill_climbing(inicial)
+print(local, round(cost(local), 2))
 ```
 
 ---
 
-<!--
-_footer:  ""
--->
+### És la millor ruta possible?
 
-
-### Execució
-
-```python
-ciutats = [
-  (random.randint(0, 1000),
-    random.randint(0, 1000))
-  for _ in range(100)
-]
-tsp = TSP(
-  inicial=TSP.genera_estat_inicial(ciutats),
-  ciutats=ciutats
-)
-solucio = hill_climbing(tsp)
-
-51442.77444568607 > 54092.0949691196
-...
-
-41.1 s ± 6.22 s per loop
-(mean ± std. dev. of 7 runs, 1 loop each)
-
-Inline:
-2.13 s ± 922 ms per loop
-(mean ± std. dev. of 7 runs, 1 loop each)
-```
-
-![bg right:47% 100%](../../images/exec_escalada.png)
+Quan l’escalada s’atura, cap intercanvi millora la ruta. Per saber si hi ha un circuit més curt, comparem totes les 7! rutes que comencen en 0. Amb huit ciutats és viable. El nombre de rutes creix ràpidament quan afegim ciutats.
 
 ---
 
-### Consum de memòria
+### Ruta òptima per enumeració
 
-- Un dels problemes que tenen els algorismes de búsqueda local que s'utilitza molta **memòria**.
-  - Cal **mantenir una estructura de dades** que representi els espais successors
-  - Podem **millorar** l'eficiència del algorisme de recuit simulat **eliminant** aquesta estructura de dades.
-  - Per això, **no** generarem **estats successors** nous.
-  - En lloc d'això, **modificarem l'estat actual** (`inline`) per generar el successor i, si no millora, **desfarem els canvis**.
+```python
+optima = min(((0,) + resta for resta in permutations(inicial[1:])), key=cost)
+print(optima, round(cost(optima), 2))
+print(round(cost(local) - cost(optima), 2))  # Diferència de cost
+```
 
 ---
 
-<!--
-_footer:  ""
--->
+### Memòria i veïns
 
-### Implementació `inline`
+`veines` genera un veí cada vegada. `min` els compara sense crear una llista amb totes les rutes.
 
-```python
-def hill_climbing_inline(problema, iteracions=10000):
-    estat = problema.inicial
-    fitness = problema.funcio_avaluacio(estat)
-
-    for _ in range(iteracions):
-        millorat_iter = False
-        for i in range(len(estat)):
-            for j in range(len(estat)):
-                if i != j:
-                    estat[i], estat[j] = estat[j], estat[i]
-                    fitness_succ = problema.funcio_avaluacio(estat)
-                    if fitness_succ > fitness:
-                        print(f"{fitness} > {fitness_succ}")
-                        fitness = fitness_succ
-                        millorat_iter = True
-                    else:
-                        estat[i], estat[j] = estat[j], estat[i]
-        if not millorat_iter:
-            break
-    return estat
-```
 
 ---
 
@@ -436,49 +274,19 @@ def hill_climbing_inline(problema, iteracions=10000):
 
 ---
 
-### Implementació
+### Escalada de primer millor
 
 ```python
-def first_choice_hill_climbing(espai_estats, funcio, max_iteracions):
-  estat_actual = espai_estats.estat_inicial()
-  for _ in range(max_iteracions):
-    successor = espai_estats.genera_successor(estat_actual)
-    if not successor:
-      return estat_actual
-    if funcio(successor) >= funcio(estat_actual):
-      estat_actual = successor
-
-  return estat_actual
-```
-
----
-<!--
-_footer:  ""
--->
-
-### Implementació `inline`
-
-```python
-def first_choice_hill_climbing_inline(problema, iteracions=10000):
-    estat = problema.inicial
-    fitness = problema.funcio_avaluacio(estat)
-
-    for _ in range(iteracions):
-        millorat_iter = False
-        for i in range(len(estat)):
-            if not millorat_iter:
-                for j in range(len(estat)):
-                    if i != j:
-                        estat[i], estat[j] = estat[j], estat[i]
-                        fitness_succ = problema.funcio_avaluacio(estat)
-                        if fitness_succ > fitness:
-                            print(f"{fitness} > {fitness_succ}")
-                            fitness = fitness_succ
-                            millorat_iter = True
-                            break
-                        else:
-                            estat[i], estat[j] = estat[j], estat[i]
-    return estat
+def primer_millor(ruta, rng):
+    while True:
+        candidates = list(veines(ruta))
+        rng.shuffle(candidates)
+        for candidata in candidates:
+            if cost(candidata) < cost(ruta):
+                ruta = candidata
+                break
+        else:
+            return ruta
 ```
 
 ---
@@ -492,41 +300,27 @@ def first_choice_hill_climbing_inline(problema, iteracions=10000):
 
 ---
 
-### Implementació
+### Escalada amb reinicis
 
 ```python
-def random_restart_hill_climbing(problema, ciutats, iteracions=1000, restarts=10):
-  millor_estat = None
-  millor_fitness = float('inf')
-  for _ in range(restarts):
-    inicial = TSP.genera_estat_inicial(ciutats)
-    problema.inicial = inicial
-    estat = hill_climbing(problema, iteracions=iteracions)
-    fitness = problema.funcio_avaluacio(estat)
-    if fitness > millor_fitness:
-      millor_estat = estat
-      millor_fitness = fitness
-      print(f"Millor fitness: {millor_fitness}")
-  return millor_estat
+def amb_reinicis(ruta, rng, intents=10):
+    millor = hill_climbing(ruta)
+    for _ in range(intents):
+        nova = (ruta[0],) + tuple(rng.sample(ruta[1:], len(ruta) - 1))
+        resultat = hill_climbing(nova)
+        if cost(resultat) < cost(millor):
+            millor = resultat
+    return millor
 ```
 
 ---
 
-### Execució
+### Prova els reinicis
 
 ```python
-solucio = random_restart_hill_climbing(
-  tsp, ciutats, 1000, 10
-)
+reinicis = amb_reinicis(inicial, Random(42))
+print(reinicis, round(cost(reinicis), 2))
 ```
-
-```bash
-Millor fitness: 12936.962711620448
-Millor fitness: 12887.286272582816
-Millor fitness: 12798.50074780205
-```
-
-![bg right:47% 100%](../../images/exec_escalada_reinici_aleatori.png)
 
 ---
 
@@ -572,102 +366,32 @@ Millor fitness: 12798.50074780205
 
 ---
 
-<!--
-_footer:  ""
--->
+<style scoped>section { font-size: 28px; }</style>
 
-### Implementació
+### Recuit simulat
 
 ```python
-def simulated_annealing(espai_estats, funcio, temperatura=100, refredament=0.9):
-    estat_actual = espai_estats.estat_inicial()
-    while True:
-        successors = espai_estats.estats_successors(estat_actual)
-        successors_ordenats = sorted(successors, key=funcio)
-
-        if funcio(successors_ordenats[0]) <= funcio(estat_actual):
-            estat_actual = successors_ordenats[0]
-        else:
-            delta = funcio(successors_ordenats[0]) - funcio(estat_actual)
-            probabilitat = math.exp(-delta / temperatura)
-            if random.random() < probabilitat:
-                estat_actual = successors_ordenats[0]
-
-        temperatura *= refredament
-        if temperatura < 0.00001:
-            return estat_actual
+def recuit(ruta, rng, passos=500, temperatura=30):
+    millor = ruta
+    for _ in range(passos):
+        i, j = rng.sample(range(1, len(ruta)), 2)
+        candidata = intercanvia(ruta, i, j)
+        delta = cost(candidata) - cost(ruta)
+        if delta <= 0 or rng.random() < exp(-delta / temperatura):
+            ruta = candidata
+            if cost(ruta) < cost(millor):
+                millor = ruta
+        temperatura *= 0.99
+    return millor
 ```
 
 ---
 
-<!--
-_footer:  ""
--->
-
-### Execució
+### Prova el recuit
 
 ```python
-
-solucio = hill_climbing(tsp)
-plot_tsp(tsp, solucio)
-
-Cost:        50976.93306917217
-Cost:        51376.91701004807
-...
-Cost:        11354.397010378212
-Cost:        11350.41254307539
-Cost final:  11350.41254307539
-```
-
-![bg right:47% fit](../../images/exec_annealing.png)
-
----
-
-### Implementació `inline` (I)
-
-```python
-
-def simulated_annealing(problema, temp=100000, refredament=0.9999, iteracions=10000):
-    estat = problema.inicial
-    cost = problema.funcio_avaluacio(estat)
-
-    while temp > 0.1:
-        i = random.randint(1, len(estat) - 1)
-        j = random.randint(1,len(estat) - 1)
-
-        while i == j:
-            j = random.randint(1, len(estat) - 1)
-
-        estat[i], estat[j] = estat[j], estat[i]
-        cost_nou = problema.funcio_avaluacio(estat)
-        ...
-```
-
----
-
-
-<!--
-_footer:  ""
--->
-
-### Implementació `inline` (II)
-
-```python
-        ...
-        delta = cost_nou - cost
-        if delta < 0 or math.exp(-delta / temp) > random.uniform(0, 1):
-            cost = cost_nou
-            print("Cost: ", cost)
-        else:
-            estat[i], estat[j] = estat[j], estat[i]
-
-        temp = temp * refredament
-
-    print("Cost final: ", cost)
-    print("Estat final: ", estat)
-
-    return estat
-
+recuit_final = recuit(inicial, Random(42))
+print(recuit_final, round(cost(recuit_final), 2))
 ```
 
 ---
@@ -803,48 +527,101 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-<!--
-_footer:  ""
--->
+<style scoped>section { font-size: 28px; }</style>
 
-
-### Implementació (I)
+### Motxilla · Dades i puntuació
 
 ```python
-def genetic_algorithm(espai_estats, funcio, num_individus=100, num_iteracions=100):
-    poblacio = [espai_estats.estat_inicial() for _ in range(num_individus)]
-    for _ in range(num_iteracions):
-        seleccionats = sorted(poblacio, key=funcio)[:num_individus]
-        nova_poblacio = []
-        for i in range(num_individus):
-            pare = random.choice(seleccionats)
-            mare = random.choice(seleccionats)
-            fill = creuament(pare, mare)
-            if random.random() < 0.1:
-                fill = espai_estats.mutacio(fill)
-            poblacio.append(fill)
+from random import Random
 
-        poblacio = nova_poblacio
-
-    return poblacio[0]
+PES_MAXIM = 100
+MAX_UNITATS = 10
+objectes = [
+    ('Coca-Cola', 1, 1.5),
+    ('Cervesa', 2, 2.5),
+    ('Aigua', 1, 0.5),
+    ('Cacauets', 1, 1.0),
+    ('Patates', 2, 1.5),
+    ('Galetes', 1, 1.0),
+    ('Pomes', 1, 1.0),
+    ('Taronges', 1, 1.0),
+    ('Plàtans', 1, 1.0),
+    ('Peres', 1, 1.0),
+    ('Maduixes', 1, 1.0),
+    ('Pinya', 1, 1.0),
+    ('Pomes', 1, 1.0),
+]
 ```
 
 ---
 
-### Implementació (II)
+### Motxilla · Pes, valor i puntuació
 
 ```python
-def creuament(pare, mare):
-    punt = random.randint(0, len(pare))
-    fill = pare[:punt] + mare[punt:]
-    return fill
+def pes(individu):
+    return sum(q * p for q, (_, p, _) in zip(individu, objectes))
 
+def valor(individu):
+    return sum(q * v for q, (_, _, v) in zip(individu, objectes))
 
-def mutacio(individu):
-    punt = random.randint(0, len(individu))
-    nou_valor = random.randint(0, 100)
-    individu[punt] = nou_valor
-    return individu
+def puntuacio(individu):
+    if pes(individu) > PES_MAXIM:
+        return -1
+    return valor(individu)
+```
+
+---
+
+### Motxilla · Creuament i mutació
+
+```python
+def creua(a, b, rng):
+    tall = rng.randrange(1, len(a))
+    return a[:tall] + b[tall:]
+
+def muta(individu, rng):
+    i = rng.randrange(len(individu))
+    opcions = [q for q in range(MAX_UNITATS + 1) if q != individu[i]]
+    quantitat = rng.choice(opcions)
+    return individu[:i] + (quantitat,) + individu[i + 1:]
+```
+
+---
+
+<style scoped>section { font-size: 28px; }</style>
+
+### Motxilla · Algorisme genètic
+
+```python
+def genetic(rng, generacions=30):
+    poblacio = [(0,) * len(objectes)]
+    for _ in range(19):
+        poblacio.append(tuple(rng.randrange(MAX_UNITATS + 1) for _ in objectes))
+
+    for _ in range(generacions):
+        poblacio.sort(key=puntuacio, reverse=True)
+        pares = poblacio[:10]
+        nova = [poblacio[0]]
+        while len(nova) < len(poblacio):
+            a, b = rng.sample(pares, 2)
+            fill = creua(a, b, rng)
+            if rng.random() < 0.25:
+                fill = muta(fill, rng)
+            nova.append(fill)
+        poblacio = nova
+    return max(poblacio, key=puntuacio)
+```
+
+---
+
+### Prova l’algorisme genètic
+
+```python
+resultat = genetic(Random(42))
+for quantitat, (nom, _, _) in zip(resultat, objectes):
+    if quantitat:
+        print(quantitat, nom)
+print(f"{pes(resultat)} kg · {valor(resultat):.2f} €")
 ```
 
 ---
